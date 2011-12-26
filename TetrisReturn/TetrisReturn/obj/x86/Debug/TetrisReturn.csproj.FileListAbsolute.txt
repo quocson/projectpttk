@@ -63,3 +63,20 @@ C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TetrisReturn\obj\x86\Deb
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TetrisReturn\obj\x86\Debug\ResGen.read.1.tlog
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TetrisReturn\obj\x86\Debug\ResGen.write.1.tlog
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\bin\Debug\TetrisReturn.exe.config
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.exe
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.pdb
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\bin\Debug\TetrisReturn.exe
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\bin\Debug\TetrisReturn.pdb
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\bin\Debug\MapInterface.dll
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.ImageButton.resources
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.MainForm.resources
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.Properties.Resources.resources
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\ResGen.read.1.tlog
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\ResGen.write.1.tlog

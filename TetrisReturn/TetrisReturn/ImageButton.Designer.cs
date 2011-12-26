@@ -36,7 +36,7 @@
             // 
             this.picBox.Location = new System.Drawing.Point(3, 27);
             this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(482, 120);
+            this.picBox.Size = new System.Drawing.Size(190, 120);
             this.picBox.TabIndex = 0;
             this.picBox.TabStop = false;
             this.picBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picBox_MouseDown);
@@ -53,8 +53,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "ImageButton";
-            this.Size = new System.Drawing.Size(488, 150);
-            this.Load += new System.EventHandler(this.ImageButton_Load);
+            this.Size = new System.Drawing.Size(200, 159);
             this.EnabledChanged += new System.EventHandler(this.ImageButton_EnabledChanged);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);

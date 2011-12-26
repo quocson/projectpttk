@@ -21,6 +21,7 @@ namespace TetrisReturn
             Graphics.FromImage(b).FillRectangle(new SolidBrush(Color.Red), new Rectangle(0, 0, this.Width, this.Height));
             this.imageButton1.IEnabled = b;
             imageButton1.SText = "Pro";
+            imageButton1.TFont = new Font("Arial", 20, FontStyle.Italic);
 
         }
     }
