@@ -29,3 +29,15 @@ C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Deb
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb

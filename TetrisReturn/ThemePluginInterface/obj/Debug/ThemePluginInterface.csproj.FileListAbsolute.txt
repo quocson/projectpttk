@@ -13,3 +13,8 @@ C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\bin\Deb
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb

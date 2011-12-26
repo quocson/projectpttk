@@ -57,6 +57,12 @@ namespace MapPluginInterface
             set { statusMap = value; }
         }
 
+        //Image Map properties.
+        public Bitmap ImageMap
+        {
+            get { return iMap; }
+        }
+
         //check point on map.
         public bool checkOnMap(int x, int y)
         {

@@ -19,6 +19,8 @@ namespace ThemePluginInterface
         private Bitmap iClickButton;
         private Bitmap iDisableButton;
         private Bitmap iInformations;
+        private int numColorBlock;
+        private int numTypeBlock;
 
         public Theme()
         {
@@ -37,6 +39,8 @@ namespace ThemePluginInterface
             iClickButton = new Bitmap(t.iClickButton);
             iDisableButton = new Bitmap(t.iDisableButton);
             iInformations = new Bitmap(t.iInformations);
+            numColorBlock = t.numColorBlock;
+            numTypeBlock = t.numTypeBlock;
         }
 
         public Theme(Image iMainBackground,
@@ -49,7 +53,9 @@ namespace ThemePluginInterface
                     Image iHoverButton,
                     Image iClickButton,
                     Image iDisableButton,
-                    Image iInformations)
+                    Image iInformations,
+                    int numColorBlock,
+                    int numTypeBlock)
         {
             this.iMainBackground = new Bitmap(iMainBackground);
             this.iHelpBackground = new Bitmap(iHelpBackground);
@@ -62,6 +68,8 @@ namespace ThemePluginInterface
             this.iClickButton = new Bitmap(iClickButton);
             this.iDisableButton = new Bitmap(iDisableButton);
             this.iInformations = new Bitmap(iInformations);
+            this.numColorBlock = numColorBlock;
+            this.numTypeBlock = numTypeBlock;
         }
 
         public void Dispose()
@@ -91,5 +99,7 @@ namespace ThemePluginInterface
         public Bitmap ClickButton { get { return iClickButton; } }
         public Bitmap DisableButton { get { return iDisableButton; } }
         public Bitmap Informations { get { return iInformations; } }
+        public int NumColorBlock { get { return numColorBlock; } }
+        public int NumTypeBlock { get { return numTypeBlock; } }
     }
 }
