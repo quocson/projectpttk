@@ -38,3 +38,13 @@ C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheOldBoardMapPlugin\obj
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\TheOldBoardMapPlugin.dll
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\TheOldBoardMapPlugin.pdb
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\bin\Debug\TheOldBoardMapPlugin.dll
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\bin\Debug\TheOldBoardMapPlugin.pdb
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\bin\Debug\MapInterface.dll
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\TheOldBoardMapPlugin.Properties.Resources.resources
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\TheOldBoardMapPlugin.dll
+E:\Document\Software design\Project sem\TetrisReturn\TheOldBoardMapPlugin\obj\Debug\TheOldBoardMapPlugin.pdb

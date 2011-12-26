@@ -18,3 +18,8 @@ C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\MapPluginInterface\bin\D
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\MapPluginInterface\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.dll
 C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.pdb
+E:\Document\Software design\Project sem\TetrisReturn\MapPluginInterface\bin\Debug\MapInterface.dll
+E:\Document\Software design\Project sem\TetrisReturn\MapPluginInterface\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project sem\TetrisReturn\MapPluginInterface\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project sem\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.dll
+E:\Document\Software design\Project sem\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.pdb
