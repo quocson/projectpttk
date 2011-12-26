@@ -1,0 +1,30 @@
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.Properties.Resources.resources
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.pdb

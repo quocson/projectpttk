@@ -1,0 +1,15 @@
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapPluginInterface\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapPluginInterface\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapPluginInterface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\MapPluginInterface\bin\Debug\MapInterface.dll
+E:\Document\Software design\Project Description\TetrisReturn\MapPluginInterface\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\MapPluginInterface\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project Description\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.dll
+E:\Document\Software design\Project Description\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\MapPluginInterface\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\MapPluginInterface\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\MapPluginInterface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\MapPluginInterface\obj\Debug\MapInterface.pdb

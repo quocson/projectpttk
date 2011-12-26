@@ -1,0 +1,7 @@
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapInterface\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapInterface\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapInterface\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapInterface\bin\Debug\TetrisReturn.exe
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapInterface\bin\Debug\TetrisReturn.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapInterface\obj\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\MapInterface\obj\Debug\MapInterface.pdb
