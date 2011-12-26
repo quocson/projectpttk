@@ -18,7 +18,9 @@ namespace TheTransformerThemePlugin
                                         TheTransformerThemePlugin.Properties.Resources.HoverButton,
                                         TheTransformerThemePlugin.Properties.Resources.ClickButton,
                                         TheTransformerThemePlugin.Properties.Resources.DisableButton,
-                                        TheTransformerThemePlugin.Properties.Resources.Informations);
+                                        TheTransformerThemePlugin.Properties.Resources.Informations,
+                                        7,
+                                        1);
 
         public string VietNameseName { get { return TheTransformerThemePlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheTransformerThemePlugin.Properties.Resources.vietNameseDescription; } }

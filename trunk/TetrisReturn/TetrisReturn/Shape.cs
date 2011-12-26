@@ -25,7 +25,7 @@ namespace TetrisReturn
                     statusArr[i, j] = 0;
                 }
 
-            color = Constants.r.Next(0, 7);
+            color = Constants.r.Next(0, Constants.numColorBlock);
         }
 
         public Shape(Shape s)

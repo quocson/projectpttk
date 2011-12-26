@@ -18,7 +18,9 @@ namespace TheSketchThemePlugin
                                         TheSketchThemePlugin.Properties.Resources.HoverButton,
                                         TheSketchThemePlugin.Properties.Resources.ClickButton,
                                         TheSketchThemePlugin.Properties.Resources.DisableButton,
-                                        TheSketchThemePlugin.Properties.Resources.Informations);
+                                        TheSketchThemePlugin.Properties.Resources.Informations,
+                                        7,
+                                        7);
 
         public string VietNameseName { get { return TheSketchThemePlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheSketchThemePlugin.Properties.Resources.vietNameseDescription; } }

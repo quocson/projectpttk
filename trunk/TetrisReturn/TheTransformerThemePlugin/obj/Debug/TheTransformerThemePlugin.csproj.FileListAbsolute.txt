@@ -34,3 +34,15 @@ C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheTransformerThemePlugin\ob
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheTransformerThemePlugin\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.dll
 C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\bin\Debug\TheTransformerThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\bin\Debug\TheTransformerThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\bin\Debug\ThemeInterface.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\bin\Debug\ThemeInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.pdb
