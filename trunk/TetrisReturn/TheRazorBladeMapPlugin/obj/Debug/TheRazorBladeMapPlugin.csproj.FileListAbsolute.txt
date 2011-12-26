@@ -1,0 +1,30 @@
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\TheRazorBladeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\TheRazorBladeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\TheRazorBladeMapPlugin.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\TheRazorBladeMapPlugin.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\MapInterface.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.Properties.Resources.resources
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\TheRazorBladeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\TheRazorBladeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheRazorBladeMapPlugin\obj\Debug\TheRazorBladeMapPlugin.pdb

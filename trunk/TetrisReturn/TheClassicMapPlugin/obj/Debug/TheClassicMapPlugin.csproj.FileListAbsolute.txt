@@ -1,0 +1,50 @@
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\bin\Debug\TetrisReturn.exe
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\bin\Debug\TetrisReturn.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\bin\Debug\TheClassicMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\bin\Debug\TheClassicMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\obj\Debug\TheClassicMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\obj\Debug\TheClassicMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\obj\Debug\TheClassicMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMap\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\TheClassicMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\TheClassicMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\TetrisReturn.exe
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\TetrisReturn.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\bin\Debug\TheClassicMapPlugin.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\bin\Debug\TheClassicMapPlugin.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\bin\Debug\MapInterface.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\bin\Debug\TetrisReturn.exe
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\bin\Debug\TetrisReturn.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.Properties.Resources.resources
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\TheClassicMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\TheClassicMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\TetrisReturn.exe
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\ThemeInterface.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\TetrisReturn.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\bin\Debug\ThemeInterface.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheClassicMapPlugin\obj\Debug\TheClassicMapPlugin.pdb

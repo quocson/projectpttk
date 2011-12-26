@@ -1,0 +1,31 @@
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.Properties.Resources.resources
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
+E:\Document\Software design\Project Description\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.pdb
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
