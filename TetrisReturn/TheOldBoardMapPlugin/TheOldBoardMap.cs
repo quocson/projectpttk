@@ -24,12 +24,12 @@ namespace TheOldBoardMapPlugin
                 for (int j = 0; j < col; j++)
                     statusMap[i, j] = -1;
 
-            statusMap[3, 3] = statusMap[3, 4] = -2;
-            statusMap[6, 11] = statusMap[6, 12] = -2;
-            statusMap[9, 3] = statusMap[9, 4] = -2;
-            statusMap[12, 11] = statusMap[12, 12] = -2;
-            statusMap[15, 3] = statusMap[15, 4] = -2;
-            statusMap[18, 11] = statusMap[18, 12] = -2;
+            statusMap[7, 3] = statusMap[7, 4] = -2;
+            statusMap[10, 11] = statusMap[10, 12] = -2;
+            statusMap[13, 3] = statusMap[13, 4] = -2;
+            statusMap[16, 11] = statusMap[16, 12] = -2;
+            statusMap[19, 3] = statusMap[19, 4] = -2;
+            statusMap[22, 11] = statusMap[22, 12] = -2;
         }
     }
 }

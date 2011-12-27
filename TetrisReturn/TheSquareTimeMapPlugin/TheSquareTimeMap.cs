@@ -22,8 +22,8 @@ namespace TheSquareTimeMapPlugin
         {
             for (int i = 0; i < row; i++)
                 for (int j = 0; j < col; j++)
-                    if ((i == 2 || i == 3 || i == 6 || i == 7 || i == 10 ||
-                        i == 11 || i == 14 || i == 15 || i == 18 || i == 19) &&
+                    if ((i == 6 || i == 7 || i == 10 || i == 11 || i == 14 ||
+                        i == 15 || i == 18 || i == 19 || i == 22 || i == 23) &&
                         (j < 2 || j > 13))
                         statusMap[i, j] = -2;
                     else

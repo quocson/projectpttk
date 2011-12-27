@@ -29,6 +29,28 @@ namespace TetrisReturn
             type = t;
         }
 
+        public Block(Block b)
+        {
+            xScreen = b.xScreen;
+            yScreen = b.yScreen;
+            color = b.color;
+            type = b.type;
+        }
+
+        //xScreen properties.
+        public int X
+        {
+            get { return xScreen; }
+            set { xScreen = value; }
+        }
+
+        //yScreen properties.
+        public int Y
+        {
+            get { return yScreen; }
+            set { yScreen = value; }
+        }
+
         public void Dispose()
         {
             GC.SuppressFinalize(this);
@@ -37,7 +59,7 @@ namespace TetrisReturn
         //return position block on map.
         public Point mapPosotion()
         {
-            return new Point(xScreen / Constants.blockSize, (yScreen + Constants.blockSize * 4) / Constants.blockSize);
+            return new Point(xScreen / Constants.blockSize, yScreen / Constants.blockSize + 4);
         }
 
         //draw block on the graphics.
@@ -54,7 +76,7 @@ namespace TetrisReturn
         {
             gr.DrawImage(Constants.theme.Blocks,
                 new Rectangle(xScreen, yScreen, Constants.blockSize - Constants.blockDelta, Constants.blockSize - Constants.blockDelta),
-                new Rectangle(color * Constants.blockSize, (type + Constants.numTypeBlock) * Constants.blockSize, Constants.blockSize, Constants.blockSize),
+                new Rectangle(color * Constants.blockSize, (type + Constants.theme.NumTypeBlock) * Constants.blockSize, Constants.blockSize, Constants.blockSize),
                 GraphicsUnit.Pixel);
         }
 
@@ -70,16 +92,55 @@ namespace TetrisReturn
         //check right position block.
         public bool rightPosition()
         {
-            //if
+            int x = mapPosotion().X;
+            int y = mapPosotion().Y;
+
+            if ((x >= 0 && x < Constants.map.Colum) &&
+                (y >= 0 && y < Constants.map.Row) &&
+                Constants.map.StatusMap[x, y] == -1)
+                return true;
 
             return false;
+        }
 
+        //check block can move left.
+        public bool canMoveLeft()
+        {
+            int x = mapPosotion().X;
+            int y = mapPosotion().Y;
+
+            if ((x > 0 && x < Constants.map.Colum) &&
+                (y >= 0 && y < Constants.map.Row - 1) &&
+                Constants.map.StatusMap[x - 1, y] == -1)
+                return true;
+
+            return false;
+        }
+
+        //check block can move right.
+        public bool canMoveRight()
+        {
+            int x = mapPosotion().X;
+            int y = mapPosotion().Y;
+
+            if ((x >= 0 && x < Constants.map.Colum - 1) &&
+                (y >= 0 && y < Constants.map.Row - 1) &&
+                Constants.map.StatusMap[x + 1, y] == -1)
+                return true;
+
+            return false;
         }
 
         //check block can move down.
-        public bool checkDown()
+        public bool canMoveDown()
         {
-            //if
+            int x = mapPosotion().X;
+            int y = mapPosotion().Y;
+
+            if ((x >= 0 && x < Constants.map.Colum) &&
+                (y >= 0 && y < Constants.map.Row - 1) &&
+                Constants.map.StatusMap[x, y + 1] == -1)
+                return true;
 
             return false;
         }
@@ -87,6 +148,11 @@ namespace TetrisReturn
         //lock block on static map.
         public void lockBlockOnMap()
         {
+            int x = mapPosotion().X;
+            int y = mapPosotion().Y;
+
+            if (Constants.map.StatusMap[x, y] == -1)
+                Constants.map.StatusMap[x, y] = color;
         }
 
         //move block to the left.

@@ -81,3 +81,4 @@ E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\
 E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\ResGen.write.1.tlog
 E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.NextShape.resources
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.NextShape.resources

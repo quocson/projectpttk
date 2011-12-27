@@ -58,10 +58,13 @@ namespace MapPluginInterface
         }
 
         //Image Map properties.
-        public Bitmap ImageMap
-        {
-            get { return iMap; }
-        }
+        public Bitmap ImageMap { get { return iMap; } }
+
+        //Row Map properties.
+        public int Row { get { return row; } }
+
+        //Colum properties.
+        public int Colum { get { return col; } }
 
         //check point on map.
         public bool checkOnMap(int x, int y)
