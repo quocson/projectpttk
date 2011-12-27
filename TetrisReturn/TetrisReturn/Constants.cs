@@ -11,6 +11,7 @@ namespace TetrisReturn
     {
         public const int blockSize = 25;//size of block.
         public const int blockDelta = 2;//size between two block.
+        public const int xStart = blockSize * 7;//position x start of shape.
 
         public static Random r = new Random(unchecked((int)DateTime.Now.Ticks));//static variable random.
 

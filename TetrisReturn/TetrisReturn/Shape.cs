@@ -8,7 +8,7 @@ namespace TetrisReturn
 {
     public class Shape : IDisposable
     {
-        protected int[,] statusArr;//status of blocks on the shape.
+        protected bool[,] statusArr;//status of blocks on the shape.
         protected int row;//row of shape.
         protected int col;//colum of shape.
         protected int xScreen;//x position of shape on the screen.
@@ -18,14 +18,14 @@ namespace TetrisReturn
 
         public Shape()
         {
-            xScreen = yScreen = 0;
-            row = col = 4;
+            xScreen = Constants.xStart;
+            yScreen = row = col = 0;
 
-            statusArr = new int[4, 4];
+            statusArr = new bool[4, 4];
             for (int i = 0; i < row; i++)
                 for (int j = 0; j < col; j++)
                 {
-                    statusArr[i, j] = 0;
+                    statusArr[i, j] = false;
                 }
 
             color = Constants.r.Next(0, Constants.theme.NumColorBlock);
@@ -39,7 +39,7 @@ namespace TetrisReturn
             yScreen = s.yScreen;
             color = s.color;
 
-            statusArr = new int[4, 4];
+            statusArr = new bool[4, 4];
             for (int i = 0; i < 4; i++)
                 for (int j = 0; j < 4; j++)
                 {
@@ -130,13 +130,13 @@ namespace TetrisReturn
             bool rotatable = true;
             int tmpRow = col;
             int tmpCol = row;
-            int[,] tmpArr = new int[4, 4];
+            bool[,] tmpArr = new bool[4, 4];
 
             for (int i = row - 1; i >= 0; i--)
                 for (int j = col - 1; j >= 0; j--)
                 {
                     tmpArr[j, row - i - 1] = statusArr[i, j];
-                    if (tmpArr[j, row - i - 1] == 1)
+                    if (tmpArr[j, row - i - 1])
                     {
                         Block tmpBlock = new Block(xScreen + (row - i - 1) * Constants.blockSize, yScreen + j * Constants.blockSize, 0, 0);
                         if (!tmpBlock.rightPosition())
@@ -158,7 +158,7 @@ namespace TetrisReturn
                 for (int i = 0; i < tmpRow; i++)
                     for (int j = 0; j < tmpCol - dx; j++)
                     {
-                        if (tmpArr[i, j] == 1)
+                        if (tmpArr[i, j])
                         {
                             Block tmpBlock = new Block(tmpX + j * Constants.blockSize, tmpY + i * Constants.blockSize, 0, 0);
                             if (!tmpBlock.rightPosition())
@@ -232,7 +232,29 @@ namespace TetrisReturn
 
             yScreen += Constants.blockSize;
         }
-        
+
+        //rotate statusArr of shape.
+        protected void rotateStatusArr()
+        {
+            int tmpRow = col;
+            int tmpCol = row;
+            bool[,] tmpArr = new bool[4, 4];
+            for (int i = row - 1; i >= 0; i--)
+                for (int j = col - 1; j >= 0; j--)
+                {
+                    tmpArr[j, row - i - 1] = statusArr[i, j];
+                }
+
+            row = tmpRow;
+            col = tmpCol;
+            for (int i = 0; i < row; i++)
+                for (int j = 0; j < col; j++)
+                {
+                    statusArr[i, j] = tmpArr[i, j];
+                }
+            tmpArr = null;
+        }
+
         //rotate shape.
         public void rotate()
         {
@@ -241,7 +263,7 @@ namespace TetrisReturn
 
             int tmpRow = col;
             int tmpCol = row;
-            int[,] tmpArr = new int[4, 4];
+            bool[,] tmpArr = new bool[4, 4];
             for (int i = row - 1; i >= 0; i--)
                 for (int j = col - 1; j >= 0; j--)
                 {
@@ -255,7 +277,7 @@ namespace TetrisReturn
                 for (int j = 0; j < col; j++)
                 {
                     statusArr[i, j] = tmpArr[i, j];
-                    if (statusArr[i, j] == 1)
+                    if (statusArr[i, j])
                     {
                         cube[index].X = xScreen + j * Constants.blockSize;
                         cube[index++].Y = yScreen + i * Constants.blockSize;

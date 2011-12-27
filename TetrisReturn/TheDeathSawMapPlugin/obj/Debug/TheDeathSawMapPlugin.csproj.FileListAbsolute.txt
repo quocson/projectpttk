@@ -12,3 +12,17 @@ E:\Document\Software design\Project sem\TetrisReturn\TheDeathSawMapPlugin\bin\De
 E:\Document\Software design\Project sem\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\ThemeInterface.pdb
 E:\Document\Software design\Project sem\TetrisReturn\TheDeathSawMapPlugin\obj\Debug\TheDeathSawMapPlugin.dll
 E:\Document\Software design\Project sem\TetrisReturn\TheDeathSawMapPlugin\obj\Debug\TheDeathSawMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\TheDeathSawMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\TheDeathSawMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\TetrisReturn.exe
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\ThemeInterface.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\TetrisReturn.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\bin\Debug\ThemeInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\obj\Debug\TheDeathSawMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\obj\Debug\TheDeathSawMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\TheDeathSawMapPlugin\obj\Debug\TheDeathSawMapPlugin.pdb
