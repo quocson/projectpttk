@@ -13,16 +13,40 @@ namespace TetrisReturn
 {
     public partial class ImageButton : UserControl
     {
+        //bitmap for state
         private Bitmap iEnabled;
         private Bitmap iDisabled;
         private Bitmap iHover;
         private Bitmap iOnclick;
+        //String 
         private String sText;// button text
         private Color tColor = Color.White; // text color
         private Color strokeColor = Color.Black; //stroke color
         private int strokeWidth = 2; //stroke width
         private Font tFont; // font of text
         private Point tPos; //pos of text
+        //Drawable
+        private bool drawabled;
+        private Bitmap buffer;
+        public bool Drawabled
+        {
+            get { return drawabled; }
+            set { 
+                drawabled = value;
+
+                if (drawabled)
+                {
+                    buffer = new Bitmap(Height, Width);
+                    SizeF sz = Graphics.FromImage(buffer).MeasureString(SText, TFont);
+                    if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
+                        TPos = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
+                    else
+                        TPos = new Point(0, 0);
+                    drawImg();
+                    Refresh();
+                }
+            }
+        }
         public Point TPos
         {
             get { return tPos; }
@@ -33,12 +57,12 @@ namespace TetrisReturn
             get { return tFont; }
             set { 
                 tFont = value;
-                SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
-                //sap xep vi tri cua text
-                if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
-                    TPos = new Point(0, 0);
-                else
-                    TPos = new Point((picBox.Width - (int)sz.Width) / 2, (picBox.Height - (int)sz.Height) / 2);
+                //SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
+                ////sap xep vi tri cua text
+                //if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
+                //    TPos = new Point(0, 0);
+                //else
+                //    TPos = new Point((picBox.Width - (int)sz.Width) / 2, (picBox.Height - (int)sz.Height) / 2);
             }
         }
         public int StrokeWidth
@@ -51,7 +75,6 @@ namespace TetrisReturn
             get { return strokeColor; }
             set { strokeColor = value; }
         }
-
         public Color TColor
         {
             get { return tColor; }
@@ -63,124 +86,104 @@ namespace TetrisReturn
             set
             {
                 sText = value;
-                if (TFont != null && SText != null)
-                {
-                    SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
-                    //sap xep vi tri cua text
-                    if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
-                        TPos = new Point(0, 0);
-                    else
-                        TPos = new Point((picBox.Width - (int)sz.Width) / 2, (picBox.Height - (int)sz.Height) / 2);
-                    drawStr();
-                    drawImg();
-                }
+                //if (TFont != null && SText != null)
+                //{
+                //    SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
+                //    //sap xep vi tri cua text
+                //    if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
+                //        TPos = new Point(0, 0);
+                //    else
+                //        TPos = new Point((picBox.Width - (int)sz.Width) / 2, (picBox.Height - (int)sz.Height) / 2);
+                //    drawStr();
+                //    drawImg();
+                //}
             }
         }
+        
         public Bitmap IEnabled
         {
             get { return iEnabled; }
-            set { iEnabled = value; }
-        }
+            set
+            {
 
+                if (value == null)
+                    return;
+                iEnabled = new Bitmap(value.Width, value.Height);
+                Graphics.FromImage(iEnabled).DrawImage(value, new Point(0, 0));
+            }
+        }
         public Bitmap IDisabled
         {
             get { return iDisabled; }
-            set { iDisabled = value;}
+            set
+            {
+                if (value == null)
+                    return;
+                iDisabled = new Bitmap(value.Width, value.Height);
+                Graphics.FromImage(iDisabled).DrawImage(value, new Point(0, 0));
+            }
         }
-
         public Bitmap IHover
         {
             get { return iHover; }
-            set { iHover = value; }
-        }
+            set
+            {
 
+                if (value == null)
+                    return;
+                iHover = new Bitmap(value.Width, value.Height);
+                Graphics.FromImage(iHover).DrawImage(value, new Point(0, 0));
+            }
+        }
         public Bitmap IOnclick
         {
             get { return iOnclick; }
-            set { iOnclick = value; }
+            set
+            {
+
+                if (value == null)
+                    return;
+                iOnclick = new Bitmap(value.Width, value.Height);
+                Graphics.FromImage(iOnclick).DrawImage(value, new Point(0, 0));
+            }
         }
         public ImageButton()
         {
             InitializeComponent();
+
+            Drawabled = false;
+            
             //default
-            picBox.Top = 0;
-            picBox.Left = 0;
-            picBox.Height = Height;
-            picBox.Width = Width;
-            picBox.Image = new Bitmap(picBox.Width, picBox.Height);
-            TPos = new Point(0, 0);
-            TFont = new Font("Arial", 5);
         }
 
         protected override void  OnPaint(PaintEventArgs e)
         {
  	        base.OnPaint(e);
+            if(Drawabled)
+                e.Graphics.DrawImage(buffer, new Point(0,0));
         }
         
 
-        private void picBox_MouseHover(object sender, EventArgs e)
-        {
-            if (Enabled && IHover != null)
-                Graphics.FromImage(picBox.Image).DrawImage(IHover, new Point(0, 0));
-            drawStr(); 
-        }
-
-        private void picBox_MouseLeave(object sender, EventArgs e)
-        {
-            if (Enabled && IEnabled != null)
-                Graphics.FromImage(picBox.Image).DrawImage(IEnabled, new Point(0, 0));
-            drawStr();
-        }
-
-        private void picBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (Enabled && IHover != null)
-                Graphics.FromImage(picBox.Image).DrawImage(IHover, new Point(0, 0));
-            drawStr();            
-        }
-
-        private void picBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (Enabled && IEnabled != null)
-                Graphics.FromImage(picBox.Image).DrawImage(IEnabled, new Point(0, 0));
-            drawStr();
-            if (e.X <= picBox.Width && e.X <= picBox.Height && e.X >= 0 && e.Y >= 0)
-            {
-                //thuc hien
-                MessageBox.Show("It's Ok!");
-            }
-        }
-      
-        private void picBox_MouseEnter(object sender, EventArgs e)
-        {
-            if (Enabled && IEnabled != null)
-                Graphics.FromImage(picBox.Image).DrawImage(IHover, new Point(0, 0));
-            drawStr();            
-        }
-
-        private void drawStr()
-        {
-            if (TFont == null || SText == null)
-                return ;
-            if (Enabled)
-                Graphics.FromImage(picBox.Image).DrawImage(getImgFromTxt(), TPos);
-            else
-                Graphics.FromImage(picBox.Image).DrawImage(getImgFromTxtDis(), TPos);
-            picBox.Refresh();
-        }
 
         private void drawImg()
         {
-            if (Enabled && IEnabled != null)
+            if (!Drawabled)
+                return;
+            SizeF sz = Graphics.FromImage(buffer).MeasureString(SText, TFont);
+            if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
+                TPos = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
+            else
+                TPos = new Point(0, 0);
+            if(Enabled)
             {
-                Graphics.FromImage(picBox.Image).DrawImage(IEnabled, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(IEnabled, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), TPos);
             }
             else
             {
-                if(IDisabled != null)
-                    Graphics.FromImage(picBox.Image).DrawImage(IDisabled, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(IDisabled, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxtDis(), TPos);
             }
-            drawStr();  
         }
 
         private Image getImgFromTxtDis() // ve text trong -  disable
@@ -241,33 +244,46 @@ namespace TetrisReturn
             return bmpOut;
         }
 
-        private bool canDraw()
-        {
-            if (TFont == null)
-                return false;
-            if (SText == null)
-                return false;
-            if (IEnabled == null)
-                return false;
-            if (IDisabled == null)
-                return false;
-            if (IOnclick == null)
-                return false;
-            if (IHover== null)
-                return false;
-            if (TColor == null)
-                return false;
-            if (StrokeColor == null)
-                return false;
-            if (TPos == null)
-                return false;
-
-            return true;
-        }
+        
         private void ImageButton_EnabledChanged(object sender, EventArgs e)
         {
+            Refresh();            
+        }
+
+        private void ImageButton_MouseLeave(object sender, EventArgs e)
+        {
             drawImg();
-            drawStr();            
+            Refresh();
+        }
+
+        private void ImageButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (Enabled)
+            {
+                Graphics.FromImage(buffer).DrawImage(IHover, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), TPos);
+            }
+            Refresh();
+        }
+
+        private void ImageButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (Enabled)
+            {
+                Graphics.FromImage(buffer).DrawImage(IOnclick, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), TPos);
+            }
+            Refresh();
+        }
+
+        private void ImageButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.X > 0 && e.X < Width && e.Y > 0 && e.Y < Height)
+            {
+
+            }
+            drawImg();
+            Refresh();   
         }
     }
 }
