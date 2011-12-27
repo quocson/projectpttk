@@ -24,24 +24,24 @@ namespace TheRandomizeMapPlugin
                 for (int j = 0; j < col; j++)
                     statusMap[i, j] = -1;
 
-            statusMap[0, 0] = -2;
-            statusMap[2, 0] = statusMap[2, 13] = statusMap[2, 14] = statusMap[2, 15] = -2;
-            statusMap[3, 14] = statusMap[3, 15] = -2;
-            statusMap[4, 0] = statusMap[4, 1] = statusMap[4, 2] = -2;
-            statusMap[5, 13] = statusMap[5, 14] = statusMap[5, 15] = -2;
-            statusMap[6, 0] = statusMap[6, 1] = -2;
-            statusMap[7, 13] = statusMap[7, 14] = statusMap[7, 15] = -2;
-            statusMap[8, 0] = statusMap[8, 1] = -2;
-            statusMap[9, 14] = statusMap[9, 15] = -2;
-            statusMap[10, 0] = -2;
+            statusMap[4, 0] = -2;
+            statusMap[6, 0] = statusMap[6, 13] = statusMap[6, 14] = statusMap[6, 15] = -2;
+            statusMap[7, 14] = statusMap[7, 15] = -2;
+            statusMap[8, 0] = statusMap[8, 1] = statusMap[8, 2] = -2;
+            statusMap[9, 13] = statusMap[9, 14] = statusMap[9, 15] = -2;
+            statusMap[10, 0] = statusMap[10, 1] = -2;
             statusMap[11, 13] = statusMap[11, 14] = statusMap[11, 15] = -2;
             statusMap[12, 0] = statusMap[12, 1] = -2;
-            statusMap[13, 0] = statusMap[13, 1] = statusMap[13, 15] = -2;
-            statusMap[15, 0] = statusMap[15, 1] = statusMap[15, 2] = statusMap[15, 15] = -2;
-            statusMap[16, 14] = statusMap[16, 15] = -2;
+            statusMap[13, 14] = statusMap[13, 15] = -2;
+            statusMap[14, 0] = -2;
+            statusMap[15, 13] = statusMap[15, 14] = statusMap[15, 15] = -2;
+            statusMap[16, 0] = statusMap[16, 1] = -2;
             statusMap[17, 0] = statusMap[17, 1] = statusMap[17, 15] = -2;
-            statusMap[19, 0] = statusMap[19, 15] = -2;
-            statusMap[20, 0] = statusMap[20, 1] = -2;
+            statusMap[19, 0] = statusMap[19, 1] = statusMap[19, 2] = statusMap[19, 15] = -2;
+            statusMap[20, 14] = statusMap[20, 15] = -2;
+            statusMap[21, 0] = statusMap[21, 1] = statusMap[21, 15] = -2;
+            statusMap[23, 0] = statusMap[23, 15] = -2;
+            statusMap[24, 0] = statusMap[24, 1] = -2;
         }
     }
 }

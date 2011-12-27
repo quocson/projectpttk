@@ -21,7 +21,7 @@ namespace TheDeathSawMapPlugin
         {
             for (int i = 0; i < row; i++)
                 for (int j = 0; j < col; j++)
-                    if ((i % 2 == 0) && (j == 0 || j == 1))
+                    if ((i > 3) && (i % 2 == 0) && (j == 0 || j == 1))
                         statusMap[i, j] = -2;
                     else
                         statusMap[i, j] = -1;

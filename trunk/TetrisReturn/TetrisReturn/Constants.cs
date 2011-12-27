@@ -20,9 +20,6 @@ namespace TetrisReturn
         public static PluginMapServices mapService = new PluginMapServices();//static plugin map services.
         public static PluginThemeServices themeService = new PluginThemeServices();//static plugin theme services.
 
-        public static int numColorBlock;//number color of block.
-        public static int numTypeBlock;//number type of block.
-
         //set type for the static map.
         public static void setMap(Map m)
         {
@@ -35,8 +32,6 @@ namespace TetrisReturn
         {
             theme.Dispose();
             theme = new Theme(t);
-            numColorBlock = t.NumColorBlock;
-            numTypeBlock = t.NumTypeBlock;
         }
     }
 }
