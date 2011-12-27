@@ -20,11 +20,11 @@ namespace TetrisReturn
         private Bitmap iOnclick;
         //String 
         private String sText;// button text
-        private Color tColor = Color.White; // text color
-        private Color strokeColor = Color.Black; //stroke color
-        private int strokeWidth = 2; //stroke width
-        private Font tFont; // font of text
-        private Point tPos; //pos of text
+        private Color cText = Color.White; // text color
+        private Color cStroke = Color.Black; //stroke color
+        private int iWidth = 2; //stroke width
+        private Font fText; // font of text
+        private Point pText; //pos of text
         //Drawable
         private bool drawabled;
         private Bitmap buffer;
@@ -37,67 +37,45 @@ namespace TetrisReturn
                 if (drawabled)
                 {
                     buffer = new Bitmap(Height, Width);
-                    SizeF sz = Graphics.FromImage(buffer).MeasureString(SText, TFont);
+                    SizeF sz = Graphics.FromImage(buffer).MeasureString(SText, FText);
                     if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
-                        TPos = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
+                        PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
                     else
-                        TPos = new Point(0, 0);
+                        PText = new Point(0, 0);
                     drawImg();
                     Refresh();
                 }
             }
         }
-        public Point TPos
+        public Point PText
         {
-            get { return tPos; }
-            set { tPos = value; }
+            get { return pText; }
+            set { pText = value; }
         }
-        public Font TFont
+        public Font FText
         {
-            get { return tFont; }
-            set { 
-                tFont = value;
-                //SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
-                ////sap xep vi tri cua text
-                //if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
-                //    TPos = new Point(0, 0);
-                //else
-                //    TPos = new Point((picBox.Width - (int)sz.Width) / 2, (picBox.Height - (int)sz.Height) / 2);
-            }
+            get { return fText; }
+            set { fText = value;}
         }
-        public int StrokeWidth
+        public int IWidth
         {
-            get { return strokeWidth; }
-            set { strokeWidth = value; }
+            get { return iWidth; }
+            set { iWidth = value; }
         }
-        public Color StrokeColor
+        public Color CStroke
         {
-            get { return strokeColor; }
-            set { strokeColor = value; }
+            get { return cStroke; }
+            set { cStroke = value; }
         }
-        public Color TColor
+        public Color CText
         {
-            get { return tColor; }
-            set { tColor = value; }
+            get { return cText; }
+            set { cText = value; }
         }
         public String SText
         {
             get { return sText; }
-            set
-            {
-                sText = value;
-                //if (TFont != null && SText != null)
-                //{
-                //    SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
-                //    //sap xep vi tri cua text
-                //    if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
-                //        TPos = new Point(0, 0);
-                //    else
-                //        TPos = new Point((picBox.Width - (int)sz.Width) / 2, (picBox.Height - (int)sz.Height) / 2);
-                //    drawStr();
-                //    drawImg();
-                //}
-            }
+            set { sText = value;}
         }
         
         public Bitmap IEnabled
@@ -169,61 +147,61 @@ namespace TetrisReturn
         {
             if (!Drawabled)
                 return;
-            SizeF sz = Graphics.FromImage(buffer).MeasureString(SText, TFont);
+            SizeF sz = Graphics.FromImage(buffer).MeasureString(SText, FText);
             if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
-                TPos = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
+                PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
             else
-                TPos = new Point(0, 0);
+                PText = new Point(0, 0);
             if(Enabled)
             {
                 Graphics.FromImage(buffer).DrawImage(IEnabled, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), TPos);
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
             }
             else
             {
                 Graphics.FromImage(buffer).DrawImage(IDisabled, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxtDis(), TPos);
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxtDis(), PText);
             }
         }
 
         private Image getImgFromTxtDis() // ve text trong -  disable
         {
-            if (TFont == null || SText == null)
+            if (FText == null || SText == null)
                 return null;
-            Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
+            Bitmap bmpOut = null; 
             Graphics g = Graphics.FromHwnd(IntPtr.Zero);
-            SizeF sz = g.MeasureString(SText, TFont);
-            bmpOut = new Bitmap((int)sz.Width + strokeWidth, (int)sz.Height + strokeWidth);
+            SizeF sz = g.MeasureString(SText, FText);
+            bmpOut = new Bitmap((int)sz.Width + iWidth, (int)sz.Height + iWidth);
             SolidBrush brFore = new SolidBrush(Color.White);
             Graphics gBmpOut = Graphics.FromImage(bmpOut);
             gBmpOut.SmoothingMode = SmoothingMode.HighQuality;
             gBmpOut.InterpolationMode = InterpolationMode.HighQualityBilinear;
             gBmpOut.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
-            gBmpOut.DrawString(SText, TFont, brFore, strokeWidth / 2, strokeWidth / 2);
+            gBmpOut.DrawString(SText, FText, brFore, iWidth / 2, iWidth / 2);
             return bmpOut;
         }
 
         private Image getImgFromTxt()
         {
             Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
-            if (TFont == null || SText == null)
+            if (FText == null || SText == null)
                 return bmpOut;
             using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
             {
-                SizeF sz = g.MeasureString(SText, TFont);
+                SizeF sz = g.MeasureString(SText, FText);
                 Bitmap bmp = new Bitmap((int)sz.Width, (int)sz.Height);
                 Graphics gBmp = Graphics.FromImage(bmp);
-                SolidBrush brBack = new SolidBrush(Color.FromArgb(255, StrokeColor.R, StrokeColor.G, StrokeColor.B));
-                using (SolidBrush brFore = new SolidBrush(TColor))
+                SolidBrush brBack = new SolidBrush(Color.FromArgb(255, CStroke.R, CStroke.G, CStroke.B));
+                using (SolidBrush brFore = new SolidBrush(CText))
                 {
                     gBmp.SmoothingMode = SmoothingMode.HighQuality;
                     gBmp.InterpolationMode = InterpolationMode.HighQualityBilinear;
                     gBmp.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
 
-                    gBmp.DrawString(SText, TFont, brBack, 0, 0);
+                    gBmp.DrawString(SText, FText, brBack, 0, 0);
 
                     // make bitmap we will return.
-                    bmpOut = new Bitmap(bmp.Width + strokeWidth, bmp.Height + strokeWidth);
+                    bmpOut = new Bitmap(bmp.Width + iWidth, bmp.Height + iWidth);
                     using (Graphics gBmpOut = Graphics.FromImage(bmpOut))
                     {
                         gBmpOut.SmoothingMode = SmoothingMode.HighQuality;
@@ -231,12 +209,12 @@ namespace TetrisReturn
                         gBmpOut.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
 
                         // smear image of background of text about to make blurred background "halo"
-                        for (int x = 0; x <= strokeWidth; x++)
-                            for (int y = 0; y <= strokeWidth; y++)
+                        for (int x = 0; x <= iWidth; x++)
+                            for (int y = 0; y <= iWidth; y++)
                                 gBmpOut.DrawImageUnscaled(bmp, x, y);
 
                         // draw actual text
-                        gBmpOut.DrawString(SText, TFont, brFore, strokeWidth / 2, strokeWidth / 2);
+                        gBmpOut.DrawString(SText, FText, brFore, iWidth / 2, iWidth / 2);
                     }
                 }
             }
@@ -261,7 +239,7 @@ namespace TetrisReturn
             if (Enabled)
             {
                 Graphics.FromImage(buffer).DrawImage(IHover, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), TPos);
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
             }
             Refresh();
         }
@@ -271,7 +249,7 @@ namespace TetrisReturn
             if (Enabled)
             {
                 Graphics.FromImage(buffer).DrawImage(IOnclick, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), TPos);
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
             }
             Refresh();
         }
@@ -280,7 +258,7 @@ namespace TetrisReturn
         {
             if (e.X > 0 && e.X < Width && e.Y > 0 && e.Y < Height)
             {
-
+                // xu li khi click button
             }
             drawImg();
             Refresh();   

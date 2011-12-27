@@ -35,9 +35,9 @@
             // picBox
             // 
             this.picBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.picBox.Location = new System.Drawing.Point(33, 45);
+            this.picBox.Location = new System.Drawing.Point(44, 101);
             this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(192, 152);
+            this.picBox.Size = new System.Drawing.Size(169, 152);
             this.picBox.TabIndex = 0;
             this.picBox.TabStop = false;
             // 
@@ -48,7 +48,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Controls.Add(this.picBox);
             this.Name = "NextShape";
-            this.Size = new System.Drawing.Size(262, 200);
+            this.Size = new System.Drawing.Size(262, 268);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
 
