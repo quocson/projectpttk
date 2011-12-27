@@ -6,82 +6,94 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 
 namespace TetrisReturn
 {
     public partial class NextShape : UserControl
     {
         private String sText;// button text
-        private Color tColor = Color.White; // text color
-        private Color strokeColor = Color.Black; //stroke color
-        private int strokeWidth = 2; //stroke width
-        private Font tFont; // font of text
-        private Point tPos; //pos of text
+        private Color cText = Color.White; // text color
+        private Color cStroke = Color.Black; //stroke color
+        private int iWidth = 2; //stroke width
+        private Font fText; // font of text
+        private Point pText; //pos of text
         private Shape shapeNext;
+        private bool drawabled;
+        private Bitmap buffer;
+        private Bitmap imgBack;
+
         public Shape ShapeNext
         {
             get { return shapeNext; }
-            set { shapeNext = value;
-            shapeNext.drawShape(Graphics.FromImage(picBox.Image));
-            }
-        }
-        public Point TPos
-        {
-            get { return tPos; }
-            set { tPos = value; }
-        }
-        public Font TFont
-        {
-            get { return tFont; }
             set
             {
-                tFont = value;
-                SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
-                //sap xep vi tri cua text
-                if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
-                    TPos = new Point(0, 0);
-                else
-                    TPos = new Point((picBox.Width - (int)sz.Width) / 2, (picBox.Height - (int)sz.Height) / 2);
+                shapeNext = value;
             }
         }
-        public int StrokeWidth
+        public Bitmap ImgBack
         {
-            get { return strokeWidth; }
-            set { strokeWidth = value; }
+            get { return imgBack; }
+            set
+            {
+                if (value == null)
+                    return;
+                imgBack = new Bitmap(value.Width, value.Height);
+                Graphics.FromImage(imgBack).DrawImage(value, new Point(0, 0));
+            }
         }
-        public Color StrokeColor
+        public Point PText
         {
-            get { return strokeColor; }
-            set { strokeColor = value; }
+            get { return pText; }
+            set { pText = value; }
         }
-
-        public Color TColor
+        public Font FText
         {
-            get { return tColor; }
-            set { tColor = value; }
+            get { return fText; }
+            set{fText = value;}
+        }
+        public int IWidth
+        {
+            get { return iWidth; }
+            set { iWidth = value; }
+        }
+        public Color CStroke
+        {
+            get { return cStroke; }
+            set { cStroke = value; }
+        }
+        public Color CText
+        {
+            get { return cText; }
+            set { cText = value; }
         }
         public String SText
         {
             get { return sText; }
-            set
-            {
-                sText = value;
-                if (canDraw())
-                {
-                    SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
-                    //sap xep vi tri cua text
-                    if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
-                        TPos = new Point(0, 0);
-                    else
-                        TPos = new Point((picBox.Width - (int)sz.Width) / 2, (picBox.Height - (int)sz.Height) / 2);
-                    
-                }
+            set{sText = value;}
+        }
+        public bool Drawabled
+        {
+            get { return drawabled; }
+            set { drawabled = value;
+            if (!Drawabled)
+                return;
+            buffer = new Bitmap(Width, Height);
+            SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
+            picBox.Top = (int)sz.Height;
+            if (Width - (int)sz.Width < 0)
+                PText = new Point(0, 0);
+            else
+                PText = new Point((Width - (int)sz.Width) / 2, 0);
+            Graphics.FromImage(buffer).DrawImage(ImgBack, new Point(0, 0));
+            Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
+            Refresh();
             }
         }
         public NextShape()
         {
             InitializeComponent();
-            Enabled = false;
             picBox.Height = 4 * Constants.blockSize + 3 * Constants.blockDelta;
             picBox.Width = 4 * Constants.blockSize + 3 * Constants.blockDelta;
             picBox.Image = new Bitmap(picBox.Width, picBox.Height);
@@ -89,34 +101,51 @@ namespace TetrisReturn
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            if (!Enabled)
+            if (!Drawabled)
                 return;
-            Font TFont = new Font("Transformers Movie", 20, FontStyle.Bold);
-            Point TPos;
-            SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
-            picBox.Top = (int) sz.Height;
-                    //sap xep vi tri cua text
-            if (picBox.Height - (int)sz.Height < 0 || picBox.Width - (int)sz.Width < 0)
-                TPos = new Point(0, 0);
-            else
-                TPos = new Point((picBox.Width - (int)sz.Width) / 2, 0);
-            e.Graphics.DrawString("Next Shape", TFont, new SolidBrush(Color.Red), TPos);
-            //Graphics.FromImage(picBox.Image)
+            e.Graphics.DrawImage(buffer, new Point(0,0));
+            shapeNext.drawShape(Graphics.FromImage(picBox.Image));
         }
-        private bool canDraw()
-        {
-            if (TFont == null)
-                return false;
-            if (SText == null)
-                return false;
-            if (TColor == null)
-                return false;
-            if (StrokeColor == null)
-                return false;
-            if (TPos == null)
-                return false;
 
-            return true;
+        private Image getImgFromTxt()
+        {
+            Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
+            if (FText == null || SText == null)
+                return bmpOut;
+            using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
+            {
+                SizeF sz = g.MeasureString(SText, FText);
+                Bitmap bmp = new Bitmap((int)sz.Width, (int)sz.Height);
+                Graphics gBmp = Graphics.FromImage(bmp);
+                SolidBrush brBack = new SolidBrush(Color.FromArgb(255, CStroke.R, CStroke.G, CStroke.B));
+                using (SolidBrush brFore = new SolidBrush(CText))
+                {
+                    gBmp.SmoothingMode = SmoothingMode.HighQuality;
+                    gBmp.InterpolationMode = InterpolationMode.HighQualityBilinear;
+                    gBmp.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
+
+                    gBmp.DrawString(SText, FText, brBack, 0, 0);
+
+                    // make bitmap we will return.
+                    bmpOut = new Bitmap(bmp.Width + iWidth, bmp.Height + iWidth);
+                    using (Graphics gBmpOut = Graphics.FromImage(bmpOut))
+                    {
+                        gBmpOut.SmoothingMode = SmoothingMode.HighQuality;
+                        gBmpOut.InterpolationMode = InterpolationMode.HighQualityBilinear;
+                        gBmpOut.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
+
+                        // smear image of background of text about to make blurred background "halo"
+                        for (int x = 0; x <= iWidth; x++)
+                            for (int y = 0; y <= iWidth; y++)
+                                gBmpOut.DrawImageUnscaled(bmp, x, y);
+
+                        // draw actual text
+                        gBmpOut.DrawString(SText, FText, brFore, iWidth / 2, iWidth / 2);
+                    }
+                }
+            }
+
+            return bmpOut;
         }
     }
 }
