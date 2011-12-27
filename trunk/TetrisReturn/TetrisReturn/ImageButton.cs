@@ -63,7 +63,7 @@ namespace TetrisReturn
             set
             {
                 sText = value;
-                if (canDraw())
+                if (TFont != null && SText != null)
                 {
                     SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);
                     //sap xep vi tri cua text
@@ -112,6 +112,11 @@ namespace TetrisReturn
             TFont = new Font("Arial", 5);
         }
 
+        protected override void  OnPaint(PaintEventArgs e)
+        {
+ 	        base.OnPaint(e);
+        }
+        
 
         private void picBox_MouseHover(object sender, EventArgs e)
         {
@@ -155,6 +160,8 @@ namespace TetrisReturn
 
         private void drawStr()
         {
+            if (TFont == null || SText == null)
+                return ;
             if (Enabled)
                 Graphics.FromImage(picBox.Image).DrawImage(getImgFromTxt(), TPos);
             else
@@ -170,13 +177,16 @@ namespace TetrisReturn
             }
             else
             {
-                Graphics.FromImage(picBox.Image).DrawImage(IDisabled, new Point(0, 0));
+                if(IDisabled != null)
+                    Graphics.FromImage(picBox.Image).DrawImage(IDisabled, new Point(0, 0));
             }
             drawStr();  
         }
 
         private Image getImgFromTxtDis() // ve text trong -  disable
         {
+            if (TFont == null || SText == null)
+                return null;
             Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
             Graphics g = Graphics.FromHwnd(IntPtr.Zero);
             SizeF sz = g.MeasureString(SText, TFont);
@@ -193,13 +203,14 @@ namespace TetrisReturn
         private Image getImgFromTxt()
         {
             Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
-
+            if (TFont == null || SText == null)
+                return bmpOut;
             using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
             {
                 SizeF sz = g.MeasureString(SText, TFont);
-                using (Bitmap bmp = new Bitmap((int)sz.Width, (int)sz.Height))
-                using (Graphics gBmp = Graphics.FromImage(bmp))
-                using (SolidBrush brBack = new SolidBrush(Color.FromArgb(255, StrokeColor.R, StrokeColor.G, StrokeColor.B)))
+                Bitmap bmp = new Bitmap((int)sz.Width, (int)sz.Height);
+                Graphics gBmp = Graphics.FromImage(bmp);
+                SolidBrush brBack = new SolidBrush(Color.FromArgb(255, StrokeColor.R, StrokeColor.G, StrokeColor.B));
                 using (SolidBrush brFore = new SolidBrush(TColor))
                 {
                     gBmp.SmoothingMode = SmoothingMode.HighQuality;
