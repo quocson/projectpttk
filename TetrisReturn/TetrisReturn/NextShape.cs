@@ -17,6 +17,14 @@ namespace TetrisReturn
         private int strokeWidth = 2; //stroke width
         private Font tFont; // font of text
         private Point tPos; //pos of text
+        private Shape shapeNext;
+        public Shape ShapeNext
+        {
+            get { return shapeNext; }
+            set { shapeNext = value;
+            shapeNext.drawShape(Graphics.FromImage(picBox.Image));
+            }
+        }
         public Point TPos
         {
             get { return tPos; }
@@ -73,14 +81,16 @@ namespace TetrisReturn
         public NextShape()
         {
             InitializeComponent();
-            
-            picBox.Height = Height;
-            picBox.Width = Width;
+            Enabled = false;
+            picBox.Height = 4 * Constants.blockSize + 3 * Constants.blockDelta;
+            picBox.Width = 4 * Constants.blockSize + 3 * Constants.blockDelta;
             picBox.Image = new Bitmap(picBox.Width, picBox.Height);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
+            if (!Enabled)
+                return;
             Font TFont = new Font("Transformers Movie", 20, FontStyle.Bold);
             Point TPos;
             SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, TFont);

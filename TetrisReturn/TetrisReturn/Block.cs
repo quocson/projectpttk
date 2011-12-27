@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace TetrisReturn
 {
-    class Block : IDisposable
+    public class Block : IDisposable
     {
         private int xScreen;//x position of block on the screen.
         private int yScreen;//y position of block on the screen.

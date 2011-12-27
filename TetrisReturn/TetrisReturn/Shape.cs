@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace TetrisReturn
 {
-    class Shape : IDisposable
+    public class Shape : IDisposable
     {
         protected int[,] statusArr;//status of blocks on the shape.
         protected int row;//row of shape.
