@@ -14,8 +14,6 @@ namespace TetrisReturn
         public MainForm()
         {
             InitializeComponent();
-            imageButton1.SText = "New game";
-            nextShape1.SText = "Next shape";
 
         }
     }

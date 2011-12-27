@@ -34,6 +34,7 @@
             // 
             // picBox
             // 
+            this.picBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.picBox.Location = new System.Drawing.Point(33, 45);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(192, 152);

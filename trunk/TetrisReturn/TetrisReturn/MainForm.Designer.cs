@@ -29,43 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.imageButton1 = new TetrisReturn.ImageButton();
-            this.nextShape1 = new TetrisReturn.NextShape();
             this.SuspendLayout();
-            // 
-            // imageButton1
-            // 
-            this.imageButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.imageButton1.IDisabled = null;
-            this.imageButton1.IEnabled = null;
-            this.imageButton1.IHover = null;
-            this.imageButton1.IOnclick = null;
-            this.imageButton1.Location = new System.Drawing.Point(64, 67);
-            this.imageButton1.Name = "imageButton1";
-            this.imageButton1.Size = new System.Drawing.Size(200, 159);
-            this.imageButton1.SText = null;
-            this.imageButton1.StrokeColor = System.Drawing.Color.Black;
-            this.imageButton1.StrokeWidth = 2;
-            this.imageButton1.TabIndex = 0;
-            this.imageButton1.TColor = System.Drawing.Color.White;
-            this.imageButton1.TFont = new System.Drawing.Font("Arial", 5F);
-            this.imageButton1.TPos = new System.Drawing.Point(100, 79);
-            // 
-            // nextShape1
-            // 
-            this.nextShape1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.nextShape1.Location = new System.Drawing.Point(421, 46);
-            this.nextShape1.Name = "nextShape1";
-            this.nextShape1.Size = new System.Drawing.Size(262, 200);
-            this.nextShape1.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 297);
-            this.Controls.Add(this.nextShape1);
-            this.Controls.Add(this.imageButton1);
+            this.ClientSize = new System.Drawing.Size(116, 0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Tetris Return";
@@ -75,8 +45,6 @@
 
         #endregion
 
-        private ImageButton imageButton1;
-        private NextShape nextShape1;
 
 
     }
