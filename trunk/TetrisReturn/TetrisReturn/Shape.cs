@@ -28,6 +28,7 @@ namespace TetrisReturn
                     statusArr[i, j] = false;
                 }
 
+            cube = new List<Block>();
             color = Constants.r.Next(0, Constants.theme.NumColorBlock);
         }
 
