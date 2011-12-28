@@ -6,7 +6,7 @@ using System.Xml;
 
 namespace TetrisReturn
 {
-    class Config
+    public class Config : IDisposable
     {
         XmlDocument xmlDoc;
         private string sPath = AppDomain.CurrentDomain.BaseDirectory + @"\setting.cfg";
@@ -47,6 +47,11 @@ namespace TetrisReturn
             {
                 createNew();
             }
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
         }
         private void createNew()
         {

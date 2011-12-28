@@ -111,6 +111,7 @@
     <Compile Include="ShowInformation.Designer.cs">
       <DependentUpon>ShowInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="SoundControl.cs" />
     <EmbeddedResource Include="ImageButton.resx">
       <DependentUpon>ImageButton.cs</DependentUpon>
     </EmbeddedResource>

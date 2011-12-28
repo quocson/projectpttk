@@ -114,6 +114,15 @@ namespace TetrisReturn
                 }
                 return toReturn;
             }
+
+            public Types.AvailableTheme getFirst()
+            {
+                Types.AvailableTheme toReturn = null;
+
+                toReturn = (AvailableTheme)this.List[0];
+
+                return toReturn;
+            }
         }
 
         public class AvailableTheme
