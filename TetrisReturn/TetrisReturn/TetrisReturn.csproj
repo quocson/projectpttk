@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="ClassicShape.cs" />
     <Compile Include="Block.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="GameControl.cs">
       <SubType>Component</SubType>
