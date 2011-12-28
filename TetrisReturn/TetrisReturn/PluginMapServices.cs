@@ -114,6 +114,15 @@ namespace TetrisReturn
                 }
                 return toReturn;
             }
+
+            public Types.AvailableMap getFirst()
+            {
+                Types.AvailableMap toReturn = null;
+
+                toReturn = (AvailableMap)this.List[0];
+
+                return toReturn;
+            }
         }
 
         public class AvailableMap
