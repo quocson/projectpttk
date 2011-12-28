@@ -9,8 +9,6 @@ namespace TetrisReturn
     {
         public ClassicShape()
         {
-            cube = new List<Block>();
-
             int kind = Constants.r.Next(0, 7);
             switch (kind)
             {
