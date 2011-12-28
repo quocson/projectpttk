@@ -19,12 +19,6 @@ namespace TetrisReturn
             get { return sMap; }
             set { sMap = value; }
         }
-        private string sLanguage = "";
-        public string SLanguage
-        {
-            get { return sLanguage; }
-            set { sLanguage = value; }
-        }
         private string sShapeMode  = "";
         public string SShapeMode
         {

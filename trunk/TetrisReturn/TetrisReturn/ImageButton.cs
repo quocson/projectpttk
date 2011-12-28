@@ -28,6 +28,9 @@ namespace TetrisReturn
         //Drawable
         private bool drawabled;
         private Bitmap buffer;
+        //event
+        public delegate void ImageButton_ClickHandle();
+        public event ImageButton_ClickHandle Button_Click;
         public bool Drawabled
         {
             get { return drawabled; }
@@ -258,7 +261,7 @@ namespace TetrisReturn
         {
             if (e.X > 0 && e.X < Width && e.Y > 0 && e.Y < Height)
             {
-                // xu li khi click button
+                Button_Click();
             }
             drawImg();
             Refresh();   
