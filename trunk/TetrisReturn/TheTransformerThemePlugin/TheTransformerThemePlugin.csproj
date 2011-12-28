@@ -50,10 +50,6 @@
     <Compile Include="TheTransformerThemeInterface.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MapPluginInterface\MapPluginInterface.csproj">
-      <Project>{BF092A8C-6205-4F2A-9D9E-5FD98DF482F4}</Project>
-      <Name>MapPluginInterface</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ThemePluginInterface\ThemePluginInterface.csproj">
       <Project>{12BAB21A-F35A-48FD-9C48-B58184414564}</Project>
       <Name>ThemePluginInterface</Name>

@@ -55,9 +55,7 @@ E:\Document\Software design\Project sem\TetrisReturn\TheSketchThemePlugin\obj\De
 E:\Document\Software design\Project sem\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.dll
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.pdb
-C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.dll
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.dll
-C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSketchThemePlugin\bin\Debug\MapInterface.pdb
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.pdb
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSketchThemePlugin\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.Properties.Resources.resources
