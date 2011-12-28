@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MapPluginInterface;
 using ThemePluginInterface;
+using System.Windows.Forms;
 
 namespace TetrisReturn
 {
@@ -33,6 +34,18 @@ namespace TetrisReturn
         {
             theme.Dispose();
             theme = new Theme(t);
+        }
+
+        //find map.
+        public static void findMap()
+        {
+            mapService.findMaps(Application.StartupPath + @"\Maps");
+        }
+
+        //find theme.
+        public static void findTheme()
+        {
+            themeService.findThemes(Application.StartupPath + @"\Themes");
         }
     }
 }

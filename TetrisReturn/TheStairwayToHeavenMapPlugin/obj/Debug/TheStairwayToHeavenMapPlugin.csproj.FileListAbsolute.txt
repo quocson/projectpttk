@@ -48,3 +48,13 @@ E:\Document\Software design\Project sem\TetrisReturn\TheStairwayToHeavenMapPlugi
 E:\Document\Software design\Project sem\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\Project sem\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\TheStairwayToHeavenMapPlugin.dll
 E:\Document\Software design\Project sem\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\TheStairwayToHeavenMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\bin\Debug\TheStairwayToHeavenMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\bin\Debug\TheStairwayToHeavenMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\TheStairwayToHeavenMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\TheStairwayToHeavenMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheStairwayToHeavenMapPlugin\obj\Debug\TheStairwayToHeavenMapPlugin.pdb

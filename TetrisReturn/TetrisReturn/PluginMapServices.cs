@@ -18,12 +18,12 @@ namespace TetrisReturn
             set { colAvailableMaps = value; }
         }
 
-        public void FindMaps()
+        public void findMaps()
         {
-            FindMaps(AppDomain.CurrentDomain.BaseDirectory);
+            findMaps(AppDomain.CurrentDomain.BaseDirectory);
         }
 
-        public void FindMaps(string Path)
+        public void findMaps(string Path)
         {
             colAvailableMaps.Clear();
 
@@ -33,12 +33,12 @@ namespace TetrisReturn
 
                 if (file.Extension.Equals(".dll"))
                 {
-                    this.AddMap(fileOn);
+                    this.addMap(fileOn);
                 }
             }
         }
 
-        public void CloseMaps()
+        public void closeMaps()
         {
             foreach (Types.AvailableMap mapOn in colAvailableMaps)
             {
@@ -50,7 +50,7 @@ namespace TetrisReturn
             colAvailableMaps.Clear();
         }
 
-        private void AddMap(string FileName)
+        private void addMap(string FileName)
         {
             Assembly mapAssembly = Assembly.LoadFrom(FileName);
 

@@ -48,3 +48,13 @@ E:\Document\Software design\Project sem\TetrisReturn\TheSquareTimeMapPlugin\obj\
 E:\Document\Software design\Project sem\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\Project sem\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.dll
 E:\Document\Software design\Project sem\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.pdb
