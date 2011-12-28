@@ -103,7 +103,7 @@ namespace TetrisReturn
             int x = mapPosotion().X;
             int y = mapPosotion().Y;
 
-            if ((x >= 0 && x < Constants.map.Colum) &&
+            if ((x >= 0 && x < Constants.map.Column) &&
                 (y >= 0 && y < Constants.map.Row) &&
                 Constants.map.StatusMap[x, y] == -1)
                 return true;
@@ -117,7 +117,7 @@ namespace TetrisReturn
             int x = mapPosotion().X;
             int y = mapPosotion().Y;
 
-            if ((x > 0 && x < Constants.map.Colum) &&
+            if ((x > 0 && x < Constants.map.Column) &&
                 (y >= 0 && y < Constants.map.Row - 1) &&
                 Constants.map.StatusMap[x - 1, y] == -1)
                 return true;
@@ -131,7 +131,7 @@ namespace TetrisReturn
             int x = mapPosotion().X;
             int y = mapPosotion().Y;
 
-            if ((x >= 0 && x < Constants.map.Colum - 1) &&
+            if ((x >= 0 && x < Constants.map.Column - 1) &&
                 (y >= 0 && y < Constants.map.Row - 1) &&
                 Constants.map.StatusMap[x + 1, y] == -1)
                 return true;
@@ -145,7 +145,7 @@ namespace TetrisReturn
             int x = mapPosotion().X;
             int y = mapPosotion().Y;
 
-            if ((x >= 0 && x < Constants.map.Colum) &&
+            if ((x >= 0 && x < Constants.map.Column) &&
                 (y >= 0 && y < Constants.map.Row - 1) &&
                 Constants.map.StatusMap[x, y + 1] == -1)
                 return true;

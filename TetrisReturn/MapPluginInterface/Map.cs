@@ -64,7 +64,7 @@ namespace MapPluginInterface
         public int Row { get { return row; } }
 
         //Colum properties.
-        public int Colum { get { return col; } }
+        public int Column { get { return col; } }
 
         //check point on map.
         public bool checkOnMap(int x, int y)
