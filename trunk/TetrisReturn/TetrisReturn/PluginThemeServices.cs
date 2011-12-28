@@ -18,12 +18,12 @@ namespace TetrisReturn
             set { colAvailableThemes = value; }
         }
 
-        public void FindThemes()
+        public void findThemes()
         {
-            FindThemes(AppDomain.CurrentDomain.BaseDirectory);
+            findThemes(AppDomain.CurrentDomain.BaseDirectory);
         }
 
-        public void FindThemes(string Path)
+        public void findThemes(string Path)
         {
             colAvailableThemes.Clear();
 
@@ -33,12 +33,12 @@ namespace TetrisReturn
 
                 if (file.Extension.Equals(".dll"))
                 {
-                    this.AddTheme(fileOn);
+                    this.addTheme(fileOn);
                 }
             }
         }
 
-        public void CloseThemes()
+        public void closeThemes()
         {
             foreach (Types.AvailableTheme themeOn in colAvailableThemes)
             {
@@ -50,7 +50,7 @@ namespace TetrisReturn
             colAvailableThemes.Clear();
         }
 
-        private void AddTheme(string FileName)
+        private void addTheme(string FileName)
         {
             Assembly themeAssembly = Assembly.LoadFrom(FileName);
 

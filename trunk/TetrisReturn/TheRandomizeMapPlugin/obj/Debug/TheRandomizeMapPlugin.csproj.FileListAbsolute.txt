@@ -48,3 +48,13 @@ E:\Document\Software design\Project sem\TetrisReturn\TheRandomizeMapPlugin\obj\D
 E:\Document\Software design\Project sem\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\Project sem\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.dll
 E:\Document\Software design\Project sem\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\bin\Debug\TheRandomizeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\bin\Debug\TheRandomizeMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.pdb

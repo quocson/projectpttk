@@ -27,5 +27,13 @@ namespace TetrisReturn
             save = slg.load();
             int tre= 3;
         }
+
+        private bool setLastConfig()
+        {
+            //set success.
+
+            //set fail.
+            return false;
+        }
     }
 }
