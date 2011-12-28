@@ -53,6 +53,28 @@ namespace TetrisReturn
             }
         }
 
+        public Shape(Shape s, int x, int y)
+        {
+            row = s.row;
+            col = s.col;
+            xScreen = x;
+            yScreen = y;
+            color = s.color;
+
+            statusArr = new bool[4, 4];
+            for (int i = 0; i < 4; i++)
+                for (int j = 0; j < 4; j++)
+                {
+                    statusArr[i, j] = s.statusArr[i, j];
+                }
+
+            int n = s.cube.Count;
+            for (int i = 0; i < n; i++)
+            {
+                cube[i] = new Block(s.cube[i], x, y);
+            }
+        }
+
         public void Dispose()
         {
             int n = cube.Count;

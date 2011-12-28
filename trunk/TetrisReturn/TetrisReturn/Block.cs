@@ -37,6 +37,14 @@ namespace TetrisReturn
             type = b.type;
         }
 
+        public Block(Block b, int x, int y)
+        {
+            xScreen = x;
+            yScreen = y;
+            color = b.color;
+            type = b.type;
+        }
+
         //xScreen properties.
         public int X
         {
