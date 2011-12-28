@@ -86,8 +86,8 @@ namespace TetrisReturn
         //move shape go to end map.
         public void goToEndMap()
         {
-            while (canFallDown())
-                fallDown();
+            while (canFall())
+                moveDown();
         }
 
         //erase shape on the graphics.
@@ -175,7 +175,7 @@ namespace TetrisReturn
         }
 
         //lock shape on static map.
-        public void lockShapOnMap()
+        public void lockShapeOnMap()
         {
             int n = cube.Count;
             for (int i = 0; i < n; i++)
@@ -185,7 +185,7 @@ namespace TetrisReturn
         }
 
         //check shape can move down.
-        public bool canFallDown()
+        public bool canFall()
         {
             int n = cube.Count;
             for (int i = 0; i < n; i++)
@@ -222,7 +222,7 @@ namespace TetrisReturn
         }
 
         //move shape down.
-        public void fallDown()
+        public void moveDown()
         {
             int n = cube.Count;
             for (int i = 0; i < n; i++)
