@@ -14,7 +14,7 @@ namespace TetrisReturn
         protected int xScreen;//x position of shape on the screen.
         protected int yScreen;//y position of shape on the screen.
         protected int color;//color of shape.
-        protected List<Block> cube;//blocks of shape.
+        protected List<Block> cube = new List<Block>();//blocks of shape.
 
         public Shape()
         {
@@ -28,7 +28,6 @@ namespace TetrisReturn
                     statusArr[i, j] = false;
                 }
 
-            cube = new List<Block>();
             color = Constants.r.Next(0, Constants.theme.NumColorBlock);
         }
 
@@ -50,12 +49,12 @@ namespace TetrisReturn
             int n = s.cube.Count;
             for (int i = 0; i < n; i++)
             {
-                cube[i] = new Block(s.cube[i]);
+                cube.Add(new Block(s.cube[i]));
             }
         }
 
         public Shape(Shape s, int x, int y)
-        {
+        { 
             row = s.row;
             col = s.col;
             xScreen = x;
@@ -72,7 +71,7 @@ namespace TetrisReturn
             int n = s.cube.Count;
             for (int i = 0; i < n; i++)
             {
-                cube[i] = new Block(s.cube[i], x, y);
+                cube.Add(new Block(s.cube[i], x, y));
             }
         }
 

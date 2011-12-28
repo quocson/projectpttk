@@ -23,6 +23,7 @@ namespace TetrisReturn
         private bool drawabled;
         private Bitmap buffer;
         private Bitmap imgBack;
+        private int iTopShape;
 
         public Shape ShapeNext
         {
@@ -30,6 +31,18 @@ namespace TetrisReturn
             set
             {
                 shapeNext = value;
+                if (Drawabled)
+                {
+                    Graphics.FromImage(buffer).DrawImage(ImgBack, new Point(0, 0));
+                    Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
+                    SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
+                    iTopShape = 0;
+                    if (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta > 0)
+                        iTopShape = (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta) / 2;
+                    shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height);
+                    shapeNext.drawShape(Graphics.FromImage(buffer));
+                }
+                Refresh();
             }
         }
         public Bitmap ImgBack
@@ -76,27 +89,31 @@ namespace TetrisReturn
         public bool Drawabled
         {
             get { return drawabled; }
-            set { drawabled = value;
-            if (!Drawabled)
-                return;
-            buffer = new Bitmap(Width, Height);
-            SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
-            picBox.Top = (int)sz.Height;
-            if (Width - (int)sz.Width < 0)
-                PText = new Point(0, 0);
-            else
-                PText = new Point((Width - (int)sz.Width) / 2, 0);
-            Graphics.FromImage(buffer).DrawImage(ImgBack, new Point(0, 0));
-            Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
-            Refresh();
+            set { 
+                drawabled = value;
+                if (!Drawabled)
+                    return;
+                buffer = new Bitmap(Width, Height);
+                SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
+
+                iTopShape = 0;
+                if (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta > 0)
+                    iTopShape = (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta) / 2;
+                shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height);
+
+                if (Width - (int)sz.Width < 0)
+                    PText = new Point(0, 0);
+                else
+                    PText = new Point((Width - (int)sz.Width) / 2, 0);
+                shapeNext.drawShape(Graphics.FromImage(buffer));
+                Graphics.FromImage(buffer).DrawImage(ImgBack, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
+                Refresh();
             }
         }
         public NextShape()
         {
             InitializeComponent();
-            picBox.Height = 4 * Constants.blockSize + 3 * Constants.blockDelta;
-            picBox.Width = 4 * Constants.blockSize + 3 * Constants.blockDelta;
-            picBox.Image = new Bitmap(picBox.Width, picBox.Height);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -104,7 +121,6 @@ namespace TetrisReturn
             if (!Drawabled)
                 return;
             e.Graphics.DrawImage(buffer, new Point(0,0));
-            shapeNext.drawShape(Graphics.FromImage(picBox.Image));
         }
 
         private Image getImgFromTxt()

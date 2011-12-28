@@ -42,7 +42,7 @@
             this.showInformation1.FText = null;
             this.showInformation1.ImgBack = null;
             this.showInformation1.IWidth = 2;
-            this.showInformation1.Location = new System.Drawing.Point(151, 46);
+            this.showInformation1.Location = new System.Drawing.Point(67, 61);
             this.showInformation1.Name = "showInformation1";
             this.showInformation1.Number = 0;
             this.showInformation1.PNumber = new System.Drawing.Point(0, 0);
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 251);
+            this.ClientSize = new System.Drawing.Size(659, 310);
             this.Controls.Add(this.showInformation1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
