@@ -22,6 +22,10 @@ namespace TetrisReturn
             showInformation1.FNumber = new Font("DS-Digital", 30);
             showInformation1.Number = 100;
             showInformation1.Drawabled = true;
+            SaveDTO save = new SaveDTO();
+            SaveLoad slg = new SaveLoad();
+            save = slg.load();
+            int tre= 3;
         }
     }
 }

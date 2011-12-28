@@ -101,6 +101,8 @@
     <Compile Include="PluginThemeServices.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveDTO.cs" />
+    <Compile Include="SaveLoad.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="ShowInformation.cs">
       <SubType>UserControl</SubType>

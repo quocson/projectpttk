@@ -318,12 +318,12 @@ namespace TetrisReturn
             for (int i = rootLine; i < n; i++)
             {
                 counter = 0;
-                for (int j = 0; j < Constants.map.Colum; j++)
+                for (int j = 0; j < Constants.map.Column; j++)
                 {
                     if (Constants.map.checkOnMap(i, j) && Constants.map.StatusMap[i, j] != -1)
                         counter++;
                 }
-                if (counter == Constants.map.Colum)
+                if (counter == Constants.map.Column)
                 {
                     fullLines.Push(i);
                 }
