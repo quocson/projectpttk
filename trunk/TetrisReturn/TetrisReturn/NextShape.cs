@@ -114,6 +114,7 @@ namespace TetrisReturn
         public NextShape()
         {
             InitializeComponent();
+            Drawabled = false;
         }
         protected override void OnPaint(PaintEventArgs e)
         {

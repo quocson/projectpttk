@@ -19,26 +19,18 @@ namespace TetrisReturn
         private Color cText = Color.White; // text color
         private Color cStroke = Color.Black; //stroke color
         private int iWidth = 2; //stroke width
-        private Font fText; // font of text
+        private Font fText ;// font of text
         private Point pText; //pos of text
         //Drawable
         private Bitmap image;
         public System.Drawing.Bitmap Image
         {
             get { return image; }
-            set { image = value;
+            set { 
                 image = new Bitmap(value.Width, value.Height);
                 Graphics.FromImage(image).DrawImage(value, new Point(0, 0));
-                SizeF sz = Graphics.FromImage(image).MeasureString(SText, FText);
-                if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
-                    PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
-                else
-                    PText = new Point(0, 0);
-                if(Enabled)
-                    Graphics.FromImage(image).DrawImage(getImgFromTxt(), PText);
-                else
-                    Graphics.FromImage(image).DrawImage(getImgFromTxtDis(), PText);
-            
+                
+                Refresh();
             }
         }
         //event
@@ -48,7 +40,7 @@ namespace TetrisReturn
         public Point PText
         {
             get { return pText; }
-            set { pText = value; }
+            set { pText = value;}
         }
         public Font FText
         {
@@ -73,7 +65,12 @@ namespace TetrisReturn
         public String SText
         {
             get { return sText; }
-            set { sText = value;}
+            set
+            {
+                sText = value;
+                if (sText != null && fText != null)
+                    Refresh();
+            }
         }
         
         
@@ -82,7 +79,8 @@ namespace TetrisReturn
             InitializeComponent();
 
             image = new Bitmap(1, 1);
-            
+
+            FText = new Font("Arial", 15);
             //default
         }
 
@@ -91,6 +89,18 @@ namespace TetrisReturn
  	        base.OnPaint(e);
 
             e.Graphics.DrawImage(image, new Point(0, 0));
+
+            if (fText == null ||getImgFromTxt() == null)
+                return;
+            SizeF sz = Graphics.FromImage(image).MeasureString(SText, FText);
+            if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
+                PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
+            else
+                PText = new Point(0, 0);
+            if (Enabled)
+                e.Graphics.DrawImage(getImgFromTxt(), PText);
+            else
+                e.Graphics.DrawImage(getImgFromTxtDis(), PText);
         }
         
 
