@@ -39,11 +39,6 @@
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "ImageButton";
             this.Size = new System.Drawing.Size(180, 60);
-            this.EnabledChanged += new System.EventHandler(this.ImageButton_EnabledChanged);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImageButton_MouseDown);
-            this.MouseEnter += new System.EventHandler(this.ImageButton_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.ImageButton_MouseLeave);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ImageButton_MouseUp);
             this.ResumeLayout(false);
 
         }
