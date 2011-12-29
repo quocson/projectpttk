@@ -16,6 +16,10 @@ namespace TetrisReturn
         private GameControl gameControl;
         private SoundControl soundControl;
         private string languageDisplay;
+        private About about;
+        private Help help;
+        private HighScores highScores;
+        private Option option;
 
         public MainForm()
         {
@@ -27,11 +31,22 @@ namespace TetrisReturn
         {
             Constants.findMap();
             Constants.findTheme();
-            if (Constants.themeService.AvailableThemes.Count == 0 || Constants.mapService.AvailableMaps.Count == 0) ;
-                //thong bao mat file, khong the tiep tuc. dong chuong trinh.
-            MessageBox.Show("wtf?");
-            if (!setLastConfig()) ;
-                //thong bao mat mot so file nhung van co the tiep tuc, yeu cau kiem tra...
+            if (Constants.themeService.AvailableThemes.Count == 0 || Constants.mapService.AvailableMaps.Count == 0)
+            {
+                //MessageBox.Show(this, "", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Constants.themeService.closeThemes();
+                Constants.mapService.closeMaps();
+                Application.Exit();
+            }
+            if (!setLastConfig())
+                if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                {
+                    Constants.themeService.closeThemes();
+                    Constants.mapService.closeMaps();
+                    Constants.theme.Dispose();
+                    Constants.map.Dispose();
+                    Application.Exit();
+                }
 
             gameControl = new GameControl();
             soundControl = new SoundControl();
@@ -64,6 +79,7 @@ namespace TetrisReturn
             //set theme, map.
             Constants.setTheme(lastTheme.Instance.Theme);
             Constants.setMap(lastMap.Instance.Map);
+            MessageBox.Show(this, "", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             //set ghost.
             enableGhostShape = config.BGhost;
@@ -76,6 +92,13 @@ namespace TetrisReturn
 
             //...
             return success;
+        }
+
+        //exit game.
+        private void exitGame()
+        {
+            //dispose element.
+            Application.Exit();
         }
     }
 }
