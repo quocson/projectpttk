@@ -36,6 +36,7 @@ namespace TetrisReturn
 
             setLastConfig();
 
+
             gameControl = new GameControl();
             soundControl = new SoundControl();
         }
