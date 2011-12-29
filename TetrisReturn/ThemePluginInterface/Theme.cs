@@ -19,6 +19,7 @@ namespace ThemePluginInterface
         private Bitmap iClickButton;
         private Bitmap iDisableButton;
         private Bitmap iInformations;
+        private Bitmap iNextShape;
         private int numColorBlock;
         private int numTypeBlock;
 
@@ -39,6 +40,7 @@ namespace ThemePluginInterface
             iClickButton = new Bitmap(t.iClickButton);
             iDisableButton = new Bitmap(t.iDisableButton);
             iInformations = new Bitmap(t.iInformations);
+            iNextShape = new Bitmap(t.iNextShape);
             numColorBlock = t.numColorBlock;
             numTypeBlock = t.numTypeBlock;
         }
@@ -54,6 +56,7 @@ namespace ThemePluginInterface
                     Image iClickButton,
                     Image iDisableButton,
                     Image iInformations,
+                    Image iNextShape,
                     int numColorBlock,
                     int numTypeBlock)
         {
@@ -68,6 +71,7 @@ namespace ThemePluginInterface
             this.iClickButton = new Bitmap(iClickButton);
             this.iDisableButton = new Bitmap(iDisableButton);
             this.iInformations = new Bitmap(iInformations);
+            this.iNextShape = new Bitmap(iNextShape);
             this.numColorBlock = numColorBlock;
             this.numTypeBlock = numTypeBlock;
         }
@@ -96,6 +100,8 @@ namespace ThemePluginInterface
                 iDisableButton.Dispose();
             if (iInformations != null)
                 iInformations.Dispose();
+            if (iNextShape != null)
+                iNextShape.Dispose();
             GC.SuppressFinalize(this);
         }
 
@@ -110,6 +116,7 @@ namespace ThemePluginInterface
         public Bitmap ClickButton { get { return iClickButton; } }
         public Bitmap DisableButton { get { return iDisableButton; } }
         public Bitmap Informations { get { return iInformations; } }
+        public Bitmap NextShape { get { return iNextShape; } }
         public int NumColorBlock { get { return numColorBlock; } }
         public int NumTypeBlock { get { return numTypeBlock; } }
     }

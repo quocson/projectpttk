@@ -19,6 +19,7 @@ namespace TheTransformerThemePlugin
                                         TheTransformerThemePlugin.Properties.Resources.ClickButton,
                                         TheTransformerThemePlugin.Properties.Resources.DisableButton,
                                         TheTransformerThemePlugin.Properties.Resources.Informations,
+                                        TheTransformerThemePlugin.Properties.Resources.NextShape,
                                         7,
                                         1);
 
