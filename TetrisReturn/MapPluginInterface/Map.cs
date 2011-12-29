@@ -34,6 +34,8 @@ namespace MapPluginInterface
             row = m.row;
             col = m.col;
 
+            statusMap = new int[row, col];
+
             for (int i = 0; i < row; i++)
                 for (int j = 0; j < col; j++)
                     statusMap[i, j] = m.statusMap[i, j];
@@ -46,7 +48,8 @@ namespace MapPluginInterface
 
         public void Dispose()
         {
-            iMap.Dispose();
+            if(iMap != null)
+                iMap.Dispose();
             GC.SuppressFinalize(this);
         }
 
