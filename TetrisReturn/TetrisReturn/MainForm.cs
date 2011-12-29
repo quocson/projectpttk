@@ -45,6 +45,11 @@ namespace TetrisReturn
             imageButton5.Image = Constants.theme.NormalButton;
             imageButton6.Image = Constants.theme.NormalButton;
             imageButton7.Image = Constants.theme.NormalButton;
+            showInformation1.ImgBack = Constants.theme.Informations;
+            showInformation1.STitle = "son";
+
+            showInformation1.SInfo = "son";
+
             gameControl = new GameControl();
             soundControl = new SoundControl();
         }

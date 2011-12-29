@@ -20,8 +20,6 @@ namespace TetrisReturn
         private Font fText; // font of text
         private Point pText; //pos of text
         private Shape shapeNext;
-        private bool drawabled;
-        private Bitmap buffer;
         private Bitmap imgBack;
         private int iTopShape;
 
@@ -31,18 +29,9 @@ namespace TetrisReturn
             set
             {
                 shapeNext = value;
-                if (Drawabled)
-                {
-                    Graphics.FromImage(buffer).DrawImage(ImgBack, new Point(0, 0));
-                    Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
-                    SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
-                    iTopShape = 0;
-                    if (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta > 0)
-                        iTopShape = (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta) / 2;
-                    shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height);
-                    shapeNext.drawShape(Graphics.FromImage(buffer));
-                }
-                Refresh();
+                if (value != null)
+                    Refresh();
+                   
             }
         }
         public Bitmap ImgBack
@@ -54,6 +43,8 @@ namespace TetrisReturn
                     return;
                 imgBack = new Bitmap(value.Width, value.Height);
                 Graphics.FromImage(imgBack).DrawImage(value, new Point(0, 0));
+                if (value != null)
+                    Refresh();
             }
         }
         public Point PText
@@ -84,44 +75,38 @@ namespace TetrisReturn
         public String SText
         {
             get { return sText; }
-            set{sText = value;}
-        }
-        public bool Drawabled
-        {
-            get { return drawabled; }
-            set { 
-                drawabled = value;
-                if (!Drawabled)
-                    return;
-                buffer = new Bitmap(Width, Height);
-                SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
-
-                iTopShape = 0;
-                if (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta > 0)
-                    iTopShape = (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta) / 2;
-                shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height);
-
-                if (Width - (int)sz.Width < 0)
-                    PText = new Point(0, 0);
-                else
-                    PText = new Point((Width - (int)sz.Width) / 2, 0);
-                shapeNext.drawShape(Graphics.FromImage(buffer));
-                Graphics.FromImage(buffer).DrawImage(ImgBack, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
+            set{sText = value;
+            if (value != null)
                 Refresh();
             }
         }
+        
         public NextShape()
         {
             InitializeComponent();
-            Drawabled = false;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            if (!Drawabled)
+            if(ImgBack == null)
                 return;
-            e.Graphics.DrawImage(buffer, new Point(0,0));
+            e.Graphics.DrawImage(ImgBack, new Point(0, 0));
+            if(SText == null)
+                return;
+            SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
+            if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
+                PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
+            else
+                PText = new Point(0, 0);
+
+            e.Graphics.DrawImage(getImgFromTxt(), PText);
+            if(shapeNext == null)
+                return;
+            iTopShape = 0;
+            if (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta > 0)
+                iTopShape = (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta) / 2;
+            shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height + Constants.blockSize);
+            shapeNext.drawShape(e.Graphics);
         }
 
         private Image getImgFromTxt()
