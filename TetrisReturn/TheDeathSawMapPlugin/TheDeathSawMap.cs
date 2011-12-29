@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheDeathSawMapPlugin
 {
-    class TheDeathSawMap : Map
+    public class TheDeathSawMap : Map
     {
         public TheDeathSawMap()
         {

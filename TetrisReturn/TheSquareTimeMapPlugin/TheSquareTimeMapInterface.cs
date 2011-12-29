@@ -6,7 +6,7 @@ using MapPluginInterface;
 
 namespace TheSquareTimeMapPlugin
 {
-    class TheSquareTimeMapInterface : MapInterface
+    public class TheSquareTimeMapInterface : MapInterface
     {
         private Map map = new TheSquareTimeMap();
         public string VietNameseName { get { return TheSquareTimeMapPlugin.Properties.Resources.vietNameseName; } }

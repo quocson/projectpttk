@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheStairwayToHeavenMapPlugin
 {
-    class TheStairwayToHeavenMap : Map
+    public class TheStairwayToHeavenMap : Map
     {
         public TheStairwayToHeavenMap()
         {

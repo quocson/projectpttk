@@ -6,7 +6,7 @@ using MapPluginInterface;
 
 namespace TheRazorBladeMapPlugin
 {
-    class TheRazorBladeMapInterface : MapInterface
+    public class TheRazorBladeMapInterface : MapInterface
     {
         private Map map = new TheRazorBladeMap();
         public string VietNameseName { get { return TheRazorBladeMapPlugin.Properties.Resources.vietNameseName; } }

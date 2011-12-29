@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheRandomizeMapPlugin
 {
-    class TheRandomizeMap : Map
+    public class TheRandomizeMap : Map
     {
         public TheRandomizeMap()
         {

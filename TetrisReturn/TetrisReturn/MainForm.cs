@@ -29,6 +29,7 @@ namespace TetrisReturn
             Constants.findTheme();
             if (Constants.themeService.AvailableThemes.Count == 0 || Constants.mapService.AvailableMaps.Count == 0) ;
                 //thong bao mat file, khong the tiep tuc. dong chuong trinh.
+            MessageBox.Show("wtf?");
             if (!setLastConfig()) ;
                 //thong bao mat mot so file nhung van co the tiep tuc, yeu cau kiem tra...
 

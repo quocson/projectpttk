@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheClassicMapPlugin
 {
-    class TheClassicMap : Map
+    public class TheClassicMap : Map
     {
         public TheClassicMap()
         {

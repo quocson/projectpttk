@@ -6,7 +6,7 @@ using ThemePluginInterface;
 
 namespace TheTransformerThemePlugin
 {
-    class TheTransformerThemeInterface : ThemeInterface
+    public class TheTransformerThemeInterface : ThemeInterface
     {
         private Theme theme = new Theme(TheTransformerThemePlugin.Properties.Resources.MainBackground,
                                         TheTransformerThemePlugin.Properties.Resources.HelpBackground,

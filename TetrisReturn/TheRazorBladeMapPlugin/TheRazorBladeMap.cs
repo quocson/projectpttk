@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheRazorBladeMapPlugin
 {
-    class TheRazorBladeMap : Map
+    public class TheRazorBladeMap : Map
     {
         public TheRazorBladeMap()
         {

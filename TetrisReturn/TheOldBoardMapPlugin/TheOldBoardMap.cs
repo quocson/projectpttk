@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheOldBoardMapPlugin
 {
-    class TheOldBoardMap : Map
+    public class TheOldBoardMap : Map
     {
         public TheOldBoardMap()
         {

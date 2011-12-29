@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheDeathSawMapPlugin
 {
-    class TheDeathSawMapInterface : MapInterface
+    public class TheDeathSawMapInterface : MapInterface
     {
         private Map map = new TheDeathSawMap();
         public string VietNameseName { get { return TheDeathSawMapPlugin.Properties.Resources.vietNameseName; } }

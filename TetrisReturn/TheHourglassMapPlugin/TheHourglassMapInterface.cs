@@ -6,7 +6,7 @@ using MapPluginInterface;
 
 namespace TheHourglassMapPlugin
 {
-    class TheHourglassMapInterface : MapInterface
+    public class TheHourglassMapInterface : MapInterface
     {
         private Map map = new TheHourglassMap();
         public string VietNameseName { get { return TheHourglassMapPlugin.Properties.Resources.vietNameseName; } }

@@ -1,28 +1,3 @@
-C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
-C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
-C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
-C:\Users\HuuTai_it\Desktop\project-pttk\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
-E:\Document\Software design\Project Description\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
-E:\Document\Software design\Project Description\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
-E:\Document\Software design\Project Description\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
-E:\Document\Software design\Project Description\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
-E:\Document\Software design\Project Description\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
-C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
-C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
-C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
-C:\Users\HuuTai_it\Desktop\projectpttk\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
-C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
-C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
-C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
-C:\Users\HuuTai_it\Desktop\fuckthisproject\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
-E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
-E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
-E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
-E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
-E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
