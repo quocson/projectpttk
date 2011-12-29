@@ -14,10 +14,6 @@ namespace TetrisReturn
     public partial class ImageButton : UserControl
     {
         //bitmap for state
-        private Bitmap iEnabled;
-        private Bitmap iDisabled;
-        private Bitmap iHover;
-        private Bitmap iOnclick;
         //String 
         private String sText;// button text
         private Color cText = Color.White; // text color
@@ -36,7 +32,6 @@ namespace TetrisReturn
             get { return drawabled; }
             set { 
                 drawabled = value;
-
                 if (drawabled)
                 {
                     buffer = new Bitmap(Height, Width);
@@ -81,53 +76,7 @@ namespace TetrisReturn
             set { sText = value;}
         }
         
-        public Bitmap IEnabled
-        {
-            get { return iEnabled; }
-            set
-            {
-
-                if (value == null)
-                    return;
-                iEnabled = new Bitmap(value.Width, value.Height);
-                Graphics.FromImage(iEnabled).DrawImage(value, new Point(0, 0));
-            }
-        }
-        public Bitmap IDisabled
-        {
-            get { return iDisabled; }
-            set
-            {
-                if (value == null)
-                    return;
-                iDisabled = new Bitmap(value.Width, value.Height);
-                Graphics.FromImage(iDisabled).DrawImage(value, new Point(0, 0));
-            }
-        }
-        public Bitmap IHover
-        {
-            get { return iHover; }
-            set
-            {
-
-                if (value == null)
-                    return;
-                iHover = new Bitmap(value.Width, value.Height);
-                Graphics.FromImage(iHover).DrawImage(value, new Point(0, 0));
-            }
-        }
-        public Bitmap IOnclick
-        {
-            get { return iOnclick; }
-            set
-            {
-
-                if (value == null)
-                    return;
-                iOnclick = new Bitmap(value.Width, value.Height);
-                Graphics.FromImage(iOnclick).DrawImage(value, new Point(0, 0));
-            }
-        }
+        
         public ImageButton()
         {
             InitializeComponent();
@@ -157,12 +106,12 @@ namespace TetrisReturn
                 PText = new Point(0, 0);
             if(Enabled)
             {
-                Graphics.FromImage(buffer).DrawImage(IEnabled, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(Constants.theme.NormalButton, new Point(0, 0));
                 Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
             }
             else
             {
-                Graphics.FromImage(buffer).DrawImage(IDisabled, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(Constants.theme.DisableButton, new Point(0, 0));
                 Graphics.FromImage(buffer).DrawImage(getImgFromTxtDis(), PText);
             }
         }
@@ -241,7 +190,7 @@ namespace TetrisReturn
         {
             if (Enabled)
             {
-                Graphics.FromImage(buffer).DrawImage(IHover, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(Constants.theme.HoverButton, new Point(0, 0));
                 Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
             }
             Refresh();
@@ -251,7 +200,7 @@ namespace TetrisReturn
         {
             if (Enabled)
             {
-                Graphics.FromImage(buffer).DrawImage(IOnclick, new Point(0, 0));
+                Graphics.FromImage(buffer).DrawImage(Constants.theme.ClickButton, new Point(0, 0));
                 Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
             }
             Refresh();
