@@ -35,6 +35,16 @@ namespace TetrisReturn
             checkLostAllFiles();
 
             setLastConfig();
+            imageButton1.Image = Constants.theme.NormalButton;
+           // imageButton1.FText = new Font("Arial", 15);
+            imageButton1.SText = "son";
+            this.BackgroundImage = Constants.theme.MainBackground;
+            imageButton2.Image = Constants.theme.NormalButton;
+            imageButton3.Image = Constants.theme.NormalButton;
+            imageButton4.Image = Constants.theme.NormalButton;
+            imageButton5.Image = Constants.theme.NormalButton;
+            imageButton6.Image = Constants.theme.NormalButton;
+            imageButton7.Image = Constants.theme.NormalButton;
             gameControl = new GameControl();
             soundControl = new SoundControl();
         }

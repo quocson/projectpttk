@@ -48,7 +48,6 @@
             this.nextShape1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.nextShape1.CStroke = System.Drawing.Color.Black;
             this.nextShape1.CText = System.Drawing.Color.White;
-            this.nextShape1.FText = null;
             this.nextShape1.ImgBack = null;
             this.nextShape1.IWidth = 2;
             this.nextShape1.Location = new System.Drawing.Point(930, 80);
@@ -66,7 +65,6 @@
             this.showInformation4.CStroke = System.Drawing.Color.Black;
             this.showInformation4.CText = System.Drawing.Color.White;
             this.showInformation4.FNumber = null;
-            this.showInformation4.FText = null;
             this.showInformation4.ImgBack = null;
             this.showInformation4.IWidth = 2;
             this.showInformation4.Location = new System.Drawing.Point(930, 307);
@@ -85,7 +83,6 @@
             this.showInformation3.CStroke = System.Drawing.Color.Black;
             this.showInformation3.CText = System.Drawing.Color.White;
             this.showInformation3.FNumber = null;
-            this.showInformation3.FText = null;
             this.showInformation3.ImgBack = null;
             this.showInformation3.IWidth = 2;
             this.showInformation3.Location = new System.Drawing.Point(930, 391);
@@ -104,7 +101,6 @@
             this.showInformation2.CStroke = System.Drawing.Color.Black;
             this.showInformation2.CText = System.Drawing.Color.White;
             this.showInformation2.FNumber = null;
-            this.showInformation2.FText = null;
             this.showInformation2.ImgBack = null;
             this.showInformation2.IWidth = 2;
             this.showInformation2.Location = new System.Drawing.Point(930, 475);
@@ -123,7 +119,6 @@
             this.showInformation1.CStroke = System.Drawing.Color.Black;
             this.showInformation1.CText = System.Drawing.Color.White;
             this.showInformation1.FNumber = null;
-            this.showInformation1.FText = null;
             this.showInformation1.ImgBack = null;
             this.showInformation1.IWidth = 2;
             this.showInformation1.Location = new System.Drawing.Point(930, 559);
@@ -141,7 +136,6 @@
             this.imageButton7.CStroke = System.Drawing.Color.Black;
             this.imageButton7.CText = System.Drawing.Color.White;
             this.imageButton7.ForeColor = System.Drawing.Color.Transparent;
-            this.imageButton7.FText = null;
             this.imageButton7.IWidth = 2;
             this.imageButton7.Location = new System.Drawing.Point(100, 579);
             this.imageButton7.Name = "imageButton7";
@@ -156,7 +150,6 @@
             this.imageButton6.CStroke = System.Drawing.Color.Black;
             this.imageButton6.CText = System.Drawing.Color.White;
             this.imageButton6.ForeColor = System.Drawing.Color.Transparent;
-            this.imageButton6.FText = null;
             this.imageButton6.IWidth = 2;
             this.imageButton6.Location = new System.Drawing.Point(100, 495);
             this.imageButton6.Name = "imageButton6";
@@ -171,7 +164,6 @@
             this.imageButton5.CStroke = System.Drawing.Color.Black;
             this.imageButton5.CText = System.Drawing.Color.White;
             this.imageButton5.ForeColor = System.Drawing.Color.Transparent;
-            this.imageButton5.FText = null;
             this.imageButton5.IWidth = 2;
             this.imageButton5.Location = new System.Drawing.Point(100, 412);
             this.imageButton5.Name = "imageButton5";
@@ -186,7 +178,6 @@
             this.imageButton4.CStroke = System.Drawing.Color.Black;
             this.imageButton4.CText = System.Drawing.Color.White;
             this.imageButton4.ForeColor = System.Drawing.Color.Transparent;
-            this.imageButton4.FText = null;
             this.imageButton4.IWidth = 2;
             this.imageButton4.Location = new System.Drawing.Point(100, 329);
             this.imageButton4.Name = "imageButton4";
@@ -201,7 +192,6 @@
             this.imageButton3.CStroke = System.Drawing.Color.Black;
             this.imageButton3.CText = System.Drawing.Color.White;
             this.imageButton3.ForeColor = System.Drawing.Color.Transparent;
-            this.imageButton3.FText = null;
             this.imageButton3.IWidth = 2;
             this.imageButton3.Location = new System.Drawing.Point(100, 246);
             this.imageButton3.Name = "imageButton3";
@@ -216,7 +206,6 @@
             this.imageButton2.CStroke = System.Drawing.Color.Black;
             this.imageButton2.CText = System.Drawing.Color.White;
             this.imageButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.imageButton2.FText = null;
             this.imageButton2.IWidth = 2;
             this.imageButton2.Location = new System.Drawing.Point(100, 163);
             this.imageButton2.Name = "imageButton2";
@@ -231,7 +220,6 @@
             this.imageButton1.CStroke = System.Drawing.Color.Black;
             this.imageButton1.CText = System.Drawing.Color.White;
             this.imageButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.imageButton1.FText = null;
             this.imageButton1.IWidth = 2;
             this.imageButton1.Location = new System.Drawing.Point(100, 80);
             this.imageButton1.Name = "imageButton1";
