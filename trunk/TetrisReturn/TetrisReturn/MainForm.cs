@@ -31,29 +31,30 @@ namespace TetrisReturn
         {
             Constants.findMap();
             Constants.findTheme();
-            if (Constants.themeService.AvailableThemes.Count == 0 || Constants.mapService.AvailableMaps.Count == 0)
-            {
-                //MessageBox.Show(this, "", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Constants.themeService.closeThemes();
-                Constants.mapService.closeMaps();
-                Application.Exit();
-            }
-            if (!setLastConfig())
-                if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                {
-                    Constants.themeService.closeThemes();
-                    Constants.mapService.closeMaps();
-                    Constants.theme.Dispose();
-                    Constants.map.Dispose();
-                    Application.Exit();
-                }
+
+            checkLostAllFiles();
+
+            setLastConfig();
 
             gameControl = new GameControl();
             soundControl = new SoundControl();
         }
 
+        //check if lost all files, close game.
+        private void checkLostAllFiles()
+        {
+            if (Constants.themeService.AvailableThemes.Count == 0 || Constants.mapService.AvailableMaps.Count == 0)
+            {
+                //lost all files.
+                MessageBox.Show(this, "", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Constants.themeService.closeThemes();
+                Constants.mapService.closeMaps();
+                Application.Exit();
+            }
+        }
+
         //set Last config for game.
-        private bool setLastConfig()
+        private void setLastConfig()
         {
             bool success = true;
             Config config = new Config();
@@ -67,7 +68,7 @@ namespace TetrisReturn
                 lastTheme = Constants.themeService.AvailableThemes.getFirst();
             }
 
-            //load map
+            //load map.
             Types.AvailableMap lastMap = Constants.mapService.AvailableMaps.Find(config.SMap);
 
             if (lastMap == null)
@@ -76,10 +77,10 @@ namespace TetrisReturn
                 lastMap = Constants.mapService.AvailableMaps.getFirst();
             }
 
-            //set theme, map.
+            //set theme, map.            
             Constants.setTheme(lastTheme.Instance.Theme);
             Constants.setMap(lastMap.Instance.Map);
-            MessageBox.Show(this, "", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
             //set ghost.
             enableGhostShape = config.BGhost;
@@ -91,7 +92,17 @@ namespace TetrisReturn
             languageDisplay = config.SLanguage;
 
             //...
-            return success;
+
+            if (!success)
+                if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                {
+                    //lost a few files.
+                    Constants.themeService.closeThemes();
+                    Constants.mapService.closeMaps();
+                    Constants.theme.Dispose();
+                    Constants.map.Dispose();
+                    Application.Exit();
+                }
         }
 
         //exit game.

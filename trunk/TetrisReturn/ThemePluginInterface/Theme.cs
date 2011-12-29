@@ -74,17 +74,28 @@ namespace ThemePluginInterface
 
         public void Dispose()
         {
-            iMainBackground.Dispose();
-            iHelpBackground.Dispose();
-            iAboutBackground.Dispose();
-            iHighScoresBackground.Dispose();
-            iOptionBackground.Dispose();
-            iBlocks.Dispose();
-            iNormalButton.Dispose();
-            iHoverButton.Dispose();
-            iClickButton.Dispose();
-            iDisableButton.Dispose();
-            iInformations.Dispose();
+            if (iMainBackground != null)
+                iMainBackground.Dispose();
+            if (iHelpBackground != null)
+                iHelpBackground.Dispose();
+            if (iAboutBackground != null)
+                iAboutBackground.Dispose();
+            if (iHighScoresBackground != null)
+                iHighScoresBackground.Dispose();
+            if (iOptionBackground != null)
+                iOptionBackground.Dispose();
+            if (iBlocks != null)
+                iBlocks.Dispose();
+            if (iNormalButton != null)
+                iNormalButton.Dispose();
+            if (iHoverButton != null)
+                iHoverButton.Dispose();
+            if (iClickButton != null)
+                iClickButton.Dispose();
+            if (iDisableButton != null)
+                iDisableButton.Dispose();
+            if (iInformations != null)
+                iInformations.Dispose();
             GC.SuppressFinalize(this);
         }
 
