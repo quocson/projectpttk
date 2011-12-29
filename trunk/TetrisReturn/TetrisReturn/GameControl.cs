@@ -16,8 +16,8 @@ namespace TetrisReturn
 
         public GameControl()
         {
-            Location = new Point(0, 0);
-            Size = new Size(400, 400);
+            Location = new Point(300, 80);
+            Size = new Size(411, 561);
             imageBuffer = new Bitmap(Constants.map.ImageMap);
             currShape = null;
             nextShape = null;

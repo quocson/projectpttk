@@ -19,6 +19,7 @@ namespace TheSketchThemePlugin
                                         TheSketchThemePlugin.Properties.Resources.ClickButton,
                                         TheSketchThemePlugin.Properties.Resources.DisableButton,
                                         TheSketchThemePlugin.Properties.Resources.Informations,
+                                        TheSketchThemePlugin.Properties.Resources.NextShape,
                                         7,
                                         7);
 

@@ -32,13 +32,13 @@
             // 
             // ImageButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Name = "ImageButton";
-            this.Size = new System.Drawing.Size(200, 159);
+            this.Size = new System.Drawing.Size(180, 60);
             this.EnabledChanged += new System.EventHandler(this.ImageButton_EnabledChanged);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImageButton_MouseDown);
             this.MouseEnter += new System.EventHandler(this.ImageButton_MouseEnter);

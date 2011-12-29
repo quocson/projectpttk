@@ -32,11 +32,11 @@
             // 
             // NextShape
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "NextShape";
-            this.Size = new System.Drawing.Size(262, 268);
+            this.Size = new System.Drawing.Size(250, 225);
             this.ResumeLayout(false);
 
         }
