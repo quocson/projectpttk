@@ -6,7 +6,7 @@ using MapPluginInterface;
 
 namespace TheRandomizeMapPlugin
 {
-    class TheRandomizeMapInterface : MapInterface
+    public class TheRandomizeMapInterface : MapInterface
     {
         private Map map = new TheRandomizeMap();
         public string VietNameseName { get { return TheRandomizeMapPlugin.Properties.Resources.vietNameseName; } }

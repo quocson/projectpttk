@@ -6,7 +6,7 @@ using MapPluginInterface;
 
 namespace TheStairwayToHeavenMapPlugin
 {
-    class TheStairwayToHeavenMapInterface : MapInterface
+    public class TheStairwayToHeavenMapInterface : MapInterface
     {
         private Map map = new TheStairwayToHeavenMap();
         public string VietNameseName { get { return TheStairwayToHeavenMapPlugin.Properties.Resources.vietNameseName; } }

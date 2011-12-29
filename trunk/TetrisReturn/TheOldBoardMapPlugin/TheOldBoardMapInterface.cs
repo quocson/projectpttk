@@ -6,7 +6,7 @@ using MapPluginInterface;
 
 namespace TheOldBoardMapPlugin
 {
-    class TheOldBoardMapInterface : MapInterface
+    public class TheOldBoardMapInterface : MapInterface
     {
         private Map map = new TheOldBoardMap();
         public string VietNameseName { get { return TheOldBoardMapPlugin.Properties.Resources.vietNameseName; } }

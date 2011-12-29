@@ -6,7 +6,7 @@ using ThemePluginInterface;
 
 namespace TheSketchThemePlugin
 {
-    class TheSketchThemeInterface : ThemeInterface
+    public class TheSketchThemeInterface : ThemeInterface
     {
         private Theme theme = new Theme(TheSketchThemePlugin.Properties.Resources.MainBackground,
                                         TheSketchThemePlugin.Properties.Resources.HelpBackground,

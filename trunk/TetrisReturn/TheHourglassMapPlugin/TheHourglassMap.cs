@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheHourglassMapPlugin
 {
-    class TheHourglassMap : Map
+    public class TheHourglassMap : Map
     {
         public TheHourglassMap()
         {

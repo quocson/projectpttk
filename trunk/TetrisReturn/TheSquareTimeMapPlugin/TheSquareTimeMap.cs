@@ -7,7 +7,7 @@ using MapPluginInterface;
 
 namespace TheSquareTimeMapPlugin
 {
-    class TheSquareTimeMap : Map
+    public class TheSquareTimeMap : Map
     {
         public TheSquareTimeMap()
         {
