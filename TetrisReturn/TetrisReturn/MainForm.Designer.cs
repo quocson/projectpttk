@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.nextShape1 = new TetrisReturn.NextShape();
             this.showInformation4 = new TetrisReturn.ShowInformation();
             this.showInformation3 = new TetrisReturn.ShowInformation();
             this.showInformation2 = new TetrisReturn.ShowInformation();
@@ -40,8 +41,24 @@
             this.imageButton3 = new TetrisReturn.ImageButton();
             this.imageButton2 = new TetrisReturn.ImageButton();
             this.imageButton1 = new TetrisReturn.ImageButton();
-            this.nextShape1 = new TetrisReturn.NextShape();
             this.SuspendLayout();
+            // 
+            // nextShape1
+            // 
+            this.nextShape1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nextShape1.CStroke = System.Drawing.Color.Black;
+            this.nextShape1.CText = System.Drawing.Color.White;
+            this.nextShape1.Drawabled = false;
+            this.nextShape1.FText = null;
+            this.nextShape1.ImgBack = null;
+            this.nextShape1.IWidth = 2;
+            this.nextShape1.Location = new System.Drawing.Point(930, 80);
+            this.nextShape1.Name = "nextShape1";
+            this.nextShape1.PText = new System.Drawing.Point(0, 0);
+            this.nextShape1.ShapeNext = null;
+            this.nextShape1.Size = new System.Drawing.Size(250, 222);
+            this.nextShape1.SText = null;
+            this.nextShape1.TabIndex = 11;
             // 
             // showInformation4
             // 
@@ -234,23 +251,6 @@
             this.imageButton1.Size = new System.Drawing.Size(180, 60);
             this.imageButton1.SText = null;
             this.imageButton1.TabIndex = 0;
-            // 
-            // nextShape1
-            // 
-            this.nextShape1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.nextShape1.CStroke = System.Drawing.Color.Black;
-            this.nextShape1.CText = System.Drawing.Color.White;
-            this.nextShape1.Drawabled = false;
-            this.nextShape1.FText = null;
-            this.nextShape1.ImgBack = null;
-            this.nextShape1.IWidth = 2;
-            this.nextShape1.Location = new System.Drawing.Point(930, 80);
-            this.nextShape1.Name = "nextShape1";
-            this.nextShape1.PText = new System.Drawing.Point(0, 0);
-            this.nextShape1.ShapeNext = null;
-            this.nextShape1.Size = new System.Drawing.Size(250, 222);
-            this.nextShape1.SText = null;
-            this.nextShape1.TabIndex = 11;
             // 
             // MainForm
             // 

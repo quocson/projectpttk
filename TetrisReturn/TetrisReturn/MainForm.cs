@@ -35,10 +35,6 @@ namespace TetrisReturn
             checkLostAllFiles();
 
             setLastConfig();
-
-            this.BackgroundImage = Constants.theme.MainBackground;
-
-
             gameControl = new GameControl();
             soundControl = new SoundControl();
         }
