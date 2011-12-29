@@ -14,11 +14,16 @@ namespace TetrisReturn
     public partial class ShowInformation : UserControl
     {
         //title 
-        private String sText;// button text
-        public String SText
+        private String sTitle;// button text
+        public String STitle
         {
-            get { return sText; }
-            set { sText = value; }
+            get { return sTitle; }
+            set
+            {
+                sTitle = value;
+                if (value != null)
+                    Refresh();
+            }
         }
         private Color cText = Color.White; // text color
         public Color CText
@@ -39,42 +44,51 @@ namespace TetrisReturn
             get { return iWidth; }
             set { iWidth = value; }
         }
-        private Font fText; // font of text
-        public Font FText
+        private Font fTitle; // font of text
+        public Font FTitle
         {
-            get { return fText; }
-            set { fText = value; }
+            get { return fTitle; }
+            set { fTitle = value; }
         }
-        private Point pText; //pos of text
-        public Point PText
+        private Point pTitle; //pos of text
+        public Point PTitle
         {
-            get { return pText; }
-            set { pText = value; }
+            get { return pTitle; }
+            set { pTitle = value; }
         }
-        // number
-        private int number;
-        public int Number
+        // info
+        private string sInfo;
+        public string SInfo
         {
-            get { return number; }
-            set { number = value; }
+            get { return sInfo; }
+            set 
+            { 
+                sInfo = value;
+                if (value != null)
+                    Refresh();
+            }
         }
-        private Point pNumber;
-        public Point PNumber
+        private Point pInfo;
+        public Point PInfo
         {
-            get { return pNumber; }
-            set { pNumber = value; }
+            get { return pInfo; }
+            set
+            {
+                pInfo = value;
+                
+            }
         }
-        private Font fNumber;
-        public Font FNumber
+        private Font fInfo;
+        public Font FInfo
         {
-            get { return fNumber; }
-            set { fNumber = value; }
+            get { return fInfo; }
+            set { fInfo = value; }
         }
-        private Color cNumber;
-        public Color CNumber
+        private Color cInfo;
+        public Color CInfo
         {
-            get { return cNumber; }
-            set { cNumber = value; }
+            get { return cInfo; }
+            set { cInfo = value; }
         }
         //Image
         private Bitmap imgBack;
@@ -82,60 +96,49 @@ namespace TetrisReturn
         public Bitmap ImgBack
         {
             get { return imgBack; }
-            set { imgBack = value; }
-        }
-  
-        private bool drawabled;
-        public bool Drawabled
-        {
-            get { return drawabled; }
-            set
-            {
-                drawabled = value;
-                if (!Drawabled)
-                    return;
-
-                SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
-                if (Width - (int)sz.Width < 0)
-                    PText = new Point(0, 0);
-                else
-                    PText = new Point((Width - (int)sz.Width) / 2, 0);
+            set { imgBack = value;
+            if (value != null)
                 Refresh();
             }
         }
         public ShowInformation()
         {
             InitializeComponent();
-            Drawabled = false;
+
+            FTitle = new Font("Arial", 15);
+
+            FInfo = new Font("Arial", 15);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            if (!Drawabled)
+            if (ImgBack == null )
                 return;
-            SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
+            e.Graphics.DrawImage(ImgBack, new Point(0, 0));
+             if (STitle == null || SInfo == null)
+                 return;
+            SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(STitle, FTitle);
             //sap xep vi tri cua title
             if (Width - (int)sz.Width < 0)
-                PText = new Point(0, 0);
+                PTitle = new Point(0, 0);
             else
-                PText = new Point((Width - (int)sz.Width) / 2, 0);
-            SizeF szn = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(Number.ToString(), FNumber);
+                PTitle = new Point((Width - (int)sz.Width) / 2, 0);
+            SizeF szn = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SInfo.ToString(), FInfo);
             if (Width - (int)szn.Width < 0)
-                PNumber= new Point(0, 0);
+                PInfo= new Point(0, 0);
             else
-                PNumber = new Point((Width - (int)szn.Width) / 2, (int)sz.Width);
-            e.Graphics.DrawImage(ImgBack, new Point(0, 0));
-            e.Graphics.DrawImage(getImgFromTxt(), PText);
-            e.Graphics.DrawImage(getImgFromNo(), PNumber);
+                PInfo = new Point((Width - (int)szn.Width) / 2, (int)sz.Height * 2);
+            e.Graphics.DrawImage(getImgFromTxt(), PTitle);
+            e.Graphics.DrawImage(getImgFromNo(), PInfo);
         }
         private Image getImgFromTxt()
         {
             Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
-            if (FText == null || SText == null)
+            if (FTitle == null || STitle == null)
                 return bmpOut;
             using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
             {
-                SizeF sz = g.MeasureString(SText, FText);
+                SizeF sz = g.MeasureString(STitle, FTitle);
                 Bitmap bmp = new Bitmap((int)sz.Width, (int)sz.Height);
                 Graphics gBmp = Graphics.FromImage(bmp);
                 SolidBrush brBack = new SolidBrush(Color.FromArgb(255, CStroke.R, CStroke.G, CStroke.B));
@@ -145,7 +148,7 @@ namespace TetrisReturn
                     gBmp.InterpolationMode = InterpolationMode.HighQualityBilinear;
                     gBmp.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
 
-                    gBmp.DrawString(SText, FText, brBack, 0, 0);
+                    gBmp.DrawString(STitle, FTitle, brBack, 0, 0);
 
                     // make bitmap we will return.
                     bmpOut = new Bitmap(bmp.Width + iWidth, bmp.Height + iWidth);
@@ -161,7 +164,7 @@ namespace TetrisReturn
                                 gBmpOut.DrawImageUnscaled(bmp, x, y);
 
                         // draw actual text
-                        gBmpOut.DrawString(SText, FText, brFore, iWidth / 2, iWidth / 2);
+                        gBmpOut.DrawString(STitle, FTitle, brFore, iWidth / 2, iWidth / 2);
                     }
                 }
             }
@@ -171,21 +174,21 @@ namespace TetrisReturn
         private Image getImgFromNo()
         {
             Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
-            if (FNumber == null || Number.ToString() == null)
+            if (FInfo == null || SInfo.ToString() == null)
                 return bmpOut;
             using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
             {
-                SizeF sz = g.MeasureString(Number.ToString(), FNumber);
+                SizeF sz = g.MeasureString(SInfo, FInfo);
                 Bitmap bmp = new Bitmap((int)sz.Width, (int)sz.Height);
                 Graphics gBmp = Graphics.FromImage(bmp);
                 SolidBrush brBack = new SolidBrush(Color.FromArgb(255, CStroke.R, CStroke.G, CStroke.B));
-                using (SolidBrush brFore = new SolidBrush(CNumber))
+                using (SolidBrush brFore = new SolidBrush(CInfo))
                 {
                     gBmp.SmoothingMode = SmoothingMode.HighQuality;
                     gBmp.InterpolationMode = InterpolationMode.HighQualityBilinear;
                     gBmp.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
 
-                    gBmp.DrawString(Number.ToString(), FNumber, brBack, 0, 0);
+                    gBmp.DrawString(SInfo.ToString(), FInfo, brBack, 0, 0);
 
                     // make bitmap we will return.
                     bmpOut = new Bitmap(bmp.Width + iWidth, bmp.Height + iWidth);
@@ -201,7 +204,7 @@ namespace TetrisReturn
                                 gBmpOut.DrawImageUnscaled(bmp, x, y);
 
                         // draw actual text
-                        gBmpOut.DrawString(Number.ToString(), FNumber, brFore, iWidth / 2, iWidth / 2);
+                        gBmpOut.DrawString(SInfo, FInfo, brFore, iWidth / 2, iWidth / 2);
                     }
                 }
             }

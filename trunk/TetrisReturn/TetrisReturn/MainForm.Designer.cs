@@ -61,73 +61,65 @@
             // showInformation4
             // 
             this.showInformation4.BackColor = System.Drawing.Color.White;
-            this.showInformation4.CNumber = System.Drawing.Color.Empty;
+            this.showInformation4.CInfo = System.Drawing.Color.Empty;
             this.showInformation4.CStroke = System.Drawing.Color.Black;
             this.showInformation4.CText = System.Drawing.Color.White;
-            this.showInformation4.FNumber = null;
             this.showInformation4.ImgBack = null;
             this.showInformation4.IWidth = 2;
             this.showInformation4.Location = new System.Drawing.Point(930, 307);
             this.showInformation4.Name = "showInformation4";
-            this.showInformation4.Number = 0;
-            this.showInformation4.PNumber = new System.Drawing.Point(0, 0);
-            this.showInformation4.PText = new System.Drawing.Point(0, 0);
+            this.showInformation4.PInfo = new System.Drawing.Point(0, 0);
+            this.showInformation4.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation4.Size = new System.Drawing.Size(250, 80);
-            this.showInformation4.SText = null;
+            this.showInformation4.STitle = null;
             this.showInformation4.TabIndex = 10;
             // 
             // showInformation3
             // 
             this.showInformation3.BackColor = System.Drawing.Color.White;
-            this.showInformation3.CNumber = System.Drawing.Color.Empty;
+            this.showInformation3.CInfo = System.Drawing.Color.Empty;
             this.showInformation3.CStroke = System.Drawing.Color.Black;
             this.showInformation3.CText = System.Drawing.Color.White;
-            this.showInformation3.FNumber = null;
             this.showInformation3.ImgBack = null;
             this.showInformation3.IWidth = 2;
             this.showInformation3.Location = new System.Drawing.Point(930, 391);
             this.showInformation3.Name = "showInformation3";
-            this.showInformation3.Number = 0;
-            this.showInformation3.PNumber = new System.Drawing.Point(0, 0);
-            this.showInformation3.PText = new System.Drawing.Point(0, 0);
+            this.showInformation3.PInfo = new System.Drawing.Point(0, 0);
+            this.showInformation3.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation3.Size = new System.Drawing.Size(250, 80);
-            this.showInformation3.SText = null;
+            this.showInformation3.STitle = null;
             this.showInformation3.TabIndex = 9;
             // 
             // showInformation2
             // 
             this.showInformation2.BackColor = System.Drawing.Color.White;
-            this.showInformation2.CNumber = System.Drawing.Color.Empty;
+            this.showInformation2.CInfo = System.Drawing.Color.Empty;
             this.showInformation2.CStroke = System.Drawing.Color.Black;
             this.showInformation2.CText = System.Drawing.Color.White;
-            this.showInformation2.FNumber = null;
             this.showInformation2.ImgBack = null;
             this.showInformation2.IWidth = 2;
             this.showInformation2.Location = new System.Drawing.Point(930, 475);
             this.showInformation2.Name = "showInformation2";
-            this.showInformation2.Number = 0;
-            this.showInformation2.PNumber = new System.Drawing.Point(0, 0);
-            this.showInformation2.PText = new System.Drawing.Point(0, 0);
+            this.showInformation2.PInfo = new System.Drawing.Point(0, 0);
+            this.showInformation2.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation2.Size = new System.Drawing.Size(250, 80);
-            this.showInformation2.SText = null;
+            this.showInformation2.STitle = null;
             this.showInformation2.TabIndex = 8;
             // 
             // showInformation1
             // 
             this.showInformation1.BackColor = System.Drawing.Color.White;
-            this.showInformation1.CNumber = System.Drawing.Color.Empty;
+            this.showInformation1.CInfo = System.Drawing.Color.Empty;
             this.showInformation1.CStroke = System.Drawing.Color.Black;
             this.showInformation1.CText = System.Drawing.Color.White;
-            this.showInformation1.FNumber = null;
             this.showInformation1.ImgBack = null;
             this.showInformation1.IWidth = 2;
             this.showInformation1.Location = new System.Drawing.Point(930, 559);
             this.showInformation1.Name = "showInformation1";
-            this.showInformation1.Number = 0;
-            this.showInformation1.PNumber = new System.Drawing.Point(0, 0);
-            this.showInformation1.PText = new System.Drawing.Point(0, 0);
+            this.showInformation1.PInfo = new System.Drawing.Point(0, 0);
+            this.showInformation1.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation1.Size = new System.Drawing.Size(250, 80);
-            this.showInformation1.SText = null;
+            this.showInformation1.STitle = null;
             this.showInformation1.TabIndex = 7;
             // 
             // imageButton7
