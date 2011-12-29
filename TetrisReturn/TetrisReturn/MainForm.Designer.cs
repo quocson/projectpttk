@@ -131,10 +131,6 @@
             this.imageButton7.Drawabled = false;
             this.imageButton7.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton7.FText = null;
-            this.imageButton7.IDisabled = null;
-            this.imageButton7.IEnabled = null;
-            this.imageButton7.IHover = null;
-            this.imageButton7.IOnclick = null;
             this.imageButton7.IWidth = 2;
             this.imageButton7.Location = new System.Drawing.Point(100, 579);
             this.imageButton7.Name = "imageButton7";
@@ -151,10 +147,6 @@
             this.imageButton6.Drawabled = false;
             this.imageButton6.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton6.FText = null;
-            this.imageButton6.IDisabled = null;
-            this.imageButton6.IEnabled = null;
-            this.imageButton6.IHover = null;
-            this.imageButton6.IOnclick = null;
             this.imageButton6.IWidth = 2;
             this.imageButton6.Location = new System.Drawing.Point(100, 495);
             this.imageButton6.Name = "imageButton6";
@@ -171,10 +163,6 @@
             this.imageButton5.Drawabled = false;
             this.imageButton5.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton5.FText = null;
-            this.imageButton5.IDisabled = null;
-            this.imageButton5.IEnabled = null;
-            this.imageButton5.IHover = null;
-            this.imageButton5.IOnclick = null;
             this.imageButton5.IWidth = 2;
             this.imageButton5.Location = new System.Drawing.Point(100, 412);
             this.imageButton5.Name = "imageButton5";
@@ -191,10 +179,6 @@
             this.imageButton4.Drawabled = false;
             this.imageButton4.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton4.FText = null;
-            this.imageButton4.IDisabled = null;
-            this.imageButton4.IEnabled = null;
-            this.imageButton4.IHover = null;
-            this.imageButton4.IOnclick = null;
             this.imageButton4.IWidth = 2;
             this.imageButton4.Location = new System.Drawing.Point(100, 329);
             this.imageButton4.Name = "imageButton4";
@@ -211,10 +195,6 @@
             this.imageButton3.Drawabled = false;
             this.imageButton3.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton3.FText = null;
-            this.imageButton3.IDisabled = null;
-            this.imageButton3.IEnabled = null;
-            this.imageButton3.IHover = null;
-            this.imageButton3.IOnclick = null;
             this.imageButton3.IWidth = 2;
             this.imageButton3.Location = new System.Drawing.Point(100, 246);
             this.imageButton3.Name = "imageButton3";
@@ -231,10 +211,6 @@
             this.imageButton2.Drawabled = false;
             this.imageButton2.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton2.FText = null;
-            this.imageButton2.IDisabled = null;
-            this.imageButton2.IEnabled = null;
-            this.imageButton2.IHover = null;
-            this.imageButton2.IOnclick = null;
             this.imageButton2.IWidth = 2;
             this.imageButton2.Location = new System.Drawing.Point(100, 163);
             this.imageButton2.Name = "imageButton2";
@@ -251,10 +227,6 @@
             this.imageButton1.Drawabled = false;
             this.imageButton1.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton1.FText = null;
-            this.imageButton1.IDisabled = null;
-            this.imageButton1.IEnabled = null;
-            this.imageButton1.IHover = null;
-            this.imageButton1.IOnclick = null;
             this.imageButton1.IWidth = 2;
             this.imageButton1.Location = new System.Drawing.Point(100, 80);
             this.imageButton1.Name = "imageButton1";

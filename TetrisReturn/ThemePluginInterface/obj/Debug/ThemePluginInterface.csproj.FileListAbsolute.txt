@@ -3,3 +3,8 @@ C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\ThemePluginInterface\bin\Debug\Them
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
+E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
+E:\Document\Software design\Project sem\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
