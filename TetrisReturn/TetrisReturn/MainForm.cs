@@ -20,8 +20,6 @@ namespace TetrisReturn
         public MainForm()
         {
             InitializeComponent();
-            gameControl = new GameControl();
-            soundControl = new SoundControl();
             
         }
 
@@ -29,10 +27,13 @@ namespace TetrisReturn
         {
             Constants.findMap();
             Constants.findTheme();
-            //if(Constants.themeService.AvailableThemes.Count == 0 || Constants.mapService.AvailableMaps.Count == 0)
+            if (Constants.themeService.AvailableThemes.Count == 0 || Constants.mapService.AvailableMaps.Count == 0) ;
                 //thong bao mat file, khong the tiep tuc. dong chuong trinh.
-            //if(!setLastConfig())
+            if (!setLastConfig()) ;
                 //thong bao mat mot so file nhung van co the tiep tuc, yeu cau kiem tra...
+
+            gameControl = new GameControl();
+            soundControl = new SoundControl();
         }
 
         //set Last config for game.
