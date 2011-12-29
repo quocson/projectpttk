@@ -48,7 +48,6 @@
             this.nextShape1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.nextShape1.CStroke = System.Drawing.Color.Black;
             this.nextShape1.CText = System.Drawing.Color.White;
-            this.nextShape1.Drawabled = false;
             this.nextShape1.FText = null;
             this.nextShape1.ImgBack = null;
             this.nextShape1.IWidth = 2;
@@ -66,7 +65,6 @@
             this.showInformation4.CNumber = System.Drawing.Color.Empty;
             this.showInformation4.CStroke = System.Drawing.Color.Black;
             this.showInformation4.CText = System.Drawing.Color.White;
-            this.showInformation4.Drawabled = false;
             this.showInformation4.FNumber = null;
             this.showInformation4.FText = null;
             this.showInformation4.ImgBack = null;
@@ -86,7 +84,6 @@
             this.showInformation3.CNumber = System.Drawing.Color.Empty;
             this.showInformation3.CStroke = System.Drawing.Color.Black;
             this.showInformation3.CText = System.Drawing.Color.White;
-            this.showInformation3.Drawabled = false;
             this.showInformation3.FNumber = null;
             this.showInformation3.FText = null;
             this.showInformation3.ImgBack = null;
@@ -106,7 +103,6 @@
             this.showInformation2.CNumber = System.Drawing.Color.Empty;
             this.showInformation2.CStroke = System.Drawing.Color.Black;
             this.showInformation2.CText = System.Drawing.Color.White;
-            this.showInformation2.Drawabled = false;
             this.showInformation2.FNumber = null;
             this.showInformation2.FText = null;
             this.showInformation2.ImgBack = null;
@@ -126,7 +122,6 @@
             this.showInformation1.CNumber = System.Drawing.Color.Empty;
             this.showInformation1.CStroke = System.Drawing.Color.Black;
             this.showInformation1.CText = System.Drawing.Color.White;
-            this.showInformation1.Drawabled = false;
             this.showInformation1.FNumber = null;
             this.showInformation1.FText = null;
             this.showInformation1.ImgBack = null;
@@ -145,7 +140,6 @@
             this.imageButton7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.imageButton7.CStroke = System.Drawing.Color.Black;
             this.imageButton7.CText = System.Drawing.Color.White;
-            this.imageButton7.Drawabled = false;
             this.imageButton7.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton7.FText = null;
             this.imageButton7.IWidth = 2;
@@ -161,7 +155,6 @@
             this.imageButton6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.imageButton6.CStroke = System.Drawing.Color.Black;
             this.imageButton6.CText = System.Drawing.Color.White;
-            this.imageButton6.Drawabled = false;
             this.imageButton6.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton6.FText = null;
             this.imageButton6.IWidth = 2;
@@ -177,7 +170,6 @@
             this.imageButton5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.imageButton5.CStroke = System.Drawing.Color.Black;
             this.imageButton5.CText = System.Drawing.Color.White;
-            this.imageButton5.Drawabled = false;
             this.imageButton5.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton5.FText = null;
             this.imageButton5.IWidth = 2;
@@ -193,7 +185,6 @@
             this.imageButton4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.imageButton4.CStroke = System.Drawing.Color.Black;
             this.imageButton4.CText = System.Drawing.Color.White;
-            this.imageButton4.Drawabled = false;
             this.imageButton4.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton4.FText = null;
             this.imageButton4.IWidth = 2;
@@ -209,7 +200,6 @@
             this.imageButton3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.imageButton3.CStroke = System.Drawing.Color.Black;
             this.imageButton3.CText = System.Drawing.Color.White;
-            this.imageButton3.Drawabled = false;
             this.imageButton3.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton3.FText = null;
             this.imageButton3.IWidth = 2;
@@ -225,7 +215,6 @@
             this.imageButton2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.imageButton2.CStroke = System.Drawing.Color.Black;
             this.imageButton2.CText = System.Drawing.Color.White;
-            this.imageButton2.Drawabled = false;
             this.imageButton2.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton2.FText = null;
             this.imageButton2.IWidth = 2;
@@ -241,7 +230,6 @@
             this.imageButton1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.imageButton1.CStroke = System.Drawing.Color.Black;
             this.imageButton1.CText = System.Drawing.Color.White;
-            this.imageButton1.Drawabled = false;
             this.imageButton1.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton1.FText = null;
             this.imageButton1.IWidth = 2;

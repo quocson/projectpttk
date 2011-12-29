@@ -22,29 +22,29 @@ namespace TetrisReturn
         private Font fText; // font of text
         private Point pText; //pos of text
         //Drawable
-        private bool drawabled;
-        private Bitmap buffer;
+        private Bitmap image;
+        public System.Drawing.Bitmap Image
+        {
+            get { return image; }
+            set { image = value;
+                image = new Bitmap(value.Width, value.Height);
+                Graphics.FromImage(image).DrawImage(value, new Point(0, 0));
+                SizeF sz = Graphics.FromImage(image).MeasureString(SText, FText);
+                if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
+                    PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
+                else
+                    PText = new Point(0, 0);
+                if(Enabled)
+                    Graphics.FromImage(image).DrawImage(getImgFromTxt(), PText);
+                else
+                    Graphics.FromImage(image).DrawImage(getImgFromTxtDis(), PText);
+            
+            }
+        }
         //event
         public delegate void ImageButton_ClickHandle();
         public event ImageButton_ClickHandle Button_Click;
-        public bool Drawabled
-        {
-            get { return drawabled; }
-            set { 
-                drawabled = value;
-                if (drawabled)
-                {
-                    buffer = new Bitmap(Height, Width);
-                    SizeF sz = Graphics.FromImage(buffer).MeasureString(SText, FText);
-                    if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
-                        PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
-                    else
-                        PText = new Point(0, 0);
-                    drawImg();
-                    Refresh();
-                }
-            }
-        }
+       
         public Point PText
         {
             get { return pText; }
@@ -81,7 +81,7 @@ namespace TetrisReturn
         {
             InitializeComponent();
 
-            Drawabled = false;
+            image = new Bitmap(1, 1);
             
             //default
         }
@@ -89,32 +89,13 @@ namespace TetrisReturn
         protected override void  OnPaint(PaintEventArgs e)
         {
  	        base.OnPaint(e);
-            if(Drawabled)
-                e.Graphics.DrawImage(buffer, new Point(0,0));
+
+            e.Graphics.DrawImage(image, new Point(0, 0));
         }
         
 
 
-        private void drawImg()
-        {
-            if (!Drawabled)
-                return;
-            SizeF sz = Graphics.FromImage(buffer).MeasureString(SText, FText);
-            if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
-                PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
-            else
-                PText = new Point(0, 0);
-            if(Enabled)
-            {
-                Graphics.FromImage(buffer).DrawImage(Constants.theme.NormalButton, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
-            }
-            else
-            {
-                Graphics.FromImage(buffer).DrawImage(Constants.theme.DisableButton, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxtDis(), PText);
-            }
-        }
+        
 
         private Image getImgFromTxtDis() // ve text trong -  disable
         {
@@ -175,45 +156,6 @@ namespace TetrisReturn
         }
 
         
-        private void ImageButton_EnabledChanged(object sender, EventArgs e)
-        {
-            Refresh();            
-        }
-
-        private void ImageButton_MouseLeave(object sender, EventArgs e)
-        {
-            drawImg();
-            Refresh();
-        }
-
-        private void ImageButton_MouseEnter(object sender, EventArgs e)
-        {
-            if (Enabled)
-            {
-                Graphics.FromImage(buffer).DrawImage(Constants.theme.HoverButton, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
-            }
-            Refresh();
-        }
-
-        private void ImageButton_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (Enabled)
-            {
-                Graphics.FromImage(buffer).DrawImage(Constants.theme.ClickButton, new Point(0, 0));
-                Graphics.FromImage(buffer).DrawImage(getImgFromTxt(), PText);
-            }
-            Refresh();
-        }
-
-        private void ImageButton_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.X > 0 && e.X < Width && e.Y > 0 && e.Y < Height)
-            {
-                Button_Click();
-            }
-            drawImg();
-            Refresh();   
-        }
+       
     }
 }
