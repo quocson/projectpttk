@@ -20,6 +20,8 @@ namespace TetrisReturn
         private Help help;
         private HighScores highScores;
         private Option option;
+        private bool mousePressed = false;
+        private Point diff = new Point(0, 0);
 
         public MainForm()
         {
@@ -35,23 +37,33 @@ namespace TetrisReturn
             checkLostAllFiles();
 
             setLastConfig();
+
+            gameControl = new GameControl();
+            soundControl = new SoundControl();
+
+            setTheme();
+        }
+
+        private void setTheme()
+        {
+            BackgroundImage = Constants.theme.MainBackground;
+
             imageButton1.Image = Constants.theme.NormalButton;
-           // imageButton1.FText = new Font("Arial", 15);
-            imageButton1.SText = "son";
-            this.BackgroundImage = Constants.theme.MainBackground;
-            imageButton2.Image = Constants.theme.NormalButton;
+            imageButton2.Image = Constants.theme.DisableButton;
             imageButton3.Image = Constants.theme.NormalButton;
             imageButton4.Image = Constants.theme.NormalButton;
             imageButton5.Image = Constants.theme.NormalButton;
             imageButton6.Image = Constants.theme.NormalButton;
             imageButton7.Image = Constants.theme.NormalButton;
+
+            Controls.Add(gameControl);
+
+            nextShape1.ImgBack = Constants.theme.NextShape;
+
             showInformation1.ImgBack = Constants.theme.Informations;
-            showInformation1.STitle = "son";
-
-            showInformation1.SInfo = "son";
-
-            gameControl = new GameControl();
-            soundControl = new SoundControl();
+            showInformation2.ImgBack = Constants.theme.Informations;
+            showInformation3.ImgBack = Constants.theme.Informations;
+            showInformation4.ImgBack = Constants.theme.Informations;
         }
 
         //check if lost all files, close game.
@@ -107,16 +119,16 @@ namespace TetrisReturn
 
             //...
 
-            if (!success)
-                if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                {
-                    //lost a few files.
-                    Constants.themeService.closeThemes();
-                    Constants.mapService.closeMaps();
-                    Constants.theme.Dispose();
-                    Constants.map.Dispose();
-                    Application.Exit();
-                }
+            //if (!success)
+            //    if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+            //    {
+            //        //lost a few files.
+            //        Constants.themeService.closeThemes();
+            //        Constants.mapService.closeMaps();
+            //        Constants.theme.Dispose();
+            //        Constants.map.Dispose();
+            //        Application.Exit();
+            //    }
         }
 
         //exit game.
@@ -124,6 +136,111 @@ namespace TetrisReturn
         {
             //dispose element.
             Application.Exit();
+        }
+
+        private void imageButton2_Button_Click()
+        {
+
+        }
+
+        private void imageButton1_Button_Click()
+        {
+
+        }
+
+        private void imageButton7_Click(object sender, EventArgs e)
+        {
+            exitGame();
+        }
+
+        private void imageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imageButton1_MouseEnter(object sender, EventArgs e)
+        {
+            imageButton1.Image = Constants.theme.HoverButton;
+            //sound here.
+        }
+
+        private void imageButton2_MouseEnter(object sender, EventArgs e)
+        {
+
+            imageButton2.Image = Constants.theme.HoverButton;
+            //sound here.
+        }
+
+        private void imageButton3_MouseEnter(object sender, EventArgs e)
+        {
+
+            imageButton3.Image = Constants.theme.HoverButton;
+            //sound here.
+        }
+
+        private void imageButton4_MouseEnter(object sender, EventArgs e)
+        {
+
+            imageButton4.Image = Constants.theme.HoverButton;
+            //sound here.
+        }
+
+        private void imageButton5_MouseEnter(object sender, EventArgs e)
+        {
+
+            imageButton5.Image = Constants.theme.HoverButton;
+            //sound here.
+        }
+
+        private void imageButton6_MouseEnter(object sender, EventArgs e)
+        {
+
+            imageButton6.Image = Constants.theme.HoverButton;
+            //sound here.
+        }
+
+        private void imageButton7_MouseEnter(object sender, EventArgs e)
+        {
+
+            imageButton7.Image = Constants.theme.HoverButton;
+            //sound here.
+        }
+
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mousePressed && (e.Button & MouseButtons.Left) != 0)
+            {
+                Point p = new Point(e.X, e.Y);
+                p = PointToScreen(p);
+                p.X -= diff.X;
+                p.Y -= diff.Y;
+                DesktopLocation = p;
+            } 
+        }
+
+        private void MainForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mousePressed = true;
+
+                Point p = new Point(e.X, e.Y);
+                p = PointToScreen(p);
+                diff.X = p.X - DesktopLocation.X;
+                diff.Y = p.Y - DesktopLocation.Y;
+            }
+
+        }
+
+        private void MainForm_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            mousePressed = false;
         }
     }
 }

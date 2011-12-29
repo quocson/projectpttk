@@ -16,12 +16,24 @@ namespace TetrisReturn
 
         public GameControl()
         {
-            Location = new Point(300, 80);
+            Location = new Point(435, 80);
             Size = new Size(411, 561);
             imageBuffer = new Bitmap(Constants.map.ImageMap);
             currShape = null;
             nextShape = null;
             ghostShape = null;
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x00000020;
+                return cp;
+            }
         }
 
         //reset statusMap and imageMap.
