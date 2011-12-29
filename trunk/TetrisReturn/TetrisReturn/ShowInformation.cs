@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
-
 namespace TetrisReturn
 {
     public partial class ShowInformation : UserControl
@@ -211,5 +210,9 @@ namespace TetrisReturn
 
             return bmpOut;
         }
+
+
+        
+        
     }
 }

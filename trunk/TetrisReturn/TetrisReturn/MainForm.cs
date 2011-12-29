@@ -26,9 +26,13 @@ namespace TetrisReturn
         public MainForm()
         {
             InitializeComponent();
-            
         }
-
+        private void AddEventHandler(Control ctl)
+        {
+            ctl.MouseDown += new MouseEventHandler(MainForm_MouseDown);
+            ctl.MouseMove += new MouseEventHandler(MainForm_MouseMove);
+            ctl.MouseUp += new MouseEventHandler(MainForm_MouseUp);
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
             Constants.findMap();
@@ -42,6 +46,13 @@ namespace TetrisReturn
             soundControl = new SoundControl();
 
             setTheme();
+
+            this.AddEventHandler(this.showInformation1);
+            this.AddEventHandler(this.showInformation2);
+            this.AddEventHandler(this.showInformation3);
+            this.AddEventHandler(this.showInformation4);
+            this.AddEventHandler(this.nextShape1);
+            this.AddEventHandler(this.gameControl);
         }
 
         private void setTheme()
