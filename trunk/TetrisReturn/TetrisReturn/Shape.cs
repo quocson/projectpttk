@@ -170,7 +170,7 @@ namespace TetrisReturn
             if (rotatable)
                 return true;
 
-            int dx = (xScreen + Constants.blockSize * tmpCol - Constants.map.Row * Constants.blockSize) / Constants.blockSize;
+            int dx = (xScreen + Constants.blockSize * tmpCol - Constants.map.Column * Constants.blockSize) / Constants.blockSize;
             if(dx < 0) dx = 0;
             int tmpX = xScreen - Constants.blockSize;
             int tmpY = yScreen;
