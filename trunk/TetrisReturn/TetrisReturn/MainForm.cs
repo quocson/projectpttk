@@ -285,6 +285,14 @@ namespace TetrisReturn
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
+        }
+
+        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void MainForm_KeyUp(object sender, KeyEventArgs e)
+        {
             Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
             gameControl.CurrentShape.eraseShape(gr);
             if (e.KeyCode == Keys.Up && gameControl.CurrentShape.canMoveLeft())
@@ -312,7 +320,7 @@ namespace TetrisReturn
                                 gameControl.setCurrShapeToEndMap();
                             }
             gameControl.CurrentShape.drawShape(gr);
-
+            gameControl.refresh();
             gr.Dispose();
         }
 
