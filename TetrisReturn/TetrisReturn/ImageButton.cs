@@ -33,9 +33,6 @@ namespace TetrisReturn
                 Refresh();
             }
         }
-        //event
-        public delegate void ImageButton_ClickHandle();
-        public event ImageButton_ClickHandle Button_Click;
        
         public Point PText
         {
