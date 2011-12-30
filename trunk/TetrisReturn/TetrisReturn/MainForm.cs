@@ -285,24 +285,16 @@ namespace TetrisReturn
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-        }
-
-        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
-        private void MainForm_KeyUp(object sender, KeyEventArgs e)
-        {
             Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
             gameControl.CurrentShape.eraseShape(gr);
-            if (e.KeyCode == Keys.Up && gameControl.CurrentShape.canMoveLeft())
+            if (e.KeyValue == (int)System.Windows.Forms.Keys.Up)
             {
-                gameControl.CurrentShape.moveLeft();
+                gameControl.CurrentShape.rotate();
             }
             else
-                if (e.KeyValue == (int)System.Windows.Forms.Keys.Up && gameControl.CurrentShape.canRotate())
+                if (e.KeyCode == Keys.Left && gameControl.CurrentShape.canMoveLeft())
                 {
-                    gameControl.CurrentShape.rotate();
+                    gameControl.CurrentShape.moveLeft();
                 }
                 else
                     if (e.KeyValue == (int)System.Windows.Forms.Keys.Right && gameControl.CurrentShape.canMoveRight())
@@ -322,6 +314,14 @@ namespace TetrisReturn
             gameControl.CurrentShape.drawShape(gr);
             gameControl.refresh();
             gr.Dispose();
+        }
+
+        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void MainForm_KeyUp(object sender, KeyEventArgs e)
+        {
         }
 
         private void MainForm_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
