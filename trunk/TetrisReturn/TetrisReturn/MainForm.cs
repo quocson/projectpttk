@@ -324,16 +324,6 @@ namespace TetrisReturn
             gr.Dispose();
         }
 
-        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
-        {
-                
-        }
-
-        private void MainForm_KeyUp(object sender, KeyEventArgs e)
-        {
-            
-        }
-
         private void MainForm_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             switch (e.KeyCode)
