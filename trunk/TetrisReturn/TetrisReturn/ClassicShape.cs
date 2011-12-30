@@ -67,14 +67,14 @@ namespace TetrisReturn
                 rotateStatusArr();
             }
 
-            yScreen = -row * Constants.blockSize;
+            yScreen = -row * Constants.blockSize + 6;
 
             for (int i = 0; i < row; i++)
                 for (int j = 0; j < col; j++)
                 {
                     if (statusArr[i, j])
                     {
-                        cube.Add(new Block(xScreen + j * Constants.blockSize, yScreen + i * Constants.blockSize, color, Constants.r.Next(0, 7)));
+                        cube.Add(new Block(xScreen + j * Constants.blockSize, yScreen + i * Constants.blockSize, color, Constants.r.Next(0, Constants.theme.NumTypeBlock)));
                     }
                 }
         }

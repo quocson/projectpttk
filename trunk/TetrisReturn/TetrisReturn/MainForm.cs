@@ -159,7 +159,7 @@ namespace TetrisReturn
         {
             timer.Enabled = true;
             timer.Interval = 500;
-            modeShape = 1;
+            modeShape = 0;
             gameControl.createShape(modeShape);
         }
 
