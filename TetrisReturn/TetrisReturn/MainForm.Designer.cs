@@ -51,7 +51,7 @@
             // 
             // nextShape1
             // 
-            this.nextShape1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nextShape1.BackColor = System.Drawing.Color.Transparent; 
             this.nextShape1.CStroke = System.Drawing.Color.Black;
             this.nextShape1.CText = System.Drawing.Color.White;
             this.nextShape1.FText = null;
@@ -67,7 +67,7 @@
             // 
             // showInformation4
             // 
-            this.showInformation4.BackColor = System.Drawing.Color.White;
+            this.showInformation4.BackColor = System.Drawing.Color.Transparent;
             this.showInformation4.CInfo = System.Drawing.Color.Empty;
             this.showInformation4.CStroke = System.Drawing.Color.Black;
             this.showInformation4.CText = System.Drawing.Color.White;
@@ -86,7 +86,7 @@
             // 
             // showInformation3
             // 
-            this.showInformation3.BackColor = System.Drawing.Color.White;
+            this.showInformation3.BackColor = System.Drawing.Color.Transparent;
             this.showInformation3.CInfo = System.Drawing.Color.Empty;
             this.showInformation3.CStroke = System.Drawing.Color.Black;
             this.showInformation3.CText = System.Drawing.Color.White;
@@ -105,7 +105,7 @@
             // 
             // showInformation2
             // 
-            this.showInformation2.BackColor = System.Drawing.Color.White;
+            this.showInformation2.BackColor = System.Drawing.Color.Transparent;
             this.showInformation2.CInfo = System.Drawing.Color.Empty;
             this.showInformation2.CStroke = System.Drawing.Color.Black;
             this.showInformation2.CText = System.Drawing.Color.White;
@@ -124,7 +124,7 @@
             // 
             // showInformation1
             // 
-            this.showInformation1.BackColor = System.Drawing.Color.White;
+            this.showInformation1.BackColor = System.Drawing.Color.Transparent;
             this.showInformation1.CInfo = System.Drawing.Color.Empty;
             this.showInformation1.CStroke = System.Drawing.Color.Black;
             this.showInformation1.CText = System.Drawing.Color.White;
@@ -143,7 +143,7 @@
             // 
             // imageButton7
             // 
-            this.imageButton7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imageButton7.BackColor = System.Drawing.Color.Transparent;
             this.imageButton7.CStroke = System.Drawing.Color.Black;
             this.imageButton7.CText = System.Drawing.Color.White;
             this.imageButton7.ForeColor = System.Drawing.Color.Transparent;
@@ -161,7 +161,7 @@
             // 
             // imageButton6
             // 
-            this.imageButton6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imageButton6.BackColor = System.Drawing.Color.Transparent;
             this.imageButton6.CStroke = System.Drawing.Color.Black;
             this.imageButton6.CText = System.Drawing.Color.White;
             this.imageButton6.ForeColor = System.Drawing.Color.Transparent;
@@ -178,7 +178,7 @@
             // 
             // imageButton5
             // 
-            this.imageButton5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imageButton5.BackColor = System.Drawing.Color.Transparent;
             this.imageButton5.CStroke = System.Drawing.Color.Black;
             this.imageButton5.CText = System.Drawing.Color.White;
             this.imageButton5.ForeColor = System.Drawing.Color.Transparent;
@@ -195,7 +195,7 @@
             // 
             // imageButton4
             // 
-            this.imageButton4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imageButton4.BackColor = System.Drawing.Color.Transparent;
             this.imageButton4.CStroke = System.Drawing.Color.Black;
             this.imageButton4.CText = System.Drawing.Color.White;
             this.imageButton4.ForeColor = System.Drawing.Color.Transparent;
@@ -212,7 +212,7 @@
             // 
             // imageButton3
             // 
-            this.imageButton3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imageButton3.BackColor = System.Drawing.Color.Transparent;
             this.imageButton3.CStroke = System.Drawing.Color.Black;
             this.imageButton3.CText = System.Drawing.Color.White;
             this.imageButton3.ForeColor = System.Drawing.Color.Transparent;
@@ -229,7 +229,7 @@
             // 
             // imageButton2
             // 
-            this.imageButton2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imageButton2.BackColor = System.Drawing.Color.Transparent;
             this.imageButton2.CStroke = System.Drawing.Color.Black;
             this.imageButton2.CText = System.Drawing.Color.White;
             this.imageButton2.ForeColor = System.Drawing.Color.Transparent;
@@ -246,7 +246,7 @@
             // 
             // imageButton1
             // 
-            this.imageButton1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imageButton1.BackColor = System.Drawing.Color.Transparent;
             this.imageButton1.CStroke = System.Drawing.Color.Black;
             this.imageButton1.CText = System.Drawing.Color.White;
             this.imageButton1.ForeColor = System.Drawing.Color.Transparent;

@@ -73,9 +73,7 @@
     <Compile Include="HighScores.Designer.cs">
       <DependentUpon>HighScores.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="ImageButton.cs" />
     <Compile Include="ImageButton.Designer.cs">
       <DependentUpon>ImageButton.cs</DependentUpon>
     </Compile>

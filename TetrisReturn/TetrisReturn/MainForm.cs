@@ -47,7 +47,6 @@ namespace TetrisReturn
             soundControl = new SoundControl();
 
             setTheme();
-
             this.AddEventHandler(this.showInformation1);
             this.AddEventHandler(this.showInformation2);
             this.AddEventHandler(this.showInformation3);
