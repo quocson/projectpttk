@@ -38,6 +38,12 @@ namespace TetrisReturn
             get { return currShape; }
         }
 
+        //get next shape.
+        public Shape NextShape
+        {
+            get { return nextShape; }
+        }
+
         protected override CreateParams CreateParams
         {
             get

@@ -187,6 +187,7 @@ namespace TetrisReturn
             timer.Interval = 200;
             modeShape = 0;
             gameControl.createShape(modeShape);
+            nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
         }
 
@@ -197,6 +198,7 @@ namespace TetrisReturn
             {
                 gameControl.lockShape();
                 gameControl.createShape(modeShape);
+                nextShape1.ShapeNext = gameControl.NextShape;
             }
         }
 
