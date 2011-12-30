@@ -148,7 +148,7 @@ namespace TetrisReturn
 
             if ((y >= 0 && y < Constants.map.Column) &&
                 (x >= 0 && x < Constants.map.Row - 1) &&
-                Constants.map.StatusMap[x, y + 1] == -1)
+                Constants.map.StatusMap[x + 1, y] == -1)
                 return true;
 
             return false;
