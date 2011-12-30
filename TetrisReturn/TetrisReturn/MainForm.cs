@@ -79,6 +79,7 @@ namespace TetrisReturn
             this.AddKeyEventHandler(this.gameControl);
 
             this.AddKeyEventHandler(this.nextShape1);
+            playing = false;
         }
 
         private void setTheme()
@@ -186,6 +187,7 @@ namespace TetrisReturn
             timer.Interval = 200;
             modeShape = 0;
             gameControl.createShape(modeShape);
+            playing = true;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -285,35 +287,38 @@ namespace TetrisReturn
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
-            gameControl.CurrentShape.eraseShape(gr);
-            if (e.KeyValue == (int)System.Windows.Forms.Keys.Up)
+            if (playing)
             {
-                gameControl.CurrentShape.rotate();
-            }
-            else
-                if (e.KeyCode == Keys.Left && gameControl.CurrentShape.canMoveLeft())
+                Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
+                gameControl.CurrentShape.eraseShape(gr);
+                if (e.KeyValue == (int)System.Windows.Forms.Keys.Up)
                 {
-                    gameControl.CurrentShape.moveLeft();
+                    gameControl.CurrentShape.rotate();
                 }
                 else
-                    if (e.KeyValue == (int)System.Windows.Forms.Keys.Right && gameControl.CurrentShape.canMoveRight())
+                    if (e.KeyCode == Keys.Left && gameControl.CurrentShape.canMoveLeft())
                     {
-                        gameControl.CurrentShape.moveRight();
+                        gameControl.CurrentShape.moveLeft();
                     }
                     else
-                        if (e.KeyValue == (int)System.Windows.Forms.Keys.Down && gameControl.CurrentShape.canFall())
+                        if (e.KeyValue == (int)System.Windows.Forms.Keys.Right && gameControl.CurrentShape.canMoveRight())
                         {
-                            gameControl.CurrentShape.moveDown();
+                            gameControl.CurrentShape.moveRight();
                         }
                         else
-                            if (e.KeyValue == (int)System.Windows.Forms.Keys.Enter && gameControl.CurrentShape.canFall())
+                            if (e.KeyValue == (int)System.Windows.Forms.Keys.Down && gameControl.CurrentShape.canFall())
                             {
-                                gameControl.setCurrShapeToEndMap();
+                                gameControl.CurrentShape.moveDown();
                             }
-            gameControl.CurrentShape.drawShape(gr);
-            gameControl.refresh();
-            gr.Dispose();
+                            else
+                                if (e.KeyValue == (int)System.Windows.Forms.Keys.Enter && gameControl.CurrentShape.canFall())
+                                {
+                                    gameControl.setCurrShapeToEndMap();
+                                }
+                gameControl.CurrentShape.drawShape(gr);
+                gameControl.refresh();
+                gr.Dispose();
+            }
         }
 
         private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
