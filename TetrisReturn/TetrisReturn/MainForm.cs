@@ -34,6 +34,12 @@ namespace TetrisReturn
             ctl.MouseDown += new MouseEventHandler(MainForm_MouseDown);
             ctl.MouseMove += new MouseEventHandler(MainForm_MouseMove);
             ctl.MouseUp += new MouseEventHandler(MainForm_MouseUp);
+            //ctl.KeyDown += new KeyEventHandler(MainForm_KeyDown);
+            //ctl.KeyPress += new KeyPressEventHandler(MainForm_KeyPress);
+            //ctl.KeyUp += new KeyEventHandler(MainForm_KeyUp);
+        }
+        private void AddKeyEventHandler(Control ctl)
+        {
             ctl.KeyDown += new KeyEventHandler(MainForm_KeyDown);
             ctl.KeyPress += new KeyPressEventHandler(MainForm_KeyPress);
             ctl.KeyUp += new KeyEventHandler(MainForm_KeyUp);
@@ -57,6 +63,21 @@ namespace TetrisReturn
             this.AddEventHandler(this.showInformation4);
             this.AddEventHandler(this.nextShape1);
             this.AddEventHandler(this.gameControl);
+
+            this.AddKeyEventHandler(this.showInformation1);
+            this.AddKeyEventHandler(this.showInformation2);
+            this.AddKeyEventHandler(this.showInformation3);
+            this.AddKeyEventHandler(this.showInformation4);
+            this.AddKeyEventHandler(this.imageButton1);
+            this.AddKeyEventHandler(this.imageButton2);
+            this.AddKeyEventHandler(this.imageButton3);
+            this.AddKeyEventHandler(this.imageButton4);
+            this.AddKeyEventHandler(this.imageButton5);
+            this.AddKeyEventHandler(this.imageButton6);
+            this.AddKeyEventHandler(this.imageButton7);
+            this.AddKeyEventHandler(this.gameControl);
+
+            this.AddKeyEventHandler(this.nextShape1);
         }
 
         private void setTheme()
@@ -264,6 +285,7 @@ namespace TetrisReturn
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
+            MessageBox.Show("AA");
             gameControl.CurrentShape.eraseShape(gr);
             if (e.KeyValue == (int)System.Windows.Forms.Keys.Left && gameControl.CurrentShape.canMoveLeft())
             {
@@ -297,11 +319,13 @@ namespace TetrisReturn
         private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+            MessageBox.Show("AA");
         }
 
         private void MainForm_KeyUp(object sender, KeyEventArgs e)
         {
 
+            MessageBox.Show("AA");
         }
     }
 }
