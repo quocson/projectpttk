@@ -72,14 +72,17 @@ namespace MapPluginInterface
         //check point on map.
         public bool checkOnMap(int x, int y)
         {
-            //if
+            if ((x >= 0 && x < row) && (y >= 0 && y < col))
+                return true;
             return false;
         }
 
         //check overflow map.
         public bool checkOverflow()
         {
-            //if
+            for (int i = 0; i < col; i++)
+                if (statusMap[4, i] != -1)
+                    return true;
             return false;
         }
 

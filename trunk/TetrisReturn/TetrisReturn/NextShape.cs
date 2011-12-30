@@ -88,7 +88,6 @@ namespace TetrisReturn
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnPaint(e);
             if(ImgBack == null)
                 return;
             e.Graphics.DrawImage(ImgBack, new Point(0, 0));
@@ -110,6 +109,10 @@ namespace TetrisReturn
                 iTopShape = (Width - shapeNext.Col * Constants.blockSize) / 2;
             shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height +  Constants.blockSize);
             shapeNext.drawShape(e.Graphics);
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
         }
 
         private Image getImgFromTxt()

@@ -200,6 +200,159 @@ namespace TetrisReturn
                 gameControl.lockShape();
                 gameControl.createShape(modeShape);
                 nextShape1.ShapeNext = gameControl.NextShape;
+                if (Constants.map.checkOverflow())
+                {
+                    timer.Enabled = false;
+                    playing = false;
+                }
+                //if (gameControl.isEndGame())
+                //{
+                //    this.timer.Enabled = false;
+                //    bool newgame = false;
+                //    if (bSound)
+                //        playSound.playSoundGameOver();
+                //    int rank = Constant.saver.saveRecords(gameScore.Score);
+                //    if ( rank > 0)
+                //    {
+                //        if (MessageBox.Show("New High Score: " + gameScore.Score + "\nRank: " + rank  + "\nDo you want to play again?",
+                //            "Game Over!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                //        {
+                //            newgame = true;
+                //        }
+                //    }
+
+                //    else
+                //        if (MessageBox.Show("Your score: " + gameScore.Score + "\nDo you want to play again?",
+                //            "Game Over!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                //        {
+                //            newgame = true;
+                //        }
+                //    if (newgame)
+                //    {
+                //        gameControl.resetGame();
+
+                //        gameScore.Score = 0;
+                //        gameLevel.Level = 1;
+                //        gameLine.Line = 0;
+                //        gamePiece.Piece = 0;
+                //        gameControl.gameInitObj(out  shapeNext, out  colorNext, out  rotaterNext);
+                //        gameControl.setShape(shapeNext, colorNext, rotaterNext);
+                //        nextShape.drawNextShape(shapeNext, colorNext, rotaterNext);
+                //        gamePiece.Piece++;
+
+                //        timer.Interval = 500;
+                //        menuItem2.Enabled = true;
+                //        menuItem2.Text = "Pause";
+                //        if (bSound)
+                //            playSound.playSoundTheme();
+                //        changeMode(ModeGame.Playing);
+                //        timer.Enabled = true;
+                //    }
+                //    else
+                //    {
+                //        changeMode(ModeGame.Ready);
+                //        playSound.stopSoundTheme();
+                //        timer.Enabled = true;
+                //        menuItem2.Enabled = false;
+                //        return;
+                //    }
+                //}   
+                //int val, i = 0;
+                //bool isfull;
+                //isfull = ((full = gameControl.fullLine()).Count > 0);
+
+
+                //tempScore += (full.Count / 4) * 100;
+                //gameLine.Line += full.Count;
+                //int c = 0;
+                //int numRow = 0;
+                //if(full.Count != 0)
+                //    numRow = Constant.rd.Next(1, 8);
+                //if (bSound)
+                //    switch (numRow)
+                //    {
+                //        case 1: playSound.playSoundAmazing(); break;
+                //        case 2: playSound.playSoundVeryGood(); break;
+                //        case 3: playSound.playSoundBrilliant(); break;
+                //        case 4: playSound.playSoundWonderful(); break;
+                //        case 5: playSound.playSoundWow(); break;
+                //        case 6: playSound.playSoundExcellent(); break;
+                //        case 7: playSound.playSoundClear(); break;
+                //    }
+                //while (full.Count > 0)
+                //{
+                //    c++;
+                //    val = full.Pop() + i;
+                //    tempScore += c * (Constant.yMax / Constant.d) * (24 - val);
+                //    gameControl.deleteLine(val);
+                //    Constant.updateMap(val, ref i);
+                //}
+                //gameScore.Score += tempScore;
+                //levelUp();
+                //tempScore = 0;
+
+
+                //if (gameLevel.Level == 99)
+                //{
+                //    this.timer.Enabled = false;
+                //    bool newgame = false;
+                //    if (bSound)
+                //        playSound.playSoundGameWin();
+                //    int rank = Constant.saver.saveRecords(gameScore.Score);
+                //    if (rank > 0)
+                //    {
+                //        if (MessageBox.Show("New High Score: " + gameScore.Score + "\nRank: " + rank + "\nDo you want to play again?",
+                //            "You Win!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                //        {
+                //            newgame = true;
+                //        }
+                //    }
+
+                //    else
+                //        if (MessageBox.Show("Your score: " + gameScore.Score + "\nDo you want to play again?",
+                //            "You Win!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                //        {
+                //            newgame = true;
+                //        }
+                //    if (newgame)
+                //    {
+                //        gameControl.setGhostNull();
+                //        gameControl.resetGame();
+
+                //        gameScore.Score = 0;
+                //        gameLevel.Level = 1;
+                //        gameLine.Line = 0;
+                //        gamePiece.Piece = 0;
+                //        gameControl.gameInitObj(out  shapeNext, out  colorNext, out  rotaterNext);
+                //        gameControl.setShape(shapeNext, colorNext, rotaterNext);
+                //        nextShape.drawNextShape(shapeNext, colorNext, rotaterNext);
+                //        gamePiece.Piece++;
+
+                //        timer.Interval = 500;
+                //        menuItem2.Enabled = true;
+                //        menuItem2.Text = "Pause";
+                //        if (bSound)
+                //            playSound.playSoundTheme();
+                //        changeMode(ModeGame.Playing);
+                //        timer.Enabled = true;
+                //    }
+                //    else
+                //    {
+                //        changeMode(ModeGame.Ready);
+                //        playSound.stopSoundTheme();
+                //        timer.Enabled = true;
+                //        return;
+                //    }
+                //}
+                //else
+                //{
+
+                //    gameControl.gameInitObj(out  shapeNext, out  colorNext, out  rotaterNext);
+                //    gameControl.setShape(shapeNext, colorNext, rotaterNext);
+                //    nextShape.drawNextShape(shapeNext, colorNext, rotaterNext);
+                //    gameControl.drawGhostShape(bGhost);
+                //    gamePiece.Piece++;
+                //}
             }
         }
 
