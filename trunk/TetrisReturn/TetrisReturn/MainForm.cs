@@ -43,6 +43,7 @@ namespace TetrisReturn
             ctl.KeyDown += new KeyEventHandler(MainForm_KeyDown);
             ctl.KeyPress += new KeyPressEventHandler(MainForm_KeyPress);
             ctl.KeyUp += new KeyEventHandler(MainForm_KeyUp);
+            ctl.PreviewKeyDown += new PreviewKeyDownEventHandler(MainForm_PreviewKeyDown);
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -285,9 +286,8 @@ namespace TetrisReturn
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
-            MessageBox.Show("AA");
             gameControl.CurrentShape.eraseShape(gr);
-            if (e.KeyValue == (int)System.Windows.Forms.Keys.Left && gameControl.CurrentShape.canMoveLeft())
+            if (e.KeyCode == Keys.Up && gameControl.CurrentShape.canMoveLeft())
             {
                 gameControl.CurrentShape.moveLeft();
             }
@@ -312,20 +312,31 @@ namespace TetrisReturn
                                 gameControl.setCurrShapeToEndMap();
                             }
             gameControl.CurrentShape.drawShape(gr);
-            Refresh();
+
             gr.Dispose();
         }
 
         private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            MessageBox.Show("AA");
+                
         }
 
         private void MainForm_KeyUp(object sender, KeyEventArgs e)
         {
+            
+        }
 
-            MessageBox.Show("AA");
+        private void MainForm_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Down:
+                case Keys.Up:
+                case Keys.Right:
+                case Keys.Left:
+                    e.IsInputKey = true;
+                    break;
+            }
         }
     }
 }
