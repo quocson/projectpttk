@@ -13,6 +13,7 @@ namespace TetrisReturn
     {
         private bool enableGhostShape;
         private int soundVolume;
+        private int modeShape;
         private GameControl gameControl;
         private SoundControl soundControl;
         private string languageDisplay;
@@ -149,16 +150,6 @@ namespace TetrisReturn
             Application.Exit();
         }
 
-        private void imageButton2_Button_Click()
-        {
-
-        }
-
-        private void imageButton1_Button_Click()
-        {
-
-        }
-
         private void imageButton7_Click(object sender, EventArgs e)
         {
             exitGame();
@@ -166,12 +157,21 @@ namespace TetrisReturn
 
         private void imageButton1_Click(object sender, EventArgs e)
         {
-
+            timer.Enabled = true;
+            timer.Interval = 500;
+            modeShape = 1;
+            gameControl.createShape(modeShape);
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            gameControl.currShapeFall();
+            gameControl.refresh();
+        }
 
+        private void pauseGame()
+        {
+            timer.Enabled = false;
         }
 
         private void imageButton1_MouseEnter(object sender, EventArgs e)

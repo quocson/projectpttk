@@ -80,7 +80,7 @@ namespace TetrisReturn
                     nextShape = new MultiShape();
                     break;
 
-                //for exScreentend shape...
+                //for extend shape...
             }
         }
 
