@@ -168,8 +168,12 @@ namespace TetrisReturn
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            gameControl.currShapeFall();
             gameControl.refresh();
+            if (!gameControl.currShapeFall())
+            {
+                gameControl.lockShape();
+                gameControl.createShape(modeShape);
+            }
         }
 
         private void pauseGame()
@@ -259,7 +263,35 @@ namespace TetrisReturn
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-
+            Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
+            gameControl.CurrentShape.eraseShape(gr);
+            if (e.KeyValue == (int)System.Windows.Forms.Keys.Left && gameControl.CurrentShape.canMoveLeft())
+            {
+                gameControl.CurrentShape.moveLeft();
+            }
+            else
+                if (e.KeyValue == (int)System.Windows.Forms.Keys.Up && gameControl.CurrentShape.canRotate())
+                {
+                    gameControl.CurrentShape.rotate();
+                }
+                else
+                    if (e.KeyValue == (int)System.Windows.Forms.Keys.Right && gameControl.CurrentShape.canMoveRight())
+                    {
+                        gameControl.CurrentShape.moveRight();
+                    }
+                    else
+                        if (e.KeyValue == (int)System.Windows.Forms.Keys.Down && gameControl.CurrentShape.canFall())
+                        {
+                            gameControl.CurrentShape.moveDown();
+                        }
+                        else
+                            if (e.KeyValue == (int)System.Windows.Forms.Keys.Enter && gameControl.CurrentShape.canFall())
+                            {
+                                gameControl.setCurrShapeToEndMap();
+                            }
+            gameControl.CurrentShape.drawShape(gr);
+            Refresh();
+            gr.Dispose();
         }
 
         private void MainForm_KeyPress(object sender, KeyPressEventArgs e)

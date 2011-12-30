@@ -26,6 +26,18 @@ namespace TetrisReturn
             this.BackColor = Color.Transparent;
         }
 
+        //get image buffer.
+        public Bitmap ImageBuffer
+        {
+            get { return imageBuffer; }
+        }
+
+        //get current shape.
+        public Shape CurrentShape
+        {
+            get { return currShape; }
+        }
+
         protected override CreateParams CreateParams
         {
             get
@@ -119,7 +131,7 @@ namespace TetrisReturn
         }
 
         //set shape to end map.
-        void setCurrShapeToEndMap()
+        public void setCurrShapeToEndMap()
         {
             currShape.goToEndMap();
         }
