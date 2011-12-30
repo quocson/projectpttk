@@ -34,6 +34,9 @@ namespace TetrisReturn
             ctl.MouseDown += new MouseEventHandler(MainForm_MouseDown);
             ctl.MouseMove += new MouseEventHandler(MainForm_MouseMove);
             ctl.MouseUp += new MouseEventHandler(MainForm_MouseUp);
+            ctl.KeyDown += new KeyEventHandler(MainForm_KeyDown);
+            ctl.KeyPress += new KeyPressEventHandler(MainForm_KeyPress);
+            ctl.KeyUp += new KeyEventHandler(MainForm_KeyUp);
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -252,6 +255,21 @@ namespace TetrisReturn
         {
 
             mousePressed = false;
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void MainForm_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
