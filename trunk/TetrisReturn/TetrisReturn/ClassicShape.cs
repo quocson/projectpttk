@@ -15,8 +15,8 @@ namespace TetrisReturn
                 case 0://shape I.
                     row = 4;
                     col = 1;
-                    statusArr[0, 0] = statusArr[0, 1] = true;
-                    statusArr[0, 2] = statusArr[0, 3] = true;
+                    statusArr[0, 0] = statusArr[1, 0] = true;
+                    statusArr[2, 0] = statusArr[3, 0] = true;
                     break;
 
                 case 1://shape O.

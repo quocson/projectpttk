@@ -12,6 +12,7 @@ namespace TetrisReturn
     public partial class MainForm : Form
     {
         private bool enableGhostShape;
+        private bool playing;
         private int soundVolume;
         private int modeShape;
         private GameControl gameControl;
@@ -157,7 +158,7 @@ namespace TetrisReturn
         private void imageButton1_Click(object sender, EventArgs e)
         {
             timer.Enabled = true;
-            timer.Interval = 500;
+            timer.Interval = 200;
             modeShape = 0;
             gameControl.createShape(modeShape);
         }

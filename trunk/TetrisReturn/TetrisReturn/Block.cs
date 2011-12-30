@@ -91,9 +91,10 @@ namespace TetrisReturn
         //erase block on the graphics.
         public void eraseBlock(Graphics gr)
         {
-            gr.DrawImage(Constants.map.ImageMap,
+
+            gr.DrawImage(Constants.theme.MainBackground,
                          new Rectangle(xScreen, yScreen, Constants.blockSize, Constants.blockSize),
-                         new Rectangle(xScreen, yScreen, Constants.blockSize, Constants.blockSize),
+                         new Rectangle(xScreen + 440, yScreen + 115, Constants.blockSize, Constants.blockSize),
                          GraphicsUnit.Pixel);
         }
 
