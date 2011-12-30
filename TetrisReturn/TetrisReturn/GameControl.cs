@@ -157,7 +157,6 @@ namespace TetrisReturn
             g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize),
                 new Rectangle(445, 120, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize), GraphicsUnit.Pixel);
 
-            Refresh();
             for (int i = line - 1; i >= 0; i--)
             {
                 bool max = true;
@@ -170,11 +169,11 @@ namespace TetrisReturn
                         new Rectangle((Constants.map.StatusMap[i, j]) * Constants.blockSize, 0, Constants.blockSize, Constants.blockSize),
                         GraphicsUnit.Pixel);
                         max = false;
-                        Refresh();
                     }
                 }
                 if (max) i = -1;
             }
+            Refresh();
             g.Dispose();
         }
 
