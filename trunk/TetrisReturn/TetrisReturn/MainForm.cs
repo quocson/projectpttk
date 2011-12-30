@@ -53,7 +53,7 @@ namespace TetrisReturn
             checkLostAllFiles();
 
             setLastConfig();
-
+            pictureBox1.Visible = false;
             gameControl = new GameControl();
             soundControl = new SoundControl();
 
