@@ -89,11 +89,26 @@ namespace MapPluginInterface
         //reset the map.
         public virtual void reset()
         {
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    statusMap[i, j] = 0;
+                }
+            }
         }
 
         //update the map.
-        public void update()
+        public void updateMap(int rol, ref int dxLine)
         {
+            int i, j;
+            for (i = rol; i >= 0; i--)
+                for (j = 0; j < col; j++)
+                {
+                    if (i != 0)
+                        statusMap[i, j] = statusMap[i - 1, j];
+                }
+            dxLine++;
         }
     }
 }
