@@ -21,7 +21,7 @@ namespace TheSketchThemePlugin
                                         TheSketchThemePlugin.Properties.Resources.Informations,
                                         TheSketchThemePlugin.Properties.Resources.NextShape,
                                         7,
-                                        7);
+                                        1);
 
         public string VietNameseName { get { return TheSketchThemePlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheSketchThemePlugin.Properties.Resources.vietNameseDescription; } }
