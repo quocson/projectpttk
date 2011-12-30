@@ -151,6 +151,31 @@ namespace TetrisReturn
         //remove line.
         public void removeLine(int line)
         {
+
+            Graphics g = Graphics.FromImage(imageBuffer);
+
+            g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize),
+                new Rectangle(445, 120, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize), GraphicsUnit.Pixel);
+
+            Refresh();
+            for (int i = line - 1; i >= 0; i--)
+            {
+                bool max = true;
+                for (int j = 0; j < Constants.map.Column; j++)
+                {
+                    if (Constants.map.StatusMap[i, j] > -1)
+                    {
+                        g.DrawImage(Constants.theme.Blocks,
+                        new Rectangle(j * Constants.blockSize + 5 + Constants.blockDelta, (i - 3) * Constants.blockSize + 5 + Constants.blockDelta, Constants.blockSize - Constants.blockDelta, Constants.blockSize - Constants.blockDelta),
+                        new Rectangle((Constants.map.StatusMap[i, j]) * Constants.blockSize, 0, Constants.blockSize, Constants.blockSize),
+                        GraphicsUnit.Pixel);
+                        max = false;
+                        Refresh();
+                    }
+                }
+                if (max) i = -1;
+            }
+            g.Dispose();
         }
 
         //draw ghost shape.

@@ -205,6 +205,9 @@ namespace TetrisReturn
                     timer.Enabled = false;
                     playing = false;
                 }
+                gameControl.removeLine(25);
+                int a = 0;
+                Constants.map.updateMap(25, ref a);
                 //if (gameControl.isEndGame())
                 //{
                 //    this.timer.Enabled = false;
