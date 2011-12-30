@@ -81,9 +81,12 @@ namespace TetrisReturn
             image = new Bitmap(1, 1);
 
             FText = new Font("Arial", 15);
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+
+            this.BackColor = Color.Transparent;
             //default
         }
-
+       
         protected override void  OnPaint(PaintEventArgs e)
         {
  	        base.OnPaint(e);
@@ -103,6 +106,9 @@ namespace TetrisReturn
                 e.Graphics.DrawImage(getImgFromTxtDis(), PText);
         }
         
+
+        
+
 
 
         
