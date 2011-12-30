@@ -79,6 +79,8 @@ namespace TetrisReturn
             this.AddKeyEventHandler(this.gameControl);
 
             this.AddKeyEventHandler(this.nextShape1);
+
+            nextShape1.SText = "Next Shape";
             playing = false;
         }
 
@@ -97,7 +99,6 @@ namespace TetrisReturn
             Controls.Add(gameControl);
 
             nextShape1.ImgBack = Constants.theme.NextShape;
-
             showInformation1.ImgBack = Constants.theme.Informations;
             showInformation2.ImgBack = Constants.theme.Informations;
             showInformation3.ImgBack = Constants.theme.Informations;

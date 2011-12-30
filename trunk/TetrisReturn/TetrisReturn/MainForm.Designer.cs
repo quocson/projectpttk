@@ -54,7 +54,6 @@
             this.nextShape1.BackColor = System.Drawing.Color.Transparent;
             this.nextShape1.CStroke = System.Drawing.Color.Black;
             this.nextShape1.CText = System.Drawing.Color.White;
-            this.nextShape1.FText = null;
             this.nextShape1.ImgBack = null;
             this.nextShape1.IWidth = 2;
             this.nextShape1.Location = new System.Drawing.Point(900, 74);

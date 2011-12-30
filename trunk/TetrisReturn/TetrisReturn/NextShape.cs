@@ -19,7 +19,7 @@ namespace TetrisReturn
         private int iWidth = 2; //stroke width
         private Font fText; // font of text
         private Point pText; //pos of text
-        private Shape shapeNext;
+        private Shape shapeNext = null;
         private Bitmap imgBack;
         private int iTopShape;
 
@@ -30,8 +30,7 @@ namespace TetrisReturn
             {
                 shapeNext = value;
                 if (value != null)
-                    Refresh();
-                   
+                    Refresh();                   
             }
         }
         public Bitmap ImgBack
@@ -75,7 +74,8 @@ namespace TetrisReturn
         public String SText
         {
             get { return sText; }
-            set{sText = value;
+            set{
+                sText = value;
             if (value != null)
                 Refresh();
             }
@@ -84,6 +84,7 @@ namespace TetrisReturn
         public NextShape()
         {
             InitializeComponent();
+            FText = new Font("Arial", 20);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -91,21 +92,23 @@ namespace TetrisReturn
             if(ImgBack == null)
                 return;
             e.Graphics.DrawImage(ImgBack, new Point(0, 0));
+
             if(SText == null)
                 return;
             SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
             if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
-                PText = new Point((Width - (int)sz.Width) / 2, (Height - (int)sz.Height) / 2);
+                PText = new Point((Width - (int)sz.Width) / 2, 0);
             else
                 PText = new Point(0, 0);
 
             e.Graphics.DrawImage(getImgFromTxt(), PText);
+
             if(shapeNext == null)
                 return;
             iTopShape = 0;
-            if (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta > 0)
-                iTopShape = (Width - 4 * Constants.blockSize + 3 * Constants.blockDelta) / 2;
-            shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height + Constants.blockSize);
+            if (Width - shapeNext.Col * Constants.blockSize  > 0)
+                iTopShape = (Width - shapeNext.Col * Constants.blockSize) / 2;
+            shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height +  Constants.blockSize);
             shapeNext.drawShape(e.Graphics);
         }
 

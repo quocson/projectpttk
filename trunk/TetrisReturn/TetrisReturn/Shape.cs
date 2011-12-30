@@ -10,7 +10,17 @@ namespace TetrisReturn
     {
         protected bool[,] statusArr;//status of blocks on the shape.
         protected int row;//row of shape.
+        public int Row
+        {
+            get { return row; }
+            set { row = value; }
+        }
         protected int col;//colum of shape.
+        public int Col
+        {
+            get { return col; }
+            set { col = value; }
+        }
         protected int xScreen;//x position of shape on the screen.
         protected int yScreen;//y position of shape on the screen.
         protected int color;//color of shape.
@@ -66,13 +76,9 @@ namespace TetrisReturn
                 for (int j = 0; j < 4; j++)
                 {
                     statusArr[i, j] = s.statusArr[i, j];
+                    if (statusArr[i, j] == true && i < row && j < col)
+                        cube.Add(new Block(s.cube[i], x + j * Constants.blockSize, y + i * Constants.blockSize));
                 }
-
-            int n = s.cube.Count;
-            for (int i = 0; i < n; i++)
-            {
-                cube.Add(new Block(s.cube[i], x, y));
-            }
         }
 
         public void Dispose()
