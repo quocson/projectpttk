@@ -23,7 +23,8 @@ namespace TetrisReturn
         private HighScores highScores;
         private Option option;
         private bool mousePressed = false;
-        private Point diff = new Point(0, 0);
+        private Point toMove = new Point(0, 0);
+        private Point toCallForm = new Point(0, 0);
 
         public MainForm()
         {
@@ -34,15 +35,10 @@ namespace TetrisReturn
             ctl.MouseDown += new MouseEventHandler(MainForm_MouseDown);
             ctl.MouseMove += new MouseEventHandler(MainForm_MouseMove);
             ctl.MouseUp += new MouseEventHandler(MainForm_MouseUp);
-            //ctl.KeyDown += new KeyEventHandler(MainForm_KeyDown);
-            //ctl.KeyPress += new KeyPressEventHandler(MainForm_KeyPress);
-            //ctl.KeyUp += new KeyEventHandler(MainForm_KeyUp);
         }
         private void AddKeyEventHandler(Control ctl)
         {
             ctl.KeyDown += new KeyEventHandler(MainForm_KeyDown);
-            ctl.KeyPress += new KeyPressEventHandler(MainForm_KeyPress);
-            ctl.KeyUp += new KeyEventHandler(MainForm_KeyUp);
             ctl.PreviewKeyDown += new PreviewKeyDownEventHandler(MainForm_PreviewKeyDown);
         }
         private void MainForm_Load(object sender, EventArgs e)
@@ -173,6 +169,8 @@ namespace TetrisReturn
         private void exitGame()
         {
             //dispose element.
+            Constants.themeService.closeThemes();
+            Constants.mapService.closeMaps();
             Application.Exit();
         }
 
@@ -183,12 +181,20 @@ namespace TetrisReturn
 
         private void imageButton1_Click(object sender, EventArgs e)
         {
+            newGame();
+        }
+
+        private void newGame()
+        {
+            modeShape = 1;
             timer.Enabled = true;
             timer.Interval = 200;
             modeShape = 1;
             gameControl.createShape(modeShape);
             nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
+            timer.Enabled = true;
+            timer.Interval = 200;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -204,157 +210,6 @@ namespace TetrisReturn
                     timer.Enabled = false;
                     playing = false;
                 }
-                gameControl.removeLine(25);
-                int a = 0;
-                Constants.map.updateMap(25, ref a);
-                //if (gameControl.isEndGame())
-                //{
-                //    this.timer.Enabled = false;
-                //    bool newgame = false;
-                //    if (bSound)
-                //        playSound.playSoundGameOver();
-                //    int rank = Constant.saver.saveRecords(gameScore.Score);
-                //    if ( rank > 0)
-                //    {
-                //        if (MessageBox.Show("New High Score: " + gameScore.Score + "\nRank: " + rank  + "\nDo you want to play again?",
-                //            "Game Over!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                //        {
-                //            newgame = true;
-                //        }
-                //    }
-
-                //    else
-                //        if (MessageBox.Show("Your score: " + gameScore.Score + "\nDo you want to play again?",
-                //            "Game Over!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                //        {
-                //            newgame = true;
-                //        }
-                //    if (newgame)
-                //    {
-                //        gameControl.resetGame();
-
-                //        gameScore.Score = 0;
-                //        gameLevel.Level = 1;
-                //        gameLine.Line = 0;
-                //        gamePiece.Piece = 0;
-                //        gameControl.gameInitObj(out  shapeNext, out  colorNext, out  rotaterNext);
-                //        gameControl.setShape(shapeNext, colorNext, rotaterNext);
-                //        nextShape.drawNextShape(shapeNext, colorNext, rotaterNext);
-                //        gamePiece.Piece++;
-
-                //        timer.Interval = 500;
-                //        menuItem2.Enabled = true;
-                //        menuItem2.Text = "Pause";
-                //        if (bSound)
-                //            playSound.playSoundTheme();
-                //        changeMode(ModeGame.Playing);
-                //        timer.Enabled = true;
-                //    }
-                //    else
-                //    {
-                //        changeMode(ModeGame.Ready);
-                //        playSound.stopSoundTheme();
-                //        timer.Enabled = true;
-                //        menuItem2.Enabled = false;
-                //        return;
-                //    }
-                //}   
-                //int val, i = 0;
-                //bool isfull;
-                //isfull = ((full = gameControl.fullLine()).Count > 0);
-
-
-                //tempScore += (full.Count / 4) * 100;
-                //gameLine.Line += full.Count;
-                //int c = 0;
-                //int numRow = 0;
-                //if(full.Count != 0)
-                //    numRow = Constant.rd.Next(1, 8);
-                //if (bSound)
-                //    switch (numRow)
-                //    {
-                //        case 1: playSound.playSoundAmazing(); break;
-                //        case 2: playSound.playSoundVeryGood(); break;
-                //        case 3: playSound.playSoundBrilliant(); break;
-                //        case 4: playSound.playSoundWonderful(); break;
-                //        case 5: playSound.playSoundWow(); break;
-                //        case 6: playSound.playSoundExcellent(); break;
-                //        case 7: playSound.playSoundClear(); break;
-                //    }
-                //while (full.Count > 0)
-                //{
-                //    c++;
-                //    val = full.Pop() + i;
-                //    tempScore += c * (Constant.yMax / Constant.d) * (24 - val);
-                //    gameControl.deleteLine(val);
-                //    Constant.updateMap(val, ref i);
-                //}
-                //gameScore.Score += tempScore;
-                //levelUp();
-                //tempScore = 0;
-
-
-                //if (gameLevel.Level == 99)
-                //{
-                //    this.timer.Enabled = false;
-                //    bool newgame = false;
-                //    if (bSound)
-                //        playSound.playSoundGameWin();
-                //    int rank = Constant.saver.saveRecords(gameScore.Score);
-                //    if (rank > 0)
-                //    {
-                //        if (MessageBox.Show("New High Score: " + gameScore.Score + "\nRank: " + rank + "\nDo you want to play again?",
-                //            "You Win!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                //        {
-                //            newgame = true;
-                //        }
-                //    }
-
-                //    else
-                //        if (MessageBox.Show("Your score: " + gameScore.Score + "\nDo you want to play again?",
-                //            "You Win!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                //        {
-                //            newgame = true;
-                //        }
-                //    if (newgame)
-                //    {
-                //        gameControl.setGhostNull();
-                //        gameControl.resetGame();
-
-                //        gameScore.Score = 0;
-                //        gameLevel.Level = 1;
-                //        gameLine.Line = 0;
-                //        gamePiece.Piece = 0;
-                //        gameControl.gameInitObj(out  shapeNext, out  colorNext, out  rotaterNext);
-                //        gameControl.setShape(shapeNext, colorNext, rotaterNext);
-                //        nextShape.drawNextShape(shapeNext, colorNext, rotaterNext);
-                //        gamePiece.Piece++;
-
-                //        timer.Interval = 500;
-                //        menuItem2.Enabled = true;
-                //        menuItem2.Text = "Pause";
-                //        if (bSound)
-                //            playSound.playSoundTheme();
-                //        changeMode(ModeGame.Playing);
-                //        timer.Enabled = true;
-                //    }
-                //    else
-                //    {
-                //        changeMode(ModeGame.Ready);
-                //        playSound.stopSoundTheme();
-                //        timer.Enabled = true;
-                //        return;
-                //    }
-                //}
-                //else
-                //{
-
-                //    gameControl.gameInitObj(out  shapeNext, out  colorNext, out  rotaterNext);
-                //    gameControl.setShape(shapeNext, colorNext, rotaterNext);
-                //    nextShape.drawNextShape(shapeNext, colorNext, rotaterNext);
-                //    gameControl.drawGhostShape(bGhost);
-                //    gamePiece.Piece++;
-                //}
             }
         }
 
@@ -417,8 +272,8 @@ namespace TetrisReturn
             {
                 Point p = new Point(e.X, e.Y);
                 p = PointToScreen(p);
-                p.X -= diff.X;
-                p.Y -= diff.Y;
+                p.X -= toMove.X;
+                p.Y -= toMove.Y;
                 DesktopLocation = p;
             } 
         }
@@ -431,14 +286,49 @@ namespace TetrisReturn
 
                 Point p = new Point(e.X, e.Y);
                 p = PointToScreen(p);
-                diff.X = p.X - DesktopLocation.X;
-                diff.Y = p.Y - DesktopLocation.Y;
+                toMove.X = p.X - DesktopLocation.X;
+                toMove.Y = p.Y - DesktopLocation.Y;
             }
+            else
+                if (e.Button == MouseButtons.Right)
+                {
+                    mousePressed = false;
+
+                    toCallForm = new Point(e.X, e.Y);
+                }
 
         }
 
         private void MainForm_MouseUp(object sender, MouseEventArgs e)
         {
+            if(!mousePressed)
+                if ((Math.Abs(e.X - toCallForm.X) < 50) && ((toCallForm.Y - e.Y) >= 300))
+                {
+                    pauseGame();
+                    about = new About(this);
+                    about.ShowDialog();
+                }
+                else
+                    if ((Math.Abs(e.X - toCallForm.X) < 50) && ((e.Y - toCallForm.Y) >= 300))
+                    {
+                        pauseGame();
+                        highScores = new HighScores();
+                        highScores.ShowDialog();
+                    }
+                    else
+                        if ((Math.Abs(e.Y - toCallForm.Y) < 50) && ((e.X - toCallForm.X) >= 300))
+                        {
+                            pauseGame();
+                            option = new Option();
+                            option.ShowDialog();
+                        }
+                        else
+                            if ((Math.Abs(e.Y - toCallForm.Y) < 50) && ((toCallForm.X - e.X) >= 300))
+                            {
+                                pauseGame();
+                                help = new Help();
+                                help.ShowDialog();
+                            }
 
             mousePressed = false;
         }
@@ -477,14 +367,6 @@ namespace TetrisReturn
                 gameControl.refresh();
                 gr.Dispose();
             }
-        }
-
-        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
-        private void MainForm_KeyUp(object sender, KeyEventArgs e)
-        {
         }
 
         private void MainForm_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)

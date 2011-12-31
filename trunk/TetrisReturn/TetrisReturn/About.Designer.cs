@@ -35,11 +35,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "About";
             this.ShowInTaskbar = false;
             this.Text = "About";
+            this.Shown += new System.EventHandler(this.About_Shown);
             this.ResumeLayout(false);
 
         }
