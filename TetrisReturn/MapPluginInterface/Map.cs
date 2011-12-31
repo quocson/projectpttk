@@ -110,5 +110,20 @@ namespace MapPluginInterface
                 }
             dxLine++;
         }
+        //get full-lines numbers
+        public Stack<int> getFullLines()
+        {
+            Stack<int> res = new Stack<int>();
+            for (int i = 0; i < row; i++)
+            {
+                bool full = true;
+                for (int j = 0; j < col; j++)
+                    if (statusMap[i, j] == -1)
+                        full = false;
+                if (full == true)
+                    res.Push(i);
+            }
+            return res;
+        }
     }
 }

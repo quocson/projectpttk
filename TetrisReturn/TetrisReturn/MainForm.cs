@@ -186,10 +186,9 @@ namespace TetrisReturn
 
         private void newGame()
         {
-            modeShape = 1;
+            modeShape = 0;
             timer.Enabled = true;
             timer.Interval = 200;
-            modeShape = 1;
             gameControl.createShape(modeShape);
             nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
@@ -209,6 +208,13 @@ namespace TetrisReturn
                 {
                     timer.Enabled = false;
                     playing = false;
+                }
+                int dx = 0;
+                while (Constants.map.getFullLines().Count > 0)
+                {
+                    int line = Constants.map.getFullLines().Pop();
+                    Constants.map.updateMap(line, ref dx);
+                    gameControl.removeLine(line);
                 }
             }
         }
