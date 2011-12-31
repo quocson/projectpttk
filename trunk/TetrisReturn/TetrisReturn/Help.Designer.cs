@@ -28,9 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Help
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Help";
+            this.ShowInTaskbar = false;
             this.Text = "Help";
+            this.Shown += new System.EventHandler(this.Help_Shown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Help_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Help_MouseUp);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

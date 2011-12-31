@@ -51,3 +51,4 @@ C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TetrisReturn\obj\x86\Debug\Generate
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.About.resources
 E:\Document\Software design\Project sem\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.About.resources
+C:\Users\HuuTai_it\Desktop\fuck\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.Help.resources

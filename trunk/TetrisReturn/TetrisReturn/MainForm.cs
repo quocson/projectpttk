@@ -328,7 +328,7 @@ namespace TetrisReturn
         private void helpAppear()
         {
             pauseGame();
-            help = new Help();
+            help = new Help(this);
             help.ShowDialog();
         }
 
