@@ -30,11 +30,15 @@ namespace TetrisReturn
             for (i = 1; i <= 145; i++)
             {
                 this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 5 * i);
+                if (5 * i < 500)
+                    Size = new System.Drawing.Size(800, 5 * i);
                 Refresh();
             }
             for (i = 145; i >= 122; i--)
             {
                 this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 5 * i);
+                if (5 * i < 500)
+                    Size = new System.Drawing.Size(800, 5 * i);
                 Refresh();
                 System.Threading.Thread.Sleep(5);
             }
