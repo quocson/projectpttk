@@ -79,7 +79,7 @@ namespace TetrisReturn
             Constants.findTheme();
             Constants.language.load("English.lng");
             checkLostAllFiles();
-
+            
             setLastConfig();
             gameControl = new GameControl();
             soundControl = new SoundControl();
@@ -106,7 +106,8 @@ namespace TetrisReturn
             this.AddKeyEventHandler(this.gameControl);
 
             this.AddKeyEventHandler(this.nextShape1);
-
+            Font t = Constants.getFont(20);
+            nextShape1.FText = t;
             nextShape1.SText = "Next Shape";
             playing = false;
         }
