@@ -29,6 +29,8 @@ namespace TetrisReturn
         public MainForm()
         {
             InitializeComponent();
+            this.textControl1.Text = "son";
+            this.textControl1.TFont = new Font("Transformer Movie", 15, FontStyle.Bold);
         }
         private void AddEventHandler(Control ctl)
         {
@@ -361,6 +363,7 @@ namespace TetrisReturn
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
+            this.textControl1.Text = "son nguye";
             if (playing)
             {
                 Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
