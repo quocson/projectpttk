@@ -45,13 +45,7 @@ namespace TetrisReturn
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-<<<<<<< .mine
-           
-=======
-            //base.OnPaint(e);
-            e.Graphics.Flush();
-            //e.Graphics.Clear(Color.FromArgb(0,Color.Transparent));
->>>>>>> .r64
+            base.OnPaint(e);
             if (Text == null || TFont == null)
             return;
             Point PText ;
@@ -63,9 +57,7 @@ namespace TetrisReturn
             if(getImgFromTxt() != null)
                 e.Graphics.DrawImage(getImgFromTxt(), PText);
         }
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
-        }
+        
         private Image getImgFromTxt()
         {
             Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
