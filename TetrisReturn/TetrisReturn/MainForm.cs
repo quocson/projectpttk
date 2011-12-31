@@ -77,7 +77,7 @@ namespace TetrisReturn
         {
             Constants.findMap();
             Constants.findTheme();
-
+            Constants.language.load("English.lng");
             checkLostAllFiles();
 
             setLastConfig();

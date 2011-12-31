@@ -18,7 +18,7 @@ namespace TetrisReturn
 
         public static Map map = new Map();//static map of game.
         public static Theme theme = new Theme();//static theme of game.
-
+        public static Language language = new Language();
         public static PluginMapServices mapService = new PluginMapServices();//static plugin map services.
         public static PluginThemeServices themeService = new PluginThemeServices();//static plugin theme services.
 

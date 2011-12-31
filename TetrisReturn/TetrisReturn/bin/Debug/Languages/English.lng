@@ -1,0 +1,19 @@
+<Language>
+  <Game New="New game" />
+  <Game Pause="Pause" />
+  <Game Resume="Resume" />
+  <Game Save="Save game" />
+  <Game Continue="Continue" />
+  <Game Score="Score" />
+  <Game Help="Help" />
+  <Game About="About" />
+  <Game Exit="Exit" />
+  <Game Option="Option" />
+  <Game Win="You are Winner!" />
+  <Game Over="Game over!" />
+  <Game Ghost="Ghost" />
+  <Game Sound="Sound" />
+  <Game LoadDLL="Failed to load any library file!" />
+  <Game LoadConfig="Failed to load latest configuration. Create new?" />
+  <Game LoadSave="No Save file to load!" />
+</Language>
