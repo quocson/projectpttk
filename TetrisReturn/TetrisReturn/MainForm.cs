@@ -186,7 +186,7 @@ namespace TetrisReturn
 
         private void newGame()
         {
-            modeShape = 0;
+            modeShape = 1;
             timer.Enabled = true;
             timer.Interval = 200;
             gameControl.createShape(modeShape);
@@ -308,22 +308,22 @@ namespace TetrisReturn
         private void MainForm_MouseUp(object sender, MouseEventArgs e)
         {
             if(!mousePressed)
-                if ((Math.Abs(e.X - toCallForm.X) < 100) && ((toCallForm.Y - e.Y) >= 300))
+                if ((Math.Abs(e.X - toCallForm.X) < 100) && ((toCallForm.Y - e.Y) >= 200))
                 {
                     aboutAppear();
                 }
                 else
-                    if ((Math.Abs(e.X - toCallForm.X) < 100) && ((e.Y - toCallForm.Y) >= 300))
+                    if ((Math.Abs(e.X - toCallForm.X) < 100) && ((e.Y - toCallForm.Y) >= 200))
                     {
                         highScoresAppear();
                     }
                     else
-                        if ((Math.Abs(e.Y - toCallForm.Y) < 100) && ((e.X - toCallForm.X) >= 300))
+                        if ((Math.Abs(e.Y - toCallForm.Y) < 100) && ((e.X - toCallForm.X) >= 200))
                         {
                             optionAppear();
                         }
                         else
-                            if ((Math.Abs(e.Y - toCallForm.Y) < 100) && ((toCallForm.X - e.X) >= 300))
+                            if ((Math.Abs(e.Y - toCallForm.Y) < 100) && ((toCallForm.X - e.X) >= 200))
                             {
                                 helpAppear();
                             }
@@ -341,14 +341,14 @@ namespace TetrisReturn
         private void optionAppear()
         {
             pauseGame();
-            option = new Option();
+            option = new Option(this);
             option.ShowDialog();
         }
 
         private void highScoresAppear()
         {
             pauseGame();
-            highScores = new HighScores();
+            highScores = new HighScores(this);
             highScores.ShowDialog();
         }
 
@@ -365,7 +365,7 @@ namespace TetrisReturn
             {
                 Graphics gr = Graphics.FromImage(gameControl.ImageBuffer);
                 gameControl.CurrentShape.eraseShape(gr);
-                if (e.KeyValue == (int)System.Windows.Forms.Keys.Up)
+                if (e.KeyCode == Keys.Up)
                 {
                     gameControl.CurrentShape.rotate();
                 }
@@ -375,17 +375,17 @@ namespace TetrisReturn
                         gameControl.CurrentShape.moveLeft();
                     }
                     else
-                        if (e.KeyValue == (int)System.Windows.Forms.Keys.Right && gameControl.CurrentShape.canMoveRight())
+                        if (e.KeyCode == Keys.Right && gameControl.CurrentShape.canMoveRight())
                         {
                             gameControl.CurrentShape.moveRight();
                         }
                         else
-                            if (e.KeyValue == (int)System.Windows.Forms.Keys.Down && gameControl.CurrentShape.canFall())
+                            if (e.KeyCode == Keys.Down && gameControl.CurrentShape.canFall())
                             {
                                 gameControl.CurrentShape.moveDown();
                             }
                             else
-                                if (e.KeyValue == (int)System.Windows.Forms.Keys.Enter && gameControl.CurrentShape.canFall())
+                                if (e.KeyCode == Keys.Enter && gameControl.CurrentShape.canFall())
                                 {
                                     gameControl.setCurrShapeToEndMap();
                                 }

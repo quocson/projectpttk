@@ -27,25 +27,24 @@ namespace TetrisReturn
         private void appear()
         {
             int i;
-            for (i = 1; i <= 360; i++)
+            for (i = 1; i <= 180; i++)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 2 * i);
-                Size = new Size(800, 2 * i < 500 ? 2 * i: 500);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 4 * i);
                 Refresh();
             }
-            for (i = 360; i >= 315; i--)
+            for (i = 180; i >= 157; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 2 * i);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 4 * i);
+                System.Threading.Thread.Sleep(10);
                 Refresh();
             }
         }
 
         private void disappear()
         {
-            for (int i = 315; i >= 1; i--)
+            for (int i = 157; i >= 1; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 2 * i);
-                Size = new Size(800, 2 * i < 500 ? 2 * i : 500);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 4 * i);
                 Refresh();
             }
         }
@@ -68,7 +67,7 @@ namespace TetrisReturn
 
         private void About_MouseUp(object sender, MouseEventArgs e)
         {
-            if ((Math.Abs(e.X - toClose.X) < 100) && ((e.Y - toClose.Y) >= 300))
+            if ((Math.Abs(e.X - toClose.X) < 100) && ((e.Y - toClose.Y) >= 200))
             {
                 disappear();
                 Close();
