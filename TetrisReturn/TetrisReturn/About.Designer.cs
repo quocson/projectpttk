@@ -43,6 +43,8 @@
             this.ShowInTaskbar = false;
             this.Text = "About";
             this.Shown += new System.EventHandler(this.About_Shown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.About_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.About_MouseUp);
             this.ResumeLayout(false);
 
         }
