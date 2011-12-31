@@ -40,6 +40,18 @@ namespace TetrisReturn
             get { return sLanguage; }
             set { sLanguage = value; }
         }
+        private int modeShape;
+        public int ModeShape
+        {
+            get { return modeShape; }
+            set { modeShape = value; }
+        }
+        private int arrowUp;
+        public int ArrowUp
+        {
+            get { return arrowUp; }
+            set { arrowUp = value; }
+        }
         public Config()
         {
             xmlDoc = new XmlDocument();
@@ -63,6 +75,8 @@ namespace TetrisReturn
             Record.SetAttribute("Map", "");
             Record.SetAttribute("Ghost", "true");
             Record.SetAttribute("Language", "English");
+            Record.SetAttribute("Mode_Shape", "0");
+            Record.SetAttribute("Arrow_Up", "0");
             Goc.AppendChild(Record);
             xmlDoc.Save(sPath);
         }
@@ -76,6 +90,8 @@ namespace TetrisReturn
             sMap = node.Attributes[2].Value;
             bGhost = bool.Parse(node.Attributes[3].Value);
             sLanguage = node.Attributes[4].Value;
+            modeShape = int.Parse(node.Attributes[5].Value);
+            arrowUp = int.Parse(node.Attributes[6].Value);
         }
         public void save()
         {
@@ -87,6 +103,8 @@ namespace TetrisReturn
             Record.SetAttribute("Map", sMap);
             Record.SetAttribute("Ghost", bGhost.ToString());
             Record.SetAttribute("Language", sLanguage);
+            Record.SetAttribute("Mode_Shape", modeShape.ToString());
+            Record.SetAttribute("Arrow_Up", arrowUp.ToString());
             Goc.AppendChild(Record);
             xmlDoc.Save(sPath);
         }
