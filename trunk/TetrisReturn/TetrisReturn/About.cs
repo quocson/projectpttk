@@ -27,28 +27,25 @@ namespace TetrisReturn
         private void appear()
         {
             int i;
-            for (i = 1; i <= 145; i++)
+            for (i = 1; i <= 360; i++)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 5 * i);
-                if (5 * i < 500)
-                    Size = new System.Drawing.Size(800, 5 * i);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 2 * i);
+                Size = new Size(800, 2 * i < 500 ? 2 * i: 500);
                 Refresh();
             }
-            for (i = 145; i >= 122; i--)
+            for (i = 360; i >= 315; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 5 * i);
-                if (5 * i < 500)
-                    Size = new System.Drawing.Size(800, 5 * i);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 2 * i);
                 Refresh();
-                System.Threading.Thread.Sleep(5);
             }
         }
 
         private void disappear()
         {
-            for (int i = 122; i >= 1; i--)
+            for (int i = 315; i >= 1; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 5 * i);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 2 * i);
+                Size = new Size(800, 2 * i < 500 ? 2 * i : 500);
                 Refresh();
             }
         }
