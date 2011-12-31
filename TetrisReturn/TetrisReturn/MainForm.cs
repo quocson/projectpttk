@@ -193,7 +193,7 @@ namespace TetrisReturn
             nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
             timer.Enabled = true;
-            timer.Interval = 200;
+            timer.Interval = 600;
         }
 
         private void timer_Tick(object sender, EventArgs e)
