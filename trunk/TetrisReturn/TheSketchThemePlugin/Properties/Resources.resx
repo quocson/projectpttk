@@ -125,10 +125,10 @@
     <value>..\Resources\Blocks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="englishDescription" xml:space="preserve">
-    <value />
+    <value>This theme's graphics look like it was be drawn by hand.</value>
   </data>
   <data name="englishName" xml:space="preserve">
-    <value />
+    <value>Sketch</value>
   </data>
   <data name="HelpBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HelpBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -146,10 +146,10 @@
     <value>..\Resources\OptionBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vietNameseDescription" xml:space="preserve">
-    <value />
+    <value>Hinh anh trong theme nay giong nhu duoc ve bang tay.</value>
   </data>
   <data name="vietNameseName" xml:space="preserve">
-    <value />
+    <value>Sketch</value>
   </data>
   <data name="ClickButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClickButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

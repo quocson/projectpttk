@@ -18,3 +18,8 @@ E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisR
 E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
 E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
 E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb

@@ -38,3 +38,13 @@ E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisR
 E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheHourglassMapPlugin\obj\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.dll
 E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.pdb
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\bin\Debug\TheHourglassMapPlugin.dll
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\bin\Debug\TheHourglassMapPlugin.pdb
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\bin\Debug\MapInterface.dll
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.Properties.Resources.resources
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.dll
+E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.pdb
