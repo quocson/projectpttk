@@ -5,6 +5,8 @@ using System.Text;
 using MapPluginInterface;
 using ThemePluginInterface;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Text;
 
 namespace TetrisReturn
 {
@@ -35,7 +37,25 @@ namespace TetrisReturn
             theme.Dispose();
             theme = new Theme(t);
         }
-
+        public static Font getFont(int size)
+        {
+            if (theme.Name == "Transformers")
+            {
+                PrivateFontCollection fonts = new PrivateFontCollection();
+                fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Transformers Movie.ttf");
+                FontFamily family = fonts.Families[0];
+                return new Font(family, size, FontStyle.Bold);
+            }
+            if (theme.Name == "Sketch")
+            {
+                PrivateFontCollection fonts = new PrivateFontCollection();
+                fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Sketch_Block.ttf");
+                FontFamily family = fonts.Families[0];
+                return new Font(family, size);
+            }
+            else
+                return new Font("Arial", size);
+        }
         //find map.
         public static void findMap()
         {
