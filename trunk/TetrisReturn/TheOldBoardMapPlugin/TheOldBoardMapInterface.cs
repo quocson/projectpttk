@@ -9,9 +9,8 @@ namespace TheOldBoardMapPlugin
     public class TheOldBoardMapInterface : MapInterface
     {
         private Map map = new TheOldBoardMap();
-        public string VietNameseName { get { return TheOldBoardMapPlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheOldBoardMapPlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheOldBoardMapPlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheOldBoardMapPlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheOldBoardMapPlugin.Properties.Resources.englishDescription; } }
 
         public Map Map { get { return map; } }

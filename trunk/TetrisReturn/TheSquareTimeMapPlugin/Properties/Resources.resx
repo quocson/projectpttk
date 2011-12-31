@@ -120,7 +120,7 @@
   <data name="englishDescription" xml:space="preserve">
     <value>This map have some slot for square shape (O tetrimino). You must have skill to put it in to slot.</value>
   </data>
-  <data name="englishName" xml:space="preserve">
+  <data name="name" xml:space="preserve">
     <value>The square time</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -129,8 +129,5 @@
   </data>
   <data name="vietNameseDescription" xml:space="preserve">
     <value>Khung choi nay co nhiu cho trong danh cho khoi gach hinh vuong. Ban phai co ki thuat de lap day cac o trong nay.</value>
-  </data>
-  <data name="vietNameseName" xml:space="preserve">
-    <value>Khoi vuong</value>
   </data>
 </root>

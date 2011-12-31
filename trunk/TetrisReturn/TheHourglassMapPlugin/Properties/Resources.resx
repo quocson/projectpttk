@@ -120,7 +120,7 @@
   <data name="englishDescription" xml:space="preserve">
     <value>This map look like a "hourglass". The "hourglass neck" width is small and it has some "slot" in borders. You must move the tetrimino carefully when it fall down because when it come in a "slot" it may be locked there.</value>
   </data>
-  <data name="englishName" xml:space="preserve">
+  <data name="name" xml:space="preserve">
     <value>The Hourglass</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -129,8 +129,5 @@
   </data>
   <data name="vietNameseDescription" xml:space="preserve">
     <value>Khung choi nay trong giong mot chiec dong ho cat. Phan eo cua "Dong ho cat" co dong rong rat nho va co mot so cho trong o hai ben. Ban phai di chuyen khoi gach can than khi di qua vung nay de tranh khoi gach bi giu lai boi cac cho trong do.</value>
-  </data>
-  <data name="vietNameseName" xml:space="preserve">
-    <value>Dong ho cat</value>
   </data>
 </root>

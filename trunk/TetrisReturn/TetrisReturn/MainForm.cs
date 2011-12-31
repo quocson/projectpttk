@@ -13,12 +13,12 @@ namespace TetrisReturn
     {
         private bool enableGhostShape;
         private bool playing;
-        private int soundVolume;
+        private bool sound;
+        private string languageDisplay;
         private int modeShape;
         private int arrowUp;
         private GameControl gameControl;
         private SoundControl soundControl;
-        private string languageDisplay;
         private About about;
         private Help help;
         private HighScores highScores;
@@ -31,6 +31,37 @@ namespace TetrisReturn
         {
             InitializeComponent();
         }
+
+        public string Language
+        {
+            get { return languageDisplay; }
+            set { languageDisplay = value; }
+        }
+
+        public int ModeShape
+        {
+            get { return modeShape; }
+            set { modeShape = value; }
+        }
+
+        public int ArrowUp
+        {
+            get { return arrowUp; }
+            set { arrowUp = value; }
+        }
+
+        public bool Sound
+        {
+            get { return sound; }
+            set { sound = value; }
+        }
+
+        public bool Ghost
+        {
+            get { return enableGhostShape; }
+            set { enableGhostShape = value; }
+        }
+
         private void AddEventHandler(Control ctl)
         {
             ctl.MouseDown += new MouseEventHandler(MainForm_MouseDown);
@@ -150,12 +181,13 @@ namespace TetrisReturn
             enableGhostShape = config.BGhost;
 
             //set sound volume.
-            soundVolume = config.ISound;
+            sound = config.BSound;
 
             //set mode shape.
+            modeShape = config.ModeShape;
 
             //set arrow up.
-
+            arrowUp = config.ArrowUp;
 
             if (!success)
                 if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
@@ -347,22 +379,70 @@ namespace TetrisReturn
         {
             pauseGame();
             option = new Option(this);
-            option.textControl1.Text = "Theme";
-            option.textControl2.Text = "Theme";
-            option.textControl3.Text = "Theme";
-            option.textControl4.Text = "Theme";
-            option.textControl5.Text = "Theme";
-            option.textControl6.Text = "Theme";
-            option.textControl7.Text = "Theme";
-            option.textControl8.Text = "Theme";
-            option.textControl9.Text = "Theme";
-            option.textControl10.Text = "Theme";
-            option.textControl11.Text = "Theme";
+            Config config = new Config();
+            config.load();
 
+            //set them.
             foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
-                option.comboBox1.Items.Add(theme.Instance.EnglishName);
+                option.comboBox1.Items.Add(theme.Instance.Name);
+            option.comboBox1.SelectedIndex = option.comboBox1.Items.IndexOf(Constants.theme.Name);
+
+            //set map.
             foreach (Types.AvailableMap map in Constants.mapService.AvailableMaps)
-                option.comboBox2.Items.Add(map.Instance.EnglishName);
+                option.comboBox2.Items.Add(map.Instance.Name);
+            option.comboBox2.SelectedIndex = option.comboBox2.Items.IndexOf(Constants.map.Name);
+
+            if (languageDisplay.CompareTo("English") == 0)
+            {
+                //set label.
+
+
+                //set language.
+                option.comboBox3.Items.Add("English");
+                option.comboBox3.Items.Add("VietNamese");
+                option.comboBox3.SelectedIndex = 0;
+            }
+            else
+            {
+                //set label.
+
+                //set language.
+                option.comboBox3.Items.Add("Tiếng Anh");
+                option.comboBox3.Items.Add("Tiếng Việt");
+                option.comboBox3.SelectedIndex = 1;
+            }
+
+            //set sound.
+            option.checkBox1.Checked = sound;
+
+            //set ghost.
+            option.checkBox4.Checked = enableGhostShape;
+
+            //set mode shape.
+            switch (modeShape)
+            {
+                case 1:
+                    option.checkBox2.Checked = true; break;
+                case 2:
+                    option.checkBox3.Checked = true; break;
+                case 3:
+                    option.checkBox2.Checked = true;
+                    option.checkBox3.Checked = true; break;
+            }
+
+            //set arrow up.
+            switch (modeShape)
+            {
+                case 1:
+                    option.checkBox5.Checked = true; break;
+                case 2:
+                    option.checkBox6.Checked = true; break;
+                case 3:
+                    option.checkBox5.Checked = true;
+                    option.checkBox6.Checked = true; break;
+            }
+            
+
             option.ShowDialog();
         }
 

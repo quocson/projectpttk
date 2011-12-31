@@ -24,6 +24,40 @@ namespace TetrisReturn
         {
             if ((Math.Abs(e.Y - toClose.Y) < 100) && ((toClose.X - e.X) >= 200))
             {
+                foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
+                    if (theme.Instance.Name.CompareTo(comboBox1.Text) == 0)
+                            Constants.setTheme(theme.Instance.Theme);
+
+                foreach (Types.AvailableMap map in Constants.mapService.AvailableMaps)
+                    if (map.Instance.Name.CompareTo(comboBox2.Text) == 0)
+                        Constants.setMap(map.Instance.Map);
+
+                mainForm.Language = comboBox3.Text;
+
+                if (checkBox1.Checked)
+                    mainForm.Sound = true;
+                else
+                    mainForm.Sound = false;
+
+                if (checkBox2.Checked)
+                    mainForm.Ghost = true;
+                else
+                    mainForm.Ghost = false;
+
+                int i = 0;
+                if (checkBox2.Checked)
+                    i += 1;
+                if (checkBox3.Checked)
+                    i += 2;
+                mainForm.ModeShape = i;
+
+                i = 0;
+                if (checkBox5.Checked)
+                    i += 1;
+                if (checkBox6.Checked)
+                    i += 2;
+                mainForm.ArrowUp = i;
+
                 disappear();
                 Close();
             }
@@ -54,12 +88,12 @@ namespace TetrisReturn
         private void appear()
         {
             int i;
-            for (i = 1; i <= 126; i++)
+            for (i = 1; i <= 129; i++)
             {
                 this.SetDesktopLocation(mainForm.Location.X - 800 + 10 * i, mainForm.Location.Y + 110);
                 Refresh();
             }
-            for (i = 126; i >= 104; i--)
+            for (i = 129; i >= 104; i--)
             {
                 this.SetDesktopLocation(mainForm.Location.X - 800 + 10 * i, mainForm.Location.Y + 110);
                 Refresh();
@@ -73,6 +107,33 @@ namespace TetrisReturn
                 this.SetDesktopLocation(mainForm.Location.X - 800 + 10 * i, mainForm.Location.Y + 110);
                 Refresh();
             }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBox2.Checked && !checkBox3.Checked)
+                checkBox3.Checked = true;
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (!checkBox2.Checked && !checkBox3.Checked)
+                checkBox2.Checked = true;
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (!checkBox5.Checked && !checkBox6.Checked)
+                checkBox6.Checked = true;
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (!checkBox5.Checked && !checkBox6.Checked)
+                checkBox5.Checked = true;
         }
     }
 }

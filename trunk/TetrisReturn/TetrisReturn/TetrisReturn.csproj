@@ -112,12 +112,6 @@
       <DependentUpon>ShowInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="SoundControl.cs" />
-    <Compile Include="TextControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TextControl.Designer.cs">
-      <DependentUpon>TextControl.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,9 +146,6 @@
     </Compile>
     <EmbeddedResource Include="ShowInformation.resx">
       <DependentUpon>ShowInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TextControl.resx">
-      <DependentUpon>TextControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

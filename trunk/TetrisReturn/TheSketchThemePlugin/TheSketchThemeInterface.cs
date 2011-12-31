@@ -21,11 +21,11 @@ namespace TheSketchThemePlugin
                                         TheSketchThemePlugin.Properties.Resources.Informations,
                                         TheSketchThemePlugin.Properties.Resources.NextShape,
                                         7,
-                                        1);
+                                        1,
+                                        TheSketchThemePlugin.Properties.Resources.name);
 
-        public string VietNameseName { get { return TheSketchThemePlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheSketchThemePlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheSketchThemePlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheSketchThemePlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheSketchThemePlugin.Properties.Resources.englishDescription; } }
 
         public Theme Theme { get { return theme; } }

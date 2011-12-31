@@ -9,9 +9,8 @@ namespace TheHourglassMapPlugin
     public class TheHourglassMapInterface : MapInterface
     {
         private Map map = new TheHourglassMap();
-        public string VietNameseName { get { return TheHourglassMapPlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheHourglassMapPlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheHourglassMapPlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheHourglassMapPlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheHourglassMapPlugin.Properties.Resources.englishDescription; } }
 
         public Map Map { get { return map; } }

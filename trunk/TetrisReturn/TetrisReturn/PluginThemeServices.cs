@@ -106,7 +106,7 @@ namespace TetrisReturn
 
                 foreach (Types.AvailableTheme themeOn in this.List)
                 {
-                    if ((themeOn.Instance.EnglishName.Equals(themeNameOrPath)) || themeOn.AssemblyPath.Equals(themeNameOrPath))
+                    if ((themeOn.Instance.Name.Equals(themeNameOrPath)) || themeOn.AssemblyPath.Equals(themeNameOrPath))
                     {
                         toReturn = themeOn;
                         break;

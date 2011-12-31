@@ -12,7 +12,7 @@ namespace TheRazorBladeMapPlugin
         public TheRazorBladeMap()
         {
             reset();
-
+            name = TheRazorBladeMapPlugin.Properties.Resources.name;
             iMap = new Bitmap(TheRazorBladeMapPlugin.Properties.Resources.RazorBladeMap);
 
         }

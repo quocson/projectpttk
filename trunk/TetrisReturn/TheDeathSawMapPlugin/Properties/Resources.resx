@@ -124,13 +124,10 @@
   <data name="englishDescription" xml:space="preserve">
     <value>This map look like a saw. The slot for two small square in horizontal is so hard to fill in.</value>
   </data>
-  <data name="englishName" xml:space="preserve">
+  <data name="name" xml:space="preserve">
     <value>Death Saw</value>
   </data>
   <data name="vietNameseDescription" xml:space="preserve">
     <value>Khung choi nay trong giong mot luoi cua. Nhung khoang trong danh cho 2 o vuong lien tiep nam ngang rat kho de duoc lap day.</value>
-  </data>
-  <data name="vietNameseName" xml:space="preserve">
-    <value>Luoi cua</value>
   </data>
 </root>

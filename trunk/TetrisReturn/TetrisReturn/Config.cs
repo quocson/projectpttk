@@ -10,11 +10,11 @@ namespace TetrisReturn
     {
         XmlDocument xmlDoc;
         private string sPath = AppDomain.CurrentDomain.BaseDirectory + @"\setting.cfg";
-        private int iSound;
-        public int ISound
+        private bool bSound;
+        public bool BSound
         {
-            get { return iSound; }
-            set { iSound = value; }
+            get { return bSound; }
+            set { bSound = value; }
         }
         private string sTheme;
         public string STheme
@@ -85,7 +85,7 @@ namespace TetrisReturn
             xmlDoc.Load(sPath);
             XmlNodeList nodelist = xmlDoc.SelectNodes("Game/Setting");
             XmlNode node = nodelist[0];
-            iSound = int.Parse(node.Attributes[0].Value);
+            bSound = bool.Parse(node.Attributes[0].Value);
             sTheme = node.Attributes[1].Value;
             sMap = node.Attributes[2].Value;
             bGhost = bool.Parse(node.Attributes[3].Value);
@@ -98,7 +98,7 @@ namespace TetrisReturn
             XmlElement Goc = xmlDoc.CreateElement("Game");
             xmlDoc.AppendChild(Goc);
             XmlElement Record = xmlDoc.CreateElement("Setting");
-            Record.SetAttribute("Sound", iSound.ToString());
+            Record.SetAttribute("Sound", bSound.ToString());
             Record.SetAttribute("Theme", sTheme);
             Record.SetAttribute("Map", sMap);
             Record.SetAttribute("Ghost", bGhost.ToString());

@@ -12,7 +12,7 @@ namespace TheDeathSawMapPlugin
         public TheDeathSawMap()
         {
             reset();
-
+            name = TheDeathSawMapPlugin.Properties.Resources.name;
             iMap = new Bitmap(TheDeathSawMapPlugin.Properties.Resources.DeathSawMap);
         }
 

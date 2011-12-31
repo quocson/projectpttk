@@ -22,6 +22,7 @@ namespace ThemePluginInterface
         private Bitmap iNextShape;
         private int numColorBlock;
         private int numTypeBlock;
+        private string name;
 
         public Theme()
         {
@@ -43,6 +44,7 @@ namespace ThemePluginInterface
             iNextShape = new Bitmap(t.iNextShape);
             numColorBlock = t.numColorBlock;
             numTypeBlock = t.numTypeBlock;
+            name = t.name;
         }
 
         public Theme(Image iMainBackground,
@@ -58,7 +60,8 @@ namespace ThemePluginInterface
                     Image iInformations,
                     Image iNextShape,
                     int numColorBlock,
-                    int numTypeBlock)
+                    int numTypeBlock,
+                    string name)
         {
             this.iMainBackground = new Bitmap(iMainBackground);
             this.iHelpBackground = new Bitmap(iHelpBackground);
@@ -74,6 +77,7 @@ namespace ThemePluginInterface
             this.iNextShape = new Bitmap(iNextShape);
             this.numColorBlock = numColorBlock;
             this.numTypeBlock = numTypeBlock;
+            this.name = name;
         }
 
         public void Dispose()
@@ -119,5 +123,6 @@ namespace ThemePluginInterface
         public Bitmap NextShape { get { return iNextShape; } }
         public int NumColorBlock { get { return numColorBlock; } }
         public int NumTypeBlock { get { return numTypeBlock; } }
+        public string Name { get { return name; } }
     }
 }

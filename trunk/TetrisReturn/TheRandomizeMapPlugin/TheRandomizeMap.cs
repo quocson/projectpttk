@@ -12,7 +12,7 @@ namespace TheRandomizeMapPlugin
         public TheRandomizeMap()
         {
             reset();
-
+            name = TheRandomizeMapPlugin.Properties.Resources.name;
             iMap = new Bitmap(TheRandomizeMapPlugin.Properties.Resources.RandomizeMap);
 
         }

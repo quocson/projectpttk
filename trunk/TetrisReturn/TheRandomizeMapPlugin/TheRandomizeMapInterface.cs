@@ -9,9 +9,8 @@ namespace TheRandomizeMapPlugin
     public class TheRandomizeMapInterface : MapInterface
     {
         private Map map = new TheRandomizeMap();
-        public string VietNameseName { get { return TheRandomizeMapPlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheRandomizeMapPlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheRandomizeMapPlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheRandomizeMapPlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheRandomizeMapPlugin.Properties.Resources.englishDescription; } }
 
         public Map Map { get { return map; } }

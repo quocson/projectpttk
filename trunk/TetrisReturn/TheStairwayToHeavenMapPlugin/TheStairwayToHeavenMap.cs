@@ -12,7 +12,7 @@ namespace TheStairwayToHeavenMapPlugin
         public TheStairwayToHeavenMap()
         {
             reset();
-
+            name = TheStairwayToHeavenMapPlugin.Properties.Resources.name;
             iMap = new Bitmap(TheStairwayToHeavenMapPlugin.Properties.Resources.StairwayToHeavenMap);
         }
 

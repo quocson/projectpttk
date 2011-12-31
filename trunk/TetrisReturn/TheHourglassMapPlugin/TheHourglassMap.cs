@@ -12,7 +12,7 @@ namespace TheHourglassMapPlugin
         public TheHourglassMap()
         {
             reset();
-
+            name = TheHourglassMapPlugin.Properties.Resources.name;
             iMap = new Bitmap(TheHourglassMapPlugin.Properties.Resources.HourglassMap);
 
         }
