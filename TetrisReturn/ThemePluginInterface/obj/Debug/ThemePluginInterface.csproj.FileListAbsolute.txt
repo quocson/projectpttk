@@ -13,3 +13,8 @@ C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\ThemePluginInterface\bin\Debu
 C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
 C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb

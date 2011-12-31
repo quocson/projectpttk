@@ -112,6 +112,12 @@
       <DependentUpon>ShowInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="SoundControl.cs" />
+    <Compile Include="TextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextControl.Designer.cs">
+      <DependentUpon>TextControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>

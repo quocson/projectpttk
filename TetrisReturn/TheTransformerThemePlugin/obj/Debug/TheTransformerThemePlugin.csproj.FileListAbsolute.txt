@@ -28,3 +28,13 @@ C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheTransformerThemePlugin\obj
 C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheTransformerThemePlugin\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.dll
 C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.pdb
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\bin\Debug\TheTransformerThemePlugin.dll
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\bin\Debug\TheTransformerThemePlugin.pdb
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.Properties.Resources.resources
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.dll
+E:\Document\Software design\Projectttttttttttttttttttttttttttttttttttttt\TetrisReturn\TheTransformerThemePlugin\obj\Debug\TheTransformerThemePlugin.pdb
