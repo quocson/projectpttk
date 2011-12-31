@@ -302,35 +302,55 @@ namespace TetrisReturn
         private void MainForm_MouseUp(object sender, MouseEventArgs e)
         {
             if(!mousePressed)
-                if ((Math.Abs(e.X - toCallForm.X) < 50) && ((toCallForm.Y - e.Y) >= 300))
+                if ((Math.Abs(e.X - toCallForm.X) < 100) && ((toCallForm.Y - e.Y) >= 300))
                 {
-                    pauseGame();
-                    about = new About(this);
-                    about.ShowDialog();
+                    aboutAppear();
                 }
                 else
-                    if ((Math.Abs(e.X - toCallForm.X) < 50) && ((e.Y - toCallForm.Y) >= 300))
+                    if ((Math.Abs(e.X - toCallForm.X) < 100) && ((e.Y - toCallForm.Y) >= 300))
                     {
-                        pauseGame();
-                        highScores = new HighScores();
-                        highScores.ShowDialog();
+                        highScoresAppear();
                     }
                     else
-                        if ((Math.Abs(e.Y - toCallForm.Y) < 50) && ((e.X - toCallForm.X) >= 300))
+                        if ((Math.Abs(e.Y - toCallForm.Y) < 100) && ((e.X - toCallForm.X) >= 300))
                         {
-                            pauseGame();
-                            option = new Option();
-                            option.ShowDialog();
+                            optionAppear();
                         }
                         else
-                            if ((Math.Abs(e.Y - toCallForm.Y) < 50) && ((toCallForm.X - e.X) >= 300))
+                            if ((Math.Abs(e.Y - toCallForm.Y) < 100) && ((toCallForm.X - e.X) >= 300))
                             {
-                                pauseGame();
-                                help = new Help();
-                                help.ShowDialog();
+                                helpAppear();
                             }
 
             mousePressed = false;
+        }
+
+        private void helpAppear()
+        {
+            pauseGame();
+            help = new Help();
+            help.ShowDialog();
+        }
+
+        private void optionAppear()
+        {
+            pauseGame();
+            option = new Option();
+            option.ShowDialog();
+        }
+
+        private void highScoresAppear()
+        {
+            pauseGame();
+            highScores = new HighScores();
+            highScores.ShowDialog();
+        }
+
+        private void aboutAppear()
+        {
+            pauseGame();
+            about = new About(this);
+            about.ShowDialog();
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -380,6 +400,15 @@ namespace TetrisReturn
                     e.IsInputKey = true;
                     break;
             }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(Constants.theme.MainBackground, 0, 0);
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
         }
     }
 }

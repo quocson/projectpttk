@@ -25,12 +25,20 @@ namespace TetrisReturn
 
         private void appear()
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 40; i++)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 200, mainForm.Location.Y + 720 - 30 * i);
-                System.Threading.Thread.Sleep(100);
+                this.SetDesktopLocation(mainForm.Location.X + 200, mainForm.Location.Y + 720 - 20 * i);
+                System.Threading.Thread.Sleep(20); Refresh();
             }
         }
 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(Constants.theme.MainBackground, 0, 0);
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+        }
     }
 }
