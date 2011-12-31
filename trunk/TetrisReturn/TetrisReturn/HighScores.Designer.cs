@@ -28,9 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // HighScores
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(786, 467);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "HighScores";
+            this.ShowInTaskbar = false;
             this.Text = "HighScores";
+            this.Shown += new System.EventHandler(this.HighScores_Shown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HighScores_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HighScores_MouseUp);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

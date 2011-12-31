@@ -118,6 +118,9 @@
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HighScores.resx">
+      <DependentUpon>HighScores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageButton.resx">
       <DependentUpon>ImageButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +130,9 @@
     <EmbeddedResource Include="NextShape.resx">
       <DependentUpon>NextShape.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Option.resx">
+      <DependentUpon>Option.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

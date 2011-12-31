@@ -28,9 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Option
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(786, 467);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Option";
+            this.ShowInTaskbar = false;
             this.Text = "Option";
+            this.Shown += new System.EventHandler(this.Option_Shown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Option_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Option_MouseUp);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

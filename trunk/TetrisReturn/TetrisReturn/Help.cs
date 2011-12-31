@@ -33,7 +33,7 @@ namespace TetrisReturn
 
         private void Help_MouseUp(object sender, MouseEventArgs e)
         {
-            if ((Math.Abs(e.Y - toClose.Y) < 100) && ((e.X - toClose.X) >= 300))
+            if ((Math.Abs(e.Y - toClose.Y) < 100) && ((e.X - toClose.X) >= 200))
             {
                 disappear();
                 Close();
@@ -44,16 +44,16 @@ namespace TetrisReturn
         private void appear()
         {
             int i;
-            for (i = 1; i <= 255; i++)
+            for (i = 1; i <= 258; i++)
             {
                 this.SetDesktopLocation(mainForm.Location.X + 1280 - 5 * i, mainForm.Location.Y + 110);
                 Refresh();
             }
-            for (i = 255; i >= 208; i--)
+            for (i = 258; i >= 208; i--)
             {
                 this.SetDesktopLocation(mainForm.Location.X + 1280 - 5 * i, mainForm.Location.Y + 110);
                 Refresh();
-                System.Threading.Thread.Sleep(5);
+                System.Threading.Thread.Sleep(10);
             }
         }
 

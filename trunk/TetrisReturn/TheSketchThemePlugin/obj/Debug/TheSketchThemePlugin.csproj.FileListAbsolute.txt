@@ -18,3 +18,13 @@ E:\Document\Software design\Project sem\TetrisReturn\TheSketchThemePlugin\obj\De
 E:\Document\Software design\Project sem\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\Project sem\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
 E:\Document\Software design\Project sem\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.pdb
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.dll
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.pdb
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
+C:\Users\HuuTai_it\Desktop\New folder\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
