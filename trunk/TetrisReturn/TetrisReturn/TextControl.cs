@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
+using System.Drawing.Imaging;
 
 namespace TetrisReturn
 {
@@ -45,7 +46,8 @@ namespace TetrisReturn
         protected override void OnPaint(PaintEventArgs e)
         {
             //base.OnPaint(e);
-            e.Graphics.Clear(Color.FromArgb(0,Color.Transparent));
+            e.Graphics.Flush();
+            //e.Graphics.Clear(Color.FromArgb(0,Color.Transparent));
             if (Text == null || TFont == null)
             return;
             Point PText ;

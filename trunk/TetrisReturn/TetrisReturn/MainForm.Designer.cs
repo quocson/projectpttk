@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.textControl1 = new TetrisReturn.TextControl();
             this.nextShape1 = new TetrisReturn.NextShape();
             this.showInformation4 = new TetrisReturn.ShowInformation();
             this.showInformation3 = new TetrisReturn.ShowInformation();
@@ -49,15 +48,6 @@
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // textControl1
-            // 
-            this.textControl1.BackColor = System.Drawing.Color.Transparent;
-            this.textControl1.Location = new System.Drawing.Point(186, 74);
-            this.textControl1.Name = "textControl1";
-            this.textControl1.Size = new System.Drawing.Size(150, 150);
-            this.textControl1.TabIndex = 12;
-            this.textControl1.TFont = null;
             // 
             // nextShape1
             // 
@@ -278,7 +268,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 669);
-            this.Controls.Add(this.textControl1);
             this.Controls.Add(this.nextShape1);
             this.Controls.Add(this.showInformation4);
             this.Controls.Add(this.showInformation3);
@@ -321,7 +310,6 @@
         private ShowInformation showInformation4;
         private NextShape nextShape1;
         private System.Windows.Forms.Timer timer;
-        private TextControl textControl1;
 
 
 
