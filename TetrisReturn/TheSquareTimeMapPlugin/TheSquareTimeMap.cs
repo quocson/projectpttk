@@ -12,7 +12,7 @@ namespace TheSquareTimeMapPlugin
         public TheSquareTimeMap()
         {
             reset();
-
+            name = TheSquareTimeMapPlugin.Properties.Resources.name;
             iMap = new Bitmap(TheSquareTimeMapPlugin.Properties.Resources.SquareTimeMap);
 
         }

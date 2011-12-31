@@ -9,9 +9,8 @@ namespace TheSquareTimeMapPlugin
     public class TheSquareTimeMapInterface : MapInterface
     {
         private Map map = new TheSquareTimeMap();
-        public string VietNameseName { get { return TheSquareTimeMapPlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheSquareTimeMapPlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheSquareTimeMapPlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheSquareTimeMapPlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheSquareTimeMapPlugin.Properties.Resources.englishDescription; } }
 
         public Map Map { get { return map; } }

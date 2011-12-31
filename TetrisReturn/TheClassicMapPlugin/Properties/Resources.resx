@@ -124,13 +124,10 @@
   <data name="englishDescription" xml:space="preserve">
     <value>The oldest map of tetris. It have no challenge for you.The first time you play Tetris, you should play this map.</value>
   </data>
-  <data name="englishName" xml:space="preserve">
+  <data name="name" xml:space="preserve">
     <value>Classic</value>
   </data>
   <data name="vietNameseDescription" xml:space="preserve">
-    <value>Co dien</value>
-  </data>
-  <data name="vietNameseName" xml:space="preserve">
     <value>Day la khung choi truyen thong cua Tetris. Khung choi nay se khong qua kho doi voi ban. Lan dau tien den voi Tetris, ban nen choi khung choi nay.</value>
   </data>
 </root>

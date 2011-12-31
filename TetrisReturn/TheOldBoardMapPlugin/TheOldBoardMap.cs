@@ -12,7 +12,7 @@ namespace TheOldBoardMapPlugin
         public TheOldBoardMap()
         {
             reset();
-
+            name = TheOldBoardMapPlugin.Properties.Resources.name;
             iMap = new Bitmap(TheOldBoardMapPlugin.Properties.Resources.OldBoardMap);
 
         }

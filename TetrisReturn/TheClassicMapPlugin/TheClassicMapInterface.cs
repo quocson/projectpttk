@@ -9,9 +9,8 @@ namespace TheClassicMapPlugin
     public class TheClassicMapInterface : MapInterface
     {
         private Map map = new TheClassicMap();
-        public string VietNameseName { get { return TheClassicMapPlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheClassicMapPlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheClassicMapPlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheClassicMapPlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheClassicMapPlugin.Properties.Resources.englishDescription; } }
 
         public Map Map { get { return map; } }

@@ -21,11 +21,11 @@ namespace TheTransformerThemePlugin
                                         TheTransformerThemePlugin.Properties.Resources.Informations,
                                         TheTransformerThemePlugin.Properties.Resources.NextShape,
                                         7,
-                                        1);
+                                        1,
+                                        TheTransformerThemePlugin.Properties.Resources.name);
 
-        public string VietNameseName { get { return TheTransformerThemePlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheTransformerThemePlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheTransformerThemePlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheTransformerThemePlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheTransformerThemePlugin.Properties.Resources.englishDescription; } }
 
         public Theme Theme { get { return theme; } }

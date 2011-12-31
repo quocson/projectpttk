@@ -7,9 +7,8 @@ namespace ThemePluginInterface
 {
     public interface ThemeInterface
     {
-        string VietNameseName { get; }
         string VietNameseDescription { get; }
-        string EnglishName { get; }
+        string Name { get; }
         string EnglishDescription { get; }
 
         Theme Theme { get; }

@@ -9,9 +9,8 @@ namespace TheStairwayToHeavenMapPlugin
     public class TheStairwayToHeavenMapInterface : MapInterface
     {
         private Map map = new TheStairwayToHeavenMap();
-        public string VietNameseName { get { return TheStairwayToHeavenMapPlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheStairwayToHeavenMapPlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheStairwayToHeavenMapPlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheStairwayToHeavenMapPlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheStairwayToHeavenMapPlugin.Properties.Resources.englishDescription; } }
 
         public Map Map { get { return map; } }

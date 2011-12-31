@@ -17,6 +17,7 @@ namespace MapPluginInterface
 
         protected int xScreen;//x position of shape on the screen.
         protected int yScreen;//y position of shape on the screen.
+        protected string name;//name of map.
 
         public Map()
         {
@@ -24,15 +25,14 @@ namespace MapPluginInterface
             col = 16;
 
             statusMap = new int[row, col];
-
-            //xScreen = ?;
-            //yScreen = ?;
         }
 
         public Map(Map m)
         {
             row = m.row;
             col = m.col;
+
+            name = m.name;
 
             statusMap = new int[row, col];
 
@@ -58,6 +58,12 @@ namespace MapPluginInterface
         {
             get { return statusMap; }
             set { statusMap = value; }
+        }
+
+        //name Map properties.
+        public string Name
+        {
+            get { return name; }
         }
 
         //Image Map properties.

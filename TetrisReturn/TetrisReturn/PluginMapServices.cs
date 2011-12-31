@@ -106,7 +106,7 @@ namespace TetrisReturn
 
                 foreach (Types.AvailableMap mapOn in this.List)
                 {
-                    if ((mapOn.Instance.EnglishName.Equals(mapNameOrPath)) || mapOn.AssemblyPath.Equals(mapNameOrPath))
+                    if ((mapOn.Instance.Name.Equals(mapNameOrPath)) || mapOn.AssemblyPath.Equals(mapNameOrPath))
                     {
                         toReturn = mapOn;
                         break;

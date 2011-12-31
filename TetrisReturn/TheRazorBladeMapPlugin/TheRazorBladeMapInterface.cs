@@ -9,9 +9,8 @@ namespace TheRazorBladeMapPlugin
     public class TheRazorBladeMapInterface : MapInterface
     {
         private Map map = new TheRazorBladeMap();
-        public string VietNameseName { get { return TheRazorBladeMapPlugin.Properties.Resources.vietNameseName; } }
         public string VietNameseDescription { get { return TheRazorBladeMapPlugin.Properties.Resources.vietNameseDescription; } }
-        public string EnglishName { get { return TheRazorBladeMapPlugin.Properties.Resources.englishName; } }
+        public string Name { get { return TheRazorBladeMapPlugin.Properties.Resources.name; } }
         public string EnglishDescription { get { return TheRazorBladeMapPlugin.Properties.Resources.englishDescription; } }
 
         public Map Map { get { return map; } }

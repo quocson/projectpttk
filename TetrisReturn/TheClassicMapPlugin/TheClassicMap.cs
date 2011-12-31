@@ -12,7 +12,7 @@ namespace TheClassicMapPlugin
         public TheClassicMap()
         {
             reset();
-
+            name = TheClassicMapPlugin.Properties.Resources.name;
             iMap = new Bitmap(TheClassicMapPlugin.Properties.Resources.ClassicMap);
         }
 
