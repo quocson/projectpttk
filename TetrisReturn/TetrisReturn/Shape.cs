@@ -22,7 +22,17 @@ namespace TetrisReturn
             set { col = value; }
         }
         protected int xScreen;//x position of shape on the screen.
+        public int XScreen
+        {
+            get { return xScreen; }
+            set { xScreen = value; }
+        }
         protected int yScreen;//y position of shape on the screen.
+        public int YScreen
+        {
+            get { return yScreen; }
+            set { yScreen = value; }
+        }
         protected int color;//color of shape.
         protected List<Block> cube = new List<Block>();//blocks of shape.
 

@@ -101,7 +101,35 @@ namespace TetrisReturn
                 //for extend shape...
             }
         }
+        public void createShape(int modeShape, bool change)
+        {
+            if (!change)
+            {
+                currShape.rotate();
+                return;
+            }
+            int x, y;
+            x = currShape.XScreen;
+            y = currShape.YScreen;
+            if (currShape != null)
+                currShape.Dispose();
 
+            
+            switch (modeShape)
+            {
+                case 0://classic shape.
+                    currShape =new Shape( new ClassicShape(), x,y);
+                    break;
+
+                case 1://multi shape.
+                    currShape = new Shape( new MultiShape(), x,y);;
+                    break;
+
+                //for exScreentend shape...
+            }
+
+            
+        }
         //lock shape on map.
         public void lockShape()
         {
