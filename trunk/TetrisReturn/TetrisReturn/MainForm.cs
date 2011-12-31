@@ -53,7 +53,6 @@ namespace TetrisReturn
             checkLostAllFiles();
 
             setLastConfig();
-            pictureBox1.Visible = false;
             gameControl = new GameControl();
             soundControl = new SoundControl();
 
@@ -186,7 +185,7 @@ namespace TetrisReturn
         {
             timer.Enabled = true;
             timer.Interval = 200;
-            modeShape = 0;
+            modeShape = 1;
             gameControl.createShape(modeShape);
             nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;

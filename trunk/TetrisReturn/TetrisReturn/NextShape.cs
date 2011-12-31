@@ -21,7 +21,6 @@ namespace TetrisReturn
         private Point pText; //pos of text
         private Shape shapeNext = null;
         private Bitmap imgBack;
-        private int iTopShape;
 
         public Shape ShapeNext
         {
@@ -104,10 +103,14 @@ namespace TetrisReturn
 
             if(shapeNext == null)
                 return;
-            iTopShape = 0;
-            if (Width - shapeNext.Col * Constants.blockSize  > 0)
-                iTopShape = (Width - shapeNext.Col * Constants.blockSize) / 2;
-            shapeNext = new Shape(shapeNext, iTopShape, (int)sz.Height +  Constants.blockSize);
+            int Left = 0;
+            int Top = (int)sz.Height + Constants.blockSize;
+            if (Width - shapeNext.Col * Constants.blockSize > 0)
+                Left = (Width - shapeNext.Col * Constants.blockSize) / 2;
+            if (Height - shapeNext.Row * Constants.blockSize > 0)
+                Top = (Height - shapeNext.Row * Constants.blockSize) / 2;
+
+            shapeNext = new Shape(shapeNext, Left, Top);
             shapeNext.drawShape(e.Graphics);
         }
 

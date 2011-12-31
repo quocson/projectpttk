@@ -43,8 +43,6 @@
             this.imageButton3 = new TetrisReturn.ImageButton();
             this.imageButton2 = new TetrisReturn.ImageButton();
             this.imageButton1 = new TetrisReturn.ImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer
@@ -63,7 +61,7 @@
             this.nextShape1.Name = "nextShape1";
             this.nextShape1.PText = new System.Drawing.Point(0, 0);
             this.nextShape1.ShapeNext = null;
-            this.nextShape1.Size = new System.Drawing.Size(280, 209);
+            this.nextShape1.Size = new System.Drawing.Size(239, 209);
             this.nextShape1.SText = null;
             this.nextShape1.TabIndex = 11;
             // 
@@ -264,21 +262,12 @@
             this.imageButton1.Click += new System.EventHandler(this.imageButton1_Click);
             this.imageButton1.MouseEnter += new System.EventHandler(this.imageButton1_MouseEnter);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(304, -37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(574, 694);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 669);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nextShape1);
             this.Controls.Add(this.showInformation4);
             this.Controls.Add(this.showInformation3);
@@ -304,7 +293,6 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,7 +312,6 @@
         private ShowInformation showInformation4;
         private NextShape nextShape1;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.PictureBox pictureBox1;
 
 
 

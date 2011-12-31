@@ -159,7 +159,6 @@ namespace TetrisReturn
 
             for (int i = line - 1; i >= 0; i--)
             {
-                bool max = true;
                 for (int j = 0; j < Constants.map.Column; j++)
                 {
                     if (Constants.map.StatusMap[i, j] > -1)
@@ -168,10 +167,8 @@ namespace TetrisReturn
                         new Rectangle(j * Constants.blockSize + 5 + Constants.blockDelta, (i - 3) * Constants.blockSize + 5 + Constants.blockDelta, Constants.blockSize - Constants.blockDelta, Constants.blockSize - Constants.blockDelta),
                         new Rectangle((Constants.map.StatusMap[i, j]) * Constants.blockSize, 0, Constants.blockSize, Constants.blockSize),
                         GraphicsUnit.Pixel);
-                        max = false;
                     }
                 }
-                if (max) i = -1;
             }
             Refresh();
             g.Dispose();
