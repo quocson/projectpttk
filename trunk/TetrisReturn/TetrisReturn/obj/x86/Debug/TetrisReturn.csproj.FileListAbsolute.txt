@@ -108,7 +108,6 @@ E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TetrisReturn\obj\x86\
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.Option.resources
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.Properties.Resources.resources
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.ShowInformation.resources
-E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.TextControl.resources
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TetrisReturn\bin\Debug\TetrisReturn.exe
