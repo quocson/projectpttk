@@ -39,15 +39,19 @@ namespace TetrisReturn
         public TextControl()
         {
             InitializeComponent();
+            TFont = new Font("Arial", 12);
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-
             this.BackColor = Color.Transparent;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
+<<<<<<< .mine
+           
+=======
             //base.OnPaint(e);
             e.Graphics.Flush();
             //e.Graphics.Clear(Color.FromArgb(0,Color.Transparent));
+>>>>>>> .r64
             if (Text == null || TFont == null)
             return;
             Point PText ;
@@ -56,20 +60,11 @@ namespace TetrisReturn
                 PText= new Point(0, 0);
             else
                 PText = new Point((Width - (int)szn.Width) / 2, (Height - (int)szn.Height) / 2);
-            e.Graphics.DrawImage(getImgFromTxt(), PText);
+            if(getImgFromTxt() != null)
+                e.Graphics.DrawImage(getImgFromTxt(), PText);
         }
         protected override void OnPaintBackground(PaintEventArgs e)
         {
-            //base.OnPaintBackground(e);
-        }
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x00000020; //WS_EX_TRANSPARENT
-                return cp;
-            }
         }
         private Image getImgFromTxt()
         {
@@ -79,6 +74,8 @@ namespace TetrisReturn
             using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
             {
                 SizeF sz = g.MeasureString(Text, TFont);
+                if((int)sz.Width <= 0 ||(int)sz.Height <= 0)
+                return null;
                 Bitmap bmp = new Bitmap((int)sz.Width, (int)sz.Height);
                 Graphics gBmp = Graphics.FromImage(bmp);
                 SolidBrush brBack = new SolidBrush(Color.FromArgb(255, Color.Black));

@@ -15,6 +15,7 @@ namespace TetrisReturn
         private bool playing;
         private int soundVolume;
         private int modeShape;
+        private int arrowUp;
         private GameControl gameControl;
         private SoundControl soundControl;
         private string languageDisplay;
@@ -119,6 +120,10 @@ namespace TetrisReturn
             bool success = true;
             Config config = new Config();
             config.load();
+
+            //set language display.
+            languageDisplay = config.SLanguage;
+
             //load theme.
             Types.AvailableTheme lastTheme = Constants.themeService.AvailableThemes.Find(config.STheme);
 
@@ -141,28 +146,27 @@ namespace TetrisReturn
             Constants.setTheme(lastTheme.Instance.Theme);
             Constants.setMap(lastMap.Instance.Map);
 
-
             //set ghost.
             enableGhostShape = config.BGhost;
 
             //set sound volume.
             soundVolume = config.ISound;
 
-            //set language display.
-            languageDisplay = config.SLanguage;
+            //set mode shape.
 
-            //...
+            //set arrow up.
 
-            //if (!success)
-            //    if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-            //    {
-            //        //lost a few files.
-            //        Constants.themeService.closeThemes();
-            //        Constants.mapService.closeMaps();
-            //        Constants.theme.Dispose();
-            //        Constants.map.Dispose();
-            //        Application.Exit();
-            //    }
+
+            if (!success)
+                if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                {
+                    //lost a few files.
+                    Constants.themeService.closeThemes();
+                    Constants.mapService.closeMaps();
+                    Constants.theme.Dispose();
+                    Constants.map.Dispose();
+                    Application.Exit();
+                }
         }
 
         //exit game.
@@ -171,6 +175,7 @@ namespace TetrisReturn
             //dispose element.
             Constants.themeService.closeThemes();
             Constants.mapService.closeMaps();
+            Dispose();
             Application.Exit();
         }
 
@@ -342,6 +347,22 @@ namespace TetrisReturn
         {
             pauseGame();
             option = new Option(this);
+            option.textControl1.Text = "Theme";
+            option.textControl2.Text = "Theme";
+            option.textControl3.Text = "Theme";
+            option.textControl4.Text = "Theme";
+            option.textControl5.Text = "Theme";
+            option.textControl6.Text = "Theme";
+            option.textControl7.Text = "Theme";
+            option.textControl8.Text = "Theme";
+            option.textControl9.Text = "Theme";
+            option.textControl10.Text = "Theme";
+            option.textControl11.Text = "Theme";
+
+            foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
+                option.comboBox1.Items.Add(theme.Instance.EnglishName);
+            foreach (Types.AvailableMap map in Constants.mapService.AvailableMaps)
+                option.comboBox2.Items.Add(map.Instance.EnglishName);
             option.ShowDialog();
         }
 

@@ -153,6 +153,9 @@
     <EmbeddedResource Include="ShowInformation.resx">
       <DependentUpon>ShowInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TextControl.resx">
+      <DependentUpon>TextControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>

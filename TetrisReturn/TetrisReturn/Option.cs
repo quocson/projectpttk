@@ -45,7 +45,7 @@ namespace TetrisReturn
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Constants.theme.HelpBackground, 0, 0);
+            e.Graphics.DrawImage(Constants.theme.OptionBackground, 0, 0);
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
@@ -54,24 +54,23 @@ namespace TetrisReturn
         private void appear()
         {
             int i;
-            for (i = 1; i <= 258; i++)
+            for (i = 1; i <= 126; i++)
             {
-                this.SetDesktopLocation(mainForm.Location.X - 800 + 5 * i, mainForm.Location.Y + 110);
+                this.SetDesktopLocation(mainForm.Location.X - 800 + 10 * i, mainForm.Location.Y + 110);
                 Refresh();
             }
-            for (i = 258; i >= 208; i--)
+            for (i = 126; i >= 104; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X - 800 + 5 * i, mainForm.Location.Y + 110);
+                this.SetDesktopLocation(mainForm.Location.X - 800 + 10 * i, mainForm.Location.Y + 110);
                 Refresh();
-                System.Threading.Thread.Sleep(10);
             }
         }
 
         private void disappear()
         {
-            for (int i = 208; i >= 1; i--)
+            for (int i = 104; i >= 1; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X - 800 + 5 * i, mainForm.Location.Y + 110);
+                this.SetDesktopLocation(mainForm.Location.X - 800 + 10 * i, mainForm.Location.Y + 110);
                 Refresh();
             }
         }
