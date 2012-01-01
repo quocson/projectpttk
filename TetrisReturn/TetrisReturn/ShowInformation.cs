@@ -114,7 +114,7 @@ namespace TetrisReturn
             if (ImgBack == null )
                 return;
             e.Graphics.DrawImage(ImgBack, new Point(0, 0));
-             if (STitle == null || SInfo == null)
+             if (STitle == null || FTitle == null)
                  return;
             SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(STitle, FTitle);
             //sap xep vi tri cua title
@@ -122,12 +122,15 @@ namespace TetrisReturn
                 PTitle = new Point(0, 0);
             else
                 PTitle = new Point((Width - (int)sz.Width) / 2, 0);
+
+            e.Graphics.DrawImage(getImgFromTxt(), PTitle);
+            if (SInfo == null || FInfo == null)
+                return;
             SizeF szn = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SInfo.ToString(), FInfo);
             if (Width - (int)szn.Width < 0)
                 PInfo= new Point(0, 0);
             else
                 PInfo = new Point((Width - (int)szn.Width) / 2, (int)sz.Height * 2);
-            e.Graphics.DrawImage(getImgFromTxt(), PTitle);
             e.Graphics.DrawImage(getImgFromNo(), PInfo);
         }
         private Image getImgFromTxt()
@@ -211,8 +214,9 @@ namespace TetrisReturn
             return bmpOut;
         }
 
-
-        
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+        }        
         
     }
 }

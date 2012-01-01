@@ -24,15 +24,16 @@ namespace TetrisReturn
         {
             if ((Math.Abs(e.Y - toClose.Y) < 100) && ((toClose.X - e.X) >= 200))
             {
-                foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
-                    if (theme.Instance.Name.CompareTo(comboBox1.Text) == 0)
-                            Constants.setTheme(theme.Instance.Theme);
 
                 foreach (Types.AvailableMap map in Constants.mapService.AvailableMaps)
                     if (map.Instance.Name.CompareTo(comboBox2.Text) == 0)
                         Constants.setMap(map.Instance.Map);
 
-                mainForm.Language = comboBox3.Text;
+                if(comboBox3.SelectedIndex == 0)
+                    mainForm.Language = "English";
+                else
+                    mainForm.Language = "VietNamese";
+
 
                 if (checkBox1.Checked)
                     mainForm.Sound = true;
@@ -85,6 +86,7 @@ namespace TetrisReturn
         protected override void OnPaintBackground(PaintEventArgs e)
         {
         }
+
         private void appear()
         {
             int i;
@@ -134,6 +136,21 @@ namespace TetrisReturn
 
             if (!checkBox5.Checked && !checkBox6.Checked)
                 checkBox5.Checked = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
+                if (theme.Instance.Name.CompareTo(comboBox1.Text) == 0)
+                    Constants.setTheme(theme.Instance.Theme);
+            Refresh();
+            mainForm.setFontOption();
+            mainForm.Refresh();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

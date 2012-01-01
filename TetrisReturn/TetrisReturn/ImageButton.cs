@@ -16,7 +16,7 @@ namespace TetrisReturn
         //bitmap for state
         //String 
         private String sText;// button text
-        private Color cText = Color.White; // text color
+        private Color cText = Color.Red; // text color
         private Color cStroke = Color.Black; //stroke color
         private int iWidth = 2; //stroke width
         private Font fText ;// font of text
@@ -57,7 +57,11 @@ namespace TetrisReturn
         public Color CText
         {
             get { return cText; }
-            set { cText = value; }
+            set
+            {
+                cText = value;
+                Refresh();
+            }
         }
         public String SText
         {
@@ -118,7 +122,7 @@ namespace TetrisReturn
             Graphics g = Graphics.FromHwnd(IntPtr.Zero);
             SizeF sz = g.MeasureString(SText, FText);
             bmpOut = new Bitmap((int)sz.Width + iWidth, (int)sz.Height + iWidth);
-            SolidBrush brFore = new SolidBrush(Color.White);
+            SolidBrush brFore = new SolidBrush(Color.Gray);
             Graphics gBmpOut = Graphics.FromImage(bmpOut);
             gBmpOut.SmoothingMode = SmoothingMode.HighQuality;
             gBmpOut.InterpolationMode = InterpolationMode.HighQualityBilinear;

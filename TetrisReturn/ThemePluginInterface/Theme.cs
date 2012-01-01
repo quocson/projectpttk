@@ -14,10 +14,10 @@ namespace ThemePluginInterface
         private Bitmap iHighScoresBackground;
         private Bitmap iOptionBackground;
         private Bitmap iBlocks;
-        private Bitmap iNormalButton;
-        private Bitmap iHoverButton;
-        private Bitmap iClickButton;
-        private Bitmap iDisableButton;
+        private Bitmap iButton;
+        private Bitmap iGameOver;
+        private Bitmap iGameWin;
+        private Bitmap iExit;
         private Bitmap iInformations;
         private Bitmap iNextShape;
         private int numColorBlock;
@@ -36,10 +36,10 @@ namespace ThemePluginInterface
             iHighScoresBackground = new Bitmap(t.iHighScoresBackground);
             iOptionBackground = new Bitmap(t.iOptionBackground);
             iBlocks = new Bitmap(t.iBlocks);
-            iNormalButton = new Bitmap(t.iNormalButton);
-            iHoverButton = new Bitmap(t.iHoverButton);
-            iClickButton = new Bitmap(t.iClickButton);
-            iDisableButton = new Bitmap(t.iDisableButton);
+            iButton = new Bitmap(t.iButton);
+            iGameOver = new Bitmap(t.iGameOver);
+            iGameWin = new Bitmap(t.iGameWin);
+            iExit = new Bitmap(t.iExit);
             iInformations = new Bitmap(t.iInformations);
             iNextShape = new Bitmap(t.iNextShape);
             numColorBlock = t.numColorBlock;
@@ -53,10 +53,10 @@ namespace ThemePluginInterface
                     Image iHighScoresBackground,
                     Image iOptionBackground,
                     Image iBlocks,
-                    Image iNormalButton,
-                    Image iHoverButton,
-                    Image iClickButton,
-                    Image iDisableButton,
+                    Image iButton,
+                    Image iGameOver,
+                    Image iGameWin,
+                    Image iExit,
                     Image iInformations,
                     Image iNextShape,
                     int numColorBlock,
@@ -69,10 +69,10 @@ namespace ThemePluginInterface
             this.iHighScoresBackground = new Bitmap(iHighScoresBackground);
             this.iOptionBackground = new Bitmap(iOptionBackground);
             this.iBlocks = new Bitmap(iBlocks);
-            this.iNormalButton = new Bitmap(iNormalButton);
-            this.iHoverButton = new Bitmap(iHoverButton);
-            this.iClickButton = new Bitmap(iClickButton);
-            this.iDisableButton = new Bitmap(iDisableButton);
+            this.iButton = new Bitmap(iButton);
+            this.iGameOver = new Bitmap(iGameOver);
+            this.iGameWin = new Bitmap(iGameWin);
+            this.iExit = new Bitmap(iExit);
             this.iInformations = new Bitmap(iInformations);
             this.iNextShape = new Bitmap(iNextShape);
             this.numColorBlock = numColorBlock;
@@ -94,14 +94,14 @@ namespace ThemePluginInterface
                 iOptionBackground.Dispose();
             if (iBlocks != null)
                 iBlocks.Dispose();
-            if (iNormalButton != null)
-                iNormalButton.Dispose();
-            if (iHoverButton != null)
-                iHoverButton.Dispose();
-            if (iClickButton != null)
-                iClickButton.Dispose();
-            if (iDisableButton != null)
-                iDisableButton.Dispose();
+            if (iButton != null)
+                iButton.Dispose();
+            if (iGameOver != null)
+                iGameOver.Dispose();
+            if (iGameWin != null)
+                iGameWin.Dispose();
+            if (iExit != null)
+                iExit.Dispose();
             if (iInformations != null)
                 iInformations.Dispose();
             if (iNextShape != null)
@@ -115,10 +115,10 @@ namespace ThemePluginInterface
         public Bitmap HighScoresBackground { get { return iHighScoresBackground; } }
         public Bitmap OptionBackground { get { return iOptionBackground; } }
         public Bitmap Blocks { get { return iBlocks; } }
-        public Bitmap NormalButton { get { return iNormalButton; } }
-        public Bitmap HoverButton { get { return iHoverButton; } }
-        public Bitmap ClickButton { get { return iClickButton; } }
-        public Bitmap DisableButton { get { return iDisableButton; } }
+        public Bitmap Button { get { return iButton; } }
+        public Bitmap GameOver { get { return iGameOver; } }
+        public Bitmap GameWin { get { return iGameWin; } }
+        public Bitmap Exit { get { return iExit; } }
         public Bitmap Informations { get { return iInformations; } }
         public Bitmap NextShape { get { return iNextShape; } }
         public int NumColorBlock { get { return numColorBlock; } }

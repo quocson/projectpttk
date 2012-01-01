@@ -148,19 +148,19 @@
   <data name="vietNameseDescription" xml:space="preserve">
     <value>Hinh anh trong theme nay giong nhu duoc ve bang tay.</value>
   </data>
-  <data name="ClickButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ClickButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DisableButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DisableButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HoverButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HoverButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NormalButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NormalButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="NextShape" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NextShape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameOver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameWin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

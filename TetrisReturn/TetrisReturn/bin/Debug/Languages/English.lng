@@ -14,6 +14,23 @@
   <Game Ghost="Ghost" />
   <Game Sound="Sound" />
   <Game LoadDLL="Failed to load any library file!" />
-  <Game LoadConfig="Failed to load latest configuration. Create new?" />
+  <Game LoadConfig="Failed to load latest configuration. Continue?" />
   <Game LoadSave="No Save file to load!" />
+  <Game Theme="Theme" />
+  <Game Map="Map" />
+  <Game Language="Language" />
+  <Game Shape="Mode Shape" />
+  <Game Shape1="Play with classic shape" />
+  <Game Shape2="Play with multi shape" />
+  <Game Up="Arrow up" />
+  <Game Up1="Use to rotate shape" />
+  <Game Up2="Use to random new shape" />
+  <Game Language1="English" />
+  <Game Language2="VietNamese" />
+  <Game CaptionLoadDLL="Lost all file!" />
+  <Game CaptionLoadConfig="May be lost some library file!" />
+  <Game Next="Next" />
+  <Game Level="Level" />
+  <Game Line="Line" />
+  <Game Piece="Piece" />
 </Language>
