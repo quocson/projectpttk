@@ -1,0 +1,19 @@
+<Language>
+  <Game New="Bat dau" />
+  <Game Pause="Tam dung" />
+  <Game Resume="Choi tiep" />
+  <Game Save="Luu" />
+  <Game Continue="Tiep tuc" />
+  <Game Score="Diem" />
+  <Game Help="Giup do" />
+  <Game About="Thong tin" />
+  <Game Exit="Thoat" />
+  <Game Option="Tuy chon" />
+  <Game Win="Chien thang!" />
+  <Game Over="Thua cuoc!" />
+  <Game Ghost="Bong" />
+  <Game Sound="Am thanh" />
+  <Game LoadDLL="Khong the doc tap tin thu vien!" />
+  <Game LoadConfig="Khong tim thay tap tin cau hinh. Tao moi?" />
+  <Game LoadSave="Khong tim thay phan luu game!" />
+</Language>
