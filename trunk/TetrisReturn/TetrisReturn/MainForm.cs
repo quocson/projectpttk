@@ -77,8 +77,6 @@ namespace TetrisReturn
         {
             Constants.findMap();
             Constants.findTheme();
-            Constants.language.load("Vietnamese.lng");
-            checkLostAllFiles();
             
             setLastConfig();
             gameControl = new GameControl();
@@ -106,23 +104,40 @@ namespace TetrisReturn
             this.AddKeyEventHandler(this.gameControl);
 
             this.AddKeyEventHandler(this.nextShape1);
-            Font t = Constants.getFont(20);
-            nextShape1.FText = t;
-            nextShape1.SText = "Next Shape";
             playing = false;
         }
 
-        private void setTheme()
+        public void setTheme()
         {
+            System.Drawing.Font f = Constants.getFont(20);
+
+           
+            imageButton1.FText = f;
+            imageButton2.FText = f;
+            imageButton3.FText = f;
+            imageButton4.FText = f;
+            imageButton5.FText = f;
+            imageButton6.FText = f;
+            imageButton7.FText = f;
+            nextShape1.FText = f;
+            showInformation1.FTitle = f;
+            showInformation2.FTitle = f;
+            showInformation3.FTitle = f;
+            showInformation4.FTitle = f;
+
             BackgroundImage = Constants.theme.MainBackground;
 
-            imageButton1.Image = Constants.theme.NormalButton;
-            imageButton2.Image = Constants.theme.DisableButton;
-            imageButton3.Image = Constants.theme.NormalButton;
-            imageButton4.Image = Constants.theme.NormalButton;
-            imageButton5.Image = Constants.theme.NormalButton;
-            imageButton6.Image = Constants.theme.NormalButton;
-            imageButton7.Image = Constants.theme.NormalButton;
+            imageButton1.Image = Constants.theme.Button;
+            imageButton2.Image = Constants.theme.Button;
+            imageButton3.Image = Constants.theme.Button;
+            imageButton4.Image = Constants.theme.Button;
+            imageButton5.Image = Constants.theme.Button;
+            imageButton6.Image = Constants.theme.Button;
+            imageButton7.Image = Constants.theme.Button;
+
+            imageButton3.Enabled = false;
+            imageButton4.Enabled = false;
+            imageButton5.Enabled = false;
 
             Controls.Add(gameControl);
 
@@ -131,6 +146,19 @@ namespace TetrisReturn
             showInformation2.ImgBack = Constants.theme.Informations;
             showInformation3.ImgBack = Constants.theme.Informations;
             showInformation4.ImgBack = Constants.theme.Informations;
+
+            imageButton1.SText = Constants.language.newgame;
+            imageButton2.SText = Constants.language.conti;
+            imageButton3.SText = Constants.language.save;
+            imageButton4.SText = Constants.language.pause;
+            imageButton5.SText = Constants.language.sound;
+            imageButton6.SText = Constants.language.ghost;
+            imageButton7.SText = Constants.language.exit;
+            nextShape1.SText = Constants.language.next;
+            showInformation4.STitle = Constants.language.score;
+            showInformation3.STitle = Constants.language.level;
+            showInformation2.STitle = Constants.language.line;
+            showInformation1.STitle = Constants.language.piece;
         }
 
         //check if lost all files, close game.
@@ -139,7 +167,7 @@ namespace TetrisReturn
             if (Constants.themeService.AvailableThemes.Count == 0 || Constants.mapService.AvailableMaps.Count == 0)
             {
                 //lost all files.
-                MessageBox.Show(this, "", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, Constants.language.loaddll, Constants.language.captionDll, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Constants.themeService.closeThemes();
                 Constants.mapService.closeMaps();
                 Application.Exit();
@@ -155,6 +183,10 @@ namespace TetrisReturn
 
             //set language display.
             languageDisplay = config.SLanguage;
+
+            Constants.language.load(languageDisplay + ".lng");
+
+            checkLostAllFiles();
 
             //load theme.
             Types.AvailableTheme lastTheme = Constants.themeService.AvailableThemes.Find(config.STheme);
@@ -191,7 +223,7 @@ namespace TetrisReturn
             arrowUp = config.ArrowUp;
 
             if (!success)
-                if (MessageBox.Show(this, "", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                if (MessageBox.Show(this, Constants.language.loadconfig, Constants.language.captionConfig, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
                 {
                     //lost a few files.
                     Constants.themeService.closeThemes();
@@ -210,16 +242,6 @@ namespace TetrisReturn
             Constants.mapService.closeMaps();
             Dispose();
             Application.Exit();
-        }
-
-        private void imageButton7_Click(object sender, EventArgs e)
-        {
-            exitGame();
-        }
-
-        private void imageButton1_Click(object sender, EventArgs e)
-        {
-            newGame();
         }
 
         private void newGame()
@@ -264,49 +286,44 @@ namespace TetrisReturn
 
         private void imageButton1_MouseEnter(object sender, EventArgs e)
         {
-            imageButton1.Image = Constants.theme.HoverButton;
+            imageButton1.CText = Color.LightSeaGreen;
             //sound here.
         }
 
         private void imageButton2_MouseEnter(object sender, EventArgs e)
         {
 
-            imageButton2.Image = Constants.theme.HoverButton;
+            imageButton2.CText = Color.LightSeaGreen;
             //sound here.
         }
 
         private void imageButton3_MouseEnter(object sender, EventArgs e)
         {
-
-            imageButton3.Image = Constants.theme.HoverButton;
+            imageButton3.CText = Color.LightSeaGreen;
             //sound here.
         }
 
         private void imageButton4_MouseEnter(object sender, EventArgs e)
         {
-
-            imageButton4.Image = Constants.theme.HoverButton;
+            imageButton4.CText = Color.LightSeaGreen;
             //sound here.
         }
 
         private void imageButton5_MouseEnter(object sender, EventArgs e)
         {
-
-            imageButton5.Image = Constants.theme.HoverButton;
+            imageButton5.CText = Color.LightSeaGreen;
             //sound here.
         }
 
         private void imageButton6_MouseEnter(object sender, EventArgs e)
         {
-
-            imageButton6.Image = Constants.theme.HoverButton;
+            imageButton6.CText = Color.LightSeaGreen;
             //sound here.
         }
 
         private void imageButton7_MouseEnter(object sender, EventArgs e)
         {
-
-            imageButton7.Image = Constants.theme.HoverButton;
+            imageButton7.CText = Color.LightSeaGreen;
             //sound here.
         }
 
@@ -380,8 +397,7 @@ namespace TetrisReturn
         {
             pauseGame();
             option = new Option(this);
-            Config config = new Config();
-            config.load();
+            setFontOption();
 
             //set them.
             foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
@@ -393,25 +409,27 @@ namespace TetrisReturn
                 option.comboBox2.Items.Add(map.Instance.Name);
             option.comboBox2.SelectedIndex = option.comboBox2.Items.IndexOf(Constants.map.Name);
 
+            option.comboBox3.Items.Add(Constants.language.language1);
+            option.comboBox3.Items.Add(Constants.language.language2);
+
             if (languageDisplay.CompareTo("English") == 0)
-            {
-                //set label.
-
-
-                //set language.
-                option.comboBox3.Items.Add("English");
-                option.comboBox3.Items.Add("VietNamese");
                 option.comboBox3.SelectedIndex = 0;
-            }
             else
-            {
-                //set label.
-
-                //set language.
-                option.comboBox3.Items.Add("Tiếng Anh");
-                option.comboBox3.Items.Add("Tiếng Việt");
                 option.comboBox3.SelectedIndex = 1;
-            }
+
+            //set label.
+            option.label1.Text = Constants.language.option;
+            option.label2.Text = Constants.language.theme;
+            option.label3.Text = Constants.language.map;
+            option.label4.Text = Constants.language.language;
+            option.label5.Text = Constants.language.sound;
+            option.label6.Text = Constants.language.shape;
+            option.label7.Text = Constants.language.shape1;
+            option.label8.Text = Constants.language.shape2;
+            option.label9.Text = Constants.language.ghost;
+            option.label10.Text = Constants.language.up;
+            option.label11.Text = Constants.language.up1;
+            option.label12.Text = Constants.language.up2;
 
             //set sound.
             option.checkBox1.Checked = sound;
@@ -445,6 +463,28 @@ namespace TetrisReturn
             
 
             option.ShowDialog();
+        }
+
+        public void setFontOption()
+        {
+            System.Drawing.Font f = Constants.getFont(16);
+            option.label1.Font = f;
+            f = Constants.getFont(12);
+            option.label2.Font = f;
+            option.label3.Font = f;
+            option.label4.Font = f;
+            option.label5.Font = f;
+            option.label6.Font = f;
+            option.label7.Font = f;
+            option.label8.Font = f;
+            option.label9.Font = f;
+            option.label10.Font = f;
+            option.label11.Font = f;
+            option.label12.Font = f;
+            f = Constants.getFont(10);
+            option.comboBox1.Font = f;
+            option.comboBox2.Font = f;
+            option.comboBox3.Font = f;
         }
 
         private void highScoresAppear()
@@ -517,6 +557,132 @@ namespace TetrisReturn
 
         protected override void OnPaintBackground(PaintEventArgs e)
         {
+        }
+
+        private void imageButton1_MouseDown(object sender, MouseEventArgs e)
+        {
+            imageButton1.CText = Color.LawnGreen;
+
+        }
+
+        private void imageButton1_MouseUp(object sender, MouseEventArgs e)
+        {
+            imageButton1.CText = Color.Red;
+            newGame();
+        }
+
+        private void imageButton1_MouseLeave(object sender, EventArgs e)
+        {
+            imageButton1.CText = Color.Red;
+        }
+
+        private void imageButton2_MouseLeave(object sender, EventArgs e)
+        {
+            imageButton2.CText = Color.Red;
+
+        }
+
+        private void imageButton2_MouseUp(object sender, MouseEventArgs e)
+        {
+            imageButton2.CText = Color.Red;
+
+        }
+
+        private void imageButton2_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            imageButton2.CText = Color.LawnGreen;
+        }
+
+        private void imageButton3_MouseLeave(object sender, EventArgs e)
+        {
+            imageButton3.CText = Color.Red;
+
+        }
+
+        private void imageButton3_MouseUp(object sender, MouseEventArgs e)
+        {
+            imageButton3.CText = Color.Red;
+
+        }
+
+        private void imageButton3_MouseDown(object sender, MouseEventArgs e)
+        {
+            imageButton3.CText = Color.LawnGreen;
+
+        }
+
+        private void imageButton4_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            imageButton4.CText = Color.LawnGreen;
+        }
+
+        private void imageButton4_MouseUp(object sender, MouseEventArgs e)
+        {
+            imageButton4.CText = Color.Red;
+
+        }
+
+        private void imageButton4_MouseLeave(object sender, EventArgs e)
+        {
+
+            imageButton4.CText = Color.Red;
+        }
+
+        private void imageButton5_MouseDown(object sender, MouseEventArgs e)
+        {
+            imageButton5.CText = Color.LawnGreen;
+
+        }
+
+        private void imageButton5_MouseLeave(object sender, EventArgs e)
+        {
+            imageButton5.CText = Color.Red;
+
+        }
+
+        private void imageButton5_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            imageButton5.CText = Color.Red;
+        }
+
+        private void imageButton6_MouseDown(object sender, MouseEventArgs e)
+        {
+            imageButton6.CText = Color.LawnGreen;
+
+        }
+
+        private void imageButton6_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            imageButton6.CText = Color.Red;
+        }
+
+        private void imageButton6_MouseLeave(object sender, EventArgs e)
+        {
+
+            imageButton6.CText = Color.Red;
+        }
+
+        private void imageButton7_MouseDown(object sender, MouseEventArgs e)
+        {
+            imageButton7.CText = Color.LawnGreen;
+
+        }
+
+        private void imageButton7_MouseLeave(object sender, EventArgs e)
+        {
+
+            imageButton7.CText = Color.Red;
+        }
+
+        private void imageButton7_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            imageButton7.CText = Color.Red;
+            exitGame();
         }
     }
 }

@@ -135,7 +135,7 @@ namespace TetrisReturn
             if ((x - 6)/ Constants.blockSize + temp.Col >= Constants.map.Column)
                 x = (Constants.map.Column - temp.Col) * Constants.blockSize + 6; for (int i = 0; i < temp.Col; i++)
             for (int j = 0; j < temp.Row; j++)
-                if ( y < 0 || Constants.map.StatusMap[(y - 6) / Constants.blockSize + j + 4, (x - 6) / Constants.blockSize + i] > -1)
+                if (y < 0 || (y - 6) / Constants.blockSize + j + 4 >= Constants.map.Row || Constants.map.StatusMap[(y - 6) / Constants.blockSize + j + 4, (x - 6) / Constants.blockSize + i] > -1)
                     return;
             if ((y - 6) / Constants.blockSize + temp.Row >= Constants.map.Row - 4)
                 return;

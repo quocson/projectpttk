@@ -53,7 +53,7 @@
             // 
             this.nextShape1.BackColor = System.Drawing.Color.Transparent;
             this.nextShape1.CStroke = System.Drawing.Color.Black;
-            this.nextShape1.CText = System.Drawing.Color.White;
+            this.nextShape1.CText = System.Drawing.Color.Red;
             this.nextShape1.FText = new System.Drawing.Font("Arial", 20F);
             this.nextShape1.ImgBack = null;
             this.nextShape1.IWidth = 2;
@@ -70,7 +70,7 @@
             this.showInformation4.BackColor = System.Drawing.Color.Transparent;
             this.showInformation4.CInfo = System.Drawing.Color.Empty;
             this.showInformation4.CStroke = System.Drawing.Color.Black;
-            this.showInformation4.CText = System.Drawing.Color.White;
+            this.showInformation4.CText = System.Drawing.Color.Red;
             this.showInformation4.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation4.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation4.ImgBack = null;
@@ -89,7 +89,7 @@
             this.showInformation3.BackColor = System.Drawing.Color.Transparent;
             this.showInformation3.CInfo = System.Drawing.Color.Empty;
             this.showInformation3.CStroke = System.Drawing.Color.Black;
-            this.showInformation3.CText = System.Drawing.Color.White;
+            this.showInformation3.CText = System.Drawing.Color.Red;
             this.showInformation3.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation3.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation3.ImgBack = null;
@@ -108,7 +108,7 @@
             this.showInformation2.BackColor = System.Drawing.Color.Transparent;
             this.showInformation2.CInfo = System.Drawing.Color.Empty;
             this.showInformation2.CStroke = System.Drawing.Color.Black;
-            this.showInformation2.CText = System.Drawing.Color.White;
+            this.showInformation2.CText = System.Drawing.Color.Red;
             this.showInformation2.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation2.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation2.ImgBack = null;
@@ -127,7 +127,7 @@
             this.showInformation1.BackColor = System.Drawing.Color.Transparent;
             this.showInformation1.CInfo = System.Drawing.Color.Empty;
             this.showInformation1.CStroke = System.Drawing.Color.Black;
-            this.showInformation1.CText = System.Drawing.Color.White;
+            this.showInformation1.CText = System.Drawing.Color.Red;
             this.showInformation1.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.ImgBack = null;
@@ -145,126 +145,145 @@
             // 
             this.imageButton7.BackColor = System.Drawing.Color.Transparent;
             this.imageButton7.CStroke = System.Drawing.Color.Black;
-            this.imageButton7.CText = System.Drawing.Color.White;
+            this.imageButton7.CText = System.Drawing.Color.Red;
             this.imageButton7.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton7.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton7.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton7.Image")));
             this.imageButton7.IWidth = 2;
-            this.imageButton7.Location = new System.Drawing.Point(100, 539);
+            this.imageButton7.Location = new System.Drawing.Point(100, 580);
             this.imageButton7.Name = "imageButton7";
             this.imageButton7.PText = new System.Drawing.Point(0, 0);
             this.imageButton7.Size = new System.Drawing.Size(230, 60);
             this.imageButton7.SText = null;
             this.imageButton7.TabIndex = 6;
-            this.imageButton7.Click += new System.EventHandler(this.imageButton7_Click);
+            this.imageButton7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton7_MouseDown);
             this.imageButton7.MouseEnter += new System.EventHandler(this.imageButton7_MouseEnter);
+            this.imageButton7.MouseLeave += new System.EventHandler(this.imageButton7_MouseLeave);
+            this.imageButton7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imageButton7_MouseUp);
             // 
             // imageButton6
             // 
             this.imageButton6.BackColor = System.Drawing.Color.Transparent;
             this.imageButton6.CStroke = System.Drawing.Color.Black;
-            this.imageButton6.CText = System.Drawing.Color.White;
+            this.imageButton6.CText = System.Drawing.Color.Red;
             this.imageButton6.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton6.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton6.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton6.Image")));
             this.imageButton6.IWidth = 2;
-            this.imageButton6.Location = new System.Drawing.Point(100, 461);
+            this.imageButton6.Location = new System.Drawing.Point(100, 496);
             this.imageButton6.Name = "imageButton6";
             this.imageButton6.PText = new System.Drawing.Point(0, 0);
             this.imageButton6.Size = new System.Drawing.Size(230, 60);
             this.imageButton6.SText = null;
             this.imageButton6.TabIndex = 5;
+            this.imageButton6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton6_MouseDown);
             this.imageButton6.MouseEnter += new System.EventHandler(this.imageButton6_MouseEnter);
+            this.imageButton6.MouseLeave += new System.EventHandler(this.imageButton6_MouseLeave);
+            this.imageButton6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imageButton6_MouseUp);
             // 
             // imageButton5
             // 
             this.imageButton5.BackColor = System.Drawing.Color.Transparent;
             this.imageButton5.CStroke = System.Drawing.Color.Black;
-            this.imageButton5.CText = System.Drawing.Color.White;
+            this.imageButton5.CText = System.Drawing.Color.Red;
             this.imageButton5.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton5.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton5.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton5.Image")));
             this.imageButton5.IWidth = 2;
-            this.imageButton5.Location = new System.Drawing.Point(100, 384);
+            this.imageButton5.Location = new System.Drawing.Point(100, 414);
             this.imageButton5.Name = "imageButton5";
             this.imageButton5.PText = new System.Drawing.Point(0, 0);
             this.imageButton5.Size = new System.Drawing.Size(230, 60);
             this.imageButton5.SText = null;
             this.imageButton5.TabIndex = 4;
+            this.imageButton5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton5_MouseDown);
             this.imageButton5.MouseEnter += new System.EventHandler(this.imageButton5_MouseEnter);
+            this.imageButton5.MouseLeave += new System.EventHandler(this.imageButton5_MouseLeave);
+            this.imageButton5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imageButton5_MouseUp);
             // 
             // imageButton4
             // 
             this.imageButton4.BackColor = System.Drawing.Color.Transparent;
             this.imageButton4.CStroke = System.Drawing.Color.Black;
-            this.imageButton4.CText = System.Drawing.Color.White;
+            this.imageButton4.CText = System.Drawing.Color.Red;
             this.imageButton4.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton4.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton4.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton4.Image")));
             this.imageButton4.IWidth = 2;
-            this.imageButton4.Location = new System.Drawing.Point(100, 307);
+            this.imageButton4.Location = new System.Drawing.Point(100, 331);
             this.imageButton4.Name = "imageButton4";
             this.imageButton4.PText = new System.Drawing.Point(0, 0);
             this.imageButton4.Size = new System.Drawing.Size(230, 60);
             this.imageButton4.SText = null;
             this.imageButton4.TabIndex = 3;
+            this.imageButton4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton4_MouseDown);
             this.imageButton4.MouseEnter += new System.EventHandler(this.imageButton4_MouseEnter);
+            this.imageButton4.MouseLeave += new System.EventHandler(this.imageButton4_MouseLeave);
+            this.imageButton4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imageButton4_MouseUp);
             // 
             // imageButton3
             // 
             this.imageButton3.BackColor = System.Drawing.Color.Transparent;
             this.imageButton3.CStroke = System.Drawing.Color.Black;
-            this.imageButton3.CText = System.Drawing.Color.White;
+            this.imageButton3.CText = System.Drawing.Color.Red;
             this.imageButton3.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton3.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton3.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton3.Image")));
             this.imageButton3.IWidth = 2;
-            this.imageButton3.Location = new System.Drawing.Point(100, 230);
+            this.imageButton3.Location = new System.Drawing.Point(100, 248);
             this.imageButton3.Name = "imageButton3";
             this.imageButton3.PText = new System.Drawing.Point(0, 0);
             this.imageButton3.Size = new System.Drawing.Size(230, 60);
             this.imageButton3.SText = null;
             this.imageButton3.TabIndex = 2;
+            this.imageButton3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton3_MouseDown);
             this.imageButton3.MouseEnter += new System.EventHandler(this.imageButton3_MouseEnter);
+            this.imageButton3.MouseLeave += new System.EventHandler(this.imageButton3_MouseLeave);
+            this.imageButton3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imageButton3_MouseUp);
             // 
             // imageButton2
             // 
             this.imageButton2.BackColor = System.Drawing.Color.Transparent;
             this.imageButton2.CStroke = System.Drawing.Color.Black;
-            this.imageButton2.CText = System.Drawing.Color.White;
+            this.imageButton2.CText = System.Drawing.Color.Red;
             this.imageButton2.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton2.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton2.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton2.Image")));
             this.imageButton2.IWidth = 2;
-            this.imageButton2.Location = new System.Drawing.Point(100, 151);
+            this.imageButton2.Location = new System.Drawing.Point(100, 163);
             this.imageButton2.Name = "imageButton2";
             this.imageButton2.PText = new System.Drawing.Point(0, 0);
             this.imageButton2.Size = new System.Drawing.Size(230, 60);
             this.imageButton2.SText = null;
             this.imageButton2.TabIndex = 1;
+            this.imageButton2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton2_MouseDown);
             this.imageButton2.MouseEnter += new System.EventHandler(this.imageButton2_MouseEnter);
+            this.imageButton2.MouseLeave += new System.EventHandler(this.imageButton2_MouseLeave);
+            this.imageButton2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imageButton2_MouseUp);
             // 
             // imageButton1
             // 
             this.imageButton1.BackColor = System.Drawing.Color.Transparent;
             this.imageButton1.CStroke = System.Drawing.Color.Black;
-            this.imageButton1.CText = System.Drawing.Color.White;
+            this.imageButton1.CText = System.Drawing.Color.Red;
             this.imageButton1.ForeColor = System.Drawing.Color.Transparent;
             this.imageButton1.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton1.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton1.Image")));
             this.imageButton1.IWidth = 2;
-            this.imageButton1.Location = new System.Drawing.Point(100, 74);
+            this.imageButton1.Location = new System.Drawing.Point(100, 80);
             this.imageButton1.Name = "imageButton1";
             this.imageButton1.PText = new System.Drawing.Point(0, 0);
             this.imageButton1.Size = new System.Drawing.Size(230, 60);
             this.imageButton1.SText = null;
             this.imageButton1.TabIndex = 0;
-            this.imageButton1.Click += new System.EventHandler(this.imageButton1_Click);
+            this.imageButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton1_MouseDown);
             this.imageButton1.MouseEnter += new System.EventHandler(this.imageButton1_MouseEnter);
+            this.imageButton1.MouseLeave += new System.EventHandler(this.imageButton1_MouseLeave);
+            this.imageButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imageButton1_MouseUp);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);

@@ -16,4 +16,17 @@
   <Game LoadDLL="Khong the doc tap tin thu vien!" />
   <Game LoadConfig="Khong tim thay tap tin cau hinh. Tao moi?" />
   <Game LoadSave="Khong tim thay phan luu game!" />
+  <Game Theme="Theme" />
+  <Game Map="Map" />
+  <Game Language="Language" />
+  <Game Shape="Mode Shape" />
+  <Game Shape1="Play with classic shape" />
+  <Game Shape2="Play with multi shape" />
+  <Game Up="Arrow up" />
+  <Game Up1="Use to rotate shape" />
+  <Game Up2="Use to random new shape" />
+  <Game Language1="English" />
+  <Game Language2="VietNamese" />
+  <Game CaptionLoadDLL="Lost all file!" />
+  <Game CaptionLoadConfig="May be lost some library file!" />
 </Language>

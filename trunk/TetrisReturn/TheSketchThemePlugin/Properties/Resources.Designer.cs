@@ -74,16 +74,9 @@ namespace TheSketchThemePlugin.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap ClickButton {
+        internal static System.Drawing.Bitmap Button {
             get {
-                object obj = ResourceManager.GetObject("ClickButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap DisableButton {
-            get {
-                object obj = ResourceManager.GetObject("DisableButton", resourceCulture);
+                object obj = ResourceManager.GetObject("Button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -97,6 +90,27 @@ namespace TheSketchThemePlugin.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Exit {
+            get {
+                object obj = ResourceManager.GetObject("Exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap GameOver {
+            get {
+                object obj = ResourceManager.GetObject("GameOver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap GameWin {
+            get {
+                object obj = ResourceManager.GetObject("GameWin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap HelpBackground {
             get {
                 object obj = ResourceManager.GetObject("HelpBackground", resourceCulture);
@@ -107,13 +121,6 @@ namespace TheSketchThemePlugin.Properties {
         internal static System.Drawing.Bitmap HighScoresBackground {
             get {
                 object obj = ResourceManager.GetObject("HighScoresBackground", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap HoverButton {
-            get {
-                object obj = ResourceManager.GetObject("HoverButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -144,13 +151,6 @@ namespace TheSketchThemePlugin.Properties {
         internal static System.Drawing.Bitmap NextShape {
             get {
                 object obj = ResourceManager.GetObject("NextShape", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap NormalButton {
-            get {
-                object obj = ResourceManager.GetObject("NormalButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -19,6 +19,15 @@ namespace TetrisReturn
         public string about;
         public string exit;
         public string option;
+        public string theme;
+        public string map;
+        public string language;
+        public string shape;
+        public string shape1;
+        public string shape2;
+        public string up;
+        public string up1;
+        public string up2;
         public string win;
         public string over;
         public string sound;
@@ -26,6 +35,14 @@ namespace TetrisReturn
         public string loaddll;
         public string loadconfig;
         public string loadsave;
+        public string language1;
+        public string language2;
+        public string captionDll;
+        public string captionConfig;
+        public string next;
+        public string level;
+        public string line;
+        public string piece;
 
         public Language()
         {
@@ -40,6 +57,8 @@ namespace TetrisReturn
 
         public void load(string filename)
         {
+            if (!System.IO.File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"/Languages/" + filename))
+                return;
             xmlDoc.Load(AppDomain.CurrentDomain.BaseDirectory + @"/Languages/" + filename);
             XmlNodeList nodelist = xmlDoc.SelectNodes("Language/Game");
             newgame = nodelist[0].Attributes[0].Value;
@@ -59,6 +78,23 @@ namespace TetrisReturn
             loaddll = nodelist[14].Attributes[0].Value;
             loadconfig = nodelist[15].Attributes[0].Value;
             loadsave = nodelist[16].Attributes[0].Value;
+            theme = nodelist[17].Attributes[0].Value;
+            map = nodelist[18].Attributes[0].Value;
+            language = nodelist[19].Attributes[0].Value;
+            shape = nodelist[20].Attributes[0].Value;
+            shape1 = nodelist[21].Attributes[0].Value;
+            shape2 = nodelist[22].Attributes[0].Value;
+            up = nodelist[23].Attributes[0].Value;
+            up1 = nodelist[24].Attributes[0].Value;
+            up2 = nodelist[25].Attributes[0].Value;
+            language1 = nodelist[26].Attributes[0].Value;
+            language2 = nodelist[27].Attributes[0].Value;
+            captionDll = nodelist[28].Attributes[0].Value;
+            captionConfig = nodelist[29].Attributes[0].Value;
+            next = nodelist[30].Attributes[0].Value;
+            level = nodelist[31].Attributes[0].Value;
+            line = nodelist[32].Attributes[0].Value;
+            piece = nodelist[33].Attributes[0].Value;
 
         }
 

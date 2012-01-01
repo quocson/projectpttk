@@ -24,6 +24,8 @@ namespace TetrisReturn
         public static PluginMapServices mapService = new PluginMapServices();//static plugin map services.
         public static PluginThemeServices themeService = new PluginThemeServices();//static plugin theme services.
 
+        public static PrivateFontCollection fonts = null;
+        public static FontFamily family = null;
         //set type for the static map.
         public static void setMap(Map m)
         {
@@ -41,16 +43,22 @@ namespace TetrisReturn
         {
             if (theme.Name == "Transformers")
             {
-                PrivateFontCollection fonts = new PrivateFontCollection();
-                fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Transformers Movie.ttf");
-                FontFamily family = fonts.Families[0];
+                if (family == null)
+                {
+                    fonts = new PrivateFontCollection();
+                    fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Transformers Movie.ttf");
+                    family = fonts.Families[0];
+                }
                 return new Font(family, size, FontStyle.Bold);
             }
             if (theme.Name == "Sketch")
             {
-                PrivateFontCollection fonts = new PrivateFontCollection();
-                fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Sketch_Block.ttf");
-                FontFamily family = fonts.Families[0];
+                if (family == null)
+                {
+                    fonts = new PrivateFontCollection();
+                    fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Sketch_Block.ttf");
+                    family = fonts.Families[0];
+                }
                 return new Font(family, size);
             }
             else
