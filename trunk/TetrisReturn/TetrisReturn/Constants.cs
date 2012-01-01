@@ -23,7 +23,6 @@ namespace TetrisReturn
         public static Language language = new Language();
         public static PluginMapServices mapService = new PluginMapServices();//static plugin map services.
         public static PluginThemeServices themeService = new PluginThemeServices();//static plugin theme services.
-
         public static PrivateFontCollection fonts = null;
         public static FontFamily family = null;
         //set type for the static map.
@@ -39,10 +38,11 @@ namespace TetrisReturn
             theme.Dispose();
             theme = new Theme(t);
         }
-        public static Font getFont(int size)
+        public static Font getFont(float size)
         {
             if (theme.Name == "Transformers")
             {
+
                 if (family == null)
                 {
                     fonts = new PrivateFontCollection();
@@ -50,9 +50,11 @@ namespace TetrisReturn
                     family = fonts.Families[0];
                 }
                 return new Font(family, size, FontStyle.Bold);
+
             }
             if (theme.Name == "Sketch")
             {
+
                 if (family == null)
                 {
                     fonts = new PrivateFontCollection();
