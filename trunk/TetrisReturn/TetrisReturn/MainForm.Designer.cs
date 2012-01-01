@@ -57,11 +57,11 @@
             this.nextShape1.FText = new System.Drawing.Font("Arial", 20F);
             this.nextShape1.ImgBack = null;
             this.nextShape1.IWidth = 2;
-            this.nextShape1.Location = new System.Drawing.Point(900, 74);
+            this.nextShape1.Location = new System.Drawing.Point(900, 80);
             this.nextShape1.Name = "nextShape1";
             this.nextShape1.PText = new System.Drawing.Point(0, 0);
             this.nextShape1.ShapeNext = null;
-            this.nextShape1.Size = new System.Drawing.Size(239, 209);
+            this.nextShape1.Size = new System.Drawing.Size(280, 220);
             this.nextShape1.SText = null;
             this.nextShape1.TabIndex = 11;
             // 
@@ -75,12 +75,12 @@
             this.showInformation4.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation4.ImgBack = null;
             this.showInformation4.IWidth = 2;
-            this.showInformation4.Location = new System.Drawing.Point(900, 297);
+            this.showInformation4.Location = new System.Drawing.Point(900, 300);
             this.showInformation4.Name = "showInformation4";
             this.showInformation4.PInfo = new System.Drawing.Point(0, 0);
             this.showInformation4.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation4.SInfo = null;
-            this.showInformation4.Size = new System.Drawing.Size(280, 74);
+            this.showInformation4.Size = new System.Drawing.Size(280, 80);
             this.showInformation4.STitle = null;
             this.showInformation4.TabIndex = 10;
             // 
@@ -94,12 +94,12 @@
             this.showInformation3.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation3.ImgBack = null;
             this.showInformation3.IWidth = 2;
-            this.showInformation3.Location = new System.Drawing.Point(900, 371);
+            this.showInformation3.Location = new System.Drawing.Point(900, 380);
             this.showInformation3.Name = "showInformation3";
             this.showInformation3.PInfo = new System.Drawing.Point(0, 0);
             this.showInformation3.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation3.SInfo = null;
-            this.showInformation3.Size = new System.Drawing.Size(280, 74);
+            this.showInformation3.Size = new System.Drawing.Size(280, 80);
             this.showInformation3.STitle = null;
             this.showInformation3.TabIndex = 9;
             // 
@@ -113,12 +113,12 @@
             this.showInformation2.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation2.ImgBack = null;
             this.showInformation2.IWidth = 2;
-            this.showInformation2.Location = new System.Drawing.Point(900, 446);
+            this.showInformation2.Location = new System.Drawing.Point(900, 460);
             this.showInformation2.Name = "showInformation2";
             this.showInformation2.PInfo = new System.Drawing.Point(0, 0);
             this.showInformation2.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation2.SInfo = null;
-            this.showInformation2.Size = new System.Drawing.Size(280, 74);
+            this.showInformation2.Size = new System.Drawing.Size(280, 80);
             this.showInformation2.STitle = null;
             this.showInformation2.TabIndex = 8;
             // 
@@ -132,12 +132,12 @@
             this.showInformation1.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.ImgBack = null;
             this.showInformation1.IWidth = 2;
-            this.showInformation1.Location = new System.Drawing.Point(900, 520);
+            this.showInformation1.Location = new System.Drawing.Point(900, 540);
             this.showInformation1.Name = "showInformation1";
             this.showInformation1.PInfo = new System.Drawing.Point(0, 0);
             this.showInformation1.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation1.SInfo = null;
-            this.showInformation1.Size = new System.Drawing.Size(280, 74);
+            this.showInformation1.Size = new System.Drawing.Size(280, 80);
             this.showInformation1.STitle = null;
             this.showInformation1.TabIndex = 7;
             // 
@@ -153,7 +153,7 @@
             this.imageButton7.Location = new System.Drawing.Point(100, 539);
             this.imageButton7.Name = "imageButton7";
             this.imageButton7.PText = new System.Drawing.Point(0, 0);
-            this.imageButton7.Size = new System.Drawing.Size(230, 56);
+            this.imageButton7.Size = new System.Drawing.Size(230, 60);
             this.imageButton7.SText = null;
             this.imageButton7.TabIndex = 6;
             this.imageButton7.Click += new System.EventHandler(this.imageButton7_Click);
@@ -171,7 +171,7 @@
             this.imageButton6.Location = new System.Drawing.Point(100, 461);
             this.imageButton6.Name = "imageButton6";
             this.imageButton6.PText = new System.Drawing.Point(0, 0);
-            this.imageButton6.Size = new System.Drawing.Size(230, 56);
+            this.imageButton6.Size = new System.Drawing.Size(230, 60);
             this.imageButton6.SText = null;
             this.imageButton6.TabIndex = 5;
             this.imageButton6.MouseEnter += new System.EventHandler(this.imageButton6_MouseEnter);
@@ -188,7 +188,7 @@
             this.imageButton5.Location = new System.Drawing.Point(100, 384);
             this.imageButton5.Name = "imageButton5";
             this.imageButton5.PText = new System.Drawing.Point(0, 0);
-            this.imageButton5.Size = new System.Drawing.Size(230, 56);
+            this.imageButton5.Size = new System.Drawing.Size(230, 60);
             this.imageButton5.SText = null;
             this.imageButton5.TabIndex = 4;
             this.imageButton5.MouseEnter += new System.EventHandler(this.imageButton5_MouseEnter);
@@ -205,7 +205,7 @@
             this.imageButton4.Location = new System.Drawing.Point(100, 307);
             this.imageButton4.Name = "imageButton4";
             this.imageButton4.PText = new System.Drawing.Point(0, 0);
-            this.imageButton4.Size = new System.Drawing.Size(230, 56);
+            this.imageButton4.Size = new System.Drawing.Size(230, 60);
             this.imageButton4.SText = null;
             this.imageButton4.TabIndex = 3;
             this.imageButton4.MouseEnter += new System.EventHandler(this.imageButton4_MouseEnter);
@@ -222,7 +222,7 @@
             this.imageButton3.Location = new System.Drawing.Point(100, 230);
             this.imageButton3.Name = "imageButton3";
             this.imageButton3.PText = new System.Drawing.Point(0, 0);
-            this.imageButton3.Size = new System.Drawing.Size(230, 56);
+            this.imageButton3.Size = new System.Drawing.Size(230, 60);
             this.imageButton3.SText = null;
             this.imageButton3.TabIndex = 2;
             this.imageButton3.MouseEnter += new System.EventHandler(this.imageButton3_MouseEnter);
@@ -239,7 +239,7 @@
             this.imageButton2.Location = new System.Drawing.Point(100, 151);
             this.imageButton2.Name = "imageButton2";
             this.imageButton2.PText = new System.Drawing.Point(0, 0);
-            this.imageButton2.Size = new System.Drawing.Size(230, 56);
+            this.imageButton2.Size = new System.Drawing.Size(230, 60);
             this.imageButton2.SText = null;
             this.imageButton2.TabIndex = 1;
             this.imageButton2.MouseEnter += new System.EventHandler(this.imageButton2_MouseEnter);
@@ -256,7 +256,7 @@
             this.imageButton1.Location = new System.Drawing.Point(100, 74);
             this.imageButton1.Name = "imageButton1";
             this.imageButton1.PText = new System.Drawing.Point(0, 0);
-            this.imageButton1.Size = new System.Drawing.Size(230, 56);
+            this.imageButton1.Size = new System.Drawing.Size(230, 60);
             this.imageButton1.SText = null;
             this.imageButton1.TabIndex = 0;
             this.imageButton1.Click += new System.EventHandler(this.imageButton1_Click);
@@ -267,7 +267,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1280, 669);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.nextShape1);
             this.Controls.Add(this.showInformation4);
             this.Controls.Add(this.showInformation3);
