@@ -108,9 +108,12 @@ namespace TetrisReturn
 
             FInfo = new Font("Arial", 15);
         }
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            //base.OnPaintBackground(e);
+        }
         protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnPaint(e);
             if (ImgBack == null )
                 return;
             e.Graphics.DrawImage(ImgBack, new Point(0, 0));
@@ -214,9 +217,6 @@ namespace TetrisReturn
             return bmpOut;
         }
 
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
-        }        
         
     }
 }

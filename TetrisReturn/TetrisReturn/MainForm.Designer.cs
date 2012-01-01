@@ -150,7 +150,7 @@
             this.imageButton7.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton7.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton7.Image")));
             this.imageButton7.IWidth = 2;
-            this.imageButton7.Location = new System.Drawing.Point(100, 580);
+            this.imageButton7.Location = new System.Drawing.Point(100, 540);
             this.imageButton7.Name = "imageButton7";
             this.imageButton7.PText = new System.Drawing.Point(0, 0);
             this.imageButton7.Size = new System.Drawing.Size(230, 60);
@@ -170,7 +170,7 @@
             this.imageButton6.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton6.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton6.Image")));
             this.imageButton6.IWidth = 2;
-            this.imageButton6.Location = new System.Drawing.Point(100, 496);
+            this.imageButton6.Location = new System.Drawing.Point(100, 461);
             this.imageButton6.Name = "imageButton6";
             this.imageButton6.PText = new System.Drawing.Point(0, 0);
             this.imageButton6.Size = new System.Drawing.Size(230, 60);
@@ -190,7 +190,7 @@
             this.imageButton5.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton5.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton5.Image")));
             this.imageButton5.IWidth = 2;
-            this.imageButton5.Location = new System.Drawing.Point(100, 414);
+            this.imageButton5.Location = new System.Drawing.Point(100, 384);
             this.imageButton5.Name = "imageButton5";
             this.imageButton5.PText = new System.Drawing.Point(0, 0);
             this.imageButton5.Size = new System.Drawing.Size(230, 60);
@@ -210,7 +210,7 @@
             this.imageButton4.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton4.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton4.Image")));
             this.imageButton4.IWidth = 2;
-            this.imageButton4.Location = new System.Drawing.Point(100, 331);
+            this.imageButton4.Location = new System.Drawing.Point(100, 307);
             this.imageButton4.Name = "imageButton4";
             this.imageButton4.PText = new System.Drawing.Point(0, 0);
             this.imageButton4.Size = new System.Drawing.Size(230, 60);
@@ -230,7 +230,7 @@
             this.imageButton3.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton3.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton3.Image")));
             this.imageButton3.IWidth = 2;
-            this.imageButton3.Location = new System.Drawing.Point(100, 248);
+            this.imageButton3.Location = new System.Drawing.Point(100, 230);
             this.imageButton3.Name = "imageButton3";
             this.imageButton3.PText = new System.Drawing.Point(0, 0);
             this.imageButton3.Size = new System.Drawing.Size(230, 60);
@@ -250,7 +250,7 @@
             this.imageButton2.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton2.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton2.Image")));
             this.imageButton2.IWidth = 2;
-            this.imageButton2.Location = new System.Drawing.Point(100, 163);
+            this.imageButton2.Location = new System.Drawing.Point(100, 151);
             this.imageButton2.Name = "imageButton2";
             this.imageButton2.PText = new System.Drawing.Point(0, 0);
             this.imageButton2.Size = new System.Drawing.Size(230, 60);
@@ -283,7 +283,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);

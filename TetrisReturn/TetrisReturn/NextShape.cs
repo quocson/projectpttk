@@ -28,7 +28,7 @@ namespace TetrisReturn
             set
             {
                 shapeNext = value;
-                if (value != null)
+                if (value != null) ;
                     Refresh();                   
             }
         }
@@ -93,7 +93,19 @@ namespace TetrisReturn
 
             if(SText == null)
                 return;
-            SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SText, FText);
+            SizeF sz;
+            try
+            {
+                // ArgumentException is thrown because 7 is not an even number.
+
+                sz = e.Graphics.MeasureString(SText, FText);
+            }
+            catch (ArgumentException)
+            {
+                FText = Constants.getFont(20.0f);
+                sz = e.Graphics.MeasureString(SText, FText);
+            }
+            
             if (Width - (int)sz.Width > 0 && Height - (int)sz.Height > 0)
                 PText = new Point((Width - (int)sz.Width) / 2, 0);
             else

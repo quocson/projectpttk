@@ -104,6 +104,9 @@ namespace TetrisReturn
             this.AddKeyEventHandler(this.gameControl);
 
             this.AddKeyEventHandler(this.nextShape1);
+            nextShape1.FText = Constants.getFont(20.0f);
+            nextShape1.SText = "Next Shape";
+
             playing = false;
         }
 
@@ -261,6 +264,7 @@ namespace TetrisReturn
             gameControl.refresh();
             if (!gameControl.currShapeFall())
             {
+                playing = false;
                 gameControl.lockShape();
                 gameControl.createShape(modeShape);
                 nextShape1.ShapeNext = gameControl.NextShape;
@@ -276,6 +280,7 @@ namespace TetrisReturn
                     Constants.map.updateMap(line, ref dx);
                     gameControl.removeLine(line);
                 }
+                playing = true; 
             }
         }
 
@@ -509,7 +514,7 @@ namespace TetrisReturn
                 gameControl.CurrentShape.eraseShape(gr);
                 if (e.KeyCode == Keys.Up)
                 {
-                    gameControl.createShape(modeShape, true);
+                    gameControl.CurrentShape.rotate();
                 }
                 else
                     if (e.KeyCode == Keys.Left && gameControl.CurrentShape.canMoveLeft())
