@@ -203,7 +203,7 @@ namespace TetrisReturn
             Graphics g = Graphics.FromImage(imageBuffer);
 
             g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize),
-                new Rectangle(435, 80, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize), GraphicsUnit.Pixel);
+                new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize), GraphicsUnit.Pixel);
 
             for (int i = line ; i >= 0; i--)
             {
