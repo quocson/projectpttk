@@ -271,7 +271,6 @@ namespace TetrisReturn
             gameControl.refresh();
             if (!gameControl.currShapeFall())
             {
-                playing = false;
                 gameControl.lockShape();
                 gameControl.createShape(modeShape);
                 nextShape1.ShapeNext = gameControl.NextShape;
@@ -288,7 +287,6 @@ namespace TetrisReturn
                     gameControl.removeLine(line);
                 }
 
-                playing = true;
             }
             if (enableGhostShape)
                 gameControl.drawGhostShape();
@@ -685,7 +683,6 @@ namespace TetrisReturn
 
         private void imageButton5_MouseUp(object sender, MouseEventArgs e)
         {
-
             imageButton5.CText = Color.Red;
             if (enableGhostShape)
             {
@@ -697,6 +694,7 @@ namespace TetrisReturn
                 enableGhostShape = true;
                 gameControl.drawGhostShape();
             }
+            gameControl.refresh();
         }
 
         private void imageButton6_MouseDown(object sender, MouseEventArgs e)
