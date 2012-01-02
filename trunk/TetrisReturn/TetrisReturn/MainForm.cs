@@ -108,6 +108,8 @@ namespace TetrisReturn
             nextShape1.SText = "Next Shape";
 
             playing = false;
+            enableGhostShape = false;
+            sound = false;
         }
 
         public void setTheme()
@@ -249,12 +251,17 @@ namespace TetrisReturn
 
         private void newGame()
         {
-            modeShape = 1;
+            gameControl.reset();
+            imageButton3.Enabled = true;
+            imageButton4.Enabled = true;
+            imageButton5.Enabled = true;
             timer.Enabled = true;
             timer.Interval = 200;
             gameControl.createShape(modeShape);
             nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
+            enableGhostShape = true;
+            sound = true;
             timer.Enabled = true;
             timer.Interval = 600;
         }
@@ -280,8 +287,11 @@ namespace TetrisReturn
                     Constants.map.updateMap(line, ref dx);
                     gameControl.removeLine(line);
                 }
-                playing = true; 
+
+                playing = true;
             }
+            if (enableGhostShape)
+                gameControl.drawGhostShape();
         }
 
         private void pauseGame()
@@ -537,6 +547,8 @@ namespace TetrisReturn
                                     gameControl.setCurrShapeToEndMap();
                                 }
                 gameControl.CurrentShape.drawShape(gr);
+                if(enableGhostShape)
+                    gameControl.drawGhostShape();
                 gameControl.refresh();
                 gr.Dispose();
             }
@@ -651,6 +663,16 @@ namespace TetrisReturn
         {
 
             imageButton5.CText = Color.Red;
+            if (enableGhostShape)
+            {
+                enableGhostShape = false;
+                gameControl.eraseGhostShape();
+            }
+            else
+            {
+                enableGhostShape = true;
+                gameControl.drawGhostShape();
+            }
         }
 
         private void imageButton6_MouseDown(object sender, MouseEventArgs e)

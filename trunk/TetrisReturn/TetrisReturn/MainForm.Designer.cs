@@ -57,7 +57,7 @@
             this.nextShape1.FText = new System.Drawing.Font("Arial", 20F);
             this.nextShape1.ImgBack = null;
             this.nextShape1.IWidth = 2;
-            this.nextShape1.Location = new System.Drawing.Point(900, 80);
+            this.nextShape1.Location = new System.Drawing.Point(900, 86);
             this.nextShape1.Name = "nextShape1";
             this.nextShape1.PText = new System.Drawing.Point(0, 0);
             this.nextShape1.ShapeNext = null;
@@ -75,7 +75,7 @@
             this.showInformation4.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation4.ImgBack = null;
             this.showInformation4.IWidth = 2;
-            this.showInformation4.Location = new System.Drawing.Point(900, 300);
+            this.showInformation4.Location = new System.Drawing.Point(900, 327);
             this.showInformation4.Name = "showInformation4";
             this.showInformation4.PInfo = new System.Drawing.Point(0, 0);
             this.showInformation4.PTitle = new System.Drawing.Point(0, 0);
@@ -94,7 +94,7 @@
             this.showInformation3.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation3.ImgBack = null;
             this.showInformation3.IWidth = 2;
-            this.showInformation3.Location = new System.Drawing.Point(900, 380);
+            this.showInformation3.Location = new System.Drawing.Point(900, 407);
             this.showInformation3.Name = "showInformation3";
             this.showInformation3.PInfo = new System.Drawing.Point(0, 0);
             this.showInformation3.PTitle = new System.Drawing.Point(0, 0);
@@ -113,7 +113,7 @@
             this.showInformation2.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation2.ImgBack = null;
             this.showInformation2.IWidth = 2;
-            this.showInformation2.Location = new System.Drawing.Point(900, 460);
+            this.showInformation2.Location = new System.Drawing.Point(900, 487);
             this.showInformation2.Name = "showInformation2";
             this.showInformation2.PInfo = new System.Drawing.Point(0, 0);
             this.showInformation2.PTitle = new System.Drawing.Point(0, 0);
@@ -132,7 +132,7 @@
             this.showInformation1.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.ImgBack = null;
             this.showInformation1.IWidth = 2;
-            this.showInformation1.Location = new System.Drawing.Point(900, 540);
+            this.showInformation1.Location = new System.Drawing.Point(900, 567);
             this.showInformation1.Name = "showInformation1";
             this.showInformation1.PInfo = new System.Drawing.Point(0, 0);
             this.showInformation1.PTitle = new System.Drawing.Point(0, 0);
@@ -150,10 +150,10 @@
             this.imageButton7.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton7.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton7.Image")));
             this.imageButton7.IWidth = 2;
-            this.imageButton7.Location = new System.Drawing.Point(100, 540);
+            this.imageButton7.Location = new System.Drawing.Point(100, 582);
             this.imageButton7.Name = "imageButton7";
             this.imageButton7.PText = new System.Drawing.Point(0, 0);
-            this.imageButton7.Size = new System.Drawing.Size(230, 60);
+            this.imageButton7.Size = new System.Drawing.Size(230, 65);
             this.imageButton7.SText = null;
             this.imageButton7.TabIndex = 6;
             this.imageButton7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton7_MouseDown);
@@ -170,10 +170,10 @@
             this.imageButton6.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton6.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton6.Image")));
             this.imageButton6.IWidth = 2;
-            this.imageButton6.Location = new System.Drawing.Point(100, 461);
+            this.imageButton6.Location = new System.Drawing.Point(100, 496);
             this.imageButton6.Name = "imageButton6";
             this.imageButton6.PText = new System.Drawing.Point(0, 0);
-            this.imageButton6.Size = new System.Drawing.Size(230, 60);
+            this.imageButton6.Size = new System.Drawing.Size(230, 65);
             this.imageButton6.SText = null;
             this.imageButton6.TabIndex = 5;
             this.imageButton6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton6_MouseDown);
@@ -190,10 +190,10 @@
             this.imageButton5.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton5.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton5.Image")));
             this.imageButton5.IWidth = 2;
-            this.imageButton5.Location = new System.Drawing.Point(100, 384);
+            this.imageButton5.Location = new System.Drawing.Point(100, 414);
             this.imageButton5.Name = "imageButton5";
             this.imageButton5.PText = new System.Drawing.Point(0, 0);
-            this.imageButton5.Size = new System.Drawing.Size(230, 60);
+            this.imageButton5.Size = new System.Drawing.Size(230, 65);
             this.imageButton5.SText = null;
             this.imageButton5.TabIndex = 4;
             this.imageButton5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton5_MouseDown);
@@ -210,10 +210,10 @@
             this.imageButton4.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton4.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton4.Image")));
             this.imageButton4.IWidth = 2;
-            this.imageButton4.Location = new System.Drawing.Point(100, 307);
+            this.imageButton4.Location = new System.Drawing.Point(100, 331);
             this.imageButton4.Name = "imageButton4";
             this.imageButton4.PText = new System.Drawing.Point(0, 0);
-            this.imageButton4.Size = new System.Drawing.Size(230, 60);
+            this.imageButton4.Size = new System.Drawing.Size(230, 65);
             this.imageButton4.SText = null;
             this.imageButton4.TabIndex = 3;
             this.imageButton4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton4_MouseDown);
@@ -230,10 +230,10 @@
             this.imageButton3.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton3.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton3.Image")));
             this.imageButton3.IWidth = 2;
-            this.imageButton3.Location = new System.Drawing.Point(100, 230);
+            this.imageButton3.Location = new System.Drawing.Point(100, 248);
             this.imageButton3.Name = "imageButton3";
             this.imageButton3.PText = new System.Drawing.Point(0, 0);
-            this.imageButton3.Size = new System.Drawing.Size(230, 60);
+            this.imageButton3.Size = new System.Drawing.Size(230, 65);
             this.imageButton3.SText = null;
             this.imageButton3.TabIndex = 2;
             this.imageButton3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton3_MouseDown);
@@ -250,10 +250,10 @@
             this.imageButton2.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton2.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton2.Image")));
             this.imageButton2.IWidth = 2;
-            this.imageButton2.Location = new System.Drawing.Point(100, 151);
+            this.imageButton2.Location = new System.Drawing.Point(100, 163);
             this.imageButton2.Name = "imageButton2";
             this.imageButton2.PText = new System.Drawing.Point(0, 0);
-            this.imageButton2.Size = new System.Drawing.Size(230, 60);
+            this.imageButton2.Size = new System.Drawing.Size(230, 65);
             this.imageButton2.SText = null;
             this.imageButton2.TabIndex = 1;
             this.imageButton2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton2_MouseDown);
@@ -270,10 +270,10 @@
             this.imageButton1.FText = new System.Drawing.Font("Arial", 15F);
             this.imageButton1.Image = ((System.Drawing.Bitmap)(resources.GetObject("imageButton1.Image")));
             this.imageButton1.IWidth = 2;
-            this.imageButton1.Location = new System.Drawing.Point(100, 80);
+            this.imageButton1.Location = new System.Drawing.Point(100, 86);
             this.imageButton1.Name = "imageButton1";
             this.imageButton1.PText = new System.Drawing.Point(0, 0);
-            this.imageButton1.Size = new System.Drawing.Size(230, 60);
+            this.imageButton1.Size = new System.Drawing.Size(230, 65);
             this.imageButton1.SText = null;
             this.imageButton1.TabIndex = 0;
             this.imageButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imageButton1_MouseDown);
@@ -283,7 +283,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);

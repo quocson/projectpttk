@@ -239,6 +239,30 @@ namespace TetrisReturn
             gr.Dispose();
         }
 
+        //erase ghost shape.
+        public void eraseGhostShape()
+        {
+            Graphics gr = Graphics.FromImage(imageBuffer);
+
+            if (ghostShape != null)
+            {
+                ghostShape.eraseShape(gr);
+                ghostShape.Dispose();
+                currShape.drawGhostShape(gr);
+            }
+            refresh();
+            gr.Dispose();
+        }
+
+        //reset game.
+        public void reset()
+        {
+            Constants.map.reset();
+            imageBuffer.Dispose();
+            imageBuffer = new Bitmap(Constants.map.ImageMap);
+            Refresh();
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             e.Graphics.DrawImage(imageBuffer, 0, 0);
