@@ -296,7 +296,24 @@ namespace TetrisReturn
 
         private void pauseGame()
         {
+            imageButton4.SText = Constants.language.resume;
+            playing = false;
+            enableGhostShape = false;
+            sound = false;
+            imageButton5.Enabled = false;
+            imageButton6.Enabled = false;
             timer.Enabled = false;
+        }
+
+        private void resumeGame()
+        {
+            imageButton4.SText = Constants.language.pause;
+            playing = true;
+            enableGhostShape = true;
+            sound = true;
+            imageButton5.Enabled = true;
+            imageButton6.Enabled = true;
+            timer.Enabled = true;
         }
 
         private void imageButton1_MouseEnter(object sender, EventArgs e)
@@ -546,9 +563,9 @@ namespace TetrisReturn
                                 {
                                     gameControl.setCurrShapeToEndMap();
                                 }
-                gameControl.CurrentShape.drawShape(gr);
                 if(enableGhostShape)
                     gameControl.drawGhostShape();
+                gameControl.CurrentShape.drawShape(gr);
                 gameControl.refresh();
                 gr.Dispose();
             }
@@ -638,7 +655,14 @@ namespace TetrisReturn
         private void imageButton4_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton4.CText = Color.Red;
-
+            if (playing)
+            {
+                pauseGame();
+            }
+            else
+            {
+                resumeGame();
+            }
         }
 
         private void imageButton4_MouseLeave(object sender, EventArgs e)

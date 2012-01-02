@@ -235,7 +235,6 @@ namespace TetrisReturn
             ghostShape = new Shape(currShape);
             ghostShape.goToEndMap();
             ghostShape.drawGhostShape(gr);
-            refresh();
             gr.Dispose();
         }
 
@@ -250,7 +249,6 @@ namespace TetrisReturn
                 ghostShape.Dispose();
                 currShape.drawGhostShape(gr);
             }
-            refresh();
             gr.Dispose();
         }
 
