@@ -68,7 +68,7 @@
             // showInformation4
             // 
             this.showInformation4.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation4.CInfo = System.Drawing.Color.Empty;
+            this.showInformation1.CInfo = System.Drawing.Color.White;
             this.showInformation4.CStroke = System.Drawing.Color.Black;
             this.showInformation4.CText = System.Drawing.Color.Red;
             this.showInformation4.FInfo = new System.Drawing.Font("Arial", 15F);
@@ -77,8 +77,6 @@
             this.showInformation4.IWidth = 2;
             this.showInformation4.Location = new System.Drawing.Point(900, 327);
             this.showInformation4.Name = "showInformation4";
-            this.showInformation4.PInfo = new System.Drawing.Point(0, 0);
-            this.showInformation4.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation4.SInfo = null;
             this.showInformation4.Size = new System.Drawing.Size(280, 80);
             this.showInformation4.STitle = null;
@@ -87,7 +85,7 @@
             // showInformation3
             // 
             this.showInformation3.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation3.CInfo = System.Drawing.Color.Empty;
+            this.showInformation1.CInfo = System.Drawing.Color.White;
             this.showInformation3.CStroke = System.Drawing.Color.Black;
             this.showInformation3.CText = System.Drawing.Color.Red;
             this.showInformation3.FInfo = new System.Drawing.Font("Arial", 15F);
@@ -96,8 +94,6 @@
             this.showInformation3.IWidth = 2;
             this.showInformation3.Location = new System.Drawing.Point(900, 407);
             this.showInformation3.Name = "showInformation3";
-            this.showInformation3.PInfo = new System.Drawing.Point(0, 0);
-            this.showInformation3.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation3.SInfo = null;
             this.showInformation3.Size = new System.Drawing.Size(280, 80);
             this.showInformation3.STitle = null;
@@ -106,7 +102,7 @@
             // showInformation2
             // 
             this.showInformation2.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation2.CInfo = System.Drawing.Color.Empty;
+            this.showInformation1.CInfo = System.Drawing.Color.White;
             this.showInformation2.CStroke = System.Drawing.Color.Black;
             this.showInformation2.CText = System.Drawing.Color.Red;
             this.showInformation2.FInfo = new System.Drawing.Font("Arial", 15F);
@@ -115,8 +111,6 @@
             this.showInformation2.IWidth = 2;
             this.showInformation2.Location = new System.Drawing.Point(900, 487);
             this.showInformation2.Name = "showInformation2";
-            this.showInformation2.PInfo = new System.Drawing.Point(0, 0);
-            this.showInformation2.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation2.SInfo = null;
             this.showInformation2.Size = new System.Drawing.Size(280, 80);
             this.showInformation2.STitle = null;
@@ -125,7 +119,7 @@
             // showInformation1
             // 
             this.showInformation1.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation1.CInfo = System.Drawing.Color.Empty;
+            this.showInformation1.CInfo = System.Drawing.Color.White;
             this.showInformation1.CStroke = System.Drawing.Color.Black;
             this.showInformation1.CText = System.Drawing.Color.Red;
             this.showInformation1.FInfo = new System.Drawing.Font("Arial", 15F);
@@ -134,8 +128,6 @@
             this.showInformation1.IWidth = 2;
             this.showInformation1.Location = new System.Drawing.Point(900, 567);
             this.showInformation1.Name = "showInformation1";
-            this.showInformation1.PInfo = new System.Drawing.Point(0, 0);
-            this.showInformation1.PTitle = new System.Drawing.Point(0, 0);
             this.showInformation1.SInfo = null;
             this.showInformation1.Size = new System.Drawing.Size(280, 80);
             this.showInformation1.STitle = null;

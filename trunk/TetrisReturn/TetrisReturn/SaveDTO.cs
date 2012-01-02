@@ -13,7 +13,7 @@ namespace TetrisReturn
             get { return sTheme; }
             set { sTheme = value; }
         }
-        private string sMap = "";
+        private string sMap = "Classic";
         public string SMap
         {
             get { return sMap; }
@@ -25,7 +25,7 @@ namespace TetrisReturn
             get { return sShapeMode; }
             set { sShapeMode = value; }
         }
-        private int iLevel = 0;
+        private int iLevel = 1;
         public int ILevel
         {
             get { return iLevel; }

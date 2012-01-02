@@ -15,7 +15,7 @@ namespace TetrisReturn
         public const int blockSize = 25;//size of block.
         public const int blockDelta = 1;//size between two block.
         public const int xStart = blockSize * 7 + 6;//position x start of shape.
-
+        public const int scorePerLine = 30;
         public static Random r = new Random(unchecked((int)DateTime.Now.Ticks));//static variable random.
 
         public static Map map = new Map();//static map of game.
@@ -25,11 +25,18 @@ namespace TetrisReturn
         public static PluginThemeServices themeService = new PluginThemeServices();//static plugin theme services.
         public static PrivateFontCollection fonts = null;
         public static FontFamily family = null;
+        private static SaveDTO saveInfo = new SaveDTO();
+        public static TetrisReturn.SaveDTO SaveInfo
+        {
+            get { return saveInfo; }
+            set { saveInfo = value; }
+        }
         //set type for the static map.
         public static void setMap(Map m)
         {
             map.Dispose();
             map = new Map(m);
+            saveInfo.SMap = map.Name;
         }
 
         //set type for the static theme.
@@ -37,6 +44,8 @@ namespace TetrisReturn
         {
             theme.Dispose();
             theme = new Theme(t);
+            saveInfo.STheme = theme.Name;
+
         }
         public static Font getFont(float size)
         {
