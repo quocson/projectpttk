@@ -277,7 +277,7 @@ namespace TetrisReturn
         private void timer_Tick(object sender, EventArgs e)
         {
             gameControl.refresh();
-            if (!gameControl.currShapeFall())
+            if (!gameControl.currShapeFall(enableGhostShape))
             {
                 gameControl.lockShape();
                 gameControl.createShape(modeShape);
@@ -305,16 +305,12 @@ namespace TetrisReturn
                 }
 
             }
-            if (enableGhostShape)
-                gameControl.drawGhostShape();
         }
 
         private void pauseGame()
         {
             imageButton4.SText = Constants.language.resume;
             playing = false;
-            enableGhostShape = false;
-            sound = false;
             imageButton5.Enabled = false;
             imageButton6.Enabled = false;
             timer.Enabled = false;
@@ -324,8 +320,6 @@ namespace TetrisReturn
         {
             imageButton4.SText = Constants.language.pause;
             playing = true;
-            enableGhostShape = true;
-            sound = true;
             imageButton5.Enabled = true;
             imageButton6.Enabled = true;
             timer.Enabled = true;
@@ -497,7 +491,7 @@ namespace TetrisReturn
             }
 
             //set arrow up.
-            switch (modeShape)
+            switch (arrowUp)
             {
                 case 1:
                     option.checkBox5.Checked = true; break;

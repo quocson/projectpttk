@@ -164,13 +164,14 @@ namespace TetrisReturn
         }
 
         //let current shape fall.
-        public bool currShapeFall()
+        public bool currShapeFall(bool g)
         {
             if (currShape.canFall())
             {
                 Graphics gr = Graphics.FromImage(imageBuffer);
                 currShape.eraseShape(gr);
                 currShape.moveDown();
+                drawGhostShape();
                 currShape.drawShape(gr);
                 gr.Dispose();
                 return true;
