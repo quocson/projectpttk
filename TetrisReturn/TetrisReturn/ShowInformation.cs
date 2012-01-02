@@ -49,12 +49,6 @@ namespace TetrisReturn
             get { return fTitle; }
             set { fTitle = value; }
         }
-        private Point pTitle; //pos of text
-        public Point PTitle
-        {
-            get { return pTitle; }
-            set { pTitle = value; }
-        }
         // info
         private string sInfo;
         public string SInfo
@@ -67,23 +61,14 @@ namespace TetrisReturn
                     Refresh();
             }
         }
-        private Point pInfo;
-        public Point PInfo
-        {
-            get { return pInfo; }
-            set
-            {
-                pInfo = value;
-                
-            }
-        }
+        
         private Font fInfo;
         public Font FInfo
         {
             get { return fInfo; }
             set { fInfo = value; }
         }
-        private Color cInfo;
+        private Color cInfo = Color.White;
         public Color CInfo
         {
             get { return cInfo; }
@@ -121,19 +106,18 @@ namespace TetrisReturn
                  return;
             SizeF sz = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(STitle, FTitle);
             //sap xep vi tri cua title
-            if (Width - (int)sz.Width < 0)
-                PTitle = new Point(0, 0);
-            else
+            Point PTitle = new Point(0, 0);
+            if (Width - (int)sz.Width > 0 )
                 PTitle = new Point((Width - (int)sz.Width) / 2, 0);
 
             e.Graphics.DrawImage(getImgFromTxt(), PTitle);
             if (SInfo == null || FInfo == null)
                 return;
             SizeF szn = Graphics.FromImage(new Bitmap(2, 2)).MeasureString(SInfo.ToString(), FInfo);
-            if (Width - (int)szn.Width < 0)
-                PInfo= new Point(0, 0);
-            else
-                PInfo = new Point((Width - (int)szn.Width) / 2, (int)sz.Height * 2);
+
+            Point PInfo = new Point(0,(int) sz.Height);
+            if (Width - (int)szn.Width > 0)
+                PInfo = new Point((Width - (int)szn.Width) / 2, (int)sz.Height);
             e.Graphics.DrawImage(getImgFromNo(), PInfo);
         }
         private Image getImgFromTxt()

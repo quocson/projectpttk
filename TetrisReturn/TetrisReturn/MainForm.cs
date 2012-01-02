@@ -129,6 +129,10 @@ namespace TetrisReturn
             showInformation2.FTitle = f;
             showInformation3.FTitle = f;
             showInformation4.FTitle = f;
+            showInformation1.FInfo = f;
+            showInformation2.FInfo = f;
+            showInformation3.FInfo = f;
+            showInformation4.FInfo = f;
 
             BackgroundImage = Constants.theme.MainBackground;
 
@@ -258,6 +262,10 @@ namespace TetrisReturn
             timer.Enabled = true;
             timer.Interval = 200;
             gameControl.createShape(modeShape);
+            showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
+            showInformation2.SInfo = (Constants.SaveInfo.ILine).ToString();
+            showInformation3.SInfo = (Constants.SaveInfo.ILevel).ToString();
+            showInformation4.SInfo = (Constants.SaveInfo.IScore).ToString();
             nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
             enableGhostShape = true;
@@ -273,6 +281,8 @@ namespace TetrisReturn
             {
                 gameControl.lockShape();
                 gameControl.createShape(modeShape);
+                showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
+
                 nextShape1.ShapeNext = gameControl.NextShape;
                 if (Constants.map.checkOverflow())
                 {
@@ -282,6 +292,13 @@ namespace TetrisReturn
                 int dx = 0;
                 while (Constants.map.getFullLines().Count > 0)
                 {
+                    showInformation2.SInfo = (++Constants.SaveInfo.ILine).ToString();
+                    //add score
+                    Constants.SaveInfo.IScore += Constants.scorePerLine;
+                    if(Constants.map.getFullLines().Count == 4)
+                        Constants.SaveInfo.IScore += 100;
+                    this.showInformation4.SInfo = Constants.SaveInfo.IScore.ToString();
+
                     int line = Constants.map.getFullLines().Pop();
                     Constants.map.updateMap(line, ref dx);
                     gameControl.removeLine(line);
@@ -555,11 +572,14 @@ namespace TetrisReturn
                             if (e.KeyCode == Keys.Down && gameControl.CurrentShape.canFall())
                             {
                                 gameControl.CurrentShape.moveDown();
+                                showInformation4.SInfo = (++Constants.SaveInfo.IScore).ToString();
+
                             }
                             else
                                 if (e.KeyCode == Keys.Enter && gameControl.CurrentShape.canFall())
                                 {
                                     gameControl.setCurrShapeToEndMap();
+                                    showInformation4.SInfo = (Constants.SaveInfo.IScore += 15).ToString();
                                 }
                 if(enableGhostShape)
                     gameControl.drawGhostShape();

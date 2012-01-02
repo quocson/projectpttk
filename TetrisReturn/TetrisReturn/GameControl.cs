@@ -257,7 +257,10 @@ namespace TetrisReturn
         {
             Constants.map.reset();
             imageBuffer.Dispose();
-            imageBuffer = new Bitmap(Constants.map.ImageMap);
+             imageBuffer = new Bitmap(Constants.map.ImageMap);
+             Graphics.FromImage(imageBuffer).DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (Constants.map.Row - 4) * Constants.blockSize),
+                new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (Constants.map.Row - 4) * Constants.blockSize), GraphicsUnit.Pixel);
+           
             Refresh();
         }
 
