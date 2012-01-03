@@ -49,31 +49,18 @@ namespace TetrisReturn
         }
         public static Font getFont(float size)
         {
-            if (theme.Name == "Transformers")
+            if (System.IO.File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\" + theme.Font))
             {
-
                 if (family == null)
                 {
                     fonts = new PrivateFontCollection();
-                    fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Transformers Movie.ttf");
+                    fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\" + theme.Font);
                     family = fonts.Families[0];
                 }
                 return new Font(family, size, FontStyle.Bold);
-
-            }
-            if (theme.Name == "Sketch")
-            {
-
-                if (family == null)
-                {
-                    fonts = new PrivateFontCollection();
-                    fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\Sketch_Block.ttf");
-                    family = fonts.Families[0];
-                }
-                return new Font(family, size);
             }
             else
-                return new Font("Arial", size);
+                return new Font("Arial", size, FontStyle.Bold);
         }
         //find map.
         public static void findMap()
