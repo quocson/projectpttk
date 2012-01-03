@@ -37,9 +37,9 @@
             // showInformation1
             // 
             this.showInformation1.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation1.CInfo = System.Drawing.Color.White;
+            this.showInformation1.CInfo = System.Drawing.Color.OrangeRed;
             this.showInformation1.CStroke = System.Drawing.Color.Black;
-            this.showInformation1.CText = System.Drawing.Color.White;
+            this.showInformation1.CText = System.Drawing.Color.OrangeRed;
             this.showInformation1.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.ImgBack = null;

@@ -24,27 +24,28 @@ namespace TetrisReturn
         {
             if ((Math.Abs(e.Y - toClose.Y) < 100) && ((toClose.X - e.X) >= 200))
             {
+                disappear();
 
-                foreach (Types.AvailableMap map in Constants.mapService.AvailableMaps)
-                    if (map.Instance.Name.CompareTo(comboBox2.Text) == 0)
-                        Constants.setMap(map.Instance.Map);
-
-                if(comboBox3.SelectedIndex == 0)
-                    mainForm.Language = "English";
-                else
-                    mainForm.Language = "VietNamese";
-
-
+                //sound.
                 if (checkBox1.Checked)
                     mainForm.Sound = true;
                 else
                     mainForm.Sound = false;
 
-                if (checkBox2.Checked)
-                    mainForm.Ghost = true;
-                else
+                //ghost.
+                if (checkBox4.Checked)
+                {
                     mainForm.Ghost = false;
+                    mainForm.GameControl.eraseGhostShape();
+                }
+                else
+                {
+                    mainForm.Ghost = true;
+                    mainForm.GameControl.drawGhostShape();
+                }
+                mainForm.GameControl.refresh();
 
+                //mode shape.
                 int i = 0;
                 if (checkBox2.Checked)
                     i += 1;
@@ -52,6 +53,7 @@ namespace TetrisReturn
                     i += 2;
                 mainForm.ModeShape = i;
 
+                //arrow up.
                 i = 0;
                 if (checkBox5.Checked)
                     i += 1;
@@ -59,7 +61,25 @@ namespace TetrisReturn
                     i += 2;
                 mainForm.ArrowUp = i;
 
-                disappear();
+                //theme.
+
+
+                //map.
+
+
+                //language.
+                if (comboBox3.SelectedIndex == 0)
+                {
+                    Constants.language.load("English.lng");
+                }
+                else
+                {
+                    Constants.language.load("VietNamese.lng");
+                }
+                mainForm.setText();
+
+                    //if (mainForm.Playing)
+                        //mainForm.resumeGame();
                 Close();
             }
 
@@ -113,44 +133,30 @@ namespace TetrisReturn
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (!checkBox2.Checked && !checkBox3.Checked)
-                checkBox3.Checked = true;
+            if (!checkBox2.Checked)
+                if (!checkBox3.Checked)
+                    checkBox3.Checked = true;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (!checkBox2.Checked && !checkBox3.Checked)
-                checkBox2.Checked = true;
+            if (!checkBox3.Checked)
+                if (!checkBox2.Checked)
+                    checkBox2.Checked = true;
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (!checkBox5.Checked && !checkBox6.Checked)
-                checkBox6.Checked = true;
+            if (!checkBox5.Checked)
+                if (!checkBox6.Checked)
+                    checkBox6.Checked = true;
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (!checkBox5.Checked && !checkBox6.Checked)
-                checkBox5.Checked = true;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
-                if (theme.Instance.Name.CompareTo(comboBox1.Text) == 0)
-                    Constants.setTheme(theme.Instance.Theme);
-            Refresh();
-            mainForm.setFontOption();
-            mainForm.Refresh();
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            if (!checkBox6.Checked)
+                if (!checkBox5.Checked)
+                    checkBox5.Checked = true;
         }
     }
 }

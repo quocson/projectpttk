@@ -25,8 +25,18 @@
   <Game Up="Arrow up" />
   <Game Up1="Use to rotate shape" />
   <Game Up2="Use to random new shape" />
-  <Game Language1="English" />
-  <Game Language2="VietNamese" />
+  <Game Language1="Tieng Anh" />
+  <Game Language2="Tieng Viet" />
   <Game CaptionLoadDLL="Lost all file!" />
   <Game CaptionLoadConfig="May be lost some library file!" />
+  <Game Next="Ke Tiep" />
+  <Game Level="Level" />
+  <Game Line="Line" />
+  <Game Piece="Piece" />
+  <Game ExitConfirm="Are you sure you want to exit?" />
+  <Game Yes="Yes" />
+  <Game No="No" />
+  <Game WinConfirm="You Win! Do you want to play again?" />
+  <Game OverConfirm="Game Over! Do you want to play again?" />
+  <Game NewHighScore="New High Score!" />
 </Language>

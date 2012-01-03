@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace TetrisReturn
 {
-    class GameControl : Panel
+    public class GameControl : Panel
     {
         private Bitmap imageBuffer;
         private Shape currShape;
@@ -163,7 +163,8 @@ namespace TetrisReturn
                 Graphics gr = Graphics.FromImage(imageBuffer);
                 currShape.eraseShape(gr);
                 currShape.moveDown();
-                drawGhostShape();
+                if(g)
+                    drawGhostShape();
                 currShape.drawShape(gr);
                 gr.Dispose();
                 return true;
@@ -228,6 +229,7 @@ namespace TetrisReturn
             ghostShape = new Shape(currShape);
             ghostShape.goToEndMap();
             ghostShape.drawGhostShape(gr);
+            currShape.drawShape(gr);
             gr.Dispose();
         }
 
@@ -240,7 +242,7 @@ namespace TetrisReturn
             {
                 ghostShape.eraseShape(gr);
                 ghostShape.Dispose();
-                currShape.drawGhostShape(gr);
+                currShape.drawShape(gr);
             }
             gr.Dispose();
         }

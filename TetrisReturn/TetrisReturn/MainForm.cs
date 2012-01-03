@@ -13,11 +13,11 @@ namespace TetrisReturn
     {
         private bool enableGhostShape;
         private bool playing;
+        private bool newgame;
         private bool sound;
         private string languageDisplay;
         private int modeShape;
         private int arrowUp;
-        private Option option;
         private GameControl gameControl;
         private SoundControl soundControl;
         private bool mousePressed = false;
@@ -59,10 +59,28 @@ namespace TetrisReturn
             set { enableGhostShape = value; }
         }
 
+        public GameControl GameControl
+        {
+            get { return gameControl; }
+            set { gameControl = value; }
+        }
+
+        public Timer Time
+        {
+            get { return timer; }
+            set { timer = value; }
+        }
+
         public bool Playing
         {
             get { return playing; }
             set { playing = value; }
+        }
+
+        public bool NewGame
+        {
+            get { return newgame; }
+            set { newgame = value; }
         }
 
         private void AddEventHandler(Control ctl)
@@ -107,35 +125,15 @@ namespace TetrisReturn
             this.AddKeyEventHandler(this.gameControl);
 
             this.AddKeyEventHandler(this.nextShape1);
-            nextShape1.FText = Constants.getFont(20.0f);
-            nextShape1.SText = "Next Shape";
 
             playing = false;
-            enableGhostShape = false;
-            sound = false;
+            newgame = false;
+            enableGhostShape = true;
+            sound = true;
         }
 
         public void setTheme()
         {
-            System.Drawing.Font f = Constants.getFont(20);
-
-           
-            imageButton1.FText = f;
-            imageButton2.FText = f;
-            imageButton3.FText = f;
-            imageButton4.FText = f;
-            imageButton5.FText = f;
-            imageButton6.FText = f;
-            imageButton7.FText = f;
-            nextShape1.FText = f;
-            showInformation1.FTitle = f;
-            showInformation2.FTitle = f;
-            showInformation3.FTitle = f;
-            showInformation4.FTitle = f;
-            showInformation1.FInfo = f;
-            showInformation2.FInfo = f;
-            showInformation3.FInfo = f;
-            showInformation4.FInfo = f;
 
             BackgroundImage = Constants.theme.MainBackground;
 
@@ -159,6 +157,29 @@ namespace TetrisReturn
             showInformation3.ImgBack = Constants.theme.Informations;
             showInformation4.ImgBack = Constants.theme.Informations;
 
+            setText();
+        }
+
+        public void setText()
+        {
+            System.Drawing.Font f = Constants.getFont(20);
+            imageButton1.FText = f;
+            imageButton2.FText = f;
+            imageButton3.FText = f;
+            imageButton4.FText = f;
+            imageButton5.FText = f;
+            imageButton6.FText = f;
+            imageButton7.FText = f;
+            nextShape1.FText = f;
+            showInformation1.FTitle = f;
+            showInformation2.FTitle = f;
+            showInformation3.FTitle = f;
+            showInformation4.FTitle = f;
+            showInformation1.FInfo = f;
+            showInformation2.FInfo = f;
+            showInformation3.FInfo = f;
+            showInformation4.FInfo = f;
+
             imageButton1.SText = Constants.language.newgame;
             imageButton2.SText = Constants.language.conti;
             imageButton3.SText = Constants.language.save;
@@ -170,7 +191,7 @@ namespace TetrisReturn
             showInformation4.STitle = Constants.language.score;
             showInformation3.STitle = Constants.language.level;
             showInformation2.STitle = Constants.language.line;
-            showInformation1.STitle = Constants.language.piece ;
+            showInformation1.STitle = Constants.language.piece;
         }
 
         //check if lost all files, close game.
@@ -262,6 +283,7 @@ namespace TetrisReturn
             imageButton3.Enabled = true;
             imageButton4.Enabled = true;
             imageButton5.Enabled = true;
+            timer.Enabled = true;
             gameControl.createShape(modeShape);
             showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
             showInformation2.SInfo = (Constants.SaveInfo.ILine).ToString();
@@ -269,10 +291,10 @@ namespace TetrisReturn
             showInformation4.SInfo = (Constants.SaveInfo.IScore).ToString();
             nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
-            enableGhostShape = true;
+            newgame = true;
             sound = true;
+            timer.Interval = 800;
             timer.Enabled = true;
-            timer.Interval = 600;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -318,13 +340,14 @@ namespace TetrisReturn
             Constants.map.reset();
             showInformation3.SInfo = (++Constants.SaveInfo.ILevel).ToString();
             gameControl.reset();
-            timer.Interval = 600 - 50 * (Constants.SaveInfo.ILevel/5);
+            timer.Interval = 800 - 50 * (Constants.SaveInfo.ILevel/5);
         }
         private void pauseGame()
         {
             imageButton4.SText = Constants.language.resume;
             imageButton5.Enabled = false;
             imageButton6.Enabled = false;
+            playing = false;
             timer.Enabled = false;
         }
 
@@ -458,9 +481,26 @@ namespace TetrisReturn
 
         private void optionAppear()
         {
-            pauseGame();
-            option = new Option(this);
-            setFontOption();
+            timer.Enabled = false;
+            Option option = new Option(this);
+            System.Drawing.Font f = Constants.getFont(16);
+            option.label1.Font = f;
+            f = Constants.getFont(12);
+            option.label2.Font = f;
+            option.label3.Font = f;
+            option.label4.Font = f;
+            option.label5.Font = f;
+            option.label6.Font = f;
+            option.label7.Font = f;
+            option.label8.Font = f;
+            option.label9.Font = f;
+            option.label10.Font = f;
+            option.label11.Font = f;
+            option.label12.Font = f;
+            f = Constants.getFont(10);
+            option.comboBox1.Font = f;
+            option.comboBox2.Font = f;
+            option.comboBox3.Font = f;
 
             //set them.
             foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
@@ -522,32 +562,14 @@ namespace TetrisReturn
                 case 3:
                     option.checkBox5.Checked = true;
                     option.checkBox6.Checked = true; break;
+
             }
+
+            if (newgame)
+                option.comboBox2.Enabled = false;
             
 
             option.ShowDialog();
-        }
-
-        public void setFontOption()
-        {
-            System.Drawing.Font f = Constants.getFont(16);
-            option.label1.Font = f;
-            f = Constants.getFont(12);
-            option.label2.Font = f;
-            option.label3.Font = f;
-            option.label4.Font = f;
-            option.label5.Font = f;
-            option.label6.Font = f;
-            option.label7.Font = f;
-            option.label8.Font = f;
-            option.label9.Font = f;
-            option.label10.Font = f;
-            option.label11.Font = f;
-            option.label12.Font = f;
-            f = Constants.getFont(10);
-            option.comboBox1.Font = f;
-            option.comboBox2.Font = f;
-            option.comboBox3.Font = f;
         }
 
         private void highScoresAppear()
@@ -689,7 +711,7 @@ namespace TetrisReturn
         private void imageButton4_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton4.CText = Color.Red;
-            if (timer.Enabled)
+            if (playing)
             {
                 pauseGame();
             }
@@ -767,9 +789,7 @@ namespace TetrisReturn
         {
 
             imageButton7.CText = Color.Red;
-            if (playing)
-                playing = false;
-            pauseGame();
+            timer.Enabled = false;
             ExitConfirm exitConfirm = new ExitConfirm(this);
             exitConfirm.ShowDialog();
         }
