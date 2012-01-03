@@ -33,17 +33,20 @@ namespace TetrisReturn
                     mainForm.Sound = false;
 
                 //ghost.
-                if (checkBox4.Checked)
+                if (mainForm.NewGame)
                 {
-                    mainForm.Ghost = false;
-                    mainForm.GameControl.eraseGhostShape();
+                    if (checkBox4.Checked)
+                    {
+                        mainForm.Ghost = false;
+                        mainForm.GameControl.eraseGhostShape();
+                    }
+                    else
+                    {
+                        mainForm.Ghost = true;
+                        mainForm.GameControl.drawGhostShape();
+                    }
+                    mainForm.GameControl.refresh();
                 }
-                else
-                {
-                    mainForm.Ghost = true;
-                    mainForm.GameControl.drawGhostShape();
-                }
-                mainForm.GameControl.refresh();
 
                 //mode shape.
                 int i = 0;
@@ -62,9 +65,25 @@ namespace TetrisReturn
                 mainForm.ArrowUp = i;
 
                 //theme.
+                foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
+                    if (theme.Instance.Name.CompareTo(comboBox1.Text) == 0)
+                    {
+                        Constants.setTheme(theme.Instance.Theme);
+                        mainForm.GameControl.refresh();
+                        mainForm.Refresh();
+                    }
 
 
                 //map.
+                if (!mainForm.NewGame)
+                {
+                    foreach (Types.AvailableMap map in Constants.mapService.AvailableMaps)
+                        if (map.Instance.Name.CompareTo(comboBox2.Text) == 0)
+                        {
+                            Constants.setMap(map.Instance.Map);
+                            mainForm.GameControl.refresh();
+                        }
+                }
 
 
                 //language.
@@ -78,8 +97,8 @@ namespace TetrisReturn
                 }
                 mainForm.setText();
 
-                    //if (mainForm.Playing)
-                        //mainForm.resumeGame();
+                    if (mainForm.Playing)
+                        mainForm.resumeGame();
                 Close();
             }
 
