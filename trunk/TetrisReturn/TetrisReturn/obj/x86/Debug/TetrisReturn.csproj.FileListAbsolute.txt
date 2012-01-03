@@ -137,3 +137,6 @@ C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TetrisReturn\obj\x86\Debu
 C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.ShowInformation.resources
 C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TetrisReturn\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.ExitConfirm.resources
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.GameWin.resources
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.GameOver.resources

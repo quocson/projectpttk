@@ -53,7 +53,7 @@
             // 
             this.nextShape1.BackColor = System.Drawing.Color.Transparent;
             this.nextShape1.CStroke = System.Drawing.Color.Black;
-            this.nextShape1.CText = System.Drawing.Color.Red;
+            this.nextShape1.CText = System.Drawing.Color.DeepSkyBlue;
             this.nextShape1.FText = new System.Drawing.Font("Arial", 20F);
             this.nextShape1.ImgBack = null;
             this.nextShape1.IWidth = 2;
@@ -68,9 +68,9 @@
             // showInformation4
             // 
             this.showInformation4.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation1.CInfo = System.Drawing.Color.White;
+            this.showInformation4.CInfo = System.Drawing.Color.DarkOrange;
             this.showInformation4.CStroke = System.Drawing.Color.Black;
-            this.showInformation4.CText = System.Drawing.Color.Red;
+            this.showInformation4.CText = System.Drawing.Color.DeepSkyBlue;
             this.showInformation4.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation4.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation4.ImgBack = null;
@@ -85,9 +85,9 @@
             // showInformation3
             // 
             this.showInformation3.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation1.CInfo = System.Drawing.Color.White;
+            this.showInformation3.CInfo = System.Drawing.Color.DarkOrange;
             this.showInformation3.CStroke = System.Drawing.Color.Black;
-            this.showInformation3.CText = System.Drawing.Color.Red;
+            this.showInformation3.CText = System.Drawing.Color.DeepSkyBlue;
             this.showInformation3.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation3.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation3.ImgBack = null;
@@ -102,9 +102,9 @@
             // showInformation2
             // 
             this.showInformation2.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation1.CInfo = System.Drawing.Color.White;
+            this.showInformation2.CInfo = System.Drawing.Color.DarkOrange;
             this.showInformation2.CStroke = System.Drawing.Color.Black;
-            this.showInformation2.CText = System.Drawing.Color.Red;
+            this.showInformation2.CText = System.Drawing.Color.DeepSkyBlue;
             this.showInformation2.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation2.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation2.ImgBack = null;
@@ -119,9 +119,9 @@
             // showInformation1
             // 
             this.showInformation1.BackColor = System.Drawing.Color.Transparent;
-            this.showInformation1.CInfo = System.Drawing.Color.White;
+            this.showInformation1.CInfo = System.Drawing.Color.DarkOrange;
             this.showInformation1.CStroke = System.Drawing.Color.Black;
-            this.showInformation1.CText = System.Drawing.Color.Red;
+            this.showInformation1.CText = System.Drawing.Color.DeepSkyBlue;
             this.showInformation1.FInfo = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.ImgBack = null;

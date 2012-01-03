@@ -17,12 +17,9 @@ namespace TetrisReturn
         private string languageDisplay;
         private int modeShape;
         private int arrowUp;
+        private Option option;
         private GameControl gameControl;
         private SoundControl soundControl;
-        private About about;
-        private Help help;
-        private HighScores highScores;
-        private Option option;
         private bool mousePressed = false;
         private Point toMove = new Point(0, 0);
         private Point toCallForm = new Point(0, 0);
@@ -60,6 +57,12 @@ namespace TetrisReturn
         {
             get { return enableGhostShape; }
             set { enableGhostShape = value; }
+        }
+
+        public bool Playing
+        {
+            get { return playing; }
+            set { playing = value; }
         }
 
         private void AddEventHandler(Control ctl)
@@ -244,7 +247,7 @@ namespace TetrisReturn
         }
 
         //exit game.
-        private void exitGame()
+        public void exitGame()
         {
             //dispose element.
             Constants.themeService.closeThemes();
@@ -253,7 +256,7 @@ namespace TetrisReturn
             Application.Exit();
         }
 
-        private void newGame()
+        public void newGame()
         {
             gameControl.reset();
             imageButton3.Enabled = true;
@@ -310,13 +313,12 @@ namespace TetrisReturn
         private void pauseGame()
         {
             imageButton4.SText = Constants.language.resume;
-            playing = false;
             imageButton5.Enabled = false;
             imageButton6.Enabled = false;
             timer.Enabled = false;
         }
 
-        private void resumeGame()
+        public void resumeGame()
         {
             imageButton4.SText = Constants.language.pause;
             playing = true;
@@ -430,7 +432,7 @@ namespace TetrisReturn
         private void helpAppear()
         {
             pauseGame();
-            help = new Help(this);
+            Help help = new Help(this);
             help.ShowDialog();
         }
 
@@ -531,14 +533,14 @@ namespace TetrisReturn
         private void highScoresAppear()
         {
             pauseGame();
-            highScores = new HighScores(this);
+            HighScores highScores = new HighScores(this);
             highScores.ShowDialog();
         }
 
         private void aboutAppear()
         {
             pauseGame();
-            about = new About(this);
+            About about = new About(this);
             about.ShowDialog();
         }
 
@@ -745,7 +747,11 @@ namespace TetrisReturn
         {
 
             imageButton7.CText = Color.Red;
-            exitGame();
+            if (playing)
+                playing = false;
+            pauseGame();
+            ExitConfirm exitConfirm = new ExitConfirm(this);
+            exitConfirm.ShowDialog();
         }
     }
 }

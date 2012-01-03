@@ -48,3 +48,13 @@ E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.dll
 E:\Document\Software design\ppppppppppppppppp\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\bin\Debug\TheHourglassMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\bin\Debug\TheHourglassMapPlugin.pdb
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\bin\Debug\MapInterface.dll
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\bin\Debug\MapInterface.pdb
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.Properties.Resources.resources
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.dll
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheHourglassMapPlugin\obj\Debug\TheHourglassMapPlugin.pdb

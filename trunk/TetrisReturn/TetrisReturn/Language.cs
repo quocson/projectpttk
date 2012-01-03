@@ -43,6 +43,11 @@ namespace TetrisReturn
         public string level;
         public string line;
         public string piece;
+        public string exitConfirm;
+        public string yes;
+        public string no;
+        public string winConfirm;
+        public string overConfirm;
 
         public Language()
         {
@@ -95,6 +100,11 @@ namespace TetrisReturn
             level = nodelist[31].Attributes[0].Value;
             line = nodelist[32].Attributes[0].Value;
             piece = nodelist[33].Attributes[0].Value;
+            exitConfirm = nodelist[34].Attributes[0].Value;
+            yes = nodelist[35].Attributes[0].Value;
+            no = nodelist[36].Attributes[0].Value;
+            winConfirm = nodelist[37].Attributes[0].Value;
+            overConfirm = nodelist[38].Attributes[0].Value;
 
         }
 

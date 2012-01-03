@@ -20,8 +20,9 @@ namespace TheTransformerThemePlugin
                                         TheTransformerThemePlugin.Properties.Resources.Exit,
                                         TheTransformerThemePlugin.Properties.Resources.Informations,
                                         TheTransformerThemePlugin.Properties.Resources.NextShape,
+                                        TheTransformerThemePlugin.Properties.Resources.ExitConfirm,
                                         7,
-                                        1,
+                                        7,
                                         TheTransformerThemePlugin.Properties.Resources.name);
 
         public string VietNameseDescription { get { return TheTransformerThemePlugin.Properties.Resources.vietNameseDescription; } }
