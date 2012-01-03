@@ -35,6 +35,8 @@ namespace TetrisReturn
         {
             imageButton2.CText = Color.Red;
             mainForm.newGame();
+            disAppear();
+            this.Close();
 
         }
 

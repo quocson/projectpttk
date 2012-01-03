@@ -290,6 +290,7 @@ namespace TetrisReturn
                 if (Constants.map.checkOverflow())
                 {
                     timer.Enabled = false;
+                    gameOverAppear();
                     playing = false;
                 }
                 int dx = 0;
@@ -434,6 +435,16 @@ namespace TetrisReturn
             pauseGame();
             Help help = new Help(this);
             help.ShowDialog();
+        }
+        private void gameWinAppear()
+        {
+            GameWin gameWin = new GameWin(this);
+            gameWin.ShowDialog();
+        }
+        private void gameOverAppear()
+        {
+            GameOver gameOver = new GameOver(this);
+            gameOver.ShowDialog();
         }
 
         private void optionAppear()
@@ -669,7 +680,7 @@ namespace TetrisReturn
         private void imageButton4_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton4.CText = Color.Red;
-            if (playing)
+            if (timer.Enabled)
             {
                 pauseGame();
             }

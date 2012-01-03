@@ -35,7 +35,8 @@ namespace TetrisReturn
         {
             imageButton2.CText = Color.Red;
             mainForm.newGame();
-
+            disAppear();
+            this.Close();
         }
 
         private void imageButton1_MouseLeave(object sender, EventArgs e)
