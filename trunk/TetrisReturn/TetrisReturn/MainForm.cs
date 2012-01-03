@@ -170,7 +170,7 @@ namespace TetrisReturn
             showInformation4.STitle = Constants.language.score;
             showInformation3.STitle = Constants.language.level;
             showInformation2.STitle = Constants.language.line;
-            showInformation1.STitle = Constants.language.piece;
+            showInformation1.STitle = Constants.language.piece ;
         }
 
         //check if lost all files, close game.
@@ -310,7 +310,11 @@ namespace TetrisReturn
 
             }
         }
-
+        private void levelUp()
+        {
+            Constants.map.reset();
+            gameControl.reset();
+        }
         private void pauseGame()
         {
             imageButton4.SText = Constants.language.resume;

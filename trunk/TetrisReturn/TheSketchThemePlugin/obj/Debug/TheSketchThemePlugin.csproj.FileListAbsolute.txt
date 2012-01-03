@@ -58,3 +58,13 @@ C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheSketchThemePlugin\obj\
 C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
 C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.dll
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\bin\Debug\TheSketchThemePlugin.pdb
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.Properties.Resources.resources
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.dll
+E:\Document\Software design\Project\TetrisReturn\TheSketchThemePlugin\obj\Debug\TheSketchThemePlugin.pdb
