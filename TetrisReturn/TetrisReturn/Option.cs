@@ -65,24 +65,27 @@ namespace TetrisReturn
                 mainForm.ArrowUp = i;
 
                 //theme.
-                foreach (Types.AvailableTheme theme in Constants.themeService.AvailableThemes)
-                    if (theme.Instance.Name.CompareTo(comboBox1.Text) == 0)
-                    {
-                        Constants.setTheme(theme.Instance.Theme);
-                        mainForm.GameControl.refresh();
-                        mainForm.Refresh();
-                    }
+                Types.AvailableTheme theme = Constants.themeService.AvailableThemes.Find(comboBox1.Text);
+                if (theme == null)
+                {
+                    theme = Constants.themeService.AvailableThemes.getFirst();
+                }
+                Constants.setTheme(theme.Instance.Theme);
+                mainForm.GameControl.refresh();
+                mainForm.Refresh();
 
 
                 //map.
                 if (!mainForm.NewGame)
                 {
-                    foreach (Types.AvailableMap map in Constants.mapService.AvailableMaps)
-                        if (map.Instance.Name.CompareTo(comboBox2.Text) == 0)
-                        {
-                            Constants.setMap(map.Instance.Map);
-                            mainForm.GameControl.refresh();
-                        }
+                    Types.AvailableMap map = Constants.mapService.AvailableMaps.Find(comboBox2.Text);
+
+                    if (map == null)
+                    {
+                        map = Constants.mapService.AvailableMaps.getFirst();
+                    }
+                    Constants.setMap(map.Instance.Map);
+                    mainForm.GameControl.refresh();
                 }
 
 
