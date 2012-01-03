@@ -6,8 +6,8 @@ using System.Text;
 namespace TetrisReturn
 {
     public class SaveDTO
-    { 
-        private string sTheme = "";
+    {
+        private string sTheme = "Transformer";
         public string STheme
         {
             get { return sTheme; }
@@ -19,11 +19,11 @@ namespace TetrisReturn
             get { return sMap; }
             set { sMap = value; }
         }
-        private string sShapeMode  = "";
-        public string SShapeMode
+        private int iShapeMode  = 1;
+        public int IShapeMode
         {
-            get { return sShapeMode; }
-            set { sShapeMode = value; }
+            get { return iShapeMode; }
+            set { iShapeMode = value; }
         }
         private int iLevel = 1;
         public int ILevel
