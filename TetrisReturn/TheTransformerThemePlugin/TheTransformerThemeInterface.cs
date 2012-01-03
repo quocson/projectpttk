@@ -22,7 +22,7 @@ namespace TheTransformerThemePlugin
                                         TheTransformerThemePlugin.Properties.Resources.NextShape,
                                         TheTransformerThemePlugin.Properties.Resources.ExitConfirm,
                                         7,
-                                        7,
+                                        1,
                                         TheTransformerThemePlugin.Properties.Resources.name,
                                         TheTransformerThemePlugin.Properties.Resources.font);
 
