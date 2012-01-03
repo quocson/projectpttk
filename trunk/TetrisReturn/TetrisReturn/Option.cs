@@ -35,7 +35,7 @@ namespace TetrisReturn
                 //ghost.
                 if (mainForm.NewGame)
                 {
-                    if (checkBox4.Checked)
+                    if (!checkBox4.Checked)
                     {
                         mainForm.Ghost = false;
                         mainForm.GameControl.eraseGhostShape();
@@ -64,17 +64,6 @@ namespace TetrisReturn
                     i += 2;
                 mainForm.ArrowUp = i;
 
-                //theme.
-                Types.AvailableTheme theme = Constants.themeService.AvailableThemes.Find(comboBox1.Text);
-                if (theme == null)
-                {
-                    theme = Constants.themeService.AvailableThemes.getFirst();
-                }
-                Constants.setTheme(theme.Instance.Theme);
-                mainForm.GameControl.refresh();
-                mainForm.Refresh();
-
-
                 //map.
                 if (!mainForm.NewGame)
                 {
@@ -85,7 +74,7 @@ namespace TetrisReturn
                         map = Constants.mapService.AvailableMaps.getFirst();
                     }
                     Constants.setMap(map.Instance.Map);
-                    mainForm.GameControl.refresh();
+                    mainForm.GameControl.reset();
                 }
 
 
@@ -93,12 +82,23 @@ namespace TetrisReturn
                 if (comboBox3.SelectedIndex == 0)
                 {
                     Constants.language.load("English.lng");
+                    mainForm.Language = "English";
                 }
                 else
                 {
                     Constants.language.load("VietNamese.lng");
+                    mainForm.Language = "VietNamese";
                 }
-                mainForm.setText();
+
+                //theme.
+                Types.AvailableTheme theme = Constants.themeService.AvailableThemes.Find(comboBox1.Text);
+                if (theme == null)
+                {
+                    theme = Constants.themeService.AvailableThemes.getFirst();
+                }
+                Constants.setTheme(theme.Instance.Theme);
+                mainForm.setTheme();
+                mainForm.Refresh();
 
                     if (mainForm.Playing)
                         mainForm.resumeGame();

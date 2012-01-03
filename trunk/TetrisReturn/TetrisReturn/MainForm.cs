@@ -13,6 +13,7 @@ namespace TetrisReturn
     {
         private bool enableGhostShape;
         private bool playing;
+        private bool pause;
         private bool newgame;
         private bool sound;
         private string languageDisplay;
@@ -102,7 +103,7 @@ namespace TetrisReturn
             setLastConfig();
             gameControl = new GameControl();
             soundControl = new SoundControl();
-
+            pause = true;
             setTheme();
             this.AddEventHandler(this.showInformation1);
             this.AddEventHandler(this.showInformation2);
@@ -130,38 +131,15 @@ namespace TetrisReturn
             newgame = false;
             enableGhostShape = true;
             sound = true;
+
+            imageButton3.Enabled = false;
+            imageButton4.Enabled = false;
+            imageButton5.Enabled = false;
         }
 
         public void setTheme()
         {
 
-            BackgroundImage = Constants.theme.MainBackground;
-
-            imageButton1.Image = Constants.theme.Button;
-            imageButton2.Image = Constants.theme.Button;
-            imageButton3.Image = Constants.theme.Button;
-            imageButton4.Image = Constants.theme.Button;
-            imageButton5.Image = Constants.theme.Button;
-            imageButton6.Image = Constants.theme.Button;
-            imageButton7.Image = Constants.theme.Button;
-
-            imageButton3.Enabled = false;
-            imageButton4.Enabled = false;
-            imageButton5.Enabled = false;
-
-            Controls.Add(gameControl);
-
-            nextShape1.ImgBack = Constants.theme.NextShape;
-            showInformation1.ImgBack = Constants.theme.Informations;
-            showInformation2.ImgBack = Constants.theme.Informations;
-            showInformation3.ImgBack = Constants.theme.Informations;
-            showInformation4.ImgBack = Constants.theme.Informations;
-
-            setText();
-        }
-
-        public void setText()
-        {
             System.Drawing.Font f = Constants.getFont(20);
             imageButton1.FText = f;
             imageButton2.FText = f;
@@ -180,10 +158,31 @@ namespace TetrisReturn
             showInformation3.FInfo = f;
             showInformation4.FInfo = f;
 
+            BackgroundImage = Constants.theme.MainBackground;
+
+            imageButton1.Image = Constants.theme.Button;
+            imageButton2.Image = Constants.theme.Button;
+            imageButton3.Image = Constants.theme.Button;
+            imageButton4.Image = Constants.theme.Button;
+            imageButton5.Image = Constants.theme.Button;
+            imageButton6.Image = Constants.theme.Button;
+            imageButton7.Image = Constants.theme.Button;
+
+            Controls.Add(gameControl);
+
+            nextShape1.ImgBack = Constants.theme.NextShape;
+            showInformation1.ImgBack = Constants.theme.Informations;
+            showInformation2.ImgBack = Constants.theme.Informations;
+            showInformation3.ImgBack = Constants.theme.Informations;
+            showInformation4.ImgBack = Constants.theme.Informations;
+
             imageButton1.SText = Constants.language.newgame;
             imageButton2.SText = Constants.language.conti;
             imageButton3.SText = Constants.language.save;
-            imageButton4.SText = Constants.language.pause;
+            if(pause)
+                imageButton4.SText = Constants.language.pause;
+            else
+                imageButton4.SText = Constants.language.resume;
             imageButton5.SText = Constants.language.sound;
             imageButton6.SText = Constants.language.ghost;
             imageButton7.SText = Constants.language.exit;
@@ -348,6 +347,7 @@ namespace TetrisReturn
             imageButton5.Enabled = false;
             imageButton6.Enabled = false;
             playing = false;
+            pause = false;
             timer.Enabled = false;
         }
 
@@ -355,6 +355,7 @@ namespace TetrisReturn
         {
             imageButton4.SText = Constants.language.pause;
             playing = true;
+            pause = true; ;
             imageButton5.Enabled = true;
             imageButton6.Enabled = true;
             timer.Enabled = true;
@@ -464,7 +465,7 @@ namespace TetrisReturn
 
         private void helpAppear()
         {
-            pauseGame();
+            timer.Enabled = false;
             Help help = new Help(this);
             help.ShowDialog();
         }
@@ -574,14 +575,14 @@ namespace TetrisReturn
 
         private void highScoresAppear()
         {
-            pauseGame();
+            timer.Enabled = false;
             HighScores highScores = new HighScores(this);
             highScores.ShowDialog();
         }
 
         private void aboutAppear()
         {
-            pauseGame();
+            timer.Enabled = false;
             About about = new About(this);
             about.ShowDialog();
         }
@@ -594,7 +595,7 @@ namespace TetrisReturn
                 gameControl.CurrentShape.eraseShape(gr);
                 if (e.KeyCode == Keys.Up)
                 {
-                    gameControl.CurrentShape.rotate();
+                    gameControl.createShape(modeShape, arrowUp);
                 }
                 else
                     if (e.KeyCode == Keys.Left && gameControl.CurrentShape.canMoveLeft())
