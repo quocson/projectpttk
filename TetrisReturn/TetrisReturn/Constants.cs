@@ -45,7 +45,12 @@ namespace TetrisReturn
             theme.Dispose();
             theme = new Theme(t);
             saveInfo.STheme = theme.Name;
-
+            if (System.IO.File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\" + theme.Font))
+            {
+                fonts = new PrivateFontCollection();
+                fonts.AddFontFile(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\" + theme.Font);
+                family = fonts.Families[0];
+            }
         }
         public static Font getFont(float size)
         {

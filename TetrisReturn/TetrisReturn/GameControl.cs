@@ -69,36 +69,54 @@ namespace TetrisReturn
             else
                 switch (modeShape)
                 {
-                    case 0://classic shape.
+                    case 1://classic shape.
                         currShape = new ClassicShape();
                         break;
 
-                    case 1://multi shape.
+                    case 2://multi shape.
                         currShape = new MultiShape();
                         break;
-
+                    case 3://multi shape.
+                        if (Constants.r.Next(0, 2) == 0)
+                            currShape = new ClassicShape();
+                        else
+                            currShape = new MultiShape();
+                    break;
                     //for exScreentend shape...
                 }
 
             switch (modeShape)
             {
-                case 0://classic shape.
+                case 1://classic shape.
                     nextShape = new ClassicShape();
                     break;
 
-                case 1://multi shape.
+                case 2://multi shape.
                     nextShape = new MultiShape();
                     break;
-
+                case 3://multi shape.
+                    if (Constants.r.Next(0, 2) == 0)
+                        nextShape = new ClassicShape();
+                    else
+                        nextShape = new MultiShape();
+                    break;
                 //for extend shape...
             }
         }
-        public void createShape(int modeShape, bool change)
+        public void createShape(int modeShape, int change)
         {
-            if (!change)
+            if (change == 1)
             {
                 currShape.rotate();
                 return;
+            }
+            if(change == 3)
+            {
+                if (Constants.r.Next(0, 2) == 0)
+                {
+                    currShape.rotate();
+                    return;
+                }
             }
             int x, y;
             x = currShape.XScreen;

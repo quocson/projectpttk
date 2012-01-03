@@ -80,14 +80,14 @@ namespace TetrisReturn
             xScreen = x;
             yScreen = y;
             color = s.color;
-
+            int k = 0;
             statusArr = new bool[4, 4];
             for (int i = 0; i < 4; i++)
                 for (int j = 0; j < 4; j++)
                 {
                     statusArr[i, j] = s.statusArr[i, j];
-                    if (statusArr[i, j] == true && i < row && j < col)
-                        cube.Add(new Block(s.cube[i], x + j * Constants.blockSize, y + i * Constants.blockSize));
+                    if (statusArr[i, j] == true && i < row && j < col && cube.Count < s.cube.Count)
+                        cube.Add(new Block(s.cube[k++], x + j * Constants.blockSize, y + i * Constants.blockSize));
                 }
         }
 

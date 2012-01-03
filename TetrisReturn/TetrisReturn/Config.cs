@@ -70,13 +70,13 @@ namespace TetrisReturn
             XmlElement Goc = xmlDoc.CreateElement("Game");
             xmlDoc.AppendChild(Goc);
             XmlElement Record = xmlDoc.CreateElement("Setting");
-            Record.SetAttribute("Sound", "0");
-            Record.SetAttribute("Theme", "");
-            Record.SetAttribute("Map", "");
+            Record.SetAttribute("Sound", "true");
+            Record.SetAttribute("Theme", "Transformers");
+            Record.SetAttribute("Map", "Classic");
             Record.SetAttribute("Ghost", "true");
             Record.SetAttribute("Language", "English");
-            Record.SetAttribute("Mode_Shape", "0");
-            Record.SetAttribute("Arrow_Up", "0");
+            Record.SetAttribute("Mode_Shape", "1");
+            Record.SetAttribute("Arrow_Up", "1");
             Goc.AppendChild(Record);
             xmlDoc.Save(sPath);
         }
