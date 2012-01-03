@@ -310,8 +310,8 @@ namespace TetrisReturn
                 if (Constants.map.checkOverflow())
                 {
                     timer.Enabled = false;
-                    gameOverAppear();
                     playing = false;
+                    gameOverAppear();
                 }
                 int dx = 0;
                 while (Constants.map.getFullLines().Count > 0)
@@ -676,6 +676,9 @@ namespace TetrisReturn
         {
             imageButton2.CText = Color.Red;
 
+
+            SaveLoad sl = new SaveLoad();
+            Constants.SaveInfo = sl.load();
         }
 
         private void imageButton2_MouseDown(object sender, MouseEventArgs e)
@@ -693,6 +696,11 @@ namespace TetrisReturn
         private void imageButton3_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton3.CText = Color.Red;
+            Constants.SaveInfo.ArrMap = Constants.map.StatusMap;
+            Constants.SaveInfo.SMap = Constants.map.Name;
+            Constants.SaveInfo.IShapeMode = modeShape;
+            SaveLoad sl = new SaveLoad();
+            sl.save(Constants.SaveInfo);
 
         }
 
@@ -730,6 +738,7 @@ namespace TetrisReturn
         private void imageButton5_MouseDown(object sender, MouseEventArgs e)
         {
             imageButton5.CText = Color.LawnGreen;
+            
 
         }
 

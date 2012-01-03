@@ -87,7 +87,7 @@ namespace MapPluginInterface
         public bool checkOverflow()
         {
             for (int i = 0; i < col; i++)
-                if (statusMap[4, i] != -1)
+                if (statusMap[3, i] > -1)
                     return true;
             return false;
         }
@@ -109,10 +109,15 @@ namespace MapPluginInterface
         public void updateMap(int rol, ref int dxLine)
         {
             int i, j;
+            bool[] unfall = new bool[col];
+            for (j = 0; j < col; j++ )
+                unfall[j] = false;
             for (i = rol; i >= 0; i--)
                 for (j = 0; j < col; j++)
                 {
-                    if (i != 0)
+                    if (statusMap[i, j] == -2)
+                        unfall[j] = true;
+                    if (i != 0 && !unfall[j])
                         statusMap[i, j] = statusMap[i - 1, j];
                 }
             dxLine++;

@@ -20,30 +20,8 @@ namespace TetrisReturn
         }
         private void createNew()
         {
-            XmlElement Goc = xmlDoc.CreateElement("Game");
-            xmlDoc.AppendChild(Goc);
-
-            XmlElement Record = xmlDoc.CreateElement("Info");
-            Record.SetAttribute("Theme", "");
-            Record.SetAttribute("Map", "");
-            Record.SetAttribute("ShapeMode", "");
-            Record.SetAttribute("Level", "0");
-            Record.SetAttribute("Score", "0");
-            Record.SetAttribute("Line", "0");
-            Record.SetAttribute("Piece", "0");
-            Goc.AppendChild(Record);
-
-            for (int i = 0; i < Constants.map.Row; i++)
-            {
-                XmlElement Row = xmlDoc.CreateElement("Row");
-                Row.SetAttribute("Num", i.ToString());
-                Goc.AppendChild(Row);
-                for (int j = 0; j < Constants.map.Column; j++)
-                {
-                    Row.SetAttribute("Col"+j, "-1");
-                }
-            }
-            xmlDoc.Save(sPath);
+            SaveDTO sld = new SaveDTO();
+            save(sld);
         }
         public SaveDTO load()
         {
@@ -53,7 +31,7 @@ namespace TetrisReturn
             XmlNode node = nodelist[0];
             res.STheme = node.Attributes[0].Value;
             res.SMap = node.Attributes[1].Value;
-            res.SShapeMode = node.Attributes[2].Value;
+            res.IShapeMode = int.Parse(node.Attributes[2].Value);
             res.ILevel = int.Parse(node.Attributes[3].Value);
             res.IScore = int.Parse(node.Attributes[4].Value);
             res.ILine = int.Parse(node.Attributes[5].Value);
@@ -70,15 +48,14 @@ namespace TetrisReturn
             }
             return res;
         }
-        private void save(SaveDTO save)
+        public void save(SaveDTO save)
         {
             XmlElement Goc = xmlDoc.CreateElement("Game");
             xmlDoc.AppendChild(Goc);
-
             XmlElement Record = xmlDoc.CreateElement("Info");
             Record.SetAttribute("Theme", save.STheme);
             Record.SetAttribute("Map", save.SMap);
-            Record.SetAttribute("ShapeMode", save.SShapeMode);
+            Record.SetAttribute("ShapeMode", save.IShapeMode.ToString());
             Record.SetAttribute("Level", save.ILevel.ToString());
             Record.SetAttribute("Score", save.IScore.ToString());
             Record.SetAttribute("Line", save.ILine.ToString());
