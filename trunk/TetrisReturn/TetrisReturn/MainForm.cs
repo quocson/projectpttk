@@ -262,8 +262,6 @@ namespace TetrisReturn
             imageButton3.Enabled = true;
             imageButton4.Enabled = true;
             imageButton5.Enabled = true;
-            timer.Enabled = true;
-            timer.Interval = 200;
             gameControl.createShape(modeShape);
             showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
             showInformation2.SInfo = (Constants.SaveInfo.ILine).ToString();
@@ -296,6 +294,7 @@ namespace TetrisReturn
                 int dx = 0;
                 while (Constants.map.getFullLines().Count > 0)
                 {
+                    
                     showInformation2.SInfo = (++Constants.SaveInfo.ILine).ToString();
                     //add score
                     Constants.SaveInfo.IScore += Constants.scorePerLine;
@@ -306,14 +305,20 @@ namespace TetrisReturn
                     int line = Constants.map.getFullLines().Pop();
                     Constants.map.updateMap(line, ref dx);
                     gameControl.removeLine(line);
+                    if (Constants.map.getFullLines().Count == 0)
+                        levelUp();
                 }
 
             }
         }
         private void levelUp()
         {
+            if (Constants.SaveInfo.IScore <= Constants.SaveInfo.ILevel * Constants.SaveInfo.ILevel * 500)
+                return;
             Constants.map.reset();
+            showInformation3.SInfo = (++Constants.SaveInfo.ILevel).ToString();
             gameControl.reset();
+            timer.Interval = 600 - 50 * (Constants.SaveInfo.ILevel/5);
         }
         private void pauseGame()
         {

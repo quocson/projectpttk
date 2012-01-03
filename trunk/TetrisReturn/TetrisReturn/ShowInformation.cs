@@ -92,6 +92,8 @@ namespace TetrisReturn
             FTitle = new Font("Arial", 15);
 
             FInfo = new Font("Arial", 15);
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            UpdateStyles();
         }
         protected override void OnPaintBackground(PaintEventArgs e)
         {
