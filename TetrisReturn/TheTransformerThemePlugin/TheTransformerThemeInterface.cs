@@ -23,7 +23,8 @@ namespace TheTransformerThemePlugin
                                         TheTransformerThemePlugin.Properties.Resources.ExitConfirm,
                                         7,
                                         7,
-                                        TheTransformerThemePlugin.Properties.Resources.name);
+                                        TheTransformerThemePlugin.Properties.Resources.name,
+                                        TheTransformerThemePlugin.Properties.Resources.font);
 
         public string VietNameseDescription { get { return TheTransformerThemePlugin.Properties.Resources.vietNameseDescription; } }
         public string Name { get { return TheTransformerThemePlugin.Properties.Resources.name; } }

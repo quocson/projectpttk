@@ -23,7 +23,8 @@ namespace TheSketchThemePlugin
                                         TheSketchThemePlugin.Properties.Resources.ExitConfirm,
                                         7,
                                         1,
-                                        TheSketchThemePlugin.Properties.Resources.name);
+                                        TheSketchThemePlugin.Properties.Resources.name,
+                                        TheSketchThemePlugin.Properties.Resources.font);
 
         public string VietNameseDescription { get { return TheSketchThemePlugin.Properties.Resources.vietNameseDescription; } }
         public string Name { get { return TheSketchThemePlugin.Properties.Resources.name; } }

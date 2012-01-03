@@ -24,6 +24,7 @@ namespace ThemePluginInterface
         private int numColorBlock;
         private int numTypeBlock;
         private string name;
+        private string font;
 
         public Theme()
         {
@@ -47,6 +48,7 @@ namespace ThemePluginInterface
             numColorBlock = t.numColorBlock;
             numTypeBlock = t.numTypeBlock;
             name = t.name;
+            font = t.font;
         }
 
         public Theme(Image iMainBackground,
@@ -64,7 +66,8 @@ namespace ThemePluginInterface
                     Image iExitConfirm,
                     int numColorBlock,
                     int numTypeBlock,
-                    string name)
+                    string name,
+                    string font)
         {
             this.iMainBackground = new Bitmap(iMainBackground);
             this.iHelpBackground = new Bitmap(iHelpBackground);
@@ -82,6 +85,7 @@ namespace ThemePluginInterface
             this.numColorBlock = numColorBlock;
             this.numTypeBlock = numTypeBlock;
             this.name = name;
+            this.font = font;
         }
 
         public void Dispose()
@@ -131,5 +135,6 @@ namespace ThemePluginInterface
         public int NumColorBlock { get { return numColorBlock; } }
         public int NumTypeBlock { get { return numTypeBlock; } }
         public string Name { get { return name; } }
+        public string Font { get { return font; } }
     }
 }
