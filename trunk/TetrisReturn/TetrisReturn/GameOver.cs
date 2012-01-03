@@ -55,6 +55,7 @@ namespace TetrisReturn
         private void imageButton2_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton2.CText = Color.Red;
+            mainForm.NewGame = false;
             disAppear();
             this.Close();
 

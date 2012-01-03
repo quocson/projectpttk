@@ -36,6 +36,7 @@
   <Game ExitConfirm="Are you sure you want to exit?" />
   <Game Yes="Yes" />
   <Game No="No" />
-  <Game WinConfirm="You Win! Do you want to play new game?" />
-  <Game OverConfirm="Game Over! Do you want to play new game?" />
+  <Game WinConfirm="You Win! Do you want to play again?" />
+  <Game OverConfirm="Game Over! Do you want to play again?" />
+  <Game NewHighScore="New High Score!" />
 </Language>
