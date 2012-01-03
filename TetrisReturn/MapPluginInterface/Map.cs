@@ -99,7 +99,8 @@ namespace MapPluginInterface
             {
                 for (int j = 0; j < col; j++)
                 {
-                    statusMap[i, j] = -1;
+                    if (statusMap[i, j] > -2)
+                        statusMap[i, j] = -1;
                 }
             }
         }

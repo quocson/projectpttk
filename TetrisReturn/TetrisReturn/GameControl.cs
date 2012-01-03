@@ -54,14 +54,6 @@ namespace TetrisReturn
             }
         }
 
-        //reset statusMap and imageMap.
-        public void resetMap()
-        {
-            Constants.map.reset();
-            imageBuffer.Dispose();
-            imageBuffer = new Bitmap(Constants.map.ImageMap);
-            Refresh();
-        }
 
         //create new shape.
         public void createShape(int modeShape)
