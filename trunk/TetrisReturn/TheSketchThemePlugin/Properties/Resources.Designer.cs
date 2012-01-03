@@ -104,6 +104,15 @@ namespace TheSketchThemePlugin.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Sketch_Block.ttf.
+        /// </summary>
+        internal static string font {
+            get {
+                return ResourceManager.GetString("font", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap GameOver {
             get {
                 object obj = ResourceManager.GetObject("GameOver", resourceCulture);
