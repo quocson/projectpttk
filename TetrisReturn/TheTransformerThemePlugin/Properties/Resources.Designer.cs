@@ -97,6 +97,13 @@ namespace TheTransformerThemePlugin.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ExitConfirm {
+            get {
+                object obj = ResourceManager.GetObject("ExitConfirm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap GameOver {
             get {
                 object obj = ResourceManager.GetObject("GameOver", resourceCulture);

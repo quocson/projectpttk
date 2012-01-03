@@ -20,6 +20,7 @@ namespace TheSketchThemePlugin
                                         TheSketchThemePlugin.Properties.Resources.Exit,
                                         TheSketchThemePlugin.Properties.Resources.Informations,
                                         TheSketchThemePlugin.Properties.Resources.NextShape,
+                                        TheSketchThemePlugin.Properties.Resources.ExitConfirm,
                                         7,
                                         1,
                                         TheSketchThemePlugin.Properties.Resources.name);

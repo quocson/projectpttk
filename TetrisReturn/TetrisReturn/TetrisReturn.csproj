@@ -58,8 +58,26 @@
     <Compile Include="Block.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="ExitConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitConfirm.Designer.cs">
+      <DependentUpon>ExitConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameControl.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameWin.Designer.cs">
+      <DependentUpon>GameWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
@@ -115,6 +133,15 @@
     <Compile Include="SoundControl.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitConfirm.resx">
+      <DependentUpon>ExitConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameWin.resx">
+      <DependentUpon>GameWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>

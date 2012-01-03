@@ -20,6 +20,7 @@ namespace ThemePluginInterface
         private Bitmap iExit;
         private Bitmap iInformations;
         private Bitmap iNextShape;
+        private Bitmap iExitConfirm;
         private int numColorBlock;
         private int numTypeBlock;
         private string name;
@@ -41,6 +42,7 @@ namespace ThemePluginInterface
             iGameWin = new Bitmap(t.iGameWin);
             iExit = new Bitmap(t.iExit);
             iInformations = new Bitmap(t.iInformations);
+            iExitConfirm = new Bitmap(t.iExitConfirm);
             iNextShape = new Bitmap(t.iNextShape);
             numColorBlock = t.numColorBlock;
             numTypeBlock = t.numTypeBlock;
@@ -59,6 +61,7 @@ namespace ThemePluginInterface
                     Image iExit,
                     Image iInformations,
                     Image iNextShape,
+                    Image iExitConfirm,
                     int numColorBlock,
                     int numTypeBlock,
                     string name)
@@ -75,6 +78,7 @@ namespace ThemePluginInterface
             this.iExit = new Bitmap(iExit);
             this.iInformations = new Bitmap(iInformations);
             this.iNextShape = new Bitmap(iNextShape);
+            this.iExitConfirm = new Bitmap(iExitConfirm);
             this.numColorBlock = numColorBlock;
             this.numTypeBlock = numTypeBlock;
             this.name = name;
@@ -106,6 +110,8 @@ namespace ThemePluginInterface
                 iInformations.Dispose();
             if (iNextShape != null)
                 iNextShape.Dispose();
+            if (iExitConfirm != null)
+                iExitConfirm.Dispose();
             GC.SuppressFinalize(this);
         }
 
@@ -121,6 +127,7 @@ namespace ThemePluginInterface
         public Bitmap Exit { get { return iExit; } }
         public Bitmap Informations { get { return iInformations; } }
         public Bitmap NextShape { get { return iNextShape; } }
+        public Bitmap ExitConfirm { get { return iExitConfirm; } }
         public int NumColorBlock { get { return numColorBlock; } }
         public int NumTypeBlock { get { return numTypeBlock; } }
         public string Name { get { return name; } }
