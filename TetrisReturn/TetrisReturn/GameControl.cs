@@ -205,7 +205,7 @@ namespace TetrisReturn
 
             g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize),
                 new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize), GraphicsUnit.Pixel);
-
+            g.DrawImage(Constants.map.ImageMap, new Point(0, 0));
             for (int i = line ; i >= 0; i--)
             {
                 for (int j = 0; j < Constants.map.Column; j++)
