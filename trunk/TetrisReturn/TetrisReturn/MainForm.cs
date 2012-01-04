@@ -135,28 +135,14 @@ namespace TetrisReturn
             imageButton3.Enabled = false;
             imageButton4.Enabled = false;
             imageButton5.Enabled = false;
+
         }
 
         public void setTheme()
         {
 
-            System.Drawing.Font f = Constants.getFont(20);
-            imageButton1.FText = f;
-            imageButton2.FText = f;
-            imageButton3.FText = f;
-            imageButton4.FText = f;
-            imageButton5.FText = f;
-            imageButton6.FText = f;
-            imageButton7.FText = f;
-            nextShape1.FText = f;
-            showInformation1.FTitle = f;
-            showInformation2.FTitle = f;
-            showInformation3.FTitle = f;
-            showInformation4.FTitle = f;
-            showInformation1.FInfo = f;
-            showInformation2.FInfo = f;
-            showInformation3.FInfo = f;
-            showInformation4.FInfo = f;
+            
+
 
             BackgroundImage = Constants.theme.MainBackground;
 
@@ -175,7 +161,6 @@ namespace TetrisReturn
             showInformation2.ImgBack = Constants.theme.Informations;
             showInformation3.ImgBack = Constants.theme.Informations;
             showInformation4.ImgBack = Constants.theme.Informations;
-
             imageButton1.SText = Constants.language.newgame;
             imageButton2.SText = Constants.language.conti;
             imageButton3.SText = Constants.language.save;
@@ -191,6 +176,23 @@ namespace TetrisReturn
             showInformation3.STitle = Constants.language.level;
             showInformation2.STitle = Constants.language.line;
             showInformation1.STitle = Constants.language.piece;
+            System.Drawing.Font f = Constants.getFont(20);
+            imageButton1.FText = f;
+            imageButton2.FText = f;
+            imageButton3.FText = f;
+            imageButton4.FText = f;
+            imageButton5.FText = f;
+            imageButton6.FText = f;
+            imageButton7.FText = f;
+            nextShape1.FText = f;
+            showInformation1.FTitle = f;
+            showInformation2.FTitle = f;
+            showInformation3.FTitle = f;
+            showInformation4.FTitle = f;
+            showInformation1.FInfo = f;
+            showInformation2.FInfo = f;
+            showInformation3.FInfo = f;
+            showInformation4.FInfo = f;
         }
 
         //check if lost all files, close game.
@@ -282,7 +284,6 @@ namespace TetrisReturn
             imageButton3.Enabled = true;
             imageButton4.Enabled = true;
             imageButton5.Enabled = true;
-            timer.Enabled = true;
             gameControl.createShape(modeShape);
             showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
             showInformation2.SInfo = (Constants.SaveInfo.ILine).ToString();
@@ -292,12 +293,33 @@ namespace TetrisReturn
             playing = true;
             newgame = true;
             sound = true;
-            timer.Interval = 800;
+            timer.Interval = 600;
             timer.Enabled = true;
+        }
+        public void continueGame()
+        {
+
+            imageButton3.Enabled = true;
+            imageButton4.Enabled = true;
+            imageButton5.Enabled = true;
+            gameControl.createShape(modeShape);
+
+            
+            showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
+            showInformation2.SInfo = (Constants.SaveInfo.ILine).ToString();
+            showInformation3.SInfo = (Constants.SaveInfo.ILevel).ToString();
+            showInformation4.SInfo = (Constants.SaveInfo.IScore).ToString();
+            nextShape1.ShapeNext = gameControl.NextShape;
+            playing = true;
+            newgame = true;
+            sound = true;
+            timer.Interval = timer.Interval = 800 - 50 * (Constants.SaveInfo.ILevel / 5); 
+            timer.Enabled = true;
+            gameControl.drawMap();
             if (sound)
                 soundControl.playSoundTheme();
         }
-
+        
         private void timer_Tick(object sender, EventArgs e)
         {
             gameControl.refresh();
@@ -681,7 +703,14 @@ namespace TetrisReturn
 
 
             SaveLoad sl = new SaveLoad();
-            Constants.SaveInfo = sl.load();
+            SaveDTO sd = sl.load();
+            Types.AvailableMap lastMap = Constants.mapService.AvailableMaps.Find(sd.SMap);
+            Constants.setMap(lastMap.Instance.Map);
+            Constants.SaveInfo = sd;
+            if (Constants.SaveInfo.IPiece > 0)
+            {
+                continueGame();
+            }
         }
 
         private void imageButton2_MouseDown(object sender, MouseEventArgs e)
@@ -699,11 +728,13 @@ namespace TetrisReturn
         private void imageButton3_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton3.CText = Color.Red;
+            pauseGame();
             Constants.SaveInfo.ArrMap = Constants.map.StatusMap;
             Constants.SaveInfo.SMap = Constants.map.Name;
             Constants.SaveInfo.IShapeMode = modeShape;
             SaveLoad sl = new SaveLoad();
             sl.save(Constants.SaveInfo);
+            MessageBox.Show("Saved!");
 
         }
 

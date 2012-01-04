@@ -29,7 +29,12 @@ namespace TetrisReturn
         public static TetrisReturn.SaveDTO SaveInfo
         {
             get { return saveInfo; }
-            set { saveInfo = value; }
+            set { 
+                saveInfo = value;
+                for (int i = 0; i < map.Row; i++)
+                    for (int j = 0; j < map.Column; j++)
+                        map.StatusMap[i, j] = saveInfo.ArrMap[i, j];
+            }
         }
         //set type for the static map.
         public static void setMap(Map m)
@@ -45,6 +50,7 @@ namespace TetrisReturn
             theme.Dispose();
             theme = new Theme(t);
             saveInfo.STheme = theme.Name;
+
             if (System.IO.File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\" + theme.Font))
             {
                 fonts = new PrivateFontCollection();

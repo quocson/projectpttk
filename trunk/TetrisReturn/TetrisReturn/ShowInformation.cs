@@ -47,7 +47,12 @@ namespace TetrisReturn
         public Font FTitle
         {
             get { return fTitle; }
-            set { fTitle = value; }
+            set
+            {
+                fTitle = value; 
+                if (value != null)
+                    Refresh();
+            }
         }
         // info
         private string sInfo;
@@ -66,7 +71,12 @@ namespace TetrisReturn
         public Font FInfo
         {
             get { return fInfo; }
-            set { fInfo = value; }
+            set
+            {
+                fInfo = value; 
+                if (value != null)
+                    Refresh();
+            }
         }
         private Color cInfo = Color.White;
         public Color CInfo

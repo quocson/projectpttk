@@ -130,7 +130,7 @@ namespace MapPluginInterface
             {
                 bool full = true;
                 for (int j = 0; j < col; j++)
-                    if (statusMap[i, j] <= -1)
+                    if (statusMap[i, j] == -1)
                         full = false;
                 if (full == true)
                     res.Push(i);

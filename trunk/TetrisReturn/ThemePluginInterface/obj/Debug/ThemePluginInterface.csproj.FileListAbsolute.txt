@@ -33,3 +33,8 @@ E:\Document\Software design\Project\TetrisReturn\ThemePluginInterface\bin\Debug\
 E:\Document\Software design\Project\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
 E:\Document\Software design\Project\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
 E:\Document\Software design\Project\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
+E:\Document\Software design\Lastr\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.dll
+E:\Document\Software design\Lastr\TetrisReturn\ThemePluginInterface\bin\Debug\ThemeInterface.pdb
+E:\Document\Software design\Lastr\TetrisReturn\ThemePluginInterface\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Lastr\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.dll
+E:\Document\Software design\Lastr\TetrisReturn\ThemePluginInterface\obj\Debug\ThemeInterface.pdb
