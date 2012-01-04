@@ -100,8 +100,8 @@ namespace TetrisReturn
                 mainForm.setTheme();
                 mainForm.Refresh();
 
-                    if (mainForm.Playing)
-                        mainForm.resumeGame();
+                if (mainForm.Playing)
+                    mainForm.resumeGame();
                 Close();
             }
 
@@ -115,7 +115,7 @@ namespace TetrisReturn
 
         private void Option_MouseDown(object sender, MouseEventArgs e)
         {
-            
+
             toClose = new Point(e.X, e.Y);
         }
 

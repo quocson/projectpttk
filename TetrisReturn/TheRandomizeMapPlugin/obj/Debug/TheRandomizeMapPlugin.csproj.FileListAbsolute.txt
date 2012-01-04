@@ -68,3 +68,13 @@ E:\Document\Software design\Project\TetrisReturn\TheRandomizeMapPlugin\obj\Debug
 E:\Document\Software design\Project\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\Project\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.dll
 E:\Document\Software design\Project\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.pdb
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\bin\Debug\TheRandomizeMapPlugin.dll
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\bin\Debug\TheRandomizeMapPlugin.pdb
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\bin\Debug\MapInterface.dll
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.Properties.Resources.resources
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.dll
+E:\Document\Software design\Lastr\TetrisReturn\TheRandomizeMapPlugin\obj\Debug\TheRandomizeMapPlugin.pdb

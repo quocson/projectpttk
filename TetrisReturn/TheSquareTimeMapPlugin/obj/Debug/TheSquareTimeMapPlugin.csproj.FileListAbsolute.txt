@@ -68,3 +68,13 @@ E:\Document\Software design\Project\TetrisReturn\TheSquareTimeMapPlugin\obj\Debu
 E:\Document\Software design\Project\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
 E:\Document\Software design\Project\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.dll
 E:\Document\Software design\Project\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.pdb
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.dll
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\TheSquareTimeMapPlugin.pdb
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.dll
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\bin\Debug\MapInterface.pdb
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\ResolveAssemblyReference.cache
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.Properties.Resources.resources
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.read.1.tlog
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\GenerateResource.write.1.tlog
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.dll
+E:\Document\Software design\Lastr\TetrisReturn\TheSquareTimeMapPlugin\obj\Debug\TheSquareTimeMapPlugin.pdb

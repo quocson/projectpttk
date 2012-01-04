@@ -51,6 +51,7 @@ namespace TetrisReturn
         public void save(SaveDTO save)
         {
             XmlElement Goc = xmlDoc.CreateElement("Game");
+            xmlDoc.RemoveAll();
             xmlDoc.AppendChild(Goc);
             XmlElement Record = xmlDoc.CreateElement("Info");
             Record.SetAttribute("Theme", save.STheme);

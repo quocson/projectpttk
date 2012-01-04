@@ -130,7 +130,6 @@ namespace TetrisReturn
                 case 0://classic shape.
                     {
                         temp = new ClassicShape();
-                        
                     }
                     break;
 
@@ -139,6 +138,12 @@ namespace TetrisReturn
                         temp = new MultiShape();
                     }
                     break;
+                case 3://multi shape.
+                    if (Constants.r.Next(0, 2) == 0)
+                        temp = new ClassicShape();
+                    else
+                        temp = new MultiShape();
+                break;
 
                 //for exScreentend shape...
             }
@@ -209,6 +214,29 @@ namespace TetrisReturn
         }
 
         //remove line.
+        public void drawMap()
+        {
+            Graphics g = Graphics.FromImage(imageBuffer);
+
+            g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (21) * Constants.blockSize),
+                new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (21) * Constants.blockSize), GraphicsUnit.Pixel);
+            g.DrawImage(Constants.map.ImageMap, new Point(0, 0));
+            for (int i = 25; i >= 0; i--)
+            {
+                for (int j = 0; j < Constants.map.Column; j++)
+                {
+                    if (Constants.map.StatusMap[i, j] > -1)
+                    {
+                        g.DrawImage(Constants.theme.Blocks,
+                        new Rectangle(j * Constants.blockSize + 5 + Constants.blockDelta, (i - 4) * Constants.blockSize + 5 + Constants.blockDelta, Constants.blockSize - Constants.blockDelta, Constants.blockSize - Constants.blockDelta),
+                        new Rectangle((Constants.map.StatusMap[i, j]) * Constants.blockSize, 0, Constants.blockSize, Constants.blockSize),
+                        GraphicsUnit.Pixel);
+                    }
+                }
+            }
+            Refresh();
+            g.Dispose();
+        }
         public void removeLine(int line)
         {
 
