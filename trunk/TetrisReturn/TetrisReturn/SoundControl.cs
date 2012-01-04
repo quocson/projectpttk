@@ -17,7 +17,7 @@ namespace TetrisReturn
         {
             player = new SoundPlayer();
             a = System.Reflection.Assembly.GetExecutingAssembly();
-            s = a.GetManifestResourceStream("Tetris_Windows_Mobile.Resources.theme.wav");
+            s = a.GetManifestResourceStream("TetrisReturn.Resources.Theme.wav");
             theme = new SoundPlayer(s);
         }
 
@@ -54,7 +54,7 @@ namespace TetrisReturn
         public void playSoundAmazing()
         {
             player.Dispose();
-            s = a.GetManifestResourceStream("Tetris_Windows_Mobile.Resources.amazing.wav");
+            s = a.GetManifestResourceStream("TetrisReturn.Resources.amazing.wav");
             player = new SoundPlayer(s);
             try
             {

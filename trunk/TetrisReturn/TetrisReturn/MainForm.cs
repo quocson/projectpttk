@@ -294,6 +294,8 @@ namespace TetrisReturn
             sound = true;
             timer.Interval = 800;
             timer.Enabled = true;
+            if (sound)
+                soundControl.playSoundTheme();
         }
 
         private void timer_Tick(object sender, EventArgs e)
