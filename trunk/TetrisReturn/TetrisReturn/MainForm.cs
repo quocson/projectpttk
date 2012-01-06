@@ -84,6 +84,11 @@ namespace TetrisReturn
             set { newgame = value; }
         }
 
+        public SoundControl SoundControl
+        {
+            get { return soundControl; }
+        }
+
         private void AddEventHandler(Control ctl)
         {
             ctl.MouseDown += new MouseEventHandler(MainForm_MouseDown);
@@ -280,6 +285,8 @@ namespace TetrisReturn
 
         public void newGame()
         {
+            if (sound)
+                soundControl.playSoundTheme();
             gameControl.reset();
             imageButton3.Enabled = true;
             imageButton4.Enabled = true;
@@ -334,12 +341,24 @@ namespace TetrisReturn
                 {
                     timer.Enabled = false;
                     playing = false;
+
+                    if (sound)
+                        soundControl.playSoundGameOver();
                     gameOverAppear();
                 }
-                int dx = 0;
                 while (Constants.map.getFullLines().Count > 0)
                 {
-                    
+                    if(sound)
+                        switch(Constants.r.Next(0, 7))
+                        {
+                            case 0: soundControl.playSoundAmazing();break;
+                            case 1: soundControl.playSoundBrilliant();break;
+                            case 2: soundControl.playSoundClear();break;
+                            case 3: soundControl.playSoundExcellent();break;
+                            case 4: soundControl.playSoundVeryGood();break;
+                            case 5: soundControl.playSoundWonderful();break;
+                            case 6: soundControl.playSoundWow();break;
+                        }
                     showInformation2.SInfo = (++Constants.SaveInfo.ILine).ToString();
                     //add score
                     Constants.SaveInfo.IScore += Constants.scorePerLine;
@@ -348,7 +367,7 @@ namespace TetrisReturn
                     this.showInformation4.SInfo = Constants.SaveInfo.IScore.ToString();
 
                     int line = Constants.map.getFullLines().Pop();
-                    Constants.map.updateMap(line, ref dx);
+                    Constants.map.updateMap(line);
                     gameControl.removeLine(line);
                     if (Constants.map.getFullLines().Count == 0)
                         levelUp();
@@ -360,10 +379,20 @@ namespace TetrisReturn
         {
             if (Constants.SaveInfo.IScore <= Constants.SaveInfo.ILevel * Constants.SaveInfo.ILevel * 500)
                 return;
+            if (sound)
+                soundControl.playSoundLevelUp();
             Constants.map.reset();
             showInformation3.SInfo = (++Constants.SaveInfo.ILevel).ToString();
+            if (Constants.SaveInfo.ILevel == 40)
+            {
+                timer.Enabled = false;
+                playing = false;
+                if (sound) 
+                    soundControl.playSoundGameWin();
+                gameWinAppear();
+            }
             gameControl.reset();
-            timer.Interval = 800 - 50 * (Constants.SaveInfo.ILevel/5);
+            timer.Interval = 800 - 100 * (Constants.SaveInfo.ILevel/5);
         }
         private void pauseGame()
         {
@@ -388,44 +417,51 @@ namespace TetrisReturn
         private void imageButton1_MouseEnter(object sender, EventArgs e)
         {
             imageButton1.CText = Color.LightSeaGreen;
-            //sound here.
+            if (sound)
+                soundControl.playSoundHover();
         }
 
         private void imageButton2_MouseEnter(object sender, EventArgs e)
         {
 
             imageButton2.CText = Color.LightSeaGreen;
-            //sound here.
+            if (sound)
+                soundControl.playSoundHover();
         }
 
         private void imageButton3_MouseEnter(object sender, EventArgs e)
         {
             imageButton3.CText = Color.LightSeaGreen;
-            //sound here.
+            if (sound)
+                soundControl.playSoundHover();
         }
 
         private void imageButton4_MouseEnter(object sender, EventArgs e)
         {
             imageButton4.CText = Color.LightSeaGreen;
-            //sound here.
+            if (sound)
+                soundControl.playSoundHover();
         }
 
         private void imageButton5_MouseEnter(object sender, EventArgs e)
         {
             imageButton5.CText = Color.LightSeaGreen;
-            //sound here.
+            if (sound)
+                soundControl.playSoundHover();
         }
 
         private void imageButton6_MouseEnter(object sender, EventArgs e)
         {
             imageButton6.CText = Color.LightSeaGreen;
-            //sound here.
+            if (sound)
+                soundControl.playSoundHover();
         }
 
         private void imageButton7_MouseEnter(object sender, EventArgs e)
         {
             imageButton7.CText = Color.LightSeaGreen;
-            //sound here.
+            if (sound)
+                soundControl.playSoundHover();
         }
 
         private void MainForm_MouseMove(object sender, MouseEventArgs e)
@@ -683,6 +719,8 @@ namespace TetrisReturn
         private void imageButton1_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton1.CText = Color.Red;
+            if (sound)
+                soundControl.playSoundClick();
             newGame();
         }
 
@@ -701,6 +739,8 @@ namespace TetrisReturn
         {
             imageButton2.CText = Color.Red;
 
+            if (sound)
+                soundControl.playSoundClick();
 
             SaveLoad sl = new SaveLoad();
             SaveDTO sd = sl.load();
@@ -728,6 +768,8 @@ namespace TetrisReturn
         private void imageButton3_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton3.CText = Color.Red;
+            if (sound)
+                soundControl.playSoundClick();
             pauseGame();
             Constants.SaveInfo.ArrMap = Constants.map.StatusMap;
             Constants.SaveInfo.SMap = Constants.map.Name;
@@ -785,6 +827,8 @@ namespace TetrisReturn
         private void imageButton5_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton5.CText = Color.Red;
+            if (sound)
+                soundControl.playSoundClick();
             if (enableGhostShape)
             {
                 enableGhostShape = false;
@@ -808,6 +852,8 @@ namespace TetrisReturn
         {
 
             imageButton6.CText = Color.Red;
+            if (sound)
+                soundControl.playSoundClick();
         }
 
         private void imageButton6_MouseLeave(object sender, EventArgs e)

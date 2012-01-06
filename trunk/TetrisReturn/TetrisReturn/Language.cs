@@ -79,8 +79,8 @@ namespace TetrisReturn
             option = nodelist[9].Attributes[0].Value;
             win = nodelist[10].Attributes[0].Value;
             over = nodelist[11].Attributes[0].Value;
-            sound = nodelist[12].Attributes[0].Value;
-            ghost = nodelist[13].Attributes[0].Value;
+            ghost = nodelist[12].Attributes[0].Value;
+            sound = nodelist[13].Attributes[0].Value;
             loaddll = nodelist[14].Attributes[0].Value;
             loadconfig = nodelist[15].Attributes[0].Value;
             loadsave = nodelist[16].Attributes[0].Value;

@@ -78,6 +78,18 @@ namespace TetrisReturn.Properties {
             }
         }
         
+        internal static System.IO.UnmanagedMemoryStream Click {
+            get {
+                return ResourceManager.GetStream("Click", resourceCulture);
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream Dis_appear {
+            get {
+                return ResourceManager.GetStream("Dis_appear", resourceCulture);
+            }
+        }
+        
         internal static System.IO.UnmanagedMemoryStream Excellent {
             get {
                 return ResourceManager.GetStream("Excellent", resourceCulture);
@@ -93,6 +105,12 @@ namespace TetrisReturn.Properties {
         internal static System.IO.UnmanagedMemoryStream GameWin {
             get {
                 return ResourceManager.GetStream("GameWin", resourceCulture);
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream Hover {
+            get {
+                return ResourceManager.GetStream("Hover", resourceCulture);
             }
         }
         

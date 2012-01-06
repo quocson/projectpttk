@@ -234,6 +234,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\Wow.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Dis-appear.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Hover.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
