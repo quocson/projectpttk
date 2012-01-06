@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TheSketchThemePlugin.Properties {
+namespace TheOnePieceThemePlugin.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace TheSketchThemePlugin.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TheSketchThemePlugin.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TheOnePieceThemePlugin.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -82,7 +82,7 @@ namespace TheSketchThemePlugin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This theme&apos;s graphics look like it was be drawn by hand..
+        ///   Looks up a localized string similar to This theme has the graphics design like One Piece film.
         /// </summary>
         internal static string englishDescription {
             get {
@@ -105,7 +105,7 @@ namespace TheSketchThemePlugin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sketch_Block.ttf.
+        ///   Looks up a localized string similar to PirateKing.ttf.
         /// </summary>
         internal static string font {
             get {
@@ -156,7 +156,7 @@ namespace TheSketchThemePlugin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sketch.
+        ///   Looks up a localized string similar to One Piece.
         /// </summary>
         internal static string name {
             get {
@@ -179,7 +179,7 @@ namespace TheSketchThemePlugin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hinh anh trong theme nay giong nhu duoc ve bang tay..
+        ///   Looks up a localized string similar to Theme nay co hinh anh duoc lay tu phim One Piece.
         /// </summary>
         internal static string vietNameseDescription {
             get {

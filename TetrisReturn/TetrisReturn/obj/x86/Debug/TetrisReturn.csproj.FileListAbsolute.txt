@@ -194,3 +194,4 @@ E:\Document\Software design\Lastr\TetrisReturn\TetrisReturn\obj\x86\Debug\Genera
 E:\Document\Software design\NEWEWEWEWEWE\Lastr\TetrisReturn\TetrisReturn\bin\Debug\TetrisReturn.exe.config
 E:\Document\Software design\NEWEWEWEWEWE\Lastr\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.exe
 E:\Document\Software design\NEWEWEWEWEWE\Lastr\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.pdb
+C:\Users\HuuTai_it\Desktop\New folder (2)\TetrisReturn\TetrisReturn\obj\x86\Debug\TetrisReturn.g.resources

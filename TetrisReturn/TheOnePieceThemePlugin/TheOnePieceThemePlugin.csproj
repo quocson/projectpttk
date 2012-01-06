@@ -8,8 +8,8 @@
     <ProjectGuid>{896EA655-B996-4648-BF65-194B212DD17D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TheSketchThemePlugin</RootNamespace>
-    <AssemblyName>TheSketchThemePlugin</AssemblyName>
+    <RootNamespace>TheOnePieceThemePlugin</RootNamespace>
+    <AssemblyName>TheOnePieceThemePlugin</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,7 +47,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="TheSketchThemeInterface.cs" />
+    <Compile Include="TheOnePieceThemeInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ThemePluginInterface\ThemePluginInterface.csproj">

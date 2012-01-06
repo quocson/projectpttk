@@ -17,7 +17,7 @@ namespace TetrisReturn
         public const int xStart = blockSize * 7 + 6;//position x start of shape.
         public const int scorePerLine = 30;
         public static Random r = new Random(unchecked((int)DateTime.Now.Ticks));//static variable random.
-
+        public static SoundControl soundControl = new SoundControl();
         public static Map map = new Map();//static map of game.
         public static Theme theme = new Theme();//static theme of game.
         public static Language language = new Language();

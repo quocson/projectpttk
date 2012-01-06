@@ -27,9 +27,9 @@ namespace TetrisReturn
 
                 //sound.
                 if (checkBox1.Checked)
-                    mainForm.Sound = true;
+                    Constants.soundControl.Play = true;
                 else
-                    mainForm.Sound = false;
+                    Constants.soundControl.Play = false;
 
                 //ghost.
                 if (mainForm.NewGame)
@@ -101,8 +101,7 @@ namespace TetrisReturn
 
                 if (mainForm.Playing)
                     mainForm.resumeGame();
-                if (mainForm.Sound)
-                    mainForm.SoundControl.playSoundDis_appear();
+                Constants.soundControl.playSoundDis_appear();
                 disappear();
                 Close();
             }
@@ -111,8 +110,7 @@ namespace TetrisReturn
 
         private void Option_Shown(object sender, EventArgs e)
         {
-            if (mainForm.Sound)
-                mainForm.SoundControl.playSoundDis_appear();
+            Constants.soundControl.playSoundDis_appear();
             appear();
 
         }
