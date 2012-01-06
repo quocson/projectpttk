@@ -3,7 +3,7 @@
   <Game Pause="Pause" />
   <Game Resume="Resume" />
   <Game Save="Save game" />
-  <Game Continue="Continue" />
+  <Game Continue="Last Game" />
   <Game Score="Score" />
   <Game Help="Help" />
   <Game About="About" />
@@ -39,4 +39,5 @@
   <Game WinConfirm="You Win! Do you want to play again?" />
   <Game OverConfirm="Game Over! Do you want to play again?" />
   <Game NewHighScore="New High Score!" />
+  <Game Stop="Stop" />
 </Language>

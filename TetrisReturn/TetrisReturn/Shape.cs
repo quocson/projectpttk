@@ -141,6 +141,8 @@ namespace TetrisReturn
         //check shape can move left.
         public bool canMoveLeft()
         {
+            if (!canFall())
+                return false;
             int n = cube.Count;
             for (int i = 0; i < n; i++)
             {
@@ -153,6 +155,8 @@ namespace TetrisReturn
         //check shape can move right.
         public bool canMoveRight()
         {
+            if (!canFall())
+                return false;
             int n = cube.Count;
             for (int i = 0; i < n; i++)
             {

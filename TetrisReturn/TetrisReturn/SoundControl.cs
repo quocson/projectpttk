@@ -8,7 +8,6 @@ namespace TetrisReturn
 {
     public class SoundControl : IDisposable
     {
-        private SoundPlayer theme;
         private SoundPlayer amazing;
         private SoundPlayer brilliant;
         private SoundPlayer clear;
@@ -26,7 +25,6 @@ namespace TetrisReturn
 
         public SoundControl()
         {
-            theme = new SoundPlayer(Properties.Resources.Theme);
             amazing = new SoundPlayer(Properties.Resources.Amazing);
             brilliant = new SoundPlayer(Properties.Resources.Brilliant);
             clear = new SoundPlayer(Properties.Resources.Clear);
@@ -46,19 +44,11 @@ namespace TetrisReturn
         public bool Play
         {
             get { return play; }
-            set 
-            { play = value; }
-        }
-
-        public void playSoundTheme()
-        {
-            if(play)
-                theme.PlayLooping();
+            set { play = value; }
         }
 
         public void Dispose()
         {
-            theme.Dispose();
             amazing.Dispose();
             brilliant.Dispose();
             clear.Dispose();
@@ -73,11 +63,6 @@ namespace TetrisReturn
             wonderful.Dispose();
             wow.Dispose();
             GC.SuppressFinalize(this);
-        }
-
-        public void stopSoundTheme()
-        {
-            theme.Stop();
         }
 
         public void playSoundAmazing()
