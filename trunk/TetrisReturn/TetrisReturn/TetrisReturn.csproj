@@ -202,7 +202,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Amazing.wav" />
+    <EmbeddedResource Include="Resources\Amazing.wav" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Brilliant.wav" />

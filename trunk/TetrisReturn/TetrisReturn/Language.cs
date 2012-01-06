@@ -49,6 +49,7 @@ namespace TetrisReturn
         public string winConfirm;
         public string overConfirm;
         public string newHighScore;
+        public string stop;
 
         public Language()
         {
@@ -107,6 +108,7 @@ namespace TetrisReturn
             winConfirm = nodelist[37].Attributes[0].Value;
             overConfirm = nodelist[38].Attributes[0].Value;
             newHighScore = nodelist[39].Attributes[0].Value;
+            stop = nodelist[40].Attributes[0].Value;
 
         }
 

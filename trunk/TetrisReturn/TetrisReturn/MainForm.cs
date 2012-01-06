@@ -152,7 +152,10 @@ namespace TetrisReturn
             showInformation3.ImgBack = Constants.theme.Informations;
             showInformation4.ImgBack = Constants.theme.Informations;
             imageButton1.SText = Constants.language.newgame;
-            imageButton2.SText = Constants.language.conti;
+            if(newgame)
+                imageButton2.SText = Constants.language.stop;
+            else
+                imageButton2.SText = Constants.language.conti;
             imageButton3.SText = Constants.language.save;
             if(pause)
                 imageButton4.SText = Constants.language.pause;
@@ -270,8 +273,8 @@ namespace TetrisReturn
 
         public void newGame()
         {
-            Constants.soundControl.playSoundTheme();
             gameControl.reset();
+            imageButton2.SText = Constants.language.stop;
             imageButton3.Enabled = true;
             imageButton4.Enabled = true;
             imageButton5.Enabled = true;
@@ -706,17 +709,28 @@ namespace TetrisReturn
         private void imageButton2_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton2.CText = Color.Red;
-
             Constants.soundControl.playSoundClick();
-
-            SaveLoad sl = new SaveLoad();
-            SaveDTO sd = sl.load();
-            Types.AvailableMap lastMap = Constants.mapService.AvailableMaps.Find(sd.SMap);
-            Constants.setMap(lastMap.Instance.Map);
-            Constants.SaveInfo = sd;
-            if (Constants.SaveInfo.IPiece > 0)
+            if (newgame)
             {
-                continueGame();
+                imageButton2.SText = Constants.language.conti;
+                timer.Enabled = false;
+                playing = false;
+                newgame = false;
+            }
+            else
+            {
+                imageButton2.SText = Constants.language.stop;
+
+
+                SaveLoad sl = new SaveLoad();
+                SaveDTO sd = sl.load();
+                Types.AvailableMap lastMap = Constants.mapService.AvailableMaps.Find(sd.SMap);
+                Constants.setMap(lastMap.Instance.Map);
+                Constants.SaveInfo = sd;
+                if (Constants.SaveInfo.IPiece > 0)
+                {
+                    continueGame();
+                }
             }
         }
 
