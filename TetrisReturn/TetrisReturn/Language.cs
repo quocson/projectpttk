@@ -50,7 +50,7 @@ namespace TetrisReturn
         public string overConfirm;
         public string newHighScore;
         public string stop;
-
+        public string aboutinfo;
         public Language()
         {
             xmlDoc = new XmlDocument();
@@ -109,7 +109,7 @@ namespace TetrisReturn
             overConfirm = nodelist[38].Attributes[0].Value;
             newHighScore = nodelist[39].Attributes[0].Value;
             stop = nodelist[40].Attributes[0].Value;
-
+            aboutinfo = nodelist[41].Attributes[0].Value;
         }
 
     }

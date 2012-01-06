@@ -6,7 +6,7 @@
   <Game Continue="Last Game" />
   <Game Score="Score" />
   <Game Help="Help" />
-  <Game About="About" />
+  <Game About="ABOUT" />
   <Game Exit="Exit" />
   <Game Option="Option" />
   <Game Win="You are Winner!" />
@@ -40,4 +40,7 @@
   <Game OverConfirm="Game Over! Do you want to play again?" />
   <Game NewHighScore="New High Score!" />
   <Game Stop="Stop" />
+  <Game AboutInfo="Game Studio of University of Science.
+Developer: Nguyen Le Quoc Son - 0912397
+           Huynh Huu Tai - 0912403" />
 </Language>

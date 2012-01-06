@@ -57,6 +57,9 @@ namespace TetrisReturn
                 Refresh();
                 System.Threading.Thread.Sleep(10);
             }
+            this.showInformation1.ImgBack = new Bitmap(2, 2);
+            this.showInformation1.FTitle = Constants.getFont(50);
+            Refresh();
         }
 
         private void disappear()

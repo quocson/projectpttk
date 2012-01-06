@@ -16,12 +16,27 @@ namespace TetrisReturn
         public About(MainForm mainForm)
         {
             InitializeComponent();
-            this.mainForm = mainForm;
-        }
 
+            this.mainForm = mainForm;
+            AddEventHandler(this.showInformation1);
+            AddEventHandler(this.showInformation2);
+            this.showInformation1.ImgBack = new Bitmap(5, 5);
+            this.showInformation2.ImgBack = new Bitmap(5, 5);
+            this.showInformation1.FTitle = Constants.getFont(50);
+            this.showInformation1.STitle = Constants.language.about;
+            this.showInformation2.FTitle = Constants.getFont(20);
+            this.showInformation2.STitle = Constants.language.aboutinfo;
+            Refresh();
+        }
+        private void AddEventHandler(Control ctl)
+        {
+            ctl.MouseDown += new MouseEventHandler(About_MouseDown);
+            ctl.MouseUp += new MouseEventHandler(About_MouseUp);
+        }
         private void About_Shown(object sender, EventArgs e)
         {
             Constants.soundControl.playSoundDis_appear();
+
             appear();
         }
 
@@ -39,6 +54,8 @@ namespace TetrisReturn
                 System.Threading.Thread.Sleep(10);
                 Refresh();
             }
+            //=========================================================================
+            
         }
 
         private void disappear()
@@ -53,6 +70,7 @@ namespace TetrisReturn
         protected override void OnPaint(PaintEventArgs e)
         {
             e.Graphics.DrawImage(Constants.theme.AboutBackground, 0, 0);
+            
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
@@ -75,5 +93,7 @@ namespace TetrisReturn
                 Close();
             }
         }
+
+        
     }
 }

@@ -102,12 +102,22 @@ namespace TetrisReturn
             FTitle = new Font("Arial", 15);
 
             FInfo = new Font("Arial", 15);
-            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;
             UpdateStyles();
+        }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x00000020; //WS_EX_TRANSPARENT
+                return cp;
+            }
         }
         protected override void OnPaintBackground(PaintEventArgs e)
         {
-            //base.OnPaintBackground(e);
+            base.OnPaintBackground(e);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
