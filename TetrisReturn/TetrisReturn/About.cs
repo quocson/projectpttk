@@ -21,6 +21,8 @@ namespace TetrisReturn
 
         private void About_Shown(object sender, EventArgs e)
         {
+            if (mainForm.Sound)
+                mainForm.SoundControl.playSoundDis_appear();
             appear();
         }
 
@@ -69,6 +71,8 @@ namespace TetrisReturn
         {
             if ((Math.Abs(e.X - toClose.X) < 100) && ((e.Y - toClose.Y) >= 200))
             {
+                if (mainForm.Sound)
+                    mainForm.SoundControl.playSoundDis_appear();
                 disappear();
                 Close();
             }

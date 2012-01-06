@@ -24,6 +24,8 @@ namespace TetrisReturn
         {     
             if ((Math.Abs(e.X - toClose.X) < 100) && ((toClose.Y - e.Y) >= 200))
             {
+                if (mainForm.Sound)
+                    mainForm.SoundControl.playSoundDis_appear();
                 disappear();
                 Close();
             }
@@ -32,6 +34,8 @@ namespace TetrisReturn
 
         private void HighScores_Shown(object sender, EventArgs e)
         {
+            if (mainForm.Sound)
+                mainForm.SoundControl.playSoundDis_appear();
             appear();
         }
 

@@ -29,11 +29,15 @@ namespace TetrisReturn
         {
 
             imageButton1.CText = Color.LightSeaGreen;
+            if (mainForm.Sound)
+                mainForm.SoundControl.playSoundHover();
         }
 
         private void imageButton1_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton2.CText = Color.Red;
+            if (mainForm.Sound)
+                mainForm.SoundControl.playSoundClick();
             mainForm.newGame();
             disAppear();
             this.Close();
@@ -55,6 +59,8 @@ namespace TetrisReturn
         private void imageButton2_MouseUp(object sender, MouseEventArgs e)
         {
             imageButton2.CText = Color.Red;
+            if (mainForm.Sound)
+                mainForm.SoundControl.playSoundClick();
             mainForm.NewGame = false;
             mainForm.Playing = false;
             disAppear();
@@ -66,6 +72,8 @@ namespace TetrisReturn
         {
 
             imageButton2.CText = Color.LightSeaGreen;
+            if (mainForm.Sound)
+                mainForm.SoundControl.playSoundHover();
         }
 
         private void imageButton2_MouseLeave(object sender, EventArgs e)

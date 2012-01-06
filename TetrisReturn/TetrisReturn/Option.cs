@@ -24,7 +24,6 @@ namespace TetrisReturn
         {
             if ((Math.Abs(e.Y - toClose.Y) < 100) && ((toClose.X - e.X) >= 200))
             {
-                disappear();
 
                 //sound.
                 if (checkBox1.Checked)
@@ -102,6 +101,9 @@ namespace TetrisReturn
 
                 if (mainForm.Playing)
                     mainForm.resumeGame();
+                if (mainForm.Sound)
+                    mainForm.SoundControl.playSoundDis_appear();
+                disappear();
                 Close();
             }
 
@@ -109,6 +111,8 @@ namespace TetrisReturn
 
         private void Option_Shown(object sender, EventArgs e)
         {
+            if (mainForm.Sound)
+                mainForm.SoundControl.playSoundDis_appear();
             appear();
 
         }

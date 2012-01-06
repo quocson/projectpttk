@@ -106,7 +106,7 @@ namespace MapPluginInterface
         }
 
         //update the map.
-        public void updateMap(int rol, ref int dxLine)
+        public void updateMap(int rol)
         {
             int i, j;
             bool[] unfall = new bool[col];
@@ -118,9 +118,11 @@ namespace MapPluginInterface
                     if (statusMap[i, j] == -2)
                         unfall[j] = true;
                     if (i != 0 && !unfall[j])
-                        statusMap[i, j] = statusMap[i - 1, j];
+                        if (statusMap[i - 1, j] == -2)
+                            statusMap[i, j] = -1;
+                        else
+                            statusMap[i, j] = statusMap[i - 1, j];
                 }
-            dxLine++;
         }
         //get full-lines numbers
         public Stack<int> getFullLines()
