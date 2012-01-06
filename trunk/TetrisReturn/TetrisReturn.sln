@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemePluginInterface", "The
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheTransformerThemePlugin", "TheTransformerThemePlugin\TheTransformerThemePlugin.csproj", "{19B86768-C142-458D-9B3B-08B34261B3BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSketchThemePlugin", "TheSketchThemePlugin\TheSketchThemePlugin.csproj", "{896EA655-B996-4648-BF65-194B212DD17D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOnePieceThemePlugin", "TheOnePieceThemePlugin\TheOnePieceThemePlugin.csproj", "{896EA655-B996-4648-BF65-194B212DD17D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheStairwayToHeavenMapPlugin", "TheStairwayToHeavenMapPlugin\TheStairwayToHeavenMapPlugin.csproj", "{20DBF990-FB39-45DF-91FF-65FD5B16462A}"
 EndProject
