@@ -26,6 +26,7 @@ namespace TetrisReturn
         public static PrivateFontCollection fonts = null;
         public static FontFamily family = null;
         private static SaveDTO saveInfo = new SaveDTO();
+        
         public static TetrisReturn.SaveDTO SaveInfo
         {
             get { return saveInfo; }
@@ -49,7 +50,6 @@ namespace TetrisReturn
         {
             theme.Dispose();
             theme = new Theme(t);
-            saveInfo.STheme = theme.Name;
 
             if (System.IO.File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\Fonts\" + theme.Font))
             {

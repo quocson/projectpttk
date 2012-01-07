@@ -51,6 +51,10 @@ namespace TetrisReturn
         public string newHighScore;
         public string stop;
         public string aboutinfo;
+        public string saved;
+        public string captionSaved;
+        public string high;
+
         public Language()
         {
             xmlDoc = new XmlDocument();
@@ -110,6 +114,9 @@ namespace TetrisReturn
             newHighScore = nodelist[39].Attributes[0].Value;
             stop = nodelist[40].Attributes[0].Value;
             aboutinfo = nodelist[41].Attributes[0].Value;
+            saved = nodelist[42].Attributes[0].Value;
+            captionSaved = nodelist[43].Attributes[0].Value;
+            high = nodelist[44].Attributes[0].Value;
         }
 
     }

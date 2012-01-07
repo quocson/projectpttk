@@ -29,13 +29,12 @@ namespace TetrisReturn
             xmlDoc.Load(sPath);
             XmlNodeList nodelist = xmlDoc.SelectNodes("Game/Info");
             XmlNode node = nodelist[0];
-            res.STheme = node.Attributes[0].Value;
-            res.SMap = node.Attributes[1].Value;
-            res.IShapeMode = int.Parse(node.Attributes[2].Value);
-            res.ILevel = int.Parse(node.Attributes[3].Value);
-            res.IScore = int.Parse(node.Attributes[4].Value);
-            res.ILine = int.Parse(node.Attributes[5].Value);
-            res.IPiece = int.Parse(node.Attributes[6].Value);
+            res.SMap = node.Attributes[0].Value;
+            res.IShapeMode = int.Parse(node.Attributes[1].Value);
+            res.ILevel = int.Parse(node.Attributes[2].Value);
+            res.IScore = int.Parse(node.Attributes[3].Value);
+            res.ILine = int.Parse(node.Attributes[4].Value);
+            res.IPiece = int.Parse(node.Attributes[5].Value);
 
             for (int i = 0; i < Constants.map.Row; i++)
             {
@@ -54,7 +53,6 @@ namespace TetrisReturn
             xmlDoc.RemoveAll();
             xmlDoc.AppendChild(Goc);
             XmlElement Record = xmlDoc.CreateElement("Info");
-            Record.SetAttribute("Theme", save.STheme);
             Record.SetAttribute("Map", save.SMap);
             Record.SetAttribute("ShapeMode", save.IShapeMode.ToString());
             Record.SetAttribute("Level", save.ILevel.ToString());

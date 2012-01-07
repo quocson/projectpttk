@@ -102,6 +102,7 @@ namespace TetrisReturn
                 if (mainForm.Playing)
                     mainForm.resumeGame();
                 Constants.soundControl.playSoundDis_appear();
+                mainForm.GameControl.drawMap();
                 disappear();
                 Close();
             }

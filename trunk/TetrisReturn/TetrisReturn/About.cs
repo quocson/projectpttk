@@ -43,14 +43,14 @@ namespace TetrisReturn
         private void appear()
         {
             int i;
-            for (i = 1; i <= 180; i++)
+            for (i = 1; i <= 90; i++)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 4 * i);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 8 * i);
                 Refresh();
             }
-            for (i = 180; i >= 157; i--)
+            for (i = 90; i >= 78; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 4 * i);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 8 * i);
                 System.Threading.Thread.Sleep(10);
                 Refresh();
             }
@@ -60,9 +60,9 @@ namespace TetrisReturn
 
         private void disappear()
         {
-            for (int i = 157; i >= 1; i--)
+            for (int i = 78; i >= 1; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 4 * i);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 720 - 8 * i);
                 Refresh();
             }
         }

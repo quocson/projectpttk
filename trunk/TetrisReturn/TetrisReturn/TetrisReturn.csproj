@@ -85,6 +85,7 @@
     <Compile Include="Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
+    <Compile Include="Highscore.cs" />
     <Compile Include="HighScores.cs">
       <SubType>Form</SubType>
     </Compile>
