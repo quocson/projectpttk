@@ -408,6 +408,7 @@ namespace TetrisReturn
                 return;
             Constants.soundControl.playSoundLevelUp();
             Constants.map.reset();
+            gameControl.lvup();
             showInformation3.SInfo = (++Constants.SaveInfo.ILevel).ToString();
             if (Constants.SaveInfo.ILevel == 30)
             {

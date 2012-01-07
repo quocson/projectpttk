@@ -46,4 +46,5 @@ Developer: Nguyen Le Quoc Son - 0912397
   <Game Saved="Game was saved!" />
   <Game CaptionSaved="Save game" />
   <Game HighScore="High Score" />
+  <Game LevelUp="LEVEL UP" />
 </Language>
