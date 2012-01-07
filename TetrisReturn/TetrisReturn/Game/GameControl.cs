@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 
 namespace TetrisReturn
 {
@@ -244,13 +246,90 @@ namespace TetrisReturn
             Refresh();
             g.Dispose();
         }
+        public void lvup()
+        {
+            Graphics g = Graphics.FromImage(imageBuffer);
+            for (int i = 0; i < 5; i++)
+            {
+                SizeF sz = g.MeasureString(Constants.language.lvup, Constants.getFont(60));
+                g.DrawImage(getImgFromTxt(Constants.language.lvup, Constants.getFont(60), Color.Yellow), new Point((this.Width - (int)sz.Width) / 2, (this.Height - (int)sz.Height) / 2));
+
+                Refresh();
+                System.Threading.Thread.Sleep(350);
+                g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (22) * Constants.blockSize),
+                        new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (22) * Constants.blockSize), GraphicsUnit.Pixel);
+                g.DrawImage(Constants.map.ImageMap, new Point(0, 0));
+                Refresh();
+            }
+            g.Dispose();
+        }
+        private Image getImgFromTxt(string SText, Font FText, Color CStroke)
+        {
+            Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
+            if (FText == null || SText == null)
+                return bmpOut;
+            using (Graphics g = Graphics.FromHwnd(IntPtr.Zero))
+            {
+                SizeF sz = g.MeasureString(SText, FText);
+                Bitmap bmp = new Bitmap((int)sz.Width, (int)sz.Height);
+                Graphics gBmp = Graphics.FromImage(bmp);
+                SolidBrush brBack = new SolidBrush(Color.FromArgb(50, CStroke.R, CStroke.G, CStroke.B));
+                Brush BText = new LinearGradientBrush(new Rectangle(0, 0, (int)sz.Width, (int)sz.Height), Color.Red, Color.Blue, 90);
+                using (BText)
+                {
+                    gBmp.SmoothingMode = SmoothingMode.HighQuality;
+                    gBmp.InterpolationMode = InterpolationMode.HighQualityBilinear;
+                    gBmp.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
+
+                    gBmp.DrawString(SText, FText, brBack, 0, 0);
+
+                    // make bitmap we will return.
+                    bmpOut = new Bitmap(bmp.Width , bmp.Height );
+                    using (Graphics gBmpOut = Graphics.FromImage(bmpOut))
+                    {
+                        gBmpOut.SmoothingMode = SmoothingMode.HighQuality;
+                        gBmpOut.InterpolationMode = InterpolationMode.HighQualityBilinear;
+                        gBmpOut.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
+
+                        // smear image of background of text about to make blurred background "halo"
+                        for (int x = 0; x <= 5; x++)
+                            for (int y = 0; y <= 5; y++)
+                                gBmpOut.DrawImageUnscaled(bmp, x, y);
+
+                        // draw actual text
+                        gBmpOut.DrawString(SText, FText, BText, 5 / 2, 5 / 2);
+                    }
+                }
+            }
+
+            return bmpOut;
+        }
         public void removeLine(int line)
         {
-
             Graphics g = Graphics.FromImage(imageBuffer);
+            for (int i = 0; i < 3; i++)
+            {
+                g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5 + (line - 4) * Constants.blockSize, Constants.map.Column * Constants.blockSize, Constants.blockSize),
+                    new Rectangle(440, 85 + (line - 4) * Constants.blockSize, Constants.map.Column * Constants.blockSize, Constants.blockSize), GraphicsUnit.Pixel);
+                g.DrawImage(Constants.map.ImageMap, new Point(0, 0));
+                Refresh();
+                System.Threading.Thread.Sleep(200);
+                for (int j = 0; j < Constants.map.Column; j++)
+                {
+                    if (Constants.map.StatusMap[line, j] != -2)
+                    {
+                        g.DrawImage(Constants.theme.Blocks,
+                        new Rectangle(j * Constants.blockSize + 6, (line - 4) * Constants.blockSize + 6, Constants.blockSize - Constants.blockDelta, Constants.blockSize - Constants.blockDelta),
+                        new Rectangle(Constants.blockSize, Constants.blockSize, Constants.blockSize, Constants.blockSize),
+                        GraphicsUnit.Pixel);
+                    }
+                }
 
+                Refresh();
+                System.Threading.Thread.Sleep(200);
+            }
             g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize),
-                new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize), GraphicsUnit.Pixel);
+                    new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize), GraphicsUnit.Pixel);
             g.DrawImage(Constants.map.ImageMap, new Point(0, 0));
             for (int i = line ; i >= 0; i--)
             {
@@ -259,7 +338,7 @@ namespace TetrisReturn
                     if (Constants.map.StatusMap[i, j] > -1)
                     {
                         g.DrawImage(Constants.theme.Blocks,
-                        new Rectangle(j * Constants.blockSize + 5 + Constants.blockDelta, (i - 4) * Constants.blockSize + 5 + Constants.blockDelta, Constants.blockSize - Constants.blockDelta, Constants.blockSize - Constants.blockDelta),
+                        new Rectangle(j * Constants.blockSize + 6, (i - 4) * Constants.blockSize + 6, Constants.blockSize - Constants.blockDelta, Constants.blockSize - Constants.blockDelta),
                         new Rectangle((Constants.map.StatusMap[i, j]) * Constants.blockSize, 0, Constants.blockSize, Constants.blockSize),
                         GraphicsUnit.Pixel);
                     }
