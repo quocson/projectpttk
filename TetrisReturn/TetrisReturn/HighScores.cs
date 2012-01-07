@@ -18,6 +18,8 @@ namespace TetrisReturn
         {
             InitializeComponent();
             this.mainForm = mainForm;
+            AddEventHandler(this.listView1);
+            AddEventHandler(this.showInformation1);
         }
 
         private void HighScores_MouseUp(object sender, MouseEventArgs e)
@@ -46,14 +48,14 @@ namespace TetrisReturn
         private void appear()
         {
             int i;
-            for (i = 1; i <= 180; i++)
+            for (i = 1; i <= 90; i++)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 4 * i - 500);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 8 * i - 500);
                 Refresh();
             }
-            for (i = 180; i >= 157; i--)
+            for (i = 90; i >= 78; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 4 * i - 500);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 8 * i - 500);
                 System.Threading.Thread.Sleep(10);
                 Refresh();
             }
@@ -61,9 +63,9 @@ namespace TetrisReturn
 
         private void disappear()
         {
-            for (int i = 157; i >= 1; i--)
+            for (int i = 78; i >= 1; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 4 * i - 500);
+                this.SetDesktopLocation(mainForm.Location.X + 240, mainForm.Location.Y + 8 * i - 500);
                 Refresh();
             }
         }
@@ -74,6 +76,36 @@ namespace TetrisReturn
 
         protected override void OnPaintBackground(PaintEventArgs e)
         {
+        }
+        private void AddEventHandler(Control ctl)
+        {
+            ctl.MouseDown += new MouseEventHandler(HighScores_MouseDown);
+            ctl.MouseUp += new MouseEventHandler(HighScores_MouseUp);
+        }
+        private void HighScores_Load(object sender, EventArgs e)
+        {
+
+            System.Drawing.Font f = Constants.getFont(20);
+            this.showInformation1.ImgBack = new Bitmap(2,2);
+
+            showInformation1.FTitle = f;
+            showInformation1.STitle = Constants.language.high;
+            showInformation1.CText = Color.CadetBlue;
+            f = Constants.getFont(10);
+            listView1.Font = f;
+            HighScore hg = new HighScore();
+            SaveDTO[] slist = hg.readRecords();
+            for (int i = 0; i < 10; i++)
+            {
+                ListViewItem item = new ListViewItem((i + 1).ToString());
+                item.SubItems.Add(slist[i].IScore.ToString());
+                item.SubItems.Add(slist[i].ILevel.ToString());
+                item.SubItems.Add(slist[i].ILine.ToString());
+                item.SubItems.Add(slist[i].IPiece.ToString());
+                this.listView1.Items.Add(item);
+
+
+            }
         }
 
     }

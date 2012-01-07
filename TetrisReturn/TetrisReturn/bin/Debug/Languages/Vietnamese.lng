@@ -3,7 +3,7 @@
   <Game Pause="Tam Dung" />
   <Game Resume="Tiep Tuc" />
   <Game Save="Luu" />
-  <Game Continue="Continue" />
+  <Game Continue="Choi Tiep" />
   <Game Score="Diem" />
   <Game Help="Tro Giup" />
   <Game About="Thong Tin" />
@@ -24,7 +24,7 @@
   <Game Shape2="Choi voi loai nhiu loai hinh moi" />
   <Game Up="Phim len" />
   <Game Up1="Su dung de xoay hinh" />
-  <Game Up2="Su dung de tao ra ngau nhien mot hinh moi" />
+  <Game Up2="Su dung de tao ngau nhien mot hinh moi" />
   <Game Language1="Tieng Anh" />
   <Game Language2="Tieng Viet" />
   <Game CaptionLoadDLL="Mat ta ca tap tin!" />
@@ -34,10 +34,16 @@
   <Game Line="So dong" />
   <Game Piece="So Hinh" />
   <Game ExitConfirm="Ban thuc su muon thoat?" />
-  <Game Yes="Thoat" />
+  <Game Yes="Dong Y" />
   <Game No="Khong" />
   <Game WinConfirm="Ban da thang! Tiep tuc tro choi moi?" />
   <Game OverConfirm="Ban da thua! Tiep tuc tro choi moi?" />
   <Game NewHighScore="Diem cao moi!" />
   <Game Stop="Dung Choi" />
+  <Game AboutInfo="Game Studio of University of Science.
+Developer: Nguyen Le Quoc Son - 0912397
+           Huynh Huu Tai - 0912403" />
+  <Game Saved="Tro choi da duoc luu!" />
+  <Game CaptionSaved="Luu tro choi" />
+  <Game HighScore="Diem Cao" />
 </Language>

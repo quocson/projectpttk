@@ -37,6 +37,11 @@ namespace TetrisReturn
         {
             get { return currShape; }
         }
+        public Shape GhostShape
+        {
+            get { return ghostShape; }
+            set { ghostShape = value; }
+        }
 
         //get next shape.
         public Shape NextShape
@@ -127,23 +132,25 @@ namespace TetrisReturn
 
             switch (modeShape)
             {
-                case 0://classic shape.
+                case 1://classic shape.
                     {
                         temp = new ClassicShape();
                     }
                     break;
 
-                case 1://multi shape.
+                case 2://multi shape.
                     {
                         temp = new MultiShape();
                     }
                     break;
                 case 3://multi shape.
-                    if (Constants.r.Next(0, 2) == 0)
-                        temp = new ClassicShape();
-                    else
-                        temp = new MultiShape();
-                break;
+                    {
+                        if (Constants.r.Next(0, 2) == 0)
+                            temp = new ClassicShape();
+                        else
+                            temp = new MultiShape();
+                    }
+                    break;
 
                 //for exScreentend shape...
             }
@@ -218,8 +225,8 @@ namespace TetrisReturn
         {
             Graphics g = Graphics.FromImage(imageBuffer);
 
-            g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (21) * Constants.blockSize),
-                new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (21) * Constants.blockSize), GraphicsUnit.Pixel);
+            g.DrawImage(Constants.theme.MainBackground, new Rectangle(0, 0, Constants.map.Column * Constants.blockSize + 12, (22) * Constants.blockSize + 10),
+                new Rectangle(435, 80, Constants.map.Column * Constants.blockSize + 12, (22) * Constants.blockSize + 10), GraphicsUnit.Pixel);
             g.DrawImage(Constants.map.ImageMap, new Point(0, 0));
             for (int i = 25; i >= 0; i--)
             {

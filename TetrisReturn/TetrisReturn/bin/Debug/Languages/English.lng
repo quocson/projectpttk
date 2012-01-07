@@ -43,4 +43,7 @@
   <Game AboutInfo="Game Studio of University of Science.
 Developer: Nguyen Le Quoc Son - 0912397
            Huynh Huu Tai - 0912403" />
+  <Game Saved="Game was saved!" />
+  <Game CaptionSaved="Save game" />
+  <Game HighScore="High Score" />
 </Language>

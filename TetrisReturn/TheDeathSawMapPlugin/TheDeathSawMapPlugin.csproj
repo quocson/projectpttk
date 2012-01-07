@@ -55,10 +55,6 @@
       <Project>{BF092A8C-6205-4F2A-9D9E-5FD98DF482F4}</Project>
       <Name>MapPluginInterface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TetrisReturn\TetrisReturn.csproj">
-      <Project>{4A76CCA0-D520-4E2F-9DA0-39258A235BE4}</Project>
-      <Name>TetrisReturn</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

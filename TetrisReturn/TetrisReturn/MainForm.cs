@@ -261,9 +261,39 @@ namespace TetrisReturn
                 }
         }
 
+        private void saveConfig()
+        {
+            Config config = new Config();
+
+            //sound.
+            config.BSound = Constants.soundControl.Play;
+
+            //theme.
+            config.STheme = Constants.theme.Name;
+
+            //map.
+            config.SMap = Constants.map.Name;
+
+            //ghost.
+            config.BGhost = enableGhostShape;
+
+            //language.
+            config.SLanguage = languageDisplay;
+
+            //mode shape.
+            config.ModeShape = modeShape;
+
+            //arrow up.
+            config.ArrowUp = arrowUp;
+
+            config.save();
+
+        }
+
         //exit game.
         public void exitGame()
         {
+            saveConfig();
             //dispose element.
             Constants.themeService.closeThemes();
             Constants.mapService.closeMaps();
@@ -279,6 +309,11 @@ namespace TetrisReturn
             imageButton4.Enabled = true;
             imageButton5.Enabled = true;
             gameControl.createShape(modeShape);
+            Constants.SaveInfo.ILine = 0;
+            Constants.SaveInfo.ILevel = 1;
+            Constants.SaveInfo.IPiece = 0;
+            Constants.SaveInfo.IScore = 0;
+
             showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
             showInformation2.SInfo = (Constants.SaveInfo.ILine).ToString();
             showInformation3.SInfo = (Constants.SaveInfo.ILevel).ToString();
@@ -286,27 +321,27 @@ namespace TetrisReturn
             nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
             newgame = true;
-            timer.Interval = 800;
+            timer.Interval = 600;
             timer.Enabled = true;
         }
+
         public void continueGame()
         {
 
             imageButton3.Enabled = true;
             imageButton4.Enabled = true;
             imageButton5.Enabled = true;
-            gameControl.createShape(modeShape);
-
             
             showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
             showInformation2.SInfo = (Constants.SaveInfo.ILine).ToString();
             showInformation3.SInfo = (Constants.SaveInfo.ILevel).ToString();
             showInformation4.SInfo = (Constants.SaveInfo.IScore).ToString();
-            nextShape1.ShapeNext = gameControl.NextShape;
             playing = true;
             newgame = true;
-            timer.Interval = timer.Interval = 800 - 50 * (Constants.SaveInfo.ILevel / 5); 
+            timer.Interval = timer.Interval = 600 - 50 * (Constants.SaveInfo.ILevel / 5); 
             timer.Enabled = true;
+            gameControl.createShape(modeShape);
+            nextShape1.ShapeNext = gameControl.NextShape;
             gameControl.drawMap();
         }
         
@@ -315,45 +350,56 @@ namespace TetrisReturn
             gameControl.refresh();
             if (!gameControl.currShapeFall(enableGhostShape))
             {
-                gameControl.lockShape();
-                gameControl.createShape(modeShape);
-                showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
+                newShape();
 
-                nextShape1.ShapeNext = gameControl.NextShape;
-                if (Constants.map.checkOverflow())
+            }
+        }
+
+        private void newShape()
+        {
+
+            gameControl.lockShape();
+            gameControl.createShape(modeShape);
+            showInformation1.SInfo = (++Constants.SaveInfo.IPiece).ToString();
+
+            nextShape1.ShapeNext = gameControl.NextShape;
+            if (Constants.map.checkOverflow())
+            {
+                timer.Enabled = false;
+                playing = false;
+                //game over.
+                newgame = false;
+                imageButton4.Enabled = false;
+                imageButton2.SText = Constants.language.conti;
+                Constants.soundControl.playSoundGameOver();
+                HighScore hg = new HighScore();
+                hg.saveRecords(Constants.SaveInfo);
+                gameOverAppear();
+            }
+            while (Constants.map.getFullLines().Count > 0)
+            {
+                switch (Constants.r.Next(0, 7))
                 {
-                    timer.Enabled = false;
-                    playing = false;
-
-                    Constants.soundControl.playSoundGameOver();
-                    gameOverAppear();
+                    case 0: Constants.soundControl.playSoundAmazing(); break;
+                    case 1: Constants.soundControl.playSoundBrilliant(); break;
+                    case 2: Constants.soundControl.playSoundClear(); break;
+                    case 3: Constants.soundControl.playSoundExcellent(); break;
+                    case 4: Constants.soundControl.playSoundVeryGood(); break;
+                    case 5: Constants.soundControl.playSoundWonderful(); break;
+                    case 6: Constants.soundControl.playSoundWow(); break;
                 }
-                while (Constants.map.getFullLines().Count > 0)
-                {
-                    switch(Constants.r.Next(0, 7))
-                    {
-                        case 0: Constants.soundControl.playSoundAmazing(); break;
-                        case 1: Constants.soundControl.playSoundBrilliant(); break;
-                        case 2: Constants.soundControl.playSoundClear(); break;
-                        case 3: Constants.soundControl.playSoundExcellent(); break;
-                        case 4: Constants.soundControl.playSoundVeryGood(); break;
-                        case 5: Constants.soundControl.playSoundWonderful(); break;
-                        case 6: Constants.soundControl.playSoundWow(); break;
-                    }
-                    showInformation2.SInfo = (++Constants.SaveInfo.ILine).ToString();
-                    //add score
-                    Constants.SaveInfo.IScore += Constants.scorePerLine;
-                    if(Constants.map.getFullLines().Count == 4)
-                        Constants.SaveInfo.IScore += 100;
-                    this.showInformation4.SInfo = Constants.SaveInfo.IScore.ToString();
+                showInformation2.SInfo = (++Constants.SaveInfo.ILine).ToString();
+                //add score.
+                Constants.SaveInfo.IScore += Constants.scorePerLine;
+                if (Constants.map.getFullLines().Count == 4)
+                    Constants.SaveInfo.IScore += 100;
+                this.showInformation4.SInfo = Constants.SaveInfo.IScore.ToString();
 
-                    int line = Constants.map.getFullLines().Pop();
-                    Constants.map.updateMap(line);
-                    gameControl.removeLine(line);
-                    if (Constants.map.getFullLines().Count == 0)
-                        levelUp();
-                }
-
+                int line = Constants.map.getFullLines().Pop();
+                Constants.map.updateMap(line);
+                gameControl.removeLine(line);
+                if (Constants.map.getFullLines().Count == 0)
+                    levelUp();
             }
         }
         private void levelUp()
@@ -363,15 +409,21 @@ namespace TetrisReturn
             Constants.soundControl.playSoundLevelUp();
             Constants.map.reset();
             showInformation3.SInfo = (++Constants.SaveInfo.ILevel).ToString();
-            if (Constants.SaveInfo.ILevel == 40)
+            if (Constants.SaveInfo.ILevel == 30)
             {
                 timer.Enabled = false;
                 playing = false;
+                //game win.
+                HighScore hg = new HighScore();
+                hg.saveRecords(Constants.SaveInfo);
+                newgame = false;
+                imageButton4.Enabled = false;
+                imageButton2.SText = Constants.language.conti;
                 Constants.soundControl.playSoundGameWin();
                 gameWinAppear();
             }
             gameControl.reset();
-            timer.Interval = 800 - 100 * (Constants.SaveInfo.ILevel/5);
+            timer.Interval = 600 - 100 * (Constants.SaveInfo.ILevel/5);
         }
         private void pauseGame()
         {
@@ -652,9 +704,13 @@ namespace TetrisReturn
                                     gameControl.setCurrShapeToEndMap();
                                     showInformation4.SInfo = (Constants.SaveInfo.IScore += 15).ToString();
                                 }
-                if(enableGhostShape)
+                if (enableGhostShape)
                     gameControl.drawGhostShape();
                 gameControl.CurrentShape.drawShape(gr);
+                if (e.KeyCode == Keys.Down && !gameControl.CurrentShape.canFall() || e.KeyCode == Keys.Enter)
+                {
+                    newShape();
+                }
                 gameControl.refresh();
                 gr.Dispose();
             }
@@ -715,12 +771,15 @@ namespace TetrisReturn
                 imageButton2.SText = Constants.language.conti;
                 timer.Enabled = false;
                 playing = false;
+                HighScore hg = new HighScore();
+                hg.saveRecords(Constants.SaveInfo);
                 newgame = false;
             }
             else
             {
+                gameControl.eraseGhostShape();
+                gameControl.GhostShape = null;
                 imageButton2.SText = Constants.language.stop;
-
 
                 SaveLoad sl = new SaveLoad();
                 SaveDTO sd = sl.load();
@@ -756,7 +815,7 @@ namespace TetrisReturn
             Constants.SaveInfo.IShapeMode = modeShape;
             SaveLoad sl = new SaveLoad();
             sl.save(Constants.SaveInfo);
-            MessageBox.Show("Saved!");
+            MessageBox.Show(Constants.language.saved, Constants.language.captionSaved, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -832,6 +891,15 @@ namespace TetrisReturn
 
             imageButton6.CText = Color.Red;
             Constants.soundControl.playSoundClick();
+            if (Constants.soundControl.Play)
+            {
+                Constants.soundControl.Play = false;
+            }
+            else
+            {
+                Constants.soundControl.Play = true;
+            }
+
         }
 
         private void imageButton6_MouseLeave(object sender, EventArgs e)
@@ -857,6 +925,8 @@ namespace TetrisReturn
 
             imageButton7.CText = Color.Red;
             timer.Enabled = false;
+            HighScore hg = new HighScore();
+            hg.saveRecords(Constants.SaveInfo);
             ExitConfirm exitConfirm = new ExitConfirm(this);
             exitConfirm.ShowDialog();
         }

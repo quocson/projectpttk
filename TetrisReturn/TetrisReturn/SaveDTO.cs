@@ -7,12 +7,6 @@ namespace TetrisReturn
 {
     public class SaveDTO
     {
-        private string sTheme = "Transformer";
-        public string STheme
-        {
-            get { return sTheme; }
-            set { sTheme = value; }
-        }
         private string sMap = "Classic";
         public string SMap
         {
