@@ -563,7 +563,6 @@ namespace TetrisReturn
             GameOver gameOver = new GameOver(this);
             gameOver.ShowDialog();
         }
-
         private void optionAppear()
         {
             timer.Enabled = false;
@@ -656,14 +655,12 @@ namespace TetrisReturn
 
             option.ShowDialog();
         }
-
         private void highScoresAppear()
         {
             timer.Enabled = false;
             HighScores highScores = new HighScores(this);
             highScores.ShowDialog();
         }
-
         private void aboutAppear()
         {
             timer.Enabled = false;
@@ -671,6 +668,15 @@ namespace TetrisReturn
             about.ShowDialog();
         }
 
+        public void resetInfo()
+        {
+            this.nextShape1.ShapeNext = null;
+            this.showInformation1.SInfo = "";
+            this.showInformation2.SInfo = "";
+            this.showInformation3.SInfo = "";
+            this.showInformation4.SInfo = "";
+
+        }
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (playing)
