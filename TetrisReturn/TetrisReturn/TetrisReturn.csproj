@@ -241,6 +241,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\Hover.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftRightFail.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveLeftRight.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rotate.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RotateFail.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fall.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

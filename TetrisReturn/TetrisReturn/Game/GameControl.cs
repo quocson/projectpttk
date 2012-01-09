@@ -222,7 +222,7 @@ namespace TetrisReturn
             return currShape.getFullLines();
         }
 
-        //remove line.
+        //draw map
         public void drawMap()
         {
             Graphics g = Graphics.FromImage(imageBuffer);
@@ -263,6 +263,7 @@ namespace TetrisReturn
             }
             g.Dispose();
         }
+
         private Image getImgFromTxt(string SText, Font FText, Color CStroke)
         {
             Bitmap bmpOut = null; // bitmap we are creating and will return from this function.
@@ -304,29 +305,29 @@ namespace TetrisReturn
 
             return bmpOut;
         }
+        //remove line
         public void removeLine(int line)
         {
             Graphics g = Graphics.FromImage(imageBuffer);
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 7; i++)
             {
                 g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5 + (line - 4) * Constants.blockSize, Constants.map.Column * Constants.blockSize, Constants.blockSize),
                     new Rectangle(440, 85 + (line - 4) * Constants.blockSize, Constants.map.Column * Constants.blockSize, Constants.blockSize), GraphicsUnit.Pixel);
                 g.DrawImage(Constants.map.ImageMap, new Point(0, 0));
                 Refresh();
-                System.Threading.Thread.Sleep(200);
                 for (int j = 0; j < Constants.map.Column; j++)
                 {
                     if (Constants.map.StatusMap[line, j] != -2)
                     {
                         g.DrawImage(Constants.theme.Blocks,
                         new Rectangle(j * Constants.blockSize + 6, (line - 4) * Constants.blockSize + 6, Constants.blockSize - Constants.blockDelta, Constants.blockSize - Constants.blockDelta),
-                        new Rectangle(Constants.blockSize, Constants.blockSize, Constants.blockSize, Constants.blockSize),
+                        new Rectangle(Constants.blockSize * i * 2, 2 * Constants.blockSize, Constants.blockSize, Constants.blockSize),
                         GraphicsUnit.Pixel);
                     }
                 }
 
                 Refresh();
-                System.Threading.Thread.Sleep(200);
+                System.Threading.Thread.Sleep(100);
             }
             g.DrawImage(Constants.theme.MainBackground, new Rectangle(5, 5, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize),
                     new Rectangle(440, 85, Constants.map.Column * Constants.blockSize, (line - 3) * Constants.blockSize), GraphicsUnit.Pixel);

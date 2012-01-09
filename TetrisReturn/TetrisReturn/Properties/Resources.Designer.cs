@@ -96,6 +96,12 @@ namespace TetrisReturn.Properties {
             }
         }
         
+        internal static System.IO.UnmanagedMemoryStream Fall {
+            get {
+                return ResourceManager.GetStream("Fall", resourceCulture);
+            }
+        }
+        
         internal static System.IO.UnmanagedMemoryStream GameOver {
             get {
                 return ResourceManager.GetStream("GameOver", resourceCulture);
@@ -121,9 +127,39 @@ namespace TetrisReturn.Properties {
             }
         }
         
+        internal static System.IO.UnmanagedMemoryStream LeftRightFail {
+            get {
+                return ResourceManager.GetStream("LeftRightFail", resourceCulture);
+            }
+        }
+        
         internal static System.IO.UnmanagedMemoryStream LevelUp {
             get {
                 return ResourceManager.GetStream("LevelUp", resourceCulture);
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream Lock {
+            get {
+                return ResourceManager.GetStream("Lock", resourceCulture);
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream MoveLeftRight {
+            get {
+                return ResourceManager.GetStream("MoveLeftRight", resourceCulture);
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream Rotate {
+            get {
+                return ResourceManager.GetStream("Rotate", resourceCulture);
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream RotateFail {
+            get {
+                return ResourceManager.GetStream("RotateFail", resourceCulture);
             }
         }
         

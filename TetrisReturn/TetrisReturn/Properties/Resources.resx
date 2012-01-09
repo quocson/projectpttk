@@ -163,4 +163,22 @@
   <data name="Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hover.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="LeftRightFail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftRightFail.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lock.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MoveLeftRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveLeftRight.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Rotate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotate.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RotateFail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RotateFail.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Fall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fall.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

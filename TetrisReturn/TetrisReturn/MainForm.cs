@@ -376,8 +376,8 @@ namespace TetrisReturn
                 hg.saveRecords(Constants.SaveInfo);
                 gameOverAppear();
             }
-            while (Constants.map.getFullLines().Count > 0)
-            {
+
+            if (Constants.map.getFullLines().Count > 0)
                 switch (Constants.r.Next(0, 7))
                 {
                     case 0: Constants.soundControl.playSoundAmazing(); break;
@@ -388,6 +388,8 @@ namespace TetrisReturn
                     case 5: Constants.soundControl.playSoundWonderful(); break;
                     case 6: Constants.soundControl.playSoundWow(); break;
                 }
+            while (Constants.map.getFullLines().Count > 0)
+            {
                 showInformation2.SInfo = (++Constants.SaveInfo.ILine).ToString();
                 //add score.
                 Constants.SaveInfo.IScore += Constants.scorePerLine;
@@ -401,6 +403,7 @@ namespace TetrisReturn
                 if (Constants.map.getFullLines().Count == 0)
                     levelUp();
             }
+
         }
         private void levelUp()
         {
@@ -687,17 +690,29 @@ namespace TetrisReturn
                 if (e.KeyCode == Keys.Up)
                 {
                     gameControl.createShape(modeShape, arrowUp);
+                    if (arrowUp == 1 && !gameControl.CurrentShape.canFall())
+                        Constants.soundControl.playSoundRotateFail();
+                    else
+                        Constants.soundControl.playSoundRotate();
                 }
                 else
                     if (e.KeyCode == Keys.Left && gameControl.CurrentShape.canMoveLeft())
                     {
                         gameControl.CurrentShape.moveLeft();
+                        Constants.soundControl.playSoundMoveLeftRight();
                     }
                     else
                         if (e.KeyCode == Keys.Right && gameControl.CurrentShape.canMoveRight())
                         {
                             gameControl.CurrentShape.moveRight();
+                            Constants.soundControl.playSoundMoveLeftRight();
                         }
+                        else
+                            if (e.KeyCode == Keys.Left && !gameControl.CurrentShape.canMoveLeft() ||
+                                e.KeyCode == Keys.Right && !gameControl.CurrentShape.canMoveRight())
+                            {
+                                Constants.soundControl.playSoundMoveLeftRightFail();
+                            }
                         else
                             if (e.KeyCode == Keys.Down && gameControl.CurrentShape.canFall())
                             {
@@ -717,6 +732,7 @@ namespace TetrisReturn
                 if (e.KeyCode == Keys.Down && !gameControl.CurrentShape.canFall() || e.KeyCode == Keys.Enter)
                 {
                     newShape();
+                    Constants.soundControl.playSoundLockShape();
                 }
                 gameControl.refresh();
                 gr.Dispose();
@@ -840,6 +856,8 @@ namespace TetrisReturn
 
         private void imageButton4_MouseUp(object sender, MouseEventArgs e)
         {
+
+            Constants.soundControl.playSoundClick();
             imageButton4.CText = Color.Red;
             if (playing)
             {
