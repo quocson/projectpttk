@@ -1,5 +1,5 @@
 <Game>
-  <Info Map="Classic" ShapeMode="1" Level="1" Score="90" Line="0" Piece="7" />
+  <Info Map="Classic" ShapeMode="1" Level="1" Score="372" Line="3" Piece="21" />
   <Row Num="0" Col0="-1" Col1="-1" Col2="-1" Col3="-1" Col4="-1" Col5="-1" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="-1" Col14="-1" Col15="-1" />
   <Row Num="1" Col0="-1" Col1="-1" Col2="-1" Col3="-1" Col4="-1" Col5="-1" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="-1" Col14="-1" Col15="-1" />
   <Row Num="2" Col0="-1" Col1="-1" Col2="-1" Col3="-1" Col4="-1" Col5="-1" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="-1" Col14="-1" Col15="-1" />
@@ -22,8 +22,8 @@
   <Row Num="19" Col0="-1" Col1="-1" Col2="-1" Col3="-1" Col4="-1" Col5="-1" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="-1" Col14="-1" Col15="-1" />
   <Row Num="20" Col0="-1" Col1="-1" Col2="-1" Col3="-1" Col4="-1" Col5="-1" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="-1" Col14="-1" Col15="-1" />
   <Row Num="21" Col0="-1" Col1="-1" Col2="-1" Col3="-1" Col4="-1" Col5="-1" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="-1" Col14="-1" Col15="-1" />
-  <Row Num="22" Col0="-1" Col1="-1" Col2="-1" Col3="-1" Col4="-1" Col5="-1" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="3" Col14="-1" Col15="-1" />
-  <Row Num="23" Col0="-1" Col1="-1" Col2="-1" Col3="-1" Col4="-1" Col5="-1" Col6="5" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="3" Col14="3" Col15="-1" />
-  <Row Num="24" Col0="3" Col1="3" Col2="6" Col3="-1" Col4="5" Col5="5" Col6="5" Col7="0" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="0" Col14="3" Col15="-1" />
-  <Row Num="25" Col0="3" Col1="3" Col2="6" Col3="6" Col4="6" Col5="0" Col6="0" Col7="0" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="0" Col14="0" Col15="0" />
+  <Row Num="22" Col0="-1" Col1="-1" Col2="5" Col3="5" Col4="-1" Col5="-1" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="-1" Col14="-1" Col15="-1" />
+  <Row Num="23" Col0="-1" Col1="5" Col2="5" Col3="3" Col4="3" Col5="3" Col6="-1" Col7="-1" Col8="-1" Col9="-1" Col10="-1" Col11="-1" Col12="-1" Col13="-1" Col14="-1" Col15="-1" />
+  <Row Num="24" Col0="6" Col1="6" Col2="3" Col3="0" Col4="3" Col5="-1" Col6="-1" Col7="5" Col8="5" Col9="5" Col10="-1" Col11="-1" Col12="2" Col13="2" Col14="0" Col15="0" />
+  <Row Num="25" Col0="6" Col1="6" Col2="0" Col3="0" Col4="0" Col5="5" Col6="-1" Col7="-1" Col8="5" Col9="5" Col10="-1" Col11="-1" Col12="2" Col13="2" Col14="0" Col15="0" />
 </Game>

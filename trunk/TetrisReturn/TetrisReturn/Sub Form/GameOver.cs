@@ -103,20 +103,20 @@ namespace TetrisReturn
 
         private void appear()
         {
-            for (int i = 1; i <= 100; i++)
+            for (int i = 1; i <= 50; i++)
             {
-                this.SetDesktopLocation(mainForm.Location.X + mainForm.Size.Width / 2 - 3 * i, mainForm.Location.Y + mainForm.Size.Height / 2 - i);
-                Size = new System.Drawing.Size(6 * i, 2 * i);
+                this.SetDesktopLocation(mainForm.Location.X + mainForm.Size.Width / 2 - 6 * i, mainForm.Location.Y + mainForm.Size.Height / 2 - 2 * i);
+                Size = new System.Drawing.Size(12 * i, 4 * i);
                 Refresh();
             }
         }
 
         private void disAppear()
         {
-            for (int i = 100; i > 0; i--)
+            for (int i = 50; i > 0; i--)
             {
-                this.SetDesktopLocation(mainForm.Location.X + mainForm.Size.Width / 2 - 3 * i, mainForm.Location.Y + mainForm.Size.Height / 2 - i);
-                Size = new System.Drawing.Size(6 * i, 2 * i);
+                this.SetDesktopLocation(mainForm.Location.X + mainForm.Size.Width / 2 - 6 * i, mainForm.Location.Y + mainForm.Size.Height / 2 - 2 * i);
+                Size = new System.Drawing.Size(12 * i, 4 * i);
                 Refresh();
             }
         }
