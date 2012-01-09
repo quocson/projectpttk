@@ -18,6 +18,7 @@ namespace TetrisReturn
         {
             InitializeComponent();
             this.mainForm = mainForm;
+            SetControlVisible(false);
         }
 
         private void Option_MouseUp(object sender, MouseEventArgs e)
@@ -110,6 +111,8 @@ namespace TetrisReturn
                 Constants.soundControl.playSoundDis_appear();
 
                 mainForm.GameControl.drawMap();
+
+                SetControlVisible(false);
                 disappear();
                 Close();
             }
@@ -122,7 +125,30 @@ namespace TetrisReturn
             appear();
 
         }
-
+        private void SetControlVisible(bool bVisible)
+        {
+            this.checkBox1.Visible = bVisible;
+            this.checkBox2.Visible  = bVisible;
+            this.checkBox3.Visible  = bVisible;
+            this.checkBox4.Visible  = bVisible;
+            this.comboBox1.Visible  = bVisible;
+            this.comboBox2.Visible  = bVisible;
+            this.comboBox3.Visible = bVisible;
+            this.label1.Visible = bVisible;
+            this.label2.Visible = bVisible;
+            this.label3.Visible = bVisible;
+            this.label4.Visible = bVisible;
+            this.label5.Visible = bVisible;
+            this.label6.Visible = bVisible;
+            this.label7.Visible = bVisible;
+            this.label10.Visible = bVisible;
+            this.label11.Visible = bVisible;
+            this.label12.Visible = bVisible;
+            this.checkBox5.Visible = bVisible;
+            this.checkBox6.Visible = bVisible;
+            this.label9.Visible = bVisible;
+            this.label8.Visible = bVisible;
+        }
         private void Option_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -152,6 +178,8 @@ namespace TetrisReturn
                 this.SetDesktopLocation(mainForm.Location.X - 800 + 10 * i, mainForm.Location.Y + 110);
                 Refresh();
             }
+
+            SetControlVisible(true);
         }
 
         private void disappear()

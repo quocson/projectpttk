@@ -41,10 +41,25 @@
   <Game NewHighScore="New High Score!" />
   <Game Stop="Stop" />
   <Game AboutInfo="Game Studio of University of Science.
+
+          Tetris Return 1.0v
+
+   Sofware analyst and design project
+
 Developer: Nguyen Le Quoc Son - 0912397
-           Huynh Huu Tai - 0912403" />
+           Huynh Huu Tai - 0912403
+" />
   <Game Saved="Game was saved!" />
   <Game CaptionSaved="Save game" />
   <Game HighScore="High Score" />
   <Game LevelUp="LEVEL UP" />
+  <Game HelpInfo=" + You can use 4 arrow key to move the shape:
+    - Left Arrow: Move the shape to left.
+    - Right Arrow: Move the shape to right.
+    - Down Arrow: Move the shape down in highspeed.
+    - Up Arrow: Rotate or change the shape depend on 
+                            option Value
+ + You can get score when a row full of block.
+ + The Bonus Score will added when you get 4 row 
+       with 1 shape fall down" />
 </Language>

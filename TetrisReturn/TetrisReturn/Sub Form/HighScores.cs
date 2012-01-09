@@ -20,6 +20,12 @@ namespace TetrisReturn
             this.mainForm = mainForm;
             AddEventHandler(this.listView1);
             AddEventHandler(this.showInformation1);
+            this.showInformation1.ImgBack = new Bitmap(showInformation1.Width, showInformation1.Height);
+            Graphics.FromImage(this.showInformation1.ImgBack).DrawImage(
+                Constants.theme.HighScoresBackground, new Rectangle(new Point(0, 0), showInformation1.Size),
+            new Rectangle(showInformation1.Location, showInformation1.Size), GraphicsUnit.Pixel);
+            showInformation1.Visible = false;
+            listView1.Visible = false;
         }
 
         private void HighScores_MouseUp(object sender, MouseEventArgs e)
@@ -27,6 +33,8 @@ namespace TetrisReturn
             if ((Math.Abs(e.X - toClose.X) < 100) && ((toClose.Y - e.Y) >= 200))
             {
                 Constants.soundControl.playSoundDis_appear();
+                showInformation1.Visible = false;
+                listView1.Visible = false;
                 disappear();
                 Close();
             }
@@ -59,6 +67,9 @@ namespace TetrisReturn
                 System.Threading.Thread.Sleep(10);
                 Refresh();
             }
+
+            showInformation1.Visible = true;
+            listView1.Visible = true;
         }
 
         private void disappear()
@@ -85,8 +96,7 @@ namespace TetrisReturn
         private void HighScores_Load(object sender, EventArgs e)
         {
 
-            System.Drawing.Font f = Constants.getFont(20);
-            this.showInformation1.ImgBack = new Bitmap(2,2);
+            System.Drawing.Font f = Constants.getFont(50);
 
             showInformation1.FTitle = f;
             showInformation1.STitle = Constants.language.high;

@@ -17,7 +17,31 @@ namespace TetrisReturn
         public Help(MainForm mainForm)
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            UpdateStyles();
             this.mainForm = mainForm;
+            this.showInformation1.ImgBack = new Bitmap(showInformation1.Width, showInformation1.Height);
+            Graphics.FromImage(this.showInformation1.ImgBack).DrawImage(
+                Constants.theme.HelpBackground, new Rectangle(new Point(0, 0), showInformation1.Size),
+            new Rectangle(showInformation1.Location, showInformation1.Size), GraphicsUnit.Pixel);
+            this.showInformation1.FTitle = Constants.getFont(50);
+            this.showInformation1.STitle = Constants.language.help;
+            this.showInformation2.ImgBack = new Bitmap(showInformation2.Width, showInformation2.Height);
+            Graphics.FromImage(this.showInformation2.ImgBack).DrawImage(
+                Constants.theme.HelpBackground, new Rectangle(new Point(0, 0), showInformation2.Size),
+            new Rectangle(showInformation2.Location, showInformation2.Size), GraphicsUnit.Pixel);
+            this.showInformation2.FTitle = Constants.getFont(15);
+            this.showInformation2.STitle = Constants.language.helpinfo;
+            this.showInformation2.Visible = false;
+            this.showInformation1.Visible = false;
+            AddEventHandler(showInformation1);
+            AddEventHandler(showInformation2);
+
+        }
+        private void AddEventHandler(Control ctl)
+        {
+            ctl.MouseDown += new MouseEventHandler(Help_MouseDown);
+            ctl.MouseUp += new MouseEventHandler(Help_MouseUp);
         }
 
         private void Help_Shown(object sender, EventArgs e)
@@ -37,6 +61,9 @@ namespace TetrisReturn
             if ((Math.Abs(e.Y - toClose.Y) < 100) && ((e.X - toClose.X) >= 200))
             {
                 Constants.soundControl.playSoundDis_appear();
+
+                this.showInformation2.Visible = false;
+                this.showInformation1.Visible = false;
                 disappear();
                 Close();
             }
@@ -59,6 +86,8 @@ namespace TetrisReturn
             }
             this.showInformation1.ImgBack = new Bitmap(2, 2);
             this.showInformation1.FTitle = Constants.getFont(50);
+            this.showInformation2.Visible = true;
+            this.showInformation1.Visible = true;
             Refresh();
         }
 

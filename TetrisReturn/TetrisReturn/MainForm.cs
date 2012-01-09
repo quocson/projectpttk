@@ -571,7 +571,7 @@ namespace TetrisReturn
         {
             timer.Enabled = false;
             Option option = new Option(this);
-            System.Drawing.Font f = Constants.getFont(16);
+            System.Drawing.Font f = Constants.getFont(30);
             option.label1.Font = f;
             f = Constants.getFont(12);
             option.label2.Font = f;

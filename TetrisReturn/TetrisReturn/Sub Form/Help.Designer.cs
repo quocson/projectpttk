@@ -28,8 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.showInformation2 = new TetrisReturn.ShowInformation();
             this.showInformation1 = new TetrisReturn.ShowInformation();
             this.SuspendLayout();
+            // 
+            // showInformation2
+            // 
+            this.showInformation2.BackColor = System.Drawing.Color.Transparent;
+            this.showInformation2.CInfo = System.Drawing.Color.White;
+            this.showInformation2.CStroke = System.Drawing.Color.Black;
+            this.showInformation2.CText = System.Drawing.Color.White;
+            this.showInformation2.FInfo = new System.Drawing.Font("Arial", 15F);
+            this.showInformation2.FTitle = new System.Drawing.Font("Arial", 15F);
+            this.showInformation2.ImgBack = null;
+            this.showInformation2.IWidth = 2;
+            this.showInformation2.Location = new System.Drawing.Point(33, 128);
+            this.showInformation2.Name = "showInformation2";
+            this.showInformation2.SInfo = null;
+            this.showInformation2.Size = new System.Drawing.Size(725, 314);
+            this.showInformation2.STitle = null;
+            this.showInformation2.TabIndex = 1;
             // 
             // showInformation1
             // 
@@ -53,6 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.showInformation2);
             this.Controls.Add(this.showInformation1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -69,5 +88,6 @@
         #endregion
 
         private ShowInformation showInformation1;
+        private ShowInformation showInformation2;
     }
 }
