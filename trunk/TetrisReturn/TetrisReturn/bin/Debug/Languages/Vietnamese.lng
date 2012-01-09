@@ -46,4 +46,5 @@ Developer: Nguyen Le Quoc Son - 0912397
   <Game Saved="Tro choi da duoc luu!" />
   <Game CaptionSaved="Luu tro choi" />
   <Game HighScore="Diem Cao" />
+  <Game LevelUp="TANG CAP DO" />
 </Language>

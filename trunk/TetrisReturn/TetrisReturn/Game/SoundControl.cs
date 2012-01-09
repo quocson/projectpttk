@@ -21,6 +21,12 @@ namespace TetrisReturn
         private SoundPlayer veryGood;
         private SoundPlayer wonderful;
         private SoundPlayer wow;
+        private SoundPlayer leftRightFail;
+        private SoundPlayer moveLeftRight;
+        private SoundPlayer rotate;
+        private SoundPlayer rotateFail;
+        private SoundPlayer lockShape;
+        private SoundPlayer fall;
         private bool play;
 
         public SoundControl()
@@ -38,6 +44,12 @@ namespace TetrisReturn
             veryGood = new SoundPlayer(Properties.Resources.VeryGood);
             wonderful = new SoundPlayer(Properties.Resources.Wonderful);
             wow = new SoundPlayer(Properties.Resources.Wow);
+            leftRightFail = new SoundPlayer(Properties.Resources.LeftRightFail);
+            moveLeftRight = new SoundPlayer(Properties.Resources.MoveLeftRight);
+            rotate = new SoundPlayer(Properties.Resources.Rotate);
+            rotateFail = new SoundPlayer(Properties.Resources.RotateFail);
+            lockShape = new SoundPlayer(Properties.Resources.Lock);
+            fall = new SoundPlayer(Properties.Resources.Fall);
             play = true;
         }
 
@@ -62,7 +74,49 @@ namespace TetrisReturn
             veryGood.Dispose();
             wonderful.Dispose();
             wow.Dispose();
+            leftRightFail.Dispose();
+            moveLeftRight.Dispose();
+            rotate.Dispose();
+            rotateFail.Dispose();
+            lockShape.Dispose();
+            fall.Dispose();
             GC.SuppressFinalize(this);
+        }
+
+        public void playSoundMoveLeftRight()
+        {
+            if (play)
+                moveLeftRight.Play();
+        }
+
+        public void playSoundFall()
+        {
+            if (play)
+                fall.Play();
+        }
+
+        public void playSoundMoveLeftRightFail()
+        {
+            if (play)
+                leftRightFail.Play();
+        }
+
+        public void playSoundRotate()
+        {
+            if (play)
+                rotate.Play();
+        }
+
+        public void playSoundRotateFail()
+        {
+            if (play)
+                rotateFail.Play();
+        }
+
+        public void playSoundLockShape()
+        {
+            if (play)
+                lockShape.Play();
         }
 
         public void playSoundAmazing()

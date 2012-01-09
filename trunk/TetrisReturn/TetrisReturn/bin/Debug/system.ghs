@@ -1,12 +1,12 @@
 <HighScoreBoard>
+  <Record Level="3" Score="2840" Line="19" Piece="148" />
+  <Record Level="3" Score="2356" Line="16" Piece="107" />
+  <Record Level="2" Score="1887" Line="12" Piece="108" />
   <Record Level="2" Score="1786" Line="11" Piece="88" />
+  <Record Level="2" Score="1700" Line="13" Piece="75" />
   <Record Level="2" Score="1696" Line="11" Piece="82" />
   <Record Level="2" Score="1681" Line="11" Piece="81" />
   <Record Level="2" Score="1681" Line="11" Piece="81" />
   <Record Level="2" Score="1681" Line="11" Piece="80" />
   <Record Level="2" Score="1090" Line="4" Piece="59" />
-  <Record Level="2" Score="790" Line="4" Piece="39" />
-  <Record Level="2" Score="522" Line="2" Piece="32" />
-  <Record Level="1" Score="390" Line="2" Piece="23" />
-  <Record Level="1" Score="262" Line="1" Piece="17" />
 </HighScoreBoard>
