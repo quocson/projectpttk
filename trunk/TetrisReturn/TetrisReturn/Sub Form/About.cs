@@ -20,12 +20,20 @@ namespace TetrisReturn
             this.mainForm = mainForm;
             AddEventHandler(this.showInformation1);
             AddEventHandler(this.showInformation2);
-            this.showInformation1.ImgBack = new Bitmap(5, 5);
-            this.showInformation2.ImgBack = new Bitmap(5, 5);
+            this.showInformation1.ImgBack = new Bitmap(showInformation1.Width, showInformation1.Height);
+            Graphics.FromImage(this.showInformation1.ImgBack).DrawImage(
+                Constants.theme.AboutBackground, new Rectangle(new Point(0, 0), showInformation1.Size),
+            new Rectangle(showInformation1.Location, showInformation1.Size), GraphicsUnit.Pixel);
+            this.showInformation2.ImgBack = new Bitmap(showInformation2.Width, showInformation2.Height);
+            Graphics.FromImage(this.showInformation2.ImgBack).DrawImage(
+                Constants.theme.AboutBackground, new Rectangle(new Point(0, 0), showInformation2.Size),
+            new Rectangle(showInformation2.Location, showInformation2.Size), GraphicsUnit.Pixel);
             this.showInformation1.FTitle = Constants.getFont(50);
             this.showInformation1.STitle = Constants.language.about;
             this.showInformation2.FTitle = Constants.getFont(20);
             this.showInformation2.STitle = Constants.language.aboutinfo;
+            this.showInformation2.Visible = false;
+            this.showInformation1.Visible = false;
             Refresh();
         }
         private void AddEventHandler(Control ctl)
@@ -54,6 +62,8 @@ namespace TetrisReturn
                 System.Threading.Thread.Sleep(10);
                 Refresh();
             }
+            this.showInformation2.Visible = true;
+            this.showInformation1.Visible = true;
             //=========================================================================
             
         }
@@ -89,6 +99,8 @@ namespace TetrisReturn
             if ((Math.Abs(e.X - toClose.X) < 100) && ((e.Y - toClose.Y) >= 200))
             {
                 Constants.soundControl.playSoundDis_appear();
+                this.showInformation2.Visible = false;
+                this.showInformation1.Visible = false;
                 disappear();
                 Close();
             }

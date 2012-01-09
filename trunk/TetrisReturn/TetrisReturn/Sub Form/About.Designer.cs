@@ -42,7 +42,7 @@
             this.showInformation1.FTitle = new System.Drawing.Font("Arial", 15F);
             this.showInformation1.ImgBack = null;
             this.showInformation1.IWidth = 2;
-            this.showInformation1.Location = new System.Drawing.Point(214, 12);
+            this.showInformation1.Location = new System.Drawing.Point(199, 12);
             this.showInformation1.Name = "showInformation1";
             this.showInformation1.SInfo = null;
             this.showInformation1.Size = new System.Drawing.Size(361, 74);
