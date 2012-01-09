@@ -41,10 +41,23 @@
   <Game NewHighScore="Diem cao moi!" />
   <Game Stop="Dung Choi" />
   <Game AboutInfo="Game Studio of University of Science.
+
+          Tetris Return 1.0v
+
+   Sofware analyst and design project
+
 Developer: Nguyen Le Quoc Son - 0912397
            Huynh Huu Tai - 0912403" />
   <Game Saved="Tro choi da duoc luu!" />
   <Game CaptionSaved="Luu tro choi" />
   <Game HighScore="Diem Cao" />
   <Game LevelUp="TANG CAP DO" />
+  <Game HelpInfo=" + Su dung 4 phim mui ten de di chuyen hinh:
+    - Phim di chuyen trai: Di chuyen hinh qua trai.
+    - Phim di chuyen phai: Di chuyen hinh qua phai.
+    - Phim di chuyen xuong: Di chuyen hinh xuong nhanh hon.
+    - Phim di chuyen len: Quay hinh hoac tao hinh moi 
+                    tuy thuoc vao lua chon trong Tuy Chinh
+ + Ban se ghi diem khi xep day 1 hang.
+ + Khi xep day 4 hang lien tiep ban se nhan duoc diem thuong" />
 </Language>
