@@ -57,14 +57,14 @@
     <Compile Include="Shape\ClassicShape.cs" />
     <Compile Include="Shape\Block.cs" />
     <Compile Include="Data Transfer\Config.cs" />
-    <Compile Include="Game Effect Control\Constants.cs" />
+    <Compile Include="Game Control\Constants.cs" />
     <Compile Include="Sub Form\ExitConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sub Form\ExitConfirm.Designer.cs">
       <DependentUpon>ExitConfirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game Effect Control\GameControl.cs">
+    <Compile Include="Game Control\GameControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Sub Form\GameOver.cs">
@@ -122,7 +122,7 @@
     <Compile Include="Plugin Services\PluginThemeServices.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Data Transfer\SaveDTO.cs" />
+    <Compile Include="Game Control\SaveDTO.cs" />
     <Compile Include="Data Transfer\SaveLoad.cs" />
     <Compile Include="Shape\Shape.cs" />
     <Compile Include="User Control\ShowInformation.cs">
@@ -131,7 +131,7 @@
     <Compile Include="User Control\ShowInformation.Designer.cs">
       <DependentUpon>ShowInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game Effect Control\SoundControl.cs" />
+    <Compile Include="Game Control\SoundControl.cs" />
     <EmbeddedResource Include="Sub Form\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +176,7 @@
     <EmbeddedResource Include="User Control\ShowInformation.resx">
       <DependentUpon>ShowInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
