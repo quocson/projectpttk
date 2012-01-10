@@ -128,7 +128,7 @@ namespace MapPluginInterface
         public Stack<int> getFullLines()
         {
             Stack<int> res = new Stack<int>();
-            for (int i = row - 1; i >= 0; i--)
+            for (int i = 0; i <row; i++)
             {
                 bool full = true;
                 for (int j = 0; j < col; j++)
