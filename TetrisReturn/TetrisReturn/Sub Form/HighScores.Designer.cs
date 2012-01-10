@@ -39,13 +39,14 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BackColor = System.Drawing.Color.NavajoWhite;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Rank,
             this.Score,
             this.Level,
             this.Line,
             this.Piece});
+            this.listView1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.listView1.FullRowSelect = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.Location = new System.Drawing.Point(139, 138);
