@@ -323,29 +323,6 @@ namespace TetrisReturn
                 }
             tmpArr = null;
         }
-
-        //get full lines.
-        public Stack<int> getFullLines()
-        {
-            Stack<int> fullLines = new Stack<int>();
-
-            int rootLine = yScreen / Constants.blockSize + 4;
-            int counter, n = rootLine + row;
-            for (int i = rootLine; i < n; i++)
-            {
-                counter = 0;
-                for (int j = 0; j < Constants.map.Column; j++)
-                {
-                    if (Constants.map.checkOnMap(i, j) && Constants.map.StatusMap[i, j] != -1)
-                        counter++;
-                }
-                if (counter == Constants.map.Column)
-                {
-                    fullLines.Push(i);
-                }
-            }
-
-            return fullLines;
-        }
+        
     }
 }
