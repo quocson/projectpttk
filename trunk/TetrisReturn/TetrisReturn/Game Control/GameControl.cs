@@ -216,12 +216,6 @@ namespace TetrisReturn
             currShape.goToEndMap();
         }
 
-        //get full lines.
-        public Stack<int> getFullLines()
-        {
-            return currShape.getFullLines();
-        }
-
         //draw map
         public void drawMap()
         {
